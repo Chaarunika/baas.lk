@@ -12,12 +12,14 @@
 
 #apDivSearchBar {
 	position: absolute;
-	left: 0px;
+	left: 100px;
 	top: 88px;
-	width: 100%;
+	width: 960px;
 	height: 180px;
 	z-index: 8;
 	background-color: rgba(51,51,51,0.7);
+	border-radius: 20px;
+
 }  
 
 .SearchBar {
