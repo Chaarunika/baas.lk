@@ -1,0 +1,147 @@
+#serviceproviderbox {
+	position:absolute;
+	width:460px;
+	height:400px;
+	z-index:1;
+	left: 700px;
+	top: 150px;
+	background-color: #F7F7F7;
+	background-color: #ffffff;
+	border: 3px solid #f0f0f0;
+	border-radius: 10px;
+}
+#spbox {
+	position:absolute;
+	width:460px;
+	height:400px;
+	z-index:2;
+	left: 200px;
+	top: 150px;
+	background-color: #F7F7F7;
+	background-color: #ffffff;
+	border: 3px solid #f0f0f0;
+	border-radius: 10px;
+}
+
+@font-face {
+    font-family: verdana;
+    src: url(fonts/verdana.woff);
+}
+#signupasa {
+	position:absolute;
+	width:200px;
+	height:53px;
+	z-index:3;
+	left: 60px;
+	top: 350px;
+	font-family:verdana;
+	font-size: 20px;
+	color: #213266;
+	font-weight:bold;
+}
+@font-face {
+    font-family: verdana;
+    src: url(fonts/verdana.woff);
+}
+
+#general {
+	position:absolute;
+	width:200px;
+	height:53px;
+	z-index:3;
+	left: 60px;
+	top: 350px;
+	font-family:verdana;
+	font-size: 20px;
+	color: #213266;
+	font-weight:bold;
+}
+#spimage{
+	position:absolute;
+	width:207px;
+	height:177px;
+	z-index:2;
+	left: 247px;
+	top: 103px;
+}
+
+@font-face {
+    font-family: verdana;
+    src: url(fonts/verdana.woff);
+}
+
+#sptitle {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:3;
+	left: 57px;
+	top: 55px;
+	font-family:verdana;
+	font-size: 40px;
+	color: #213266;
+	font-weight:bold;
+}
+
+@font-face {
+    font-family: verdana;
+    src: url(fonts/verdana.woff);
+}
+
+#looking{
+	position:absolute;
+	width:400px;
+	height:115px;
+	z-index:3;
+	left: 12px;
+	top: 55px;
+	font-family:verdana;
+	font-size: 40px;
+	color: #213266;
+	font-weight:bold;
+}
+
+@font-face {
+    font-family: verdana;
+    src: url(fonts/verdana.woff);
+}
+
+#signUP {
+	position:absolute;
+	width:217px;
+	height:50px;
+	z-index:5;
+	left: 195px;
+	top: 350px;
+	font-family:verdana;
+	font-size: 20px;
+	color: #009900;
+	font-weight:bold;
+	}
+
+@font-face {
+    font-family: verdana;
+    src: url(fonts/verdana.woff);
+}
+
+#serviceprovider {
+	position:absolute;
+	width:217px;
+	height:50px;
+	z-index:5;
+	left: 195px;
+	top: 350px;
+	font-family:verdana;
+	font-size: 20px;
+	color: #009900;
+	font-weight:bold;
+	}
+
+#home {
+	position:absolute;
+	width:145px;
+	height:147px;
+	z-index:1;
+	left: 78px;
+	top: 147px;
+}

@@ -1,0 +1,70 @@
+
+#apDivBox{
+	
+	position:absolute;
+	width:631px;
+	height:521px;
+	z-index:2;
+	left: 202px;
+	top: 95px;
+	background-color: #F7F7F7;
+	background-color: #ffffff;
+	border: 2px solid #f0f0f0;
+	border-radius: 10px;
+	padding-left:50px;
+	padding-bottom:10px;
+}
+#apDivFormBox{
+	box-sizing:border-box;
+	position:relative;	
+	z-index:2;	
+	top :50px;
+	
+}
+@font-face {
+    font-family: BRITANIC;
+    src: url(fonts/verdana.woff);
+}
+
+#apDivTitle{
+	position:relative;
+	width:578px;
+	height:115px;
+	z-index:3;
+	left: 30px;
+	top: 25px;
+	font-family:BRITANIC;
+	font-size: 40px;
+	color: #213266;
+	font-weight:bold;
+}
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	margin: 10px;
+	}
+	
+label {
+	position: relative;
+	vertical-align: middle;
+	}
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=email] {
+	display: block;
+	margin-bottom: 15px;
+	
+	}
+input[type=checkbox] {
+	margin-bottom: 15px;
+	}
+
+#apDivFbLogin{
+	position:absolute;
+	width:145px;
+	height:340px;
+	z-index:5;
+	left: 949px;
+	top: 147px;
+}
