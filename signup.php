@@ -39,14 +39,14 @@
 
 		<div id="apDivTitle">Create	your baas.lk Account</div>
 
+		<?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
+
 		<div id="apDivFbLogin">
   			<p style="font-size:20px">Fed up with filling forms...???</p>
   			<p style="font-size:20px">Try easy signup solutions..</p>
   			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
    			<p><img src="images/googleSignup.png" width="255" height="54" /></p>
-		</div>
-
-		<?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
+		</div>		
 
 		<div id="apDivFormBox"> 
 
@@ -84,12 +84,12 @@
 	if (isset($registration)) {
    		if ($registration->errors) {
         	foreach ($registration->errors as $error) {
-           		echo $error;
+           		echo "<div id=\"apDivMessage\">".$error."</div>";
         		}
     		}
     	if ($registration->messages) {
         	foreach ($registration->messages as $message) {
-           		echo $message;
+           		echo "<div id=\"apDivMessage\" style = \"left:10%\">".$message."</div>";
         		}
     	}
 	}

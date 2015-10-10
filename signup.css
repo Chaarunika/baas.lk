@@ -19,11 +19,24 @@
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 2;
-	top : 90px;
-	left: 31px;
+	top : 80px;
+	left: 20px;
 	width: 400px;
 	height: 639px;
 }
+
+#apDivMessage {
+	position: absolute;
+	left: 380px;
+	top: 193px;
+	width: 394px;
+	height: 34px;
+	z-index: 10;
+	font-family: BRITANIC;
+	font-size: 15px;
+	color: red;
+}
+
 @font-face {
     font-family: BRITANIC;
     src: url(fonts/verdana.woff);
