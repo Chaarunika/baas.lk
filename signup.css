@@ -1,147 +1,102 @@
-#serviceproviderbox {
-	position:absolute;
-	width:460px;
-	height:400px;
-	z-index:1;
-	left: 700px;
-	top: 150px;
+
+#apDivBox{
+	position: absolute;
+	width: 1000px;
+	height: 650px;
+	z-index: 2;
+	left: 74px;
+	top: 80px;
 	background-color: #F7F7F7;
-	background-color: #ffffff;
-	border: 3px solid #f0f0f0;
+	//background-color: #ffffff;
+	border: 2px solid #f0f0f0;
 	border-radius: 10px;
-}
-#spbox {
-	position:absolute;
-	width:460px;
-	height:400px;
-	z-index:2;
-	left: 200px;
-	top: 150px;
-	background-color: #F7F7F7;
-	background-color: #ffffff;
-	border: 3px solid #f0f0f0;
-	border-radius: 10px;
+	padding-left: 50px;
+	padding-bottom: 10px;
+	margin : 20px;
 }
 
+#apDivFormBox{
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top : 90px;
+	left: 31px;
+	width: 400px;
+	height: 639px;
+}
 @font-face {
-    font-family: verdana;
+    font-family: BRITANIC;
     src: url(fonts/verdana.woff);
 }
-#signupasa {
-	position:absolute;
-	width:200px;
-	height:53px;
-	z-index:3;
-	left: 60px;
-	top: 350px;
-	font-family:verdana;
-	font-size: 20px;
+
+#apDivTitle{
+	position: absolute;
+	width: 800px;
+	height: 61px;
+	z-index: 3;
+	left: 30px;
+	top: 25px;
+	font-family: BRITANIC;
+	font-size: 30px;
+	color: #213266;
+	font-weight: bold;
+}
+
+p{
+	font-family:BRITANIC;
+	font-size: 15px;
 	color: #213266;
 	font-weight:bold;
+	//line-height: 120%;
+	
 }
-@font-face {
-    font-family: verdana;
-    src: url(fonts/verdana.woff);
-}
-
-#general {
-	position:absolute;
-	width:200px;
-	height:53px;
-	z-index:3;
-	left: 60px;
-	top: 350px;
-	font-family:verdana;
-	font-size: 20px;
-	color: #213266;
-	font-weight:bold;
-}
-#spimage{
-	position:absolute;
-	width:207px;
-	height:177px;
-	z-index:2;
-	left: 247px;
-	top: 103px;
-}
-
-@font-face {
-    font-family: verdana;
-    src: url(fonts/verdana.woff);
-}
-
-#sptitle {
-	position:absolute;
-	width:200px;
-	height:115px;
-	z-index:3;
-	left: 57px;
-	top: 55px;
-	font-family:verdana;
-	font-size: 40px;
-	color: #213266;
-	font-weight:bold;
-}
-
-@font-face {
-    font-family: verdana;
-    src: url(fonts/verdana.woff);
-}
-
-#looking{
-	position:absolute;
-	width:400px;
-	height:115px;
-	z-index:3;
-	left: 12px;
-	top: 55px;
-	font-family:verdana;
-	font-size: 40px;
-	color: #213266;
-	font-weight:bold;
-}
-
-@font-face {
-    font-family: verdana;
-    src: url(fonts/verdana.woff);
-}
-
-#signUP {
-	position:absolute;
-	width:217px;
-	height:50px;
-	z-index:5;
-	left: 195px;
-	top: 350px;
-	font-family:verdana;
-	font-size: 20px;
-	color: #009900;
-	font-weight:bold;
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	margin: 10px;
+	}
+	
+label {
+	position: relative;
+	vertical-align: middle;
+	}
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=email] {
+	display: block;
+	margin-bottom: 15px;
+	
+	}
+input[type=checkbox] {
+	margin-bottom: 15px;
 	}
 
-@font-face {
-    font-family: verdana;
-    src: url(fonts/verdana.woff);
+#apDivFbLogin{
+	position: absolute;
+	width: 361px;
+	height: 250px;
+	z-index: 2;
+	right: 10%;
+	top: 110px;
+	background-color: #F7F7F7;
+	background-color: #ffffff;
+	border: 2px solid #f0f0f0;
+	border-radius: 10px;
+	padding-left: 50px;
+	padding-bottom: 10px;
 }
-
-#serviceprovider {
-	position:absolute;
-	width:217px;
-	height:50px;
-	z-index:5;
-	left: 195px;
-	top: 350px;
-	font-family:verdana;
-	font-size: 20px;
-	color: #009900;
-	font-weight:bold;
-	}
-
-#home {
-	position:absolute;
-	width:145px;
-	height:147px;
-	z-index:1;
-	left: 78px;
-	top: 147px;
+.textField {
+	position: relative;
+	width: 250px;
+	height: 20px;
+}
+.signupBtn {
+	color: rgba(255,255,255,1);
+	background-color: rgba(102,102,102,1);
+	position: absolute;
+	width: 173px;
+	height: 35px;
+	font-size: 16px;
+	font-weight: bold;
 }
