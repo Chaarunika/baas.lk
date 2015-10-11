@@ -62,7 +62,28 @@ CREATE TABLE IF NOT EXISTS `baaslk`.`serviceprovider` (
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
 
 
+CREATE TABLE IF NOT EXISTS `baaslk`.`customer` (
 
+ `customer_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',
+ `user_id` int(11),
+ `contactNo` int(15) NOT NULL,
+ `opContactNo` int(15) DEFAULT NULL,
+ `opEmail` varchar(255) DEFAULT NULL,
+ `category` varchar(100) NOT NULL, 
+ `area` varchar(100) NOT NULL,
+ `descr` varchar(300) NULL,
+ `workInfo` text DEFAULT NULL, 
+ `dob` varchar(100) DEFAULT NULL,
+ `gender` varchar(255) DEFAULT NULL,
+ `address` text DEFAULT NULL,
+ `website` varchar(255) DEFAULT NULL, 
+ 
+ 
+ FOREIGN KEY (`user_id`) REFERENCES users(`user_id`),
+ 
+ PRIMARY KEY (`customer_id`)
+ 
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
 
 
 

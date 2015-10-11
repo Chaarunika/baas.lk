@@ -83,7 +83,7 @@ define("EMAIL_PASSWORDRESET_CONTENT", "Please click on this link to reset your p
  * Configuration for: verification email data
  * Set the absolute URL to register.php, necessary for email verification links
  */
-define("EMAIL_VERIFICATION_URL", "http://127.0.0.1/00MALITH/signupCustomer.php");
+define("EMAIL_VERIFICATION_URL", "http://127.0.0.1/00MALITH/signupSP.php");
 define("EMAIL_VERIFICATION_FROM", "baaslkinfo@gmail.com");
 define("EMAIL_VERIFICATION_FROM_NAME", "baas.lk");
 define("EMAIL_VERIFICATION_SUBJECT", "Account activation for baas.lk");

@@ -135,8 +135,22 @@ class Registration
                 // generate random hash for email verification (40 char string)
                 $user_activation_hash = sha1(uniqid(mt_rand(), true));
 
-				$customer="customer";
-				$user_avatar="default.jpg";
+                //header('Location: selectUser.php');
+
+                $customer="sp";
+
+                /*
+                if(isset($_POST['generalUser']))
+                {
+                    $customer="customer";
+                }
+				
+                if(isset($_POST['spUser']))
+                {
+                    $customer="sp";
+                }  */
+                
+				$user_avatar="avatar/default.png";
 				
                 // write new users data into database
                 $query_new_user_insert = $this->db_connection->prepare('INSERT INTO users (user_name, user_password_hash, user_email, user_activation_hash, user_registration_ip, user_registration_datetime,user_catagory,user_avatar) VALUES(:user_name, :user_password_hash, :user_email, :user_activation_hash, :user_registration_ip, now(),:user_catagory,:user_avatar)');
@@ -151,6 +165,10 @@ class Registration
 
                 // id of new user
                 $user_id = $this->db_connection->lastInsertId();
+
+                $query_new_user_insert = $this->db_connection->prepare('INSERT INTO serviceprovider(user_id) VALUES(:user_id)');
+                $query_new_user_insert->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+                $query_new_user_insert->execute();
 
                 if ($query_new_user_insert) {
                     // send a verification email

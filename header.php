@@ -52,7 +52,7 @@ window.onload = Fun;
 <div id="apDivBaasLk">baas.lk</div>
 
 <div id="joinus">
-<a href="signup.php"><img src="images/joinus.png"></a> 
+<a href="selectUser.php"><img src="images/joinus.png"></a> 
 </div>
 
 <div id="login">

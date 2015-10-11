@@ -26,10 +26,10 @@
 		}
 
 	
-	require_once('config/config.php');	
+	require_once('config/configCustomer.php');	
 	require_once('translations/en.php');
 	require_once('libraries/PHPMailer.php');
-	require_once('classes/Registration.php');
+	require_once('classes/RegistrationCustomer.php');
 
 	// create the registration object
 	$registration = new Registration();
@@ -39,6 +39,8 @@
 
 		<div id="apDivTitle">Create	your baas.lk Account</div>
 
+		<?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
+
 		<div id="apDivFbLogin">
   			<p style="font-size:20px">Fed up with filling forms...???</p>
   			<p style="font-size:20px">Try easy signup solutions..</p>
@@ -46,7 +48,7 @@
    			<p><img src="images/googleSignup.png" width="255" height="54" /></p>
 		</div>
 
-		<?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
+		
 
 		<div id="apDivFormBox"> 
 
@@ -84,13 +86,12 @@
 	if (isset($registration)) {
    		if ($registration->errors) {
         	foreach ($registration->errors as $error) {
-           		echo "<div id=\"apDivMessage\">".$error."</div>";
+           		echo "<div id=\"apDivMessage\" >".$error."</div>";
         		}
     		}
     	if ($registration->messages) {
-        	foreach ($registration->messages as $message) {
-        		header('Location: selectUser.php');
-           		echo "<div id=\"apDivMessage\">".$message."</div>";
+        	foreach ($registration->messages as $message) {        		
+           		echo "<div id=\"apDivMessage\" style=\"left :10%\">".$message."</div>";
         		}
     	}
 	}
