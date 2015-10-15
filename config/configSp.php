@@ -33,7 +33,7 @@ define("DB_PASS", "");
  * COOKIE_DOMAIN: The domain where the cookie is valid for, like '.mydomain.com'
  * COOKIE_SECRET_KEY: Put a random value here to make your app more secure. When changed, all cookies are reset.
  */
-define("COOKIE_RUNTIME", 10);
+define("COOKIE_RUNTIME", 10000);
 define("COOKIE_DOMAIN", ".127.0.0.1");
 define("COOKIE_SECRET_KEY", "1gp@TMPS{+$78sfpMJFe-92s");
 
