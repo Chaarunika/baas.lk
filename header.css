@@ -1,3 +1,4 @@
+
 .userpicture
 {
 	position:fixed;
@@ -100,6 +101,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', end
 	width: 102px;
 	height: 28px;
 	z-index: 2;
+	
 }
 
 #logout
@@ -122,28 +124,29 @@ z-index: 5;
 	width: 102px;
 	height: 28px;
 	z-index: 2;
+	
 }
 
 #sinhala
 {
 	position: absolute;
-	left: auto;
+	left: 900px;
 	top: 53px;
 	width: 40px;
 	height: 19px;
 	z-index: 3;
-	right: 10%;
+	
 }
 
 #tamil
 {
 	position: absolute;
-	left: auto;
+	left: 950px;
 	top: 53px;
 	width: 47px;
 	height: 20px;
 	z-index: 1;
-	right: 5%;
+	
 }
 
 
@@ -154,25 +157,24 @@ z-index: 5;
 	width: 512px;
 	height: 41px;
 	position: absolute;
-	left: auto;
+	left: 350px;
 	top: 5px;
 	font-size: 35px;
 	color: #7c7c7c;
-	right: 15%;
+	
 }
 
 
 .menubar
 {
-	position: absolute;
-	left: auto;
+	position: absolute;	
 	top: 53px;
 	width: auto;
 	height: 23px;
 	z-index: 5;
 	font-family: Arial;
 	font-size: 12px;
-	right: 15%;
+	left: 100px;
 }
 
 #menubar{
@@ -263,4 +265,31 @@ z-index: 5;
 	background: -ms-linear-gradient(top,  rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+}
+
+.img-circle {
+	width: 50px;// These are your circle dimensions
+    height: 50px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;// Center image in the circle
+    background-size: cover; // Make sure it covers the circle, as there is no bg repeat; 	
+	border: medium solid rgba(51,51,51,1);
+    }
+#apDivProfPic {
+	position: absolute;
+	left: 1050px;
+	top: 6px;
+	width: 60px;
+	height: 60px;
+	z-index: 1;
+}
+
+#apDivLogout {
+	position: absolute;
+	left: 1130px;
+	top: 15px;
+	width: 111px;
+	height: 36px;
+	z-index: 1;
 }

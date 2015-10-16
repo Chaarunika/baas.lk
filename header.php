@@ -1,3 +1,4 @@
+
 <script>
 
 function Fun() {	
@@ -40,6 +41,46 @@ window.onload = Fun;
 
 <div id="apDivHeaderContainer">
 
+<?php 	
+	//$_SESSION['username'] ="as" ;
+
+	if(isset($_SESSION['username']) )
+	{
+		echo "
+
+		<div id=\"apDivProfPic\">
+		<img class=\"img-circle\" src=\"images/face.jpg\">
+		</div>
+
+		<a href =\"index.php\">
+		<div id=\"apDivLogout\">
+		<img src=\"images/lgout.png\" width=\"100\" height=\"35\" alt=\"logot\" />
+		</div>
+		</a>
+
+
+		";
+
+		
+	}
+
+	else{
+		echo "
+		<div id=\"joinus\">
+		<a href=\"selectUser.php\"><img src=\"images/joinus.png\"></a> 
+		</div>
+
+		<div id=\"login\">
+		<a href=\"login.php\"><img src=\"images/login.png\"></a> 
+		</div>
+
+		";
+
+	}
+
+
+?>
+
 <div id="apDivLogo">
 
 <a href="index.php"><img src="images/logo.png" width="80" height="68" alt="Bass Logo"> </a>
@@ -50,14 +91,6 @@ window.onload = Fun;
 <div id="apDivUBar2"></div>
 
 <div id="apDivBaasLk">baas.lk</div>
-
-<div id="joinus">
-<a href="selectUser.php"><img src="images/joinus.png"></a> 
-</div>
-
-<div id="login">
-<a href="login.php"><img src="images/login.png"></a> 
-</div>
 
 <div id="sinhala">
 		<a href=""><img src="images/sinhala.png"></a> 
@@ -84,6 +117,7 @@ window.onload = Fun;
    <li><a href="../sample02/tok-tok.html">Forum</a></li>
 </ul>
 </div>
+
 
 
 </div>

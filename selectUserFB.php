@@ -61,7 +61,7 @@
 
 if(isset($_POST['generalUser']))
 {
-	$_SESSION['catagory'] = "customer"
+	$_SESSION['userType'] = "customer"
 }
 
 if(isset($_POST['spUser']))
