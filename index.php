@@ -1,3 +1,9 @@
+<?php
+session_start();
+echo print_r($_SESSION) ;
+//session_destroy();
+ ?>
+ 
 <html>
 
 <head>
@@ -34,11 +40,7 @@
 
 <?php include 'searchSP/searchBar.php' ?>
 
-<?php
-session_start();
-echo print_r($_SESSION) ;
-session_destroy();
- ?>
+
 </body>
 
 </html>

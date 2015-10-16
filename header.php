@@ -34,7 +34,7 @@ function Fun() {
 </script>
 
 <script>
-window.onload = Fun;
+//window.onload = Fun;
 </script>
 
 
@@ -52,7 +52,7 @@ window.onload = Fun;
 		<img class=\"img-circle\" src=\"images/face.jpg\">
 		</div>
 
-		<a href =\"index.php\">
+		<a href =\"logout.php\">
 		<div id=\"apDivLogout\">
 		<img src=\"images/lgout.png\" width=\"100\" height=\"35\" alt=\"logot\" />
 		</div>

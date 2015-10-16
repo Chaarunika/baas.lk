@@ -42,7 +42,7 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
     require_once('libraries/password_compatibility_library.php');
 }
 // include the config
-require_once('config/config.php');
+//require_once('config/config.php');
 
 // include the to-be-used language, english by default. feel free to translate your project and include something else
 require_once('translations/en.php');
@@ -98,9 +98,10 @@ if ($login->isUserLoggedIn() == true) {
 	
   </div>
   
-  
+  <a href = "fb/fbSignupStatus.php">
   <div id="facebook"><img src="images/facebook-login.png" alt="" width="150" height="33" /></div>
- 
+  </a>
+
 </div>
 
 </body>
