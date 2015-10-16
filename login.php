@@ -98,7 +98,7 @@ if ($login->isUserLoggedIn() == true) {
 	
   </div>
   
-  <a href = "fb/fbSignupStatus.php">
+  <a href = "fbLogin/fbSignupStatus.php">
   <div id="facebook"><img src="images/facebook-login.png" alt="" width="150" height="33" /></div>
   </a>
 

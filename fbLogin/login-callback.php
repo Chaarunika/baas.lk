@@ -50,7 +50,7 @@ if (isset($accessToken)) {
 	$picture=$user->getProperty('picture' );
 	$url= $picture->getProperty('url');
 	
-	$_SESSION['username']=$id;
+	$_SESSION['username']= $id;
 	$_SESSION['email']=$email;
 	$_SESSION['firstname']=$firstname;
 	$_SESSION['lastname']=$lastname;
@@ -61,6 +61,8 @@ if (isset($accessToken)) {
 	$userCatagory= $_SESSION['Catagory'] ;
 	$loginType="fb";	
 	$userActive=1;
+
+	$_SESSION['loginType'] = $loginType ;
 
 	$sql = "SELECT * FROM users where user_name=$id";
     $result = mysqli_query($database,$sql) or die(mysqli_error($database)); 
@@ -107,6 +109,17 @@ if (isset($accessToken)) {
 		$query_new_user_insert->execute();
 
 		}
+
+		$sql = "SELECT * FROM users where user_name=$id";
+	    $result = mysqli_query($database,$sql) or die(mysqli_error($database)); 
+	    $rws = mysqli_fetch_array($result);
+
+	    $count = 0;  // variable to chech wther user already exists
+		if($id==$rws['user_name'])
+		{
+		//user catagory for session for previously signed fb users$_SESSION['catagory']	= $rws['user_catagory'] ;
+		$_SESSION['userID']	= $rws['user_id'] ;
+	    }
 
 	}
 

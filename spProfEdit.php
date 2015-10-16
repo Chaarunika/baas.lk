@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
@@ -191,6 +191,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+
+ // include ('_database/database.php');
+
+
+  $userID = $_SESSION['userID']; 
+  
 ?>
 
 
@@ -308,6 +314,7 @@ if (!$conn) {
 
   if(isset($_POST["firstName"]) )
   {
+
   $firstName = $_POST["firstName"];
   $lastName = $_POST["lastName"];
   $year = $_POST["year"];
@@ -322,8 +329,8 @@ if (!$conn) {
   $address = $firstLine.",".$secondLine.",".$area ; 
   echo $firstName;
  
-  $sql = "UPDATE users SET user_firstName = '$firstName' , user_lastname = '$lastName' WHERE user_id = 2 ";
-  $sql2 = "UPDATE serviceprovider SET area= '$area' , dob = '$dob' , gender = '$gender' ,address = '$address' WHERE user_id = 2 ";
+  $sql = "UPDATE users SET user_firstName = '$firstName' , user_lastname = '$lastName' WHERE user_id = $userID";
+  $sql2 = "UPDATE serviceprovider SET area= '$area' , dob = '$dob' , gender = '$gender' ,address = '$address' WHERE user_id = $userID";
 
   if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) ) {
     echo "New record created successfully";
@@ -367,7 +374,7 @@ if (!$conn) {
   $primaryMobile = $_POST["primaryMobile"];
   $optionalMobile = $_POST["optionalMobile"];
 
-  $sql = "UPDATE serviceprovider SET opEmail = '$optionalEmail' , contactNo = ' $primaryMobile' , opContactNo='$optionalMobile' WHERE user_id = 2 ";
+  $sql = "UPDATE serviceprovider SET opEmail = '$optionalEmail' , contactNo = '$primaryMobile' , opContactNo='$optionalMobile' WHERE user_id = $userID ";
   
 
   if (mysqli_query($conn, $sql)  ) {
@@ -438,7 +445,7 @@ if (!$conn) {
   //$attachment2 = $_POST["attachment2"];
   //$attachment3 = $_POST["attachment3"];
 
-  $sql = "UPDATE serviceprovider SET workInfo = '$workHistory' , category = '$spCategory' , descr ='$shortDescription' WHERE user_id = 2 ";
+  $sql = "UPDATE serviceprovider SET workInfo = '$workHistory' , category = '$spCategory' , descr ='$shortDescription' WHERE user_id = $userID ";
   
 
   if (mysqli_query($conn, $sql)  ) {

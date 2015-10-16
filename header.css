@@ -85,7 +85,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', end
 	position: absolute;
 	box-sizing: border-box;
 	left: 90px;
-	top: 0px;
+	top: -10px;
 	font-family: "Bauhaus93";
 	font-size: 45px;
 	color: #5c5c5c;

@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <script>
 
 function Fun() {	
@@ -49,7 +49,7 @@ function Fun() {
 		echo "
 
 		<div id=\"apDivProfPic\">
-		<img class=\"img-circle\" src=\"images/face.jpg\">
+		<img class=\"img-circle\"  src= '".$_SESSION['url']."'  >
 		</div>
 
 		<a href =\"logout.php\">

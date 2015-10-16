@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
 
@@ -13,7 +12,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // optional
-$loginUrl = $helper->getLoginUrl('http://localhost/fb/fbSignupStatusRedirect.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://localhost/00MALITH/fbLogin/login-callback.php', $permissions);
 
 //echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 

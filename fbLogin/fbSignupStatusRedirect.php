@@ -61,6 +61,8 @@ if (isset($accessToken)) {
 	$loginType="fb";	
 	$userActive=1;
 
+	$_SESSION['loginType'] = $loginType ;
+
 	$sql = "SELECT * FROM users where user_name=$id";
     $result = mysqli_query($database,$sql) or die(mysqli_error($database)); 
     $rws = mysqli_fetch_array($result);
@@ -68,7 +70,8 @@ if (isset($accessToken)) {
     $count = 0;  // variable to chech wther user already exists
 	if($id==$rws['user_name'])
 	{
-	$_SESSION['catagory']	= $rws['user_catagory'] ;  //user catagory for session for previously signed fb users
+	$_SESSION['catagory']	= $rws['user_catagory'] ;  //user catagory for session for previously signed fb users$_SESSION['catagory']	= $rws['user_catagory'] ;
+	$_SESSION['userID']	= $rws['user_id'] ;
     $count++ ; 
     header('location: ../index.php');
 

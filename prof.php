@@ -1,51 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<?php 
-	// Create Database Connection
-	
-	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "";
-	$dbname = "baaslk";
-	$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-	
-	if(mysqli_connect_errno()){
-		die("Database connection failed: ".
-			mysqli_connect_error().
-			"(".mysqli_connect_errno().")"
-			);
-			}
-?>
-
-
-<?php
-	
-	$query = "SELECT * FROM serviceprovider WHERE user_id =2" ;
-
-	$result = mysqli_query($connection,$query);
-	if(!$result){
-		die("Database query failed.");
-	}
-
-	$query2 = "SELECT * FROM users WHERE user_id =2" ;
-
-	$result2 = mysqli_query($connection,$query2);
-	if(!$result2){
-		die("Database query failed.");
-	}
-	
-	$k=0;
-
-while($row1 = mysqli_fetch_assoc($result))
-{
-$k++;
-}
-
-	
-$result = mysqli_query($connection,$query);
-
-?>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -75,6 +30,57 @@ $result = mysqli_query($connection,$query);
 <body>
 
 <?php include("header.php") ?>
+
+
+<?php 
+	// Create Database Connection
+	
+	$dbhost = "localhost";
+	$dbuser = "root";
+	$dbpass = "";
+	$dbname = "baaslk";
+	$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+	
+	if(mysqli_connect_errno()){
+		die("Database connection failed: ".
+			mysqli_connect_error().
+			"(".mysqli_connect_errno().")"
+			);
+			}
+?>
+
+
+<?php
+
+	//session_start();
+	$userID = $_SESSION['userID']; 
+	
+	$query = "SELECT * FROM serviceprovider WHERE user_id =$userID " ;
+
+	$result = mysqli_query($connection,$query);
+	if(!$result){
+		die("Database query failed.");
+	}
+
+	$query2 = "SELECT * FROM users WHERE user_id =$userID " ;
+
+	$result2 = mysqli_query($connection,$query2);
+	if(!$result2){
+		die("Database query failed.");
+	}
+	
+	$k=0;
+
+while($row1 = mysqli_fetch_assoc($result))
+{
+$k++;
+}
+
+	
+$result = mysqli_query($connection,$query);
+
+?>
+
 
 <div id="apDivInfoBox">
 <div id="apDiv1">

@@ -1,9 +1,4 @@
-<?php
-session_start();
-echo print_r($_SESSION) ;
-//session_destroy();
- ?>
- 
+
 <html>
 
 <head>

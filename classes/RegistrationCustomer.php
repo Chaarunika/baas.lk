@@ -36,7 +36,7 @@ class Registration
      */
     public function __construct()
     {
-        session_start();
+        /////session_start();
 
         // if we have such a POST request, call the registerNewUser() method
         if (isset($_POST["register"])) {
