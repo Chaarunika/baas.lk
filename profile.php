@@ -174,7 +174,7 @@ while($row=mysqli_fetch_assoc($result2) )
 
 }
 
-$fullName = $firstName.$lastName ; 
+$fullName = $firstName." ".$lastName ; 
 while($row=mysqli_fetch_assoc($result) )
 {
 	$catagory = $row["category"] ;
@@ -211,10 +211,17 @@ else
 
     <div id="apDivMainInfo">
     	<div id="apDivTitle">
-        <p style="font-size:30px"><?php echo $fullName ?></p>    
-        <p>member since : <?php echo $regDate ?></p>    
-        <p>Catagory : <?php echo $catagory ?></p>
-        <p>Area : <?php echo $area ?></p>  
+
+        <p style="font-size:30px"> 
+        	<?php if(isset($fullName)) 
+        	{ 
+        		echo $fullName ;
+        	} ?> 
+        </p>    
+
+        <p>member since : <?php if(isset($regDate)) { echo $regDate ;} ?></p>    
+        <p>Catagory : <?php if(isset($catagory)) { echo $catagory ;} ?></p>
+        <p>Area : <?php if(isset($area)) { echo $area ;} ?></p>  
         </div>
       
       <div id="apDivProfPic2"><img class="img-circle2"  src= " <?php echo $_SESSION['url'] ?> "  > </div>  
@@ -223,11 +230,11 @@ else
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
         <p style="font-size:20px">Contact Details</p>    
-        <p>Contact No : <?php echo $contactNo ?></p>    
-        <p>Email : <?php echo $email ?></p>
-        <p>Address : <?php echo $address ?></p>  
-        <p>Optional Contact No : <?php echo $opContactNo ?></p>    
-        <p>Optional Email : <?php echo $opEmail ?></p>       
+        <p>Contact No : <?php if(isset($contactNo)) { echo $contactNo;} ?></p>    
+        <p>Email : <?php if(isset($email)) {  echo $email;} ?></p>
+        <p>Address : <?php if(isset($address)) { echo $address;} ?></p>  
+        <p>Optional Contact No : <?php if(isset($opContactNo)) { echo $opContactNo;} ?></p>    
+        <p>Optional Email : <?php if(isset($opEmail)) {  echo $opEmail;} ?></p>       
         </div>      
       
     </div>
@@ -235,11 +242,11 @@ else
     
     <div id="apDivShortDesc"> 
     <p style="font-size:20px">About Us</p>  
-    <p style="line-height: 130%;"><?php echo $descr ?></div>
+    <p style="line-height: 130%;"><?php if(isset($descr)) { echo $descr; }?></div>
     
     <div id="apDivWorkHistory"> 
     <p style="font-size:20px">Work History</p>  
-    <p style="line-height: 130%;"> <?php echo $workInfo ?></div>
+    <p style="line-height: 130%;"> <?php if(isset($workInfo)) { echo $workInfo;} ?></div>
     
 
 		<div id="galleryBox">
