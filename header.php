@@ -112,7 +112,7 @@ function Fun() {
   <li><a href="../baass/index.php">Home</a></li>
   <li><a href="../baas.lk/index.html">Search</a></li>
   <li><a href="../00MALITH/spProfEdit.php">Profile Edit</a></li>
-  <li><a href="../00MALITH/prof.php">Profile</a></li>
+  <li><a href="../00MALITH/profile.php">Profile</a></li>
   <li><a href="../sample02/wiki.html">Wiki</a></li>
    <li><a href="../sample02/tok-tok.html">Forum</a></li>
 </ul>
