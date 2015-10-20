@@ -113,6 +113,7 @@ function Fun() {
   <li><a href="../00MALITH/index.php">Search</a></li>
   <li><a href="../00MALITH/index.php">Wiki</a></li>
   <li><a href="../00MALITH/faq.php">FAQ</a></li>
+  <li><a href="../00MALITH/index.php">Messages</a></li>
 
   <?php 	
 	if(isset($_SESSION['username']) )
