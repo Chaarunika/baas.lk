@@ -72,9 +72,8 @@
   $secondLine = $_POST["secondLine"];
   $area = $_POST["district"];
 
-  $dob = $year."/".$month."/".$date;
-  $address = $firstLine.",".$secondLine.",".$area ; 
-  echo $firstName;
+ 
+  $address = $firstLine.",".$secondLine.",".$area ;   
  
   $sql = "UPDATE users SET user_firstName = '$firstName' , user_lastname = '$lastName' WHERE user_id = $userID";
   $sql2 = "UPDATE serviceprovider SET area= '$area' , dob = '$dob' , gender = '$gender' ,address = '$address' WHERE user_id = $userID";

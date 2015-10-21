@@ -4,7 +4,7 @@
 	$dbhost = "localhost";
 	$dbuser = "root";
 	$dbpass = "";
-	$dbname = "baas";
+	$dbname = "baaslk";
 	$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	
 	if(mysqli_connect_errno()){
@@ -25,19 +25,19 @@
 <?php
 	if($area == "ANY AREA" && $cat == "ALL")
 	{
-		$query = "SELECT * FROM sp";
+		$query = "SELECT * FROM serviceprovider";
 	}
 	else if($area == "ANY AREA")
 	{
-		$query = "SELECT * FROM sp WHERE (category = '$cat' ) ";
+		$query = "SELECT * FROM serviceprovider WHERE (category = '$cat' ) ";
 	}
 	else if($cat == "ALL")
 	{
-		$query = "SELECT * FROM sp WHERE (location = '$area' ) ";
+		$query = "SELECT * FROM serviceprovider WHERE (area = '$area' ) ";
 	}
 	else
 	{
-		$query = "SELECT * FROM sp WHERE (location = '$area' && category = '$cat' ) ";
+		$query = "SELECT * FROM serviceprovider WHERE (area = '$area' && category = '$cat' ) ";
 	}
 	
 	$result = mysqli_query($connection,$query);
@@ -65,8 +65,8 @@ $result = mysqli_query($connection,$query);
 <meta charset="utf-8">
 <title>Hello World</title>
 
-<link href="header.css" rel="stylesheet">
-<link href="searchSP/searchBar.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/searchBar.css" rel="stylesheet">
 
 
 <style type="text/css">
@@ -180,7 +180,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 <body>
 
 <?php include ("header.php")  ?>
-<?php include ("searchSP/searchBar.php")  ?>
+<?php include ("includes/searchBar.php")  ?>
 
 
 <?php 
@@ -192,8 +192,8 @@ while($row=mysqli_fetch_assoc($result) )
 
 echo "<div id=\"apDivResultBox{$i}\">";
 echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
-echo "<div id=\"apDivResultName{$i}\">".$row["name"]." || ".$row["location"] . " || ". $row["category"] . "</div>";
-echo "<div id=\"apDivResultDesc{$i}\">".$row["description"]. "</div>"."</div>";
+echo "<div id=\"apDivResultName{$i}\">".$row["sp_id"]." || ".$row["area"] . " || ". $row["category"] . "</div>";
+echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "</div>"."</div>";
 
 $i++;
 }

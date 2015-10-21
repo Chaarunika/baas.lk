@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
+	<title>baas.lk</title>
 
-<title> Frequently Asked Questions</title>
-
-<link href="header.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
 
 <style>
 

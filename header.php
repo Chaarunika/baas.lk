@@ -62,7 +62,7 @@ function Fun() {
 	<div id ="menu" class="menubar">
 		<ul>
 	  		<li><a href="../00MALITH/index.php">Home</a></li>
-	  		<li><a href="../00MALITH/index.php">Search</a></li>
+	  		<li><a href="../00MALITH/menu.php">Bidd</a></li>
 	  		<li><a href="../00MALITH/index.php">Wiki</a></li>
 	  		<li><a href="../00MALITH/faq.php">FAQ</a></li>
 	  		<li><a href="../00MALITH/index.php">Messages</a></li>

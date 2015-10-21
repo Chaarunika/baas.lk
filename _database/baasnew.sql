@@ -86,5 +86,54 @@ CREATE TABLE IF NOT EXISTS `baaslk`.`customer` (
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
 
 
+CREATE TABLE IF NOT EXISTS `baaslk`.`tblbidhistory` (
+  `bidhistoryid` int(11) NOT NULL AUTO_INCREMENT,
+  `accountid` int(11) NOT NULL,
+  `biditemid` int(11) NOT NULL,
+  `bidprice` bigint(20) NOT NULL,
+  `dtesubmitted` datetime NOT NULL,
+  PRIMARY KEY (`bidhistoryid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+
+INSERT INTO `tblbidhistory` (`bidhistoryid`, `accountid`, `biditemid`, `bidprice`, `dtesubmitted`) VALUES
+(21, 8, 73, 175000, '2015-10-18 06:17:19'),
+(22, 8, 74, 80000, '2015-10-18 06:17:42'),
+(23, 8, 76, 74000, '2015-10-18 06:17:55'),
+(24, 8, 76, 83000, '2015-10-18 06:18:10'),
+(25, 9, 73, 99000, '2015-10-18 07:23:02'),
+(26, 9, 82, 57944, '2015-10-18 07:23:18'),
+(27, 9, 77, 5892200, '2015-10-18 07:23:42'),
+(28, 3, 73, 45, '2015-10-21 18:15:55');
+
+CREATE TABLE IF NOT EXISTS `baaslk`.`tblbiditems` (
+  `biditemid` int(11) NOT NULL AUTO_INCREMENT,
+  `accountid` varchar(50) NOT NULL,
+  `biditem` varchar(50) NOT NULL,
+  `biddesc` varchar(500) NOT NULL,
+  `town` varchar(100) NOT NULL,
+  `image_path` varchar(200) NOT NULL,
+  `closingtime` text NOT NULL,
+  PRIMARY KEY (`biditemid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=99 ;
+
+INSERT INTO `tblbiditems` (`biditemid`, `accountid`, `biditem`, `biddesc`, `town`, `image_path`, `closingtime`) VALUES
+(73, '8', '  Prime Property At Piachaud Gardens', '58.8125 Perch Prime Land In Piachaud Gardens The Most Prestigious Area In Kandy (in Front Of Light House Church) For Sale. Suitable For Educational Institute, Mansion, Apartment Project Or Tourism Project', '', '', 'Oct-31-2015 04:29:04 AM'),
+(76, '8', 'Land in Haragama, Kandy', '*10km to Kandy town.\r\n*50m to Kandy-Badulla Rd.\r\n*Excellent neighbourhood.\r\n*Clear deed.\r\n*Close to the Royal park land sale.\r\n*Untroubled place to liv', 'Kandy', '', 'Oct-28-2015 05:58:56 AM'),
+(77, '8', ' Kandy - Kengalla Residential Land For Sale', 'Extent : 12.674 Perches\r\nLocated on Kengalla - Malpana Road\r\n01 Km to Kandy - Digana Main Road\r\nResidential Location\r\n\r\n', 'Kandy', '', 'Oct-23-2015 07:10:07 AM'),
+(82, '9', 'Brighter Park', 'Facilities_\r\n- Water -\r\n- Electricity -\r\n- 20 feet wide access roads - Bank loan facilities\r\n- Better quiet residential environment - \r\n- Clear deed -\r\n\r\nPrice can be negotiated.', 'Homagama', '', 'Oct-22-2015 07:21:12 AM'),
+(83, '9', 'Land in Punchiborella for Sale', '\r\nNo. 888 Maradana Road, Colombo 10., Colombo 10 (Maradana, Panchikawatta), Colombo, Colombo\r\nLKR 6,000,000', 'Borella', '', 'Oct-28-2015 07:28:41 AM'),
+(85, '3', 'Malith', 'sdf', 'asdffdsa', '', 'Oct-21-2015 06:42:02 AM'),
+(88, '', 'sadf', 'sdfsd', 'sdfsdf', '', 'Oct-14-2015 03:52:58 PM'),
+(89, '', 'fdg', 'dfg', 'dfg', '', 'Oct-21-2015 05:45:09 PM'),
+(90, '', 'sdf', 'df', 'dfs', '', 'Oct-21-2015 05:46:18 PM'),
+(91, '', 'sdf', 'sdf', 'sdf', '', 'Oct-21-2015 05:46:50 PM'),
+(92, '8', '', '', '', '', ''),
+(93, '8', 'sdf', 'sdf', 'sdf', '', 'Oct-21-2015 05:49:27 PM'),
+(94, '8', '', '', '', '', ''),
+(95, '8', 'dfg', 'dfg', 'dfg', '', 'Oct-21-2015 05:50:23 PM'),
+(97, '8', 'sfdsf', 'sdf', 'sdf', '', 'Oct-21-2015 06:17:15 PM'),
+(98, '8', 'gkg', 'ghjj', 'ghj', '', 'Oct-21-2015 06:18:12 PM');
+
+
 
 

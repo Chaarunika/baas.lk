@@ -35,7 +35,7 @@
 
 <?php include 'includes/searchBar.php' ?>
 
-
+<?php print_r($_SESSION) ;?>
 </body>
 
 </html>
