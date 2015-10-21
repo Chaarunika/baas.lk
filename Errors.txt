@@ -1,1 +1,3 @@
+
 when user login using fb for a sign up created for same mail. same email with two login types
+Sign up error :smtp Connect

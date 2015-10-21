@@ -1,0 +1,103 @@
+#apDivContainer{
+	position: absolute;
+	left: 50px;
+	top: 100px;
+	width: 1041px;
+	height: 2322px;
+	z-index: 1;
+	background-color: #f0f0f0;		
+}
+
+#apDivMainInfo{
+	position: absolute;
+	left: 30px;
+	top: 20px;
+	width: 501px;
+	height: 173px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+#apDivShortDesc{
+	position: absolute;
+	left: 31px;
+	top: 215px;
+	width: 501px;
+	height: 173px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+#apDivWorkHistory{
+	position: absolute;
+	left: 31px;
+	top: 411px;
+	width: 501px;
+	height: 173px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;	
+}
+
+#apDivContactBox{
+	position: absolute;
+	left: 585px;
+	top: 16px;
+	width: 330px;
+	height: 247px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+.img-circle2 {
+	width: 100px;// These are your circle dimensions
+    height: 100px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;// Center image in the circle
+    background-size: cover; // Make sure it covers the circle, as there is no bg repeat; 	
+	border: medium solid rgba(51,51,51,1);
+}
+
+#apDivProfPic2 {
+	position: absolute;
+	left: 18px;
+	top: 29px;
+	width: 110px;
+	height: 110px;
+	z-index: 1;
+}
+
+p{
+	line-height: 50%;
+}
+
+#apDivTitle {
+	position: absolute;
+	left: 142px;
+	top: 8px;
+	width: 323px;
+	height: 149px;
+	z-index: 2;
+}
+
+#apDivContactInfo {
+	position: absolute;
+	left: 29px;
+	top: 14px;
+	width: 275px;
+	height: 209px;
+	z-index: 2;
+}
+
+#galleryBox{
+	position: absolute;
+	left: 639px;
+	top: 334px;
+	width: 340px;
+	height: 343px;
+	z-index: 2;
+}

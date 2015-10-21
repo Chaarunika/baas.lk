@@ -5,8 +5,8 @@
 	<title>Untitled Document</title>
 
 	<style></style>
-	<link href="header.css" rel="stylesheet" />
-	<link href="signup.css" rel="stylesheet" />
+	<link href="css/header.css" rel="stylesheet" />
+	<link href="css/signup.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -46,8 +46,8 @@
   			<p style="font-size:20px">Try easy signup solutions..</p>
 
   			<a href = "fbLogin/fbSignupStatus.php">
-  			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p> </a>
-
+  			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
+  			</a>
   			
    			<p><img src="images/googleSignup.png" width="255" height="54" /></p>
 		</div>

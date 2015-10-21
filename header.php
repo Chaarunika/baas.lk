@@ -1,16 +1,15 @@
 <?php session_start(); ?>
+
 <script>
 
 function Fun() {	
-	
-	setInterval(function(){	
-	var widthVal = window.innerWidth;	
-	console.log(widthVal);
-		if (widthVal >1100)
-			{
+
+	setInterval( function(){		
+		var widthVal = window.innerWidth;	
+		console.log(widthVal);
+		if (widthVal >1100){		{
 			document.getElementById("main-header").style.right ="30%";
-			}
-			
+			}		
 		else if(widthVal >1024){
 			document.getElementById("main-header").style.right ="15%";
 			}
@@ -23,115 +22,60 @@ function Fun() {
 			document.getElementById("apDivBaasLk").style.top = "30px" ;
 			document.getElementById("tamil").style.right = "0px" ;
 			document.getElementById("sinhala").style.right = "45px" ;
-			}
-			
-			
-		
-			},500);
-		
-
+			}			
+	},500 );
 }
 </script>
 
-<script>
-//window.onload = Fun;
-</script>
-
-
+<script>//window.onload = Fun;</script>
 
 <div id="apDivHeaderContainer">
 
-<?php 	
-	//$_SESSION['username'] ="as" ;
-
-	if(isset($_SESSION['username']) )
-	{
+	<?php 		
+	if(isset($_SESSION['username']) ) { //Checking whether a user has logged in
 		echo "
+			<div id=\"apDivProfPic\">
+			<img class=\"img-circle\"  src= '".$_SESSION['url']."' ></div>
 
-		<div id=\"apDivProfPic\">
-		<img class=\"img-circle\"  src= '".$_SESSION['url']."'  >
-		</div>
-
-		<a href =\"logout.php\">
-		<div id=\"apDivLogout\">
-		<img src=\"images/lgout.png\" width=\"100\" height=\"35\" alt=\"logot\" />
-		</div>
-		</a>
-
-
-		";
-
-		
+			<a href =\"logout.php\"><div id=\"apDivLogout\">
+			<img src=\"images/lgout.png\" width=\"100\" height=\"35\" alt=\"logot\" /></div></a>";
 	}
 
 	else{
 		echo "
-		<div id=\"joinus\">
-		<a href=\"selectUser.php\"><img src=\"images/joinus.png\"></a> 
-		</div>
+			<div id=\"joinus\">
+			<a href=\"selectUser.php\"><img src=\"images/joinus.png\"></a></div>
 
-		<div id=\"login\">
-		<a href=\"login.php\"><img src=\"images/login.png\"></a> 
-		</div>
-
-		";
-
-	}
-
-
-?>
-
-<div id="apDivLogo">
-
-<a href="index.php"><img src="images/logo.png" width="80" height="68" alt="Bass Logo"> </a>
-
-</div>
-
-<div id="apDivUBar1"></div>
-<div id="apDivUBar2"></div>
-
-<div id="apDivBaasLk">baas.lk</div>
-
-<div id="sinhala">
-		<a href=""><img src="images/sinhala.png"></a> 
-</div>
-
-
-<div id="tamil">	
-		<img src="images/tamil.png">
-</div>
-
-	
-<div id="main-header">	
-"The best way to find a builder"	
-</div>
-
-
-<div id ="menu" class="menubar">
-<ul>
-  <li><a href="../00MALITH/index.php">Home</a></li>
-  <li><a href="../00MALITH/index.php">Search</a></li>
-  <li><a href="../00MALITH/index.php">Wiki</a></li>
-  <li><a href="../00MALITH/faq.php">FAQ</a></li>
-  <li><a href="../00MALITH/index.php">Messages</a></li>
-
-  <?php 	
-	if(isset($_SESSION['username']) )
-	{
-		echo"
-		<li><a href=\"../00MALITH/spProfEdit.php\">Profile Edit</a></li>
-   		<li><a href=\"../00MALITH/profile.php\">Profile</a></li>
-
-		";
-
+			<div id=\"login\">
+			<a href=\"login.php\"><img src=\"images/login.png\"></a></div>";
 	}
 	?>
-  
-</ul>
-</div>
 
+	<div id="apDivLogo"><a href="index.php"><img src="images/logo.png" width="80" height="68" alt="Bass Logo"> </a></div>
+	<div id="apDivUBar1"></div>
+	<div id="apDivUBar2"></div>
+	<div id="apDivBaasLk">baas.lk</div>
+	<div id="sinhala"><a href=""><img src="images/sinhala.png"></a></div>
+	<div id="tamil"><img src="images/tamil.png"></div>
+	<div id="main-header">"The best way to find a builder"</div>
 
+	<div id ="menu" class="menubar">
+		<ul>
+	  		<li><a href="../00MALITH/index.php">Home</a></li>
+	  		<li><a href="../00MALITH/index.php">Search</a></li>
+	  		<li><a href="../00MALITH/index.php">Wiki</a></li>
+	  		<li><a href="../00MALITH/faq.php">FAQ</a></li>
+	  		<li><a href="../00MALITH/index.php">Messages</a></li>
 
+	  		<?php
+		  		if(isset($_SESSION['username']) ){
+					echo"
+						<li><a href=\"../00MALITH/spProfEdit.php\">Profile Edit</a></li>
+			   			<li><a href=\"../00MALITH/profile.php\">Profile</a></li>";
+				}
+			?>  
+		</ul>
+	</div>
 </div>
 
 

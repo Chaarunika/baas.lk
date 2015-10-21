@@ -8,13 +8,20 @@
 
     //$conn=mysqli_connect($hostname,$user,$password,$database);
 
-    define("DB_HOST", "localhost");
-	define("DB_NAME", "baaslk");
-	define("DB_USER", "root");
-	define("DB_PASS", "");
-
-
+    
     if (!$database) {
     die("Connection failed: " . mysqli_connect_error());
+    }
+
+
+    define("DB_HOST", "localhost");
+    define("DB_NAME", "baaslk");
+    define("DB_USER", "root");
+    define("DB_PASS", "");
+
+    $dbConnection=mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+
+    if (!$dbConnection){
+        die("Database Connection failed : " . mysqli_connect_error());
     }
 ?>

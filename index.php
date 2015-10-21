@@ -24,8 +24,8 @@
 <meta name="theme-color" content="#ffffff"><link href="navbar/navigation.css" rel="stylesheet">
 
 
-<link href="header.css" rel="stylesheet">
-<link href="searchSP/searchBar.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/searchBar.css" rel="stylesheet">
 
 </head>
 
@@ -33,7 +33,7 @@
 
 <?php include 'header.php' ?>
 
-<?php include 'searchSP/searchBar.php' ?>
+<?php include 'includes/searchBar.php' ?>
 
 
 </body>

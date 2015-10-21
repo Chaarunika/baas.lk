@@ -1,62 +1,23 @@
 <!DOCTYPE html >
+<html>
 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-
-<link href ="header.css" rel = "stylesheet" >
-<style type="text/css">
-
-.spUser {
-	background-image: url(images/spUser.JPG);
-	position: absolute;
-	width: 536px;
-	height: 424px;
-	left: 650px;
-	top: 120px;
-}
-
-.spUser:hover {
-	background-image: url(images/spUser2.JPG);
-	cursor: pointer;
-    cursor: hand;
-}
-	
-
-.generalUser {
-	background-image: url(images/generalUser.JPG);
-	position: absolute;
-	left: 100px;
-	top: 120px;
-	width: 536px;
-	height: 425px;
-}
-
-.generalUser:hover{
-	
-	background-image: url(images/generalUser2.JPG);
-	cursor: pointer;
-    cursor: hand;
-	
-}
-
-</style>
+<head>	
+	<title>baas.lk</title>
+	<link href ="css/header.css" rel = "stylesheet" >
+	<link href ="css/selectUser.css" rel = "stylesheet" >	
 </head>
 
 
 <body>
-
 	<?php include("header.php") ?>
 
+	<form id="form1" name="form1" method="post" action="signupCustomer.php"> 
+  		<input name="generalUser" type="submit" class="generalUser" id="generalUser" value="" /> 
+	</form>
 
-<form id="form1" name="form1" method="post" action="signupCustomer.php"> 
-  <input name="generalUser" type="submit" class="generalUser" id="generalUser" value="" /> 
-</form>
-
-
-<form id="form1" name="form1" method="post" action="signupSP.php">  
-  <input name="spUser" type="submit" class="spUser" id="spUser" value="" /> 
-</form>
-
+	<form id="form1" name="form1" method="post" action="signupSP.php">  
+  		<input name="spUser" type="submit" class="spUser" id="spUser" value="" /> 
+	</form>
 </body>
+
 </html>
