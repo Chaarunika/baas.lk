@@ -37,7 +37,7 @@ function Fun() {
 			<div id=\"apDivProfPic\">
 			<img class=\"img-circle\"  src= '".$_SESSION['url']."' ></div>
 
-			<a href =\"logout.php\"><div id=\"apDivLogout\">
+			<a href =\"includes/logout.php\"><div id=\"apDivLogout\">
 			<img src=\"images/lgout.png\" width=\"100\" height=\"35\" alt=\"logot\" /></div></a>";
 	}
 
