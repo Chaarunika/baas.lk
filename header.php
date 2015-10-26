@@ -61,17 +61,17 @@ function Fun() {
 
 	<div id ="menu" class="menubar">
 		<ul>
-	  		<li><a href="../00MALITH/index.php">Home</a></li>
-	  		<li><a href="../00MALITH/menu.php">Bidd</a></li>
-	  		<li><a href="../00MALITH/index.php">Wiki</a></li>
-	  		<li><a href="../00MALITH/faq.php">FAQ</a></li>
-	  		<li><a href="../00MALITH/index.php">Messages</a></li>
+	  		<li><a href="../BAAS_LK/index.php">Home</a></li>
+	  		<li><a href="../BAAS_LK/menu.php">Bidd</a></li>
+	  		<li><a href="../BAAS_LK/index.php">Wiki</a></li>
+	  		<li><a href="../BAAS_LK/faq.php">FAQ</a></li>
+	  		<li><a href="../BAAS_LK/index.php">Messages</a></li>
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
 					echo"
-						<li><a href=\"../00MALITH/spProfEdit.php\">Profile Edit</a></li>
-			   			<li><a href=\"../00MALITH/profile.php\">Profile</a></li>";
+						<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>
+			   			<li><a href=\"../BAAS_LK/profile.php\">Profile</a></li>";
 				}
 			?>  
 		</ul>

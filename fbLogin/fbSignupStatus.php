@@ -13,7 +13,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // optional
-$loginUrl = $helper->getLoginUrl('http://localhost/00MALITH/fbLogin/fbSignupStatusRedirect.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://localhost/BAAS_LK/fbLogin/fbSignupStatusRedirect.php', $permissions);
 
 //echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 
