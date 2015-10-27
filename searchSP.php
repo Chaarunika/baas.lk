@@ -185,7 +185,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly
 		{ 
 			header("location:../BAAS_LK/index.php");
-		}   *
+		}   
 ?>
 
 <?php 

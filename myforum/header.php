@@ -1,10 +1,4 @@
-
-<html>
-
-<head>
-
-<title>baas.lk</title>
-
+<head><title>baas.lk</title>
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
@@ -21,45 +15,4 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff"><link href="navbar/navigation.css" rel="stylesheet">
-
-
-<link href="css/header.css" rel="stylesheet">
-<link href="css/searchBar.css" rel="stylesheet">
-
-<style type="text/css">
-
-#coverPics{
-	width: 100%
-	top:0px;
-	background-image: url('images/cover.jpg');
-	height: 100%
-
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<?php include 'header.php' ?>
-
-<?php include 'includes/searchBar.php' ?>
-
-<?php// print_r($_SESSION) ;?>
-
-<div id="coverPics">
-</div>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
+<meta name="theme-color" content="#ffffff">

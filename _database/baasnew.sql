@@ -137,3 +137,56 @@ INSERT INTO `tblbiditems` (`biditemid`, `accountid`, `biditem`, `biddesc`, `town
 
 
 
+--
+-- Table structure for table `fanswer`
+--
+
+CREATE TABLE IF NOT EXISTS `fanswer` (
+  `question_id` int(4) NOT NULL DEFAULT '0',
+  `a_id` int(4) NOT NULL DEFAULT '0',
+  `user` varchar(65) NOT NULL DEFAULT '',
+  `userphoto` varchar(65) NOT NULL DEFAULT '',
+  `a_answer` longtext NOT NULL,
+  `a_datetime` varchar(25) NOT NULL DEFAULT '',
+  `user_catagory` varchar(65) NOT NULL,
+  KEY `a_id` (`a_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fanswer`
+--
+
+INSERT INTO `fanswer` (`question_id`, `a_id`, `user`, `userphoto`, `a_answer`, `a_datetime`, `user_catagory`) VALUES
+(1, 1, 'janith', 'j-606575988.png', 'go to srch br', '23/09/15 07:24:23', 'sp'),
+(1, 2, 'kamal', '90496-404584807.jpg', 'go to hmpg', '23/09/15 07:30:14', 'customer'),
+(1, 3, 'janith', 'j-606575988.png', 'jllkj', '15/10/15 16:40:26', 'sp'),
+(2, 1, 'janith', 'default.jpg', 'jlljl', '16/10/15 05:26:24', 'customer');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fquestions`
+--
+
+CREATE TABLE IF NOT EXISTS `fquestions` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `user` varchar(65) NOT NULL DEFAULT '',
+  `userphoto` varchar(65) NOT NULL DEFAULT '',
+  `topic` varchar(255) NOT NULL DEFAULT '',
+  `detail` longtext NOT NULL,
+  `datetime` varchar(25) NOT NULL DEFAULT '',
+  `view` int(4) NOT NULL DEFAULT '0',
+  `reply` int(4) NOT NULL DEFAULT '0',
+  `user_catagory` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `fquestions`
+--
+
+INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetime`, `view`, `reply`, `user_catagory`) VALUES
+(1, 'janith', 'j-606575988.png', 'find a baas', 'hw to find a baas', '23/09/15 07:23:51', 43, 3, 'sp'),
+(2, 'janith', 'j-606575988.png', 'jfgfsj', 'hlhglh', '12/10/15 05:28:48', 35, 1, 'sp'),
+(3, 'hashini', 'default.jpg', 'i want to buy bus', 'how to find a bus', '16/10/15 11:49:45', 7, 0, 'sp');
+
