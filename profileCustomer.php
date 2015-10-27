@@ -24,14 +24,12 @@
 	?>
 
 	<?php 	
-	//$userID = $_SESSION['userID'];	
-	$userID = $_GET['user'];	
-
+	$userID = $_SESSION['userID'];	
 
 	$result = get_user_details($userID);
 	$user = mysqli_fetch_assoc($result);	
 
-	$result2 = get_serviceprovider_details($userID);
+	$result2 = get_customer_details($userID);
 	$sp = mysqli_fetch_assoc($result2);
 	
 	?>
@@ -77,35 +75,8 @@
         </div>           
     </div>
     
-    
-    <div id="apDivShortDesc"> 
-    <p style="font-size:20px">About Us</p>  
-    <p style="line-height: 130%;"><?php if(isset($sp['descr'])) { echo $sp['descr']; }?></div>
-    
-    <div id="apDivWorkHistory"> 
-    <p style="font-size:20px">Work History</p>  
-    <p style="line-height: 130%;"> <?php if(isset($sp['workInfo'])) { echo $sp['workInfo'];} ?></div>
-    
-
-		<div id="galleryBox">
-
-			<div class="wrapper-inner-content-image">    
-				<img src="Gallery/_assets/9.jpg"/>
-				<img src="Gallery/_assets/8.jpg"/>
-				<img src="Gallery/_assets/7.jpg"/>
-				<img src="Gallery/_assets/6.jpg"/>
-				<img src="Gallery/_assets/5.jpg"/>
-				<img src="Gallery/_assets/4.jpg"/>
-				<img src="Gallery/_assets/3.jpg"/>
-				<img src="Gallery/_assets/2.jpg"/>   
-				<img src="Gallery/_assets/1.jpg"/>    
-    			
-				<div class="wrapper-inner-content-image-hover">
-					<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
-                   
-				</div>  
-			</div>
-		</div>	
+  
+		
 
     
 </div>

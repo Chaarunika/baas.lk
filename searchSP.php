@@ -178,10 +178,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 </head>
 
 <body>
-
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 
+<?php 
+	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly
+		{ 
+			header("location:../BAAS_LK/index.php");
+		}   *
+?>
 
 <?php 
 $i=0;
@@ -193,7 +198,8 @@ while($row=mysqli_fetch_assoc($result) )
 echo "<div id=\"apDivResultBox{$i}\">";
 echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
 echo "<div id=\"apDivResultName{$i}\">".$row["sp_id"]." || ".$row["area"] . " || ". $row["category"] . "</div>";
-echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "</div>"."</div>";
+echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+echo "</div>";
 
 $i++;
 }

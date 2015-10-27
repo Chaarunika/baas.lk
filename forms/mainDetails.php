@@ -29,11 +29,11 @@
 
     <p>Adress</p>
     <p>
-      <label for="firstLine">Line1</label>
+      <label for="firstLine">Adress Line 1</label>
       <input type="text" name="firstLine" id="firstLine" required />
     </p>
     <p>
-      <label for="secondLine">Line 2</label>
+      <label for="secondLine">City</label>
       <input type="text" name="secondLine" id="secondLine" required />
     </p>
     <p>
