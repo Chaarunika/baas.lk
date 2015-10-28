@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php if(!isset($_SESSION))session_start(); ?>
 
 <script>
 
@@ -77,6 +77,9 @@ function Fun() {
 			   		if( $_SESSION['Catagory']== "customer"){
 					echo"
 						<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>
+
+			   			<li><a href=\"../BAAS_LK/profile.php\">Profile</a></li>;
+
 			   			<li><a href=\"../BAAS_LK/profileCustomer.php\">Profile</a></li>";
 			   		}
 

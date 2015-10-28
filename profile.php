@@ -19,14 +19,17 @@
 
 	<?php 
 	include_once('header.php'); 
+	//session_start();
 	include_once('_database/database.php'); 
 	include_once('functions/functions.php');
 	?>
 
 	<?php 	
-	//$userID = $_SESSION['userID'];	
-	$userID = $_GET['user'];	
-
+	$userID = $_SESSION['userID'];	
+	if(!isset($_GET))
+	{
+		$userID = $_GET['user'];	
+	}
 
 	$result = get_user_details($userID);
 	$user = mysqli_fetch_assoc($result);	
