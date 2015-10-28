@@ -3,6 +3,7 @@
   <label for="Area"></label>
   
   <form name="formSearch" method="post" action="searchSP.php">
+    
     <input name="SearchBar" type="text" class="SearchBar" id="SearchBar">   
     <p class="check">     
       <label>
@@ -28,6 +29,10 @@
       <option>Material Supplier</option>
       <option>Real Estate Company</option>
       <option>Technician</option>
+      <option>Carpenter</option>
+      <option>HandyMan</option>
+      <option>Painter</option>
+      <option>Plumber</option>
     </select>
 
     <label for="Area"></label>
@@ -36,6 +41,7 @@
       <option>Colombo</option>
       <option>Kandy</option>
       <option>Kurunegala</option>
+      <option>Kalutara</option>
       <option>Ampara</option>
       <option>Anuradhapura</option>
       <option>Badulla</option>

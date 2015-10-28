@@ -25,19 +25,31 @@
 <?php
 	if($area == "ANY AREA" && $cat == "ALL")
 	{
-		$query = "SELECT * FROM serviceprovider";
+		if(1)
+		{
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (users.user_id=serviceprovider.user_id)";
+		}
 	}
 	else if($area == "ANY AREA")
 	{
-		$query = "SELECT * FROM serviceprovider WHERE (category = '$cat' ) ";
+		if(1)
+		{
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (category = '$cat' ) AND (users.user_id=serviceprovider.user_id)";
+		}
 	}
 	else if($cat == "ALL")
 	{
-		$query = "SELECT * FROM serviceprovider WHERE (area = '$area' ) ";
+		if(1)
+		{
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (area = '$area' ) AND (users.user_id=serviceprovider.user_id)";
+		}
 	}
 	else
 	{
-		$query = "SELECT * FROM serviceprovider WHERE (area = '$area' && category = '$cat' ) ";
+		if(1)
+		{
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (area = '$area' && category = '$cat' ) AND (users.user_id=serviceprovider.user_id)";
+		}
 	}
 	
 	$result = mysqli_query($connection,$query);
@@ -47,12 +59,18 @@
 	
 	$k=0;
 
+	
+
 while($row1 = mysqli_fetch_assoc($result))
 {
 $k++;
 }
-
 	
+	
+
+		
+	
+
 $result = mysqli_query($connection,$query);
 
 ?>
@@ -189,20 +207,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 ?>
 
 <?php 
+$word = "";
+$word =mysql_real_escape_string(stripslashes($_POST['SearchBar']));
+$word = str_replace(' ','',$word);
+//$word = "dsd";
+
 $i=0;
+$found = 0;
+
 if($k !=0)
 {
-while($row=mysqli_fetch_assoc($result) )
-{
+	while($row=mysqli_fetch_assoc($result) )
+	{
+	
+    	$string = $row["user_name"].$row["user_firstname"].$row["user_lastname"].$row["area"].$row["category"].$row['address'].$row['descr'];
+		$string = str_replace(' ','',$string); 
+		//$string = "ds";
+	  
 
-echo "<div id=\"apDivResultBox{$i}\">";
-echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
-echo "<div id=\"apDivResultName{$i}\">".$row["sp_id"]." || ".$row["area"] . " || ". $row["category"] . "</div>";
-echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
-echo "</div>";
+		if($word== ""){
+		echo "<div id=\"apDivResultBox{$i}\">";
+		echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
+		echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
+		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+		echo "</div>";		
+		$i++;
+	  	}
 
-$i++;
-}
+		else{
+
+	  		if(strpos(strtolower($string),strtolower($word))>-1 ){
+	   		
+	   		++$found;
+			echo "<div id=\"apDivResultBox{$i}\">";
+			echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
+			echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
+			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+			echo "</div>";
+
+			$i++;
+			}
+		}
+	}
 }
 
 
