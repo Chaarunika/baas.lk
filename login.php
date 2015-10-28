@@ -13,15 +13,6 @@
 <link href="css/header.css" rel="stylesheet">
 </head>
 
-<div id="joinus">
-<a href="signup.php"><img src="images/joinus.png"></a> 
-
-</div>
-
-<div id="login">
-<a href="login.php"><img src="images/login.png"></a> 
-
-</div>
 
 <body>
 <p>&nbsp;</p>

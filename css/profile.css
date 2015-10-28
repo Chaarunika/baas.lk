@@ -52,6 +52,17 @@
 	border-radius: 20px;
 }
 
+#calendarBox{
+	position: absolute;
+	left: 585px;
+	top: 800px;
+	width: 330px;
+	height: 247px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
 .img-circle2 {
 	width: 100px;// These are your circle dimensions
     height: 100px;

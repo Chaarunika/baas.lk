@@ -66,7 +66,10 @@
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       
-     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
+      	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php echo $_SESSION['url'] ?> "  > </div>  
+      	<!--
+     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php //if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
+    	-->
     </div>
     
     <div id="apDivContactBox">
@@ -78,6 +81,10 @@
         <p>Optional Contact No : <?php if(isset($sp['opContactNo'])) { echo $sp['opContactNo'];} ?></p>    
         <p>Optional Email : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>       
         </div>           
+    </div>
+
+    <div id="calendarBox">
+
     </div>
     
     
