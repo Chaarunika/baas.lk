@@ -1,4 +1,11 @@
 <?php 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<?php 
+	
 	// Create Database Connection
 	
 	$dbhost = "localhost";
@@ -18,6 +25,20 @@
 <?php
 	$area = $_POST["location"];
 	$cat = $_POST["category"];
+
+	if(isset($_POST['SearchBar']) == FALSE)
+	{
+		$word = "";
+	}
+	else{
+		$word = $_POST['SearchBar'] ;
+	}
+	$_SESSION['tempSearchTerm'] = $word ;
+	
+	
+
+	$_SESSION['tempSearchCategory'] = $cat ;
+	$_SESSION['tempSearchArea'] = $area;
 	
 ?>
 
@@ -65,10 +86,6 @@ while($row1 = mysqli_fetch_assoc($result))
 {
 $k++;
 }
-	
-	
-
-		
 	
 
 $result = mysqli_query($connection,$query);
@@ -207,9 +224,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 ?>
 
 <?php 
-$word = "";
-$word =mysql_real_escape_string(stripslashes($_POST['SearchBar']));
+
+$word =mysql_real_escape_string(stripslashes($word));
 $word = str_replace(' ','',$word);
+
+
+
 //$word = "dsd";
 
 $i=0;

@@ -4,7 +4,7 @@
 <head>
 
 <title>baas.lk</title>
-
+<meta charset="UTF-8">
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
@@ -21,7 +21,7 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff"><link href="navbar/navigation.css" rel="stylesheet">
+<meta name="theme-color" content="#ffffff">
 
 
 <link href="css/header.css" rel="stylesheet">

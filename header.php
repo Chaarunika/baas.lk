@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
 <script>
 
@@ -7,7 +11,7 @@ function Fun() {
 	setInterval( function(){		
 		var widthVal = window.innerWidth;	
 		console.log(widthVal);
-		if (widthVal >1100){		{
+		if (widthVal >1100){		
 			document.getElementById("main-header").style.right ="30%";
 			}		
 		else if(widthVal >1024){
@@ -69,12 +73,12 @@ function Fun() {
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
-		  			if( $_SESSION['Catagory']== "sp"){
+		  			if( $_SESSION['catagory']== "sp"){
 					echo"<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>";
 			   		echo"<li><a href=\"../BAAS_LK/profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 			   		}
 
-			   		if( $_SESSION['Catagory']== "customer"){
+			   		if( $_SESSION['catagory']== "customer"){
 					echo"
 						<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>
 			   			<li><a href=\"../BAAS_LK/profileCustomer.php\">Profile</a></li>";
