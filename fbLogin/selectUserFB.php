@@ -63,13 +63,13 @@
 
 if(isset($_POST['generalUser']))
 {
-	$_SESSION['catagory'] = "customer" ;
+	$_SESSION['Catagory'] = "customer" ;
 	header('location:login.php') ;
 }
 
 if(isset($_POST['spUser']))
 {
-	$_SESSION['catagory'] = "sp" ;
+	$_SESSION['Catagory'] = "sp" ;
 	header('location:login.php') ;
 }
 	
