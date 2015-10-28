@@ -135,7 +135,7 @@ function selectFunction(variable){
 
 		<div id="apDivIcon"><img src="images/face.png" width="40" height="39" alt="icon" /></div>
 
-		<div id="apDivAbout">About</div>
+		<div id="apDivAbout">Edit Profile</div>
     </div>
 
   <div id="apDivTopicList">
@@ -143,28 +143,28 @@ function selectFunction(variable){
 		<a href="#">
 		<div id="apDivTopic0">
 			<div id="apDivBar0"> </div>
-		  <div id="apDivTag0" onclick = "selectFunction(0);">Overview</div>
+		  <div id="apDivTag0" onclick = "selectFunction(0);">Edit Basic Information</div>
 		</div>
     	</a>
 
 		<a href="#">
 		<div id="apDivTopic1" style= "top:65px">
 		  <div id="apDivBar1" ></div>
-		  <div id="apDivTag1" onclick = "selectFunction(1)">Contact details</div>
+		  <div id="apDivTag1" onclick = "selectFunction(1)">Edit your Contact details</div>
 		</div>
         </a>
 
 		<a href="#">
 		<div id="apDivTopic2" style= "top:130px">
 		  <div id="apDivBar2" ></div>
-		  <div id="apDivTag2" onclick = "selectFunction(2)">Work Info</div>
+		  <div id="apDivTag2" onclick = "selectFunction(2)">Edir your Work Information</div>
 		</div>
         </a>
 
 		<a href="#">
 		<div id="apDivTopic3" style= "top:195px">
 		  <div id="apDivBar3"></div>
-		  <div id="apDivTag3" onclick = "selectFunction(3)">Settings</div>
+		  <div id="apDivTag3" onclick = "selectFunction(3)">Password Change</div>
 		</div>
         </a>
 
