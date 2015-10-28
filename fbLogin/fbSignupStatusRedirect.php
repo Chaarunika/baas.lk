@@ -70,7 +70,7 @@ if (isset($accessToken)) {
     $count = 0;  // variable to chech wther user already exists
 	if($id==$rws['user_name'])
 	{
-	$_SESSION['Catagory']	= $rws['user_catagory'] ;  //user catagory for session for previously signed fb users$_SESSION['catagory']	= $rws['user_catagory'] ;
+	$_SESSION['catagory']	= $rws['user_catagory'] ;  //user catagory for session for previously signed fb users$_SESSION['catagory']	= $rws['user_catagory'] ;
 	$_SESSION['userID']	= $rws['user_id'] ;
     $count++ ; 
     header('location: ../index.php');
