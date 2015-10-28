@@ -81,6 +81,9 @@ function Fun() {
 			   		if( $_SESSION['catagory']== "customer"){
 					echo"
 						<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>
+
+			   			<li><a href=\"../BAAS_LK/profile.php\">Profile</a></li>;
+
 			   			<li><a href=\"../BAAS_LK/profileCustomer.php\">Profile</a></li>";
 			   		}
 

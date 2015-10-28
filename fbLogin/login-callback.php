@@ -67,6 +67,7 @@ if (isset($accessToken)) {
 	$sql = "SELECT * FROM users where user_name=$id";
     $result = mysqli_query($database,$sql) or die(mysqli_error($database)); 
     $rws = mysqli_fetch_array($result);
+	
 
     $count = 0;  // variable to chech wther user already exists
 	if($id==$rws['user_name'])
@@ -101,13 +102,14 @@ if (isset($accessToken)) {
 		$query_new_user_insert = $db_connection->prepare('INSERT INTO serviceprovider(user_id) VALUES(:user_id)');
 		$query_new_user_insert->bindValue(':user_id', $user_id, PDO::PARAM_STR);
 		$query_new_user_insert->execute();
+		$_SESSION['Catagory']	= "sp" ;
 		}
 
 		else if($userCatagory == "customer"){
 		$query_new_user_insert = $db_connection->prepare('INSERT INTO customer(user_id) VALUES(:user_id)');
 		$query_new_user_insert->bindValue(':user_id', $user_id, PDO::PARAM_STR);
 		$query_new_user_insert->execute();
-
+		$_SESSION['Catagory']	= "customer" ;
 		}
 
 		$sql = "SELECT * FROM users where user_name=$id";
@@ -119,6 +121,7 @@ if (isset($accessToken)) {
 		{
 		//user catagory for session for previously signed fb users$_SESSION['catagory']	= $rws['user_catagory'] ;
 		$_SESSION['userID']	= $rws['user_id'] ;
+		
 	    }
 
 	}
