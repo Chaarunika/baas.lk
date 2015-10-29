@@ -1,13 +1,19 @@
 <?php
 
-/**
- * Please note: we can use unencoded characters like ö, é etc here as we use the html5 doctype with utf8 encoding
- * in the application's header (in views/_header.php). To add new languages simply copy this file,
- * and create a language switch in your root files.
- */
+//login
+define("DATABASE_ERROR","Database connection error");
+define("LOGIN_FAILED", "Login failed");
+define("USERNAME_OR_EMAIL", "Username or Email");
+define("PASSWORD", "Password");
+define("REMEMBER_ME", "Keep me logged in");
+define("LOGIN", "Login");
+define("REGISTER", "Register");
+define("FORGOT_MY_PASSWORD", "I forgot my password");
 
-// login & registration classes
-define("MESSAGE_ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
+ 
+define("PASSWORD_WRONG", "Password is wrong");
+define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
+
 define("MESSAGE_CAPTCHA_WRONG", "Captcha was wrong!");
 define("MESSAGE_COOKIE_INVALID", "Invalid cookie");
 define("MESSAGE_DATABASE_ERROR", "Database connection problem.");
