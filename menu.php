@@ -13,7 +13,7 @@
 	height:400px;
 	z-index:1;
 	left: 50px;
-	top: 190px;
+	top: 90px;
 }
 #apDiv2 {
 	position:absolute;
@@ -21,14 +21,14 @@
 	height:400px;
 	z-index:2;
 	left: 550px;
-	top: 186px;
+	top: 90px;
 }
 #apDiv3 {
 	position:absolute;
 	width:460px;
 	height:400px;
 	z-index:3;
-	top: 285px;
+	top: 190px;
 	left: 1030px;
 }
 
@@ -40,10 +40,14 @@
 </head>
 
 <body>
-<?php include 'header.php'?>
+<?php 
 
-$_SESSION['loginstatus'] ='true';
+include 'header.php' ;
+
+//$_SESSION['loginstatus'] ='true';
 $_SESSION['accountid'] = $_SESSION['userID'];
+
+?>
 
 <h2>&nbsp; </h2>
 <div id="apDiv1"><a href="addauctionitem.php"><img src="pics/Bookmark-add.png" width="400" height="360" alt="add to auction"></a><pre style="font-family:verdana;

@@ -48,7 +48,7 @@
 
 <?php include 'includes/searchBar.php' ?>
 
-<?php// print_r($_SESSION) ;?>
+<?php //print_r($_SESSION) ;?>
 
 <div id="coverPics">
 </div>

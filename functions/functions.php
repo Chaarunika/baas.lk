@@ -25,6 +25,20 @@
 		return $result;
 	}
 
+	function get_customer_details($userID){
+		global $dbConnection;
+
+		$query = "SELECT * FROM customer WHERE user_id = $userID LIMIT 1" ;
+		$result = mysqli_query($dbConnection,$query);
+		
+		if(!$result){
+			die("Database query failed.");
+		}
+
+		return $result;
+	}
+
+
 	function update_user_details($userID){
 		global $dbConnection;
 		

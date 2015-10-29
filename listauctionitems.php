@@ -2,9 +2,7 @@
 include_once ('header.php');
 
 
-require_once("dbconnect.php");
-require_once("checkstatus.php");
-
+require_once("_database/database.php");
 
 ?>
 
@@ -73,12 +71,22 @@ p,h2,pre{font-family:verdana;
 <div id="apDivpic" >  
 
   <?php
-$accountid=8;
-$sql="select * from tblbiditems where accountid=$accountid";
-$result= mysql_query($sql) or die ("Error in selecting auction items: ".mysql_error());
+$accountid= $_SESSION['userID'];
+$sql="SELECT * FROM tblbiditems WHERE accountid= '$accountid' ";
+
+
+$result = mysqli_query($dbConnection,$sql);
+    
+    if(!$result){
+      die("Database query failed.");
+    }    
+
+
+
+
 echo"<ol class='bidtbl'>";
 
-while ($row=mysql_fetch_array($result)){
+while ($row=mysqli_fetch_array($result)){
 								
 	$biditemid=$row['biditemid'];
 	$item=$row['biditem'];

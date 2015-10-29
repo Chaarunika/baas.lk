@@ -102,7 +102,7 @@ if ($login->isUserLoggedIn() == true) {
 	
 
 	
-	header("Location:http://localhost/BAAS_LK/profile.php");
+	header("Location:http://localhost/BAAS_LK/index.php");
 	
 	
 	

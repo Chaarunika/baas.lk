@@ -5,8 +5,7 @@
 <?php
 
 
-require_once("dbconnect.php");
-require_once("checkstatus.php");
+require_once("_database/database.php");
 
 
 $accountid=$_SESSION['userID'];
@@ -47,18 +46,16 @@ $town=$_POST['town'];
   
  /* if(move_uploaded_file($imagename, $target_path)) {*/
 
- 
 
-  
- 
 
+    $sql=" INSERT INTO  tblbiditems (accountid, biditem, biddesc, town, closingtime ) VALUES ('$accountid' , '$item' , '$description' ,'$town', '$closingtime' )";
     
+    $result = mysqli_query($dbConnection,$sql);
+    
+    if(!$result){
+      die("Database query failed.");
+    }    
 
-
-
-
-    $sql="insert into tblbiditems (accountid, biditem, biddesc, town, closingtime ) values ('$accountid' , '$item' , '$description' ,'$town', '$closingtime' )";
-    $result=mysql_query($sql) or die("Error in adding: ".mysql_error());
     $mess= "Auction item $item sucessfully created";
 
     /*}else{
@@ -119,17 +116,11 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
 </style>
 
-
-
-
-
-
 </head>
 <body>
 
 
-<?php
-	   
+<?php  
 	   
 	   
 echo"<div id='apDiv2'>.<h2>$mess.<h2><table id='bidtbl' >

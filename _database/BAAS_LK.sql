@@ -34,7 +34,7 @@ INSERT INTO `baaslk`.`users` (`user_id`, `user_name`, `user_password_hash`, `use
 (2, 'kamal', '$2y$10$wHkMCYwjG0A/gaO95i8SV.XX6rq1OfWpiFlrVFAnNO866wGKHGKhC', 'kamalamal85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 09:37:26', '127.0.0.1', 'kamal', 'Perera', 'default.jpg', 'sp', NULL),
 (3, 'kevin', '$2y$10$h1LkMoN2p.COBym9l4d.jOiVpDBuIeiUfT8EvCQ5HTGF5.fEPI8iG', 'kevinlevin720@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 09:53:40', '::1', 'Kevin', 'Perera', 'default.jpg', 'sp', NULL),
 (4, 'kavinda', '$2y$10$6PJUKTWAkkn4Nrz4n.YmoeZhr0QqftgWMvieO6Mvsv4nDOCMbVl2O', 'kavindawijerathne85@gmail.com', 0, '54a61ef266e0887bb3379a4b75ba3a548e099d33', NULL, NULL, NULL, 1, 1445015590, '2015-10-16 09:57:25', '127.0.0.1', 'Sunil', 'dasanayake', 'default.jpg', 'sp', NULL),
-(5, 'hashini', '$2y$10$ivWdhr4XwA3oRxHVjYy1O.oNPEhDkPxDJkV9qQ3Txt8vu.fh92W1u', 'hashinihimasha560@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 10:02:41', '::1', 'kevin', 'Perera', 'hydrangeas-1364408688.jpg', 'sp', NULL),
+(5, 'hashini', '$2y$10$ivWdhr4XwA3oRxHVjYy1O.oNPEhDkPxDJkV9qQ3Txt8vu.fh92W1u', 'hashinihimasha560@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 10:02:41', '::1', 'kevin', 'Perera', 'default.jpg', 'sp', NULL),
 (6, 'miyuru', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'miyuru@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', 'ABC', 'Electricals', 'default.jpg', 'sp', NULL),
 (7, 'nisal', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'nisaljankavi85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', 'Hightec Solutions', NULL, 'default.jpg', 'sp', NULL),
 (8, 'dinidu', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'dinidu85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', 'Orange', 'Electricals', 'default.jpg', 'sp', NULL),
@@ -45,7 +45,8 @@ INSERT INTO `baaslk`.`users` (`user_id`, `user_name`, `user_password_hash`, `use
 (13, 'nethviru', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'nethviru85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', 'methviru', 'gamahe', 'default.jpg', 'sp', NULL),
 (14, 'padukka', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'padukka85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', 'Unitect', 'architects', 'default.jpg', 'sp', NULL),
 (15, 'nirmal', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'nirmal@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', NULL, NULL, 'default.jpg', 'sp', NULL),
-(16, 'wijerathne', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'wijerathne85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', NULL, NULL, 'default.jpg', 'sp', NULL);
+(16, 'wijerathne', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'wijerathne85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', NULL, NULL, 'default.jpg', 'sp', NULL),
+(17, 'customer', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'customer85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', "Customer", "Customer", 'default.jpg', 'customer', NULL);
 
 
 
@@ -79,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `baaslk`.`serviceprovider` (
  
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
 
-INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `category`, `area`, `descr`, `workInfo`, `dob`, `gender`, `address`, `website`, `languages`, `gallery1`, `gallery2`, `gallery3`) VALUES
+INSERT INTO `baaslk`.`serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `category`, `area`, `descr`, `workInfo`, `dob`, `gender`, `address`, `website`, `languages`, `gallery1`, `gallery2`, `gallery3`) VALUES
 (1, 1, 775669875, NULL, NULL, 'Carpenter', 'Kalutara', 'Im the carpenter in kalutara district', 'I worked ABC project', '1973-06-05', 'Male', 'No6.kaluthra', NULL, NULL, NULL, NULL, NULL),
 (2, 2, 712365489, NULL, NULL, 'Mason', 'Kalutara', 'Im the mason in kaluthara district', 'I worked Nawaloka construction', '1984-10-10', 'Male', 'Kaluthara south,kaluthara', NULL, NULL, NULL, NULL, NULL),
 (3, 3, 789654123, NULL, NULL, 'HandyMan', 'Colombo', 'Im the handy man in colombo district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'Kirulapane,Colombo', NULL, NULL, NULL, NULL, NULL),
@@ -106,14 +107,11 @@ CREATE TABLE IF NOT EXISTS `baaslk`.`customer` (
  `contactNo` int(15) NOT NULL,
  `opContactNo` int(15) DEFAULT NULL,
  `opEmail` varchar(255) DEFAULT NULL,
- `category` varchar(100) NOT NULL, 
  `area` varchar(100) NOT NULL,
- `descr` varchar(300) NULL,
- `workInfo` text DEFAULT NULL, 
  `dob` varchar(100) DEFAULT NULL,
  `gender` varchar(255) DEFAULT NULL,
- `address` text DEFAULT NULL,
- `website` varchar(255) DEFAULT NULL, 
+ `address` text DEFAULT NULL, 
+ `languages` varchar(10) DEFAULT NULL,
  
  
  FOREIGN KEY (`user_id`) REFERENCES users(`user_id`),
@@ -121,6 +119,9 @@ CREATE TABLE IF NOT EXISTS `baaslk`.`customer` (
  PRIMARY KEY (`customer_id`)
  
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
+
+INSERT INTO `baaslk`.`customer` (`customer_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `area`, `dob`, `gender`, `address`, `languages`) VALUES
+(1, 17, 775669875, NULL, NULL, 'Kalutara', '1973-06-05', 'Male', 'No6.kaluthra', NULL);
 
 
 CREATE TABLE IF NOT EXISTS `baaslk`.`tblbidhistory` (
@@ -160,11 +161,10 @@ INSERT INTO `baaslk`.`tblbiditems` (`biditemid`, `accountid`, `biditem`, `biddes
 (82, '9', 'Brighter Park', 'Facilities_\r\n- Water -\r\n- Electricity -\r\n- 20 feet wide access roads - Bank loan facilities\r\n- Better quiet residential environment - \r\n- Clear deed -\r\n\r\nPrice can be negotiated.', 'Homagama', '', 'Oct-22-2015 07:21:12 AM'),
 (83, '9', 'Land in Punchiborella for Sale', '\r\nNo. 888 Maradana Road, Colombo 10., Colombo 10 (Maradana, Panchikawatta), Colombo, Colombo\r\nLKR 6,000,000', 'Borella', '', 'Oct-28-2015 07:28:41 AM'),
 (85, '3', 'Malith', 'sdf', 'asdffdsa', '', 'Oct-21-2015 06:42:02 AM'),
-(88, '', 'sadf', 'sdfsd', 'sdfsdf', '', 'Oct-14-2015 03:52:58 PM'),
-(89, '', 'fdg', 'dfg', 'dfg', '', 'Oct-21-2015 05:45:09 PM'),
-(90, '', 'sdf', 'df', 'dfs', '', 'Oct-21-2015 05:46:18 PM'),
-(91, '', 'sdf', 'sdf', 'sdf', '', 'Oct-21-2015 05:46:50 PM'),
-(92, '8', '', '', '', '', ''),
+(88, '1', 'sadf', 'sdfsd', 'sdfsdf', '', 'Oct-14-2015 03:52:58 PM'),
+(89, '1', 'fdg', 'dfg', 'dfg', '', 'Oct-21-2015 05:45:09 PM'),
+(90, '1', 'sdf', 'df', 'dfs', '', 'Oct-21-2015 05:46:18 PM'),
+(91, '1', 'sdf', 'sdf', 'sdf', '', 'Oct-21-2015 05:46:50 PM'),
 (93, '8', 'sdf', 'sdf', 'sdf', '', 'Oct-21-2015 05:49:27 PM'),
 (94, '8', '', '', '', '', ''),
 (95, '8', 'dfg', 'dfg', 'dfg', '', 'Oct-21-2015 05:50:23 PM'),

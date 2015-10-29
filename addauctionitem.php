@@ -72,8 +72,8 @@
 
 <?php
 include ('header.php') ;
-require_once("dbconnect.php");
-require_once("checkstatus.php");
+
+
 
 ?>
 

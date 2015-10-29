@@ -1,11 +1,16 @@
 <?php
 session_start();
-require_once("dbconnect.php");
-require_once("checkstatus.php");
+require_once("_database/database.php");
 
 $deleteid=$_GET['biditemid'];
-$sql="delete from tblbiditems where biditemid=$deleteid";
-$result=mysql_query($sql) or die("Error in deleting auction item: ".mysql_error());
+$sql="DELETE FROM tblbiditems WHERE biditemid=$deleteid";
+
+$result = mysqli_query($dbConnection,$sql);
+    
+    if(!$result){
+      die("Database query failed.");
+    }    
+    
 
 ?>
 
