@@ -121,7 +121,7 @@ $auctionby= "me";//$row['username'];
 //table
 
 
-
+/*
    $query_1 = "SELECT max(bidprice) FROM auction.tblbidhistory WHERE biditemid = ";
    $query_1 .= "(SELECT biditemid FROM auction.tblbiditems WHERE biditem = '{$row['biditem']}') GROUP BY biditemid;";
    
@@ -131,7 +131,7 @@ $auctionby= "me";//$row['username'];
       die("Database query failed.");
     }    
 
-   $row_1=mysqli_fetch_array($result_1);
+   $row_1=mysqli_fetch_array($result_1); */
    
    //echo $row_1['max(bidprice)'];
 
@@ -144,9 +144,9 @@ $auctionby= "me";//$row['username'];
   $out .= "<td style='width:550px' >" . $row['biddesc'] . "</td>";
   $out .= "<td style='width:200px'>" .$row['town'] . "</td>";
   $out .= "<td style='width:200px'>" ."$days_remaining"." days" ." "."$hours_remaining"." hrs"." "."$minutes_remaining"." mins"." "."$seconds_remaining"." secs"."</td>";
-  $out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
-  $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 
-	
+  $out .= "<td style='width:200px'>" . "max" .  "</td>";
+  //$out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
+  $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 	
   $out .= "</tr>";
   }
 $out .= "</table>";
