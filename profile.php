@@ -25,12 +25,15 @@
 	?>
 
 	<?php 	
+	/*
 	$userID = $_SESSION['userID'];	
 	if(!isset($_GET))
 	{
 		$userID = $_GET['user'];	
-	}
+	} */
 
+	$userID = $_GET['user'];
+	
 	$result = get_user_details($userID);
 	$user = mysqli_fetch_assoc($result);	
 
