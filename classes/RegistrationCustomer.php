@@ -1,46 +1,22 @@
 <?php
 
-/**
- * Handles the user registration
- * @author Panique
- * @link http://www.php-login.net
- * @link https://github.com/panique/php-login-advanced/
- * @license http://opensource.org/licenses/MIT MIT License
- */
+
 class Registration
 {
-    /**
-     * @var object $db_connection The database connection
-     */
-    private $db_connection            = null;
-    /**
-     * @var bool success state of registration
-     */
-    public  $registration_successful  = false;
-    /**
-     * @var bool success state of verification
-     */
-    public  $verification_successful  = false;
-    /**
-     * @var array collection of error messages
-     */
-    public  $errors                   = array();
-    /**
-     * @var array collection of success / neutral messages
-     */
-    public  $messages                 = array();
 
-    /**
-     * the function "__construct()" automatically starts whenever an object of this class is created,
-     * you know, when you do "$login = new Login();"
-     */
+    private $db_connection            = null;
+    public  $registration_successful  = false;
+    public  $verification_successful  = false;
+    public  $errors                   = array();
+    public  $messages                 = array();
+	
     public function __construct()
     {
-        /////session_start();
+      
 
         // if we have such a POST request, call the registerNewUser() method
         if (isset($_POST["register"])) {
-            $this->registerNewUser($_POST['user_name'], $_POST['user_email'], $_POST['user_password_new'], $_POST['user_password_repeat'], $_POST["captcha"]);
+            $this->registerNewUser($_POST['user_name'], $_POST['user_email'], $_POST['user_password_new'], $_POST['user_password_repeat']);
         // if we have such a GET request, call the verifyNewUser() method
         } else if (isset($_GET["id"]) && isset($_GET["verification_code"])) {
             $this->verifyNewUser($_GET["id"], $_GET["verification_code"]);
@@ -58,12 +34,7 @@ class Registration
         } else {
             // create a database connection, using the constants from config/config.php
             try {
-                // Generate a database connection, using the PDO connector
-                // @see http://net.tutsplus.com/tutorials/php/why-you-should-be-using-phps-pdo-for-database-access/
-                // Also important: We include the charset, as leaving it out seems to be a security issue:
-                // @see http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers#Connecting_to_MySQL says:
-                // "Adding the charset to the DSN is very important for security reasons,
-                // most examples you'll see around leave it out. MAKE SURE TO INCLUDE THE CHARSET!"
+            
                 $this->db_connection = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
                 return true;
             // If an error is catched, database connection failed
@@ -74,21 +45,16 @@ class Registration
         }
     }
 
-    /**
-     * handles the entire registration process. checks all error possibilities, and creates a new user in the database if
-     * everything is fine
-     */
-    private function registerNewUser($user_name, $user_email, $user_password, $user_password_repeat, $captcha)
+
+    private function registerNewUser($user_name, $user_email, $user_password, $user_password_repeat)
     {
         // we just remove extra space on username and email
         $user_name  = trim($user_name);
         $user_email = trim($user_email);
 
-        // check provided data validity
-        // TODO: check for "return true" case early, so put this first
-        if (strtolower($captcha) != strtolower($_SESSION['captcha'])) {
-            $this->errors[] = MESSAGE_CAPTCHA_WRONG;
-        } elseif (empty($user_name)) {
+   
+       
+        if (empty($user_name)) {
             $this->errors[] = MESSAGE_USERNAME_EMPTY;
         } elseif (empty($user_password) || empty($user_password_repeat)) {
             $this->errors[] = MESSAGE_PASSWORD_EMPTY;
@@ -123,34 +89,15 @@ class Registration
                     $this->errors[] = ($result[$i]['user_name'] == $user_name) ? MESSAGE_USERNAME_EXISTS : MESSAGE_EMAIL_ALREADY_EXISTS;
                 }
             } else {
-                // check if we have a constant HASH_COST_FACTOR defined (in config/hashing.php),
-                // if so: put the value into $hash_cost_factor, if not, make $hash_cost_factor = null
+       
                 $hash_cost_factor = (defined('HASH_COST_FACTOR') ? HASH_COST_FACTOR : null);
-
-                // crypt the user's password with the PHP 5.5's password_hash() function, results in a 60 character hash string
-                // the PASSWORD_DEFAULT constant is defined by the PHP 5.5, or if you are using PHP 5.3/5.4, by the password hashing
-                // compatibility library. the third parameter looks a little bit shitty, but that's how those PHP 5.5 functions
-                // want the parameter: as an array with, currently only used with 'cost' => XX.
                 $user_password_hash = password_hash($user_password, PASSWORD_DEFAULT, array('cost' => $hash_cost_factor));
                 // generate random hash for email verification (40 char string)
                 $user_activation_hash = sha1(uniqid(mt_rand(), true));
 
-                //header('Location: selectUser.php');
-
+       
                 $customer="customer";
-
-                /*
-                if(isset($_POST['generalUser']))
-                {
-                    $customer="customer";
-                }
-				
-                if(isset($_POST['spUser']))
-                {
-                    $customer="sp";
-                }  */
-                
-				$user_avatar="avatar/default.png";
+				$user_avatar="default.jpg";
 				
                 // write new users data into database
                 $query_new_user_insert = $this->db_connection->prepare('INSERT INTO users (user_name, user_password_hash, user_email, user_activation_hash, user_registration_ip, user_registration_datetime,user_catagory,user_avatar) VALUES(:user_name, :user_password_hash, :user_email, :user_activation_hash, :user_registration_ip, now(),:user_catagory,:user_avatar)');
@@ -204,9 +151,7 @@ class Registration
         if (EMAIL_USE_SMTP) {
             // Set mailer to use SMTP
             $mail->IsSMTP();
-            //useful for debugging, shows full SMTP errors
-            //$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-            // Enable SMTP authentication
+         
             $mail->SMTPAuth = EMAIL_SMTP_AUTH;
             // Enable encryption, usually SSL/TLS
             if (defined(EMAIL_SMTP_ENCRYPTION)) {

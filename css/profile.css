@@ -22,9 +22,9 @@
 #apDivShortDesc{
 	position: absolute;
 	left: 31px;
-	top: 215px;
+	top: 435px;
 	width: 501px;
-	height: 173px;
+	height: 180px;
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
@@ -33,7 +33,7 @@
 #apDivWorkHistory{
 	position: absolute;
 	left: 31px;
-	top: 411px;
+	top: 635px;
 	width: 501px;
 	height: 173px;
 	z-index: 2;
@@ -43,10 +43,10 @@
 
 #apDivContactBox{
 	position: absolute;
-	left: 585px;
-	top: 16px;
-	width: 330px;
-	height: 247px;
+	left: 31px;
+	top: 215px;
+	width: 501px;
+	height: 190px;
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
@@ -54,8 +54,8 @@
 
 #calendarBox{
 	position: absolute;
-	left: 585px;
-	top: 800px;
+	left: 639px;
+	top: 16px;
 	width: 330px;
 	height: 247px;
 	z-index: 2;
