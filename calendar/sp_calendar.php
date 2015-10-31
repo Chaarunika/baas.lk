@@ -336,9 +336,9 @@
 		
 		
 		<?php
-		$spid=4;
-		$previousda=32;
-		$sql="select * from calendar where sp_id='".$spid."'";
+		
+		
+		$sql="select * from calendar where sp_id='".$spid."' group by jobDate" ;
 		$result = mysqli_query($database,$sql) or die(mysqli_error($database));
 		while($job = mysqli_fetch_assoc($result))
 		{
@@ -350,10 +350,8 @@
 		
 			if($m==$month)
 			{
-				
 				$da= date('j',$timestamp);
-				if($da!=$previousda)
-				{
+				
 				echo "<style>
 	
 				#divtoshow{$da} {
@@ -380,13 +378,24 @@
 				<div id=\"divtoshow{$da}\" style=\"display:none\">
 				
 				<div id=\"divinside\"><p align='center'>
-				".date('jS F Y',$timestamp)." <p>
+				".date('jS F, Y',$timestamp)." <p>
 				</div>
 				
 				<div id='divinsidebody'>
-					fsdf
+				";
 				
-				</div>
+				
+				
+				$sqldate="select * from calendar where sp_id='".$spid."' and jobDate='".$jobdate."'";
+				$resultdate = mysqli_query($database,$sqldate) or die(mysqli_error($database));
+
+				while($jobdate = mysqli_fetch_assoc($resultdate))
+				{
+				echo $jobdate['title']."<br>";
+				
+				}
+				echo "</div>
+				
 				
 				<div id=\"divinsideimage\"><img width=\"50\" height=\"50\" src=\"calendar/helmet.png\">
 				</div>
@@ -402,10 +411,8 @@
 
 
 				</script>";
-				
-				}
-				
-				$previousda=$da;
+			
+			
 			}
 		
 		}

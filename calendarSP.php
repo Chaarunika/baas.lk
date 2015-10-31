@@ -6,6 +6,7 @@
 
 	<link href="css/header.css" rel="stylesheet" />
 	<link href="css/calendarSP.css" rel="stylesheet" />
+	<script type="text/javascript" src="Gallery/_scripts/jquery-2.1.4.min.js"></script>
 </head>
 
 
