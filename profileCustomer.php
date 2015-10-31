@@ -19,17 +19,12 @@
 
 	<?php 
 	include_once('header.php'); 
-	//session_start();
 	include_once('_database/database.php'); 
 	include_once('functions/functions.php');
 	?>
 
 	<?php 	
 	$userID = $_SESSION['userID'];	
-	if(!isset($_GET))
-	{
-		$userID = $_GET['user'];	
-	}
 
 	$result = get_user_details($userID);
 	$user = mysqli_fetch_assoc($result);	
@@ -66,10 +61,7 @@
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       
-      	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php echo $_SESSION['url'] ?> "  > </div>  
-      	<!--
-     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php //if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
-    	-->
+     	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php echo $_SESSION['url'] ?> "  > </div>  
     </div>
     
     <div id="apDivContactBox">
@@ -82,14 +74,9 @@
         <p>Optional Email : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>       
         </div>           
     </div>
-
-    <div id="calendarBox">
-
-    </div>
     
   
-    
-
+		
 
     
 </div>

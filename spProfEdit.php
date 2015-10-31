@@ -460,7 +460,53 @@ if (!$conn) {
   ?>
 
   </div>
-      <div id="apDivOptionBox3"></div>
+      <div id="apDivOptionBox3">
+	  
+	   <form id="form2" name="form3" method="post" action="spProfEdit.php">
+     <p>
+       <label for="optionalEmail">Old Password</label>
+       <input type="text" name="optionalEmail" id="optionalEmail" />
+     </p>
+     <p>
+       <label for="primaryMobileNo">New Password</label>
+       <input type="text" name="primaryMobile" id="primaryMobile" required/>
+     </p>
+     <p>
+       <label for="optionalMobile">Confirm Password</label>
+       <input type="text" name="optionalMobile" id="optionalMobile" />
+     </p>
+     <p>
+       <input type="submit" name="saveContact" id="saveContact" value="Change" />
+     </p>
+
+     <?php
+
+  if(isset($_POST["optionalEmail"]) )
+  {
+  $optionalEmail = $_POST["optionalEmail"];
+  $primaryMobile = $_POST["primaryMobile"];
+  $optionalMobile = $_POST["optionalMobile"];
+
+  $sql = "UPDATE serviceprovider SET opEmail = '$optionalEmail' , contactNo = '$primaryMobile' , opContactNo='$optionalMobile' WHERE user_id = $userID ";
+  
+
+  if (mysqli_query($conn, $sql)  ) {
+    echo "Conatct Info recorded created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+
+
+  }
+
+  ?>
+
+   </form>
+	  
+	  
+	  
+	  
+	  </div>
 </div>
 
 </div>

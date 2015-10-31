@@ -1,0 +1,49 @@
+
+#apDivMainInfo{
+	position: absolute;
+	left: 500px;
+	top: 100px;
+	width: 501px;
+	height:250px;
+	z-index: 2;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#apDivContainer{
+	position: absolute;
+	left: 50px;
+	top: 100px;
+	width: 1041px;
+	height: 2322px;
+	z-index: 1;
+	background-color: #f0f0f0;		
+}
+
+
+
+
+#calendarBox{
+	position: absolute;
+	left: 80px;
+	top: 100px;
+	width: 330px;
+	height: 247px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 20px;
+}
+
+
+p{
+	line-height: 50%;
+}
+
+#apDivTitle {
+	position: absolute;
+	left: 50px;
+	top: 8px;
+	width: 323px;
+	z-index: 2;
+
+}
