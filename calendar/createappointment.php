@@ -25,7 +25,7 @@ function ValidateMobNumber(txtMobId) {
 
 
 
-<form name='eventform' method='POST' action="<?php $_SERVER['PHP_SELF'];?>?month=<?php echo 	$month;?>&year=<?php echo $year;?>&date=<?php echo $date;?>&add=true">
+<form name='eventform' method='POST' action="<?php $_SERVER['PHP_SELF'];?>?user=<?php echo $user?>&month=<?php echo 	$month;?>&year=<?php echo $year;?>&date=<?php echo $date;?>&add=true">
 	
 		<table>
 			<tr>
@@ -124,7 +124,7 @@ function ValidateMobNumber(txtMobId) {
 				<tr>
 				<td width='150px'><p>Contact No.</p></td>
 				<td>
-				<input type="text" id="txtMB" onblur="return ValidateMobNumber('txtMB')" />
+				<input type="text" name='contactNo' id="txtMB" onblur="return ValidateMobNumber('txtMB')" />
 
 			</tr>
 			

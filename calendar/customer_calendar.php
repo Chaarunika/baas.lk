@@ -281,12 +281,12 @@
 								if($today==$comparewith)
 								{	
 									echo "class='todayEventHoliday'";
-									echo "align='center' width='40px'>$i</td>";
+									echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></td>";
 								}
 								else
 								{
 									echo "class='holidayEvent'";
-									echo "align='center' width='40px'>$i</td>";
+									echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></td>";
 								}
 								
 							}
@@ -312,7 +312,7 @@
 								if($today==$comparewith)
 								{	
 									echo "class='todayEvent'";
-									echo "align='center' width='40px'>$i</a></td>";
+									echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></a></td>";
 								}
 								
 								else
@@ -433,7 +433,7 @@
 									else
 									{
 										echo "class='holidayEvent'";
-										echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+										echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year."><span id='spanhovering{$i}'>$i</span></a></td>";
 									}
 										
 								}
@@ -458,13 +458,13 @@
 									if($today==$comparewith)
 									{	
 											echo "class='todayEvent'";
-											echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+											echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year."><span id='spanhovering{$i}'>$i</span></a></td>";
 									}
 										
 									else
 									{
 											echo "class='event'";
-											echo "align='center' width='40px'><span id='spanhovering{$i}'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></span></td>";
+											echo "align='center' width='40px'><span id='spanhovering{$i}'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year."><span id='spanhovering{$i}'>$i</span></a></span></td>";
 																	
 										 
 									}
@@ -597,7 +597,7 @@
 									if($today==$comparewith)
 									{	
 											echo "class='todayEvent'";
-											echo "align='center' width='40px'>$i</a></td>";
+											echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></a></td>";
 									}
 										
 									else

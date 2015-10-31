@@ -17,16 +17,7 @@
 	include_once('_database/database.php'); 
 	include_once('functions/functions.php');
 	
-	if(isset($_GET['sp']))
-	{
-	$spid=$_GET['sp'];
-	$date=$_GET['date'];
-	
-	
-	$sql="select * from calendar where jobDate='".$date."' and sp_id='".$spid."'";
-	$result = mysqli_query($database,$sql) or die(mysqli_error($database));
-	$noOfjobs=mysqli_num_rows($result);
-			
+
 	
 	
 	
@@ -35,31 +26,7 @@
 <style>
 
 
-<?php
 
-	$distance = 200;
-
-	for($i=0; $i<$noOfjobs;$i++){
-	
-	
-	echo "
-	#apDivJobBox{$i}{
-	position: absolute;
-	left: 500px;
-	top: ". $distance. "px;
-	width: 501px;
-	height:200px;
-	z-index: 2;
-	border-radius: 20px;
-	background-color: rgba(255,255,255,0.5);
-	}";
-	
-	
-	
-	$distance = $distance + 250;
-	}
-		
-?>
 
 	
 	#apDivJob{
@@ -79,42 +46,8 @@
 
 
 
-<?php
-$i=0;
 
-while($job = mysqli_fetch_assoc($result))
-{
-    echo "<div id=\"apDivJobBox{$i}\">
-		<div id=\"apDivJob\">
-			 <p style=\"font-size:30px\"> 
-			   
-					Job - ".$job['title']."
-			
-					
-			
 
-			<p>	Date:
-			".$job['jobDate']."
-			</p>
-			
-			<p>	Details:
-			".$job['detail']."
-			</p>
-			
-			<p>	Location:
-			".$job['location']."
-			</p>
-			
-			<p>	Time:
-			".$job['jobtime']."
-			</p>
-
-		</div>
-  
-	</div>";
-	$i++;
-}
-?> 
 
 
 
@@ -125,11 +58,41 @@ while($job = mysqli_fetch_assoc($result))
     
 
     
-<?php }?>
+
 <div id="apDivContainer">
 
 
-
+<?php
+		
+	
+	if(isset($_GET['add']))
+	{
+	
+		if($_GET['add']==true)
+		{
+			$spid=$_GET['user'];
+			$date=$_GET['date'];
+			$title=$_POST['title'];
+			$detail=$_POST['description'];
+			$location=$_POST['location'];
+			$jobtime=$_POST['time'];
+			$contactNo=$_POST['contactNo'];
+			$customer=$_SESSION['userID'];
+			
+			
+	
+			
+			$sql="INSERT INTO `baaslk`.`calendar` (`title`, `detail`, `jobDate`, `dateAdded`, `location`, `jobtime`, `contactno`, `customer_id`, `sp_id`, `accepted`) VALUES
+			('".$title."', '".$detail."', '".$date."', now(), '".$location."', '".$jobtime."', '".$contactNo."','".$customer."' ,'".$spid."' , 0)";
+			
+			mysqli_query($database,$sql);
+	
+		
+		}
+	
+	}
+	
+?>
 
 
 
@@ -154,7 +117,7 @@ while($job = mysqli_fetch_assoc($result))
 		<div id=\"appointmentFormbody\">";
 			$date=$_GET['date'];
 			$time= strtotime($date);
-			echo "<p align='center'>".date('jS F, Y',$time)."</p>";
+			echo "<p align='center'>".date('jS F, Y',$time)."<p>";
 			include('calendar/createappointment.php');
 		 }
 		 

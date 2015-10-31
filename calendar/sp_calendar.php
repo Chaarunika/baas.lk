@@ -257,12 +257,12 @@
 							if($today==$comparewith)
 							{	
 								echo "class='todayEventHoliday'";
-								echo "align='center' width='40px'><a href=calendarSP.php?sp=".$spid."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+								echo "align='center' width='40px'><a href=calendarSP.php?sp=".$spid."&date=".$comparewith."&month=".$month."&year=".$year."><span id='spanhovering{$i}'>$i</span></a></td>";
 							}
 							else
 							{
 								echo "class='holidayEvent'";
-								echo "align='center' width='40px'><a href=calendarSP.php?sp=".$spid."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+								echo "align='center' width='40px'><a href=calendarSP.php?sp=".$spid."&date=".$comparewith."&month=".$month."&year=".$year."><span id='spanhovering{$i}'>$i</span></a></td>";
 							}
 							
 						}
@@ -288,7 +288,7 @@
 							if($today==$comparewith)
 							{	
 								echo "class='todayEvent'";
-								echo "align='center' width='40px'><a href=calendarSP.php?sp=".$spid."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+								echo "align='center' width='40px'><a href=calendarSP.php?sp=".$spid."&date=".$comparewith."&month=".$month."&year=".$year."><span id='spanhovering{$i}'>$i</span></a></td>";
 							}
 							
 							else
