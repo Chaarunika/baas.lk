@@ -242,7 +242,7 @@
 					
 			
 				
-					$sqlcount="select * from calendar where jobDate='".$comparewith."'";
+					$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
 					$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
 					$noOfEvent=mysqli_num_rows($resultsp);
 							
