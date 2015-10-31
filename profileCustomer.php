@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="Gallery/_scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="Gallery/_scripts/pop-up-gallery3.js"></script>
 	<link href="css/header.css" rel="stylesheet" />
-	<link href="css/profile.css" rel="stylesheet" />
+	<link href="css/profileCustomer.css" rel="stylesheet" />
 </head>
 
 
@@ -86,9 +86,88 @@
         </div>           
     </div>
     
-    <div id="calendarBox">
+    <div id="appointmentBox">
+	
+		 <div id="appointmentBody">
+		<p align='center' style='font-size:30px'>Your RecentAppointments</p>
 
-
+		<?php
+		$customer=$_SESSION['userID'];
+		$sql="select * from calendar where customer_id='".$customer."'";
+		$result = mysqli_query($database,$sql) or die(mysqli_error($database));
+		$noOfappointments=mysqli_num_rows($result);
+		if($noOfappointments==0)
+		{
+		echo "<br>You have no appointments to show<br>";
+		}
+		
+		else
+		{
+		
+		echo "
+		<table border='1'>
+			<tr>
+			<td align='center' width='100px'>Date</td>
+			<td align='center'width='100px'>Job</td>
+			<td align='center'width='100px'>Service Provider</td>
+			<td align='center'width='400px'>Status</td>
+			</tr>";
+		
+		while($appointment = mysqli_fetch_assoc($result))
+		{
+			$timest=strtotime($appointment['jobDate']);
+		echo "
+			<tr>
+			<td align='center' width='100px'>".date('j/m/Y',$timest)."</td>
+			<td align='center'width='100px'>".$appointment['title']."</td>
+			<td align='center'width='100px'>";
+			
+			
+			
+			$sqlname="select user_firstname,user_id from users where user_id='".$appointment['sp_id']."'";
+			$resultname = mysqli_query($database,$sqlname) or die(mysqli_error($database));
+			$fname = mysqli_fetch_assoc($resultname);	
+			echo "<a href='
+			profile.php?user=".$fname['user_id']."'";	
+			echo">";
+			echo $fname['user_firstname'];
+			echo "</a>";
+			echo "</td>";
+			echo "<td>";
+			
+			if($appointment['accepted']==0)
+			{
+				echo "Pending";
+					
+			}
+			else if($appointment['accepted']==1)
+			{
+				echo "Service provider agreed";
+					
+			}
+			else if($appointment['accepted']==2)
+			{
+				echo "Canceled by Service provider";
+					
+			}
+		
+			echo "</td>
+			</tr>";
+		
+		
+		}
+			
+		
+		echo "</table>";
+		
+		
+		}
+		
+		
+		
+		?>
+	
+		</div>
 	
     </div>
   
