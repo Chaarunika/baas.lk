@@ -24,11 +24,11 @@
 	?>
 
 	<?php 	
-	if(!isset($_SESSION['userID'])){
+	if(isset($_SESSION['userID'])){
 	$userID = $_SESSION['userID'];
 	}	
 
-	if(!isset($_GET['user']))
+	if(isset($_GET['user']))
 	{
 		$userID = $_GET['user'];	
 	}
