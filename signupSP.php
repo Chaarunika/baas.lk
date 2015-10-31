@@ -15,17 +15,9 @@
 
 	<?php
 
-	// check for minimum PHP version
-	if (version_compare(PHP_VERSION, '5.3.7', '<')) {
-    	exit('Sorry, this script does not run on a PHP version smaller than 5.3.7 !');
-		} 
-	else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
-   		// if you are using PHP 5.3 or PHP 5.4 you have to include the password_api_compatibility_library.php
-   		// (this library adds the PHP 5.5 password hashing functions to older versions of PHP)
-    	require_once('libraries/password_compatibility_library.php');
-		}
 
-	
+	require_once('_database/database.php');
+    require_once('libraries/password_compatibility_library.php');
 	require_once('config/configSP.php');	
 	require_once('translations/en.php');
 	require_once('libraries/PHPMailer.php');
@@ -71,11 +63,7 @@
 
 		    <label for="user_password_repeat"><p>Confirm your password</p></label>
 		    <input name="user_password_repeat" type="password" required class="textField" id="user_password_repeat" pattern=".{6,}" autocomplete="off" />
-
-		    <img src="tools/showCaptcha.php" alt="captcha" />
-		    <label><p>Type the capcha</p></label>
-		    <input name="captcha" type="text" required class="textField" />
-
+			
     		<input name="register" type="submit" class="signupBtn" value="signup"/>
 			</form>
 
@@ -101,7 +89,9 @@
 	}
 	?>
 
-	<?php session_destroy();?>
+	<?php if(isset($_SESSION)){
+	session_destroy();
+	}?>
 </body>
 
 </html>
