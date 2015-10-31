@@ -37,7 +37,7 @@
 
 <?php
 
-	$distance = 200;
+	$distance = 250;
 
 	for($i=0; $i<$noOfjobs;$i++){
 	
@@ -68,6 +68,9 @@
 	top: 8px;
 	width: 323px;
 	z-index: 2;
+	}
+	
+	
 
 </style> 
 
@@ -222,6 +225,16 @@ if(isset($_GET['dec']))
 
 }	
 ?>
+<div id="manageAppointments">
+
+
+	<div id="manageAppointmentsInside">
+	<p align='center' style='font-size:25px'>
+	Manage Appointments
+	</p>
+	</div>
+
+</div>
 <div id="calendarBox">
 	
 	<?php
