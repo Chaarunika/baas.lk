@@ -25,15 +25,13 @@
 	?>
 
 	<?php 	
-	/*
 	$userID = $_SESSION['userID'];	
 	if(!isset($_GET))
 	{
 		$userID = $_GET['user'];	
-	} */
+	}
 
-	$userID = $_GET['user'];
-	
+
 	$result = get_user_details($userID);
 	$user = mysqli_fetch_assoc($result);	
 
@@ -69,13 +67,10 @@
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       
-      	
       	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php echo $_SESSION['url'] ?> "  > </div>  
-      	
       	<!--
-     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
+     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php //if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
     	-->
-    	
     </div>
     
     <div id="apDivContactBox">
@@ -89,8 +84,24 @@
         </div>           
     </div>
 
+	
+	
     <div id="calendarBox">
-
+	
+	<?php
+	if(isset($_GET['user']))
+	{
+	include('calendar/customer_calendar.php');
+		
+	}
+	else
+	{
+	
+	include('calendar/sp_calendar.php');
+	
+	}
+	?>
+	
     </div>
     
     

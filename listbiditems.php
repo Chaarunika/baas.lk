@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
-require_once("_database/database.php");
-
+require_once("dbconnect.php");
+require_once("checkstatus.php");
 ?>
 
 
@@ -79,20 +79,15 @@ header("Refresh: 1; URL=$url1");
 
 
 
-$sql="SELECT tblbiditems.biditemid, tblbiditems.biditem, tblbiditems.biddesc, tblbiditems.town, tblbiditems.closingtime FROM tblbiditems  ";
-
-$result = mysqli_query($dbConnection,$sql);
-    
-    if(!$result){
-      die("Database query failed.");
-    }    
+$sql="select tblbiditems.biditemid, tblbiditems.biditem, tblbiditems.biddesc, tblbiditems.town, tblbiditems.closingtime, tblaccount.username  from tblbiditems natural join tblaccount ";
+$result= mysql_query($sql) or die ("Error in  auction item: ".mysql_error());
 
 echo "<ul>";
 
 $out = "<table id='bidtbl' border='1' ><tr><th>Land Name</th><th  word-wrap: break-word; max-width: 150px;>Land descriptiom</th><th>Area</th><th>Remaining time</th>";
 $out .= "<th>Highest Bid</th><th>Place a bid</th></tr>";
 
-while($row=mysqli_fetch_array($result)){
+while($row=mysql_fetch_array($result)){
 
 $date= strtotime($row['closingtime']);
 $remaining = $date - time();
@@ -107,7 +102,7 @@ $seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
 $itemid=$row['biditemid'];
 $item=$row['biditem'];
 
-$auctionby= "me";//$row['username'];
+$auctionby=$row['username'];
 
 
 
@@ -121,17 +116,12 @@ $auctionby= "me";//$row['username'];
 //table
 
 
-/*
+
    $query_1 = "SELECT max(bidprice) FROM auction.tblbidhistory WHERE biditemid = ";
    $query_1 .= "(SELECT biditemid FROM auction.tblbiditems WHERE biditem = '{$row['biditem']}') GROUP BY biditemid;";
    
-   $result1 = mysqli_query($dbConnection,$query_1);
-    
-    if(!$result1){
-      die("Database query failed.");
-    }    
-
-   $row_1=mysqli_fetch_array($result_1); */
+   $result_1=mysql_query($query_1);
+   $row_1=mysql_fetch_array($result_1);
    
    //echo $row_1['max(bidprice)'];
 
@@ -144,9 +134,9 @@ $auctionby= "me";//$row['username'];
   $out .= "<td style='width:550px' >" . $row['biddesc'] . "</td>";
   $out .= "<td style='width:200px'>" .$row['town'] . "</td>";
   $out .= "<td style='width:200px'>" ."$days_remaining"." days" ." "."$hours_remaining"." hrs"." "."$minutes_remaining"." mins"." "."$seconds_remaining"." secs"."</td>";
-  $out .= "<td style='width:200px'>" . "max" .  "</td>";
-  //$out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
-  $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 	
+  $out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
+  $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 
+	
   $out .= "</tr>";
   }
 $out .= "</table>";
