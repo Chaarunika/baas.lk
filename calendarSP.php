@@ -48,7 +48,7 @@
 	left: 500px;
 	top: ". $distance. "px;
 	width: 501px;
-	height:200px;
+	height:250px;
 	z-index: 2;
 	border-radius: 20px;
 	background-color: rgba(255,255,255,0.5);
