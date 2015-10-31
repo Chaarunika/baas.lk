@@ -1,0 +1,171 @@
+
+@font-face {
+    font-family: BRITANIC;
+    src: url(../fonts/verdana.woff);
+}
+
+
+
+#calendar{
+	position: absolute;
+	left: 10px;
+	top: 60px;
+	width: 310px;
+	height: 170px;
+	z-index: 2;
+	background-color: rgba(255,255,255,255);
+	border-radius: 20px;
+}
+
+#calendaryear{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 310px;
+	height: 30px;
+	z-index: 3;	
+	
+}
+
+td.today{
+		 
+		 border:1px;
+		 border-radius: 8px;
+		 border-style: solid;
+		 border-color:#336699;
+		 width:5px;
+		
+	
+	}
+	
+td.holiday
+{
+
+color:#ff0000;
+
+}	
+	
+td.todayEvent{
+		 
+		 border:1px;
+		 border-radius: 8px;
+		 border-style: solid;
+		 border-color:#336699;
+		 width:5px;
+		 background-color:#FDD3C5;
+	
+	}
+	
+td.todayHoliday{
+		 
+		 border:1px;
+		 border-radius: 8px;
+		 border-style: solid;
+		 border-color:#336699;
+		 width:5px;
+		 color:#ff0000;
+	
+	}	
+	
+	
+td.todayEventHoliday{
+		 
+		 
+		 border:1px;
+		 border-radius: 8px;
+		  border-style: solid;
+		 border-color:#336699;
+		 width:5px;
+		 background-color:#FDD3C5;
+		 color:#ff0000;
+	
+	}
+	
+
+
+td.holidayEvent
+{
+border:1px;
+border-radius: 8px;
+background-color:#FDD3C5;
+color:#ff0000;
+
+}
+
+
+td.event
+{
+border:1px;
+border-radius: 8px;
+background-color:#FDD3C5;
+
+}
+table{
+font-family:BRITANIC;
+font-size:12px;
+
+
+}
+
+
+table a
+{
+   
+    text-decoration:none;
+	color:inherit;
+
+}
+    
+
+
+
+tr#heading
+{
+width:50px; 
+height:30px;
+color:#00035B;
+font-size:14px;
+
+}
+
+tr#week
+{
+width:50px; 
+height:30px;
+color:#000000;
+font-size:12px;
+font-weight:bold;
+}
+
+
+#divinside {
+    border-bottom: 1px solid #cccccc;
+	background-color: #f0f0f0;
+    position: absolute;
+	top:4px;
+	height:30px;
+	width:198px;
+    display: inherit;
+}
+
+#divinsidebody {
+    border-bottom: 1px solid #cccccc;
+    position: absolute;
+	top:40px;
+	left:60px;
+	height:100px;
+	width:198px;
+    display: inherit;
+}
+
+#divinsideimage{
+
+    position: absolute;
+	top:40px;
+	height:50px;
+	width:50px;
+    display: inherit;
+
+}
+
+
