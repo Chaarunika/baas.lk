@@ -80,10 +80,18 @@
 
 
 <?php
+
+
+
 $i=0;
 
 while($job = mysqli_fetch_assoc($result))
 {
+
+	$today1=date("m/d/Y");
+	
+	
+	
     echo "<div id=\"apDivJobBox{$i}\">
 		<div id=\"apDivJob\">
 			 <p style=\"font-size:30px\"> 
@@ -108,6 +116,67 @@ while($job = mysqli_fetch_assoc($result))
 			<p>	Time:
 			".$job['jobtime']."
 			</p>
+			
+			<p>	Contact No.:
+			".$job['contactno']."
+			</p>";
+			
+			if($today1<$job['jobDate']){
+			
+				if($job['accepted']==0)
+				{
+					echo "
+					<form name='accept' action='";
+					$_SERVER['PHP_SELF'];
+					
+					$_SESSION['cid']=$job['calendar_id'];
+					
+					echo "?id=
+					'method='get'>
+					<p align='center'>     
+					<input type='submit' name='acc' value='Accept'>
+					<input type='submit' name='dec' value='Decline'>
+					</p>
+					</form>
+						";
+				}
+				else if($job['accepted']==1)
+				{
+					echo "
+					<form name='accept' action='";
+					$_SERVER['PHP_SELF'];
+					
+					$_SESSION['cid']=$job['calendar_id'];
+					
+					echo "?id=
+					'method='get'>
+					<p align='center'>     
+					<input type='submit' name='dec' value='Decline'>
+					</p>
+					</form>
+						";
+				}
+				
+				else if($job['accepted']==2)
+				{
+					echo "
+					<form name='accept' action='";
+					$_SERVER['PHP_SELF'];
+					
+					$_SESSION['cid']=$job['calendar_id'];
+					
+					echo "?id=
+					'method='get'>
+					<p align='center'>     
+					<input type='submit' name='acc' value='Accept'>
+					</p>
+					</form>
+						";
+				}
+	
+			}
+			
+		echo "		
 
 		</div>
   
@@ -127,6 +196,32 @@ while($job = mysqli_fetch_assoc($result))
     
 <?php }?>
 <div id="apDivContainer">
+<?php
+if(isset($_GET['acc']))
+{
+	if($_GET['acc']=='Accept')
+	{
+		$id=$_SESSION['cid'];
+		
+		$sqlset="update calendar set accepted='1' where calendar_id='".$id."'";
+		mysqli_query($database,$sqlset);
+	}
+	 
+
+}
+if(isset($_GET['dec']))
+{
+	if($_GET['dec']=='Decline')
+	{
+		$id=$_SESSION['cid'];
+		
+		$sqlset="update calendar set accepted='2' where calendar_id='".$id."'";
+		mysqli_query($database,$sqlset);
+	
+	}
+
+}	
+?>
 <div id="calendarBox">
 	
 	<?php
