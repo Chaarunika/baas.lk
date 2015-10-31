@@ -245,46 +245,194 @@
 					$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
 					$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
 					$noOfEvent=mysqli_num_rows($resultsp);
-							
-					if($noOfEvent>=1){
-						if($today==$comparewith)
-						{	
-							echo "class='todayevent'";
-						}
-						
-						else
-						{
-							echo "class='event'";
-						 
-						}
-						
-					}
-					else if($today==$comparewith){
 					
-						echo "class='today'";
-
-					}
-						
-					
-				
-					
+	
 					$dayOnWeek=date("w",$eachday);
 					
 					if($dayOnWeek==0 ||$dayOnWeek==6)
 					{
-						echo "<td id='holiday' align='center' width='40px'>$i</td>";
+						if($noOfEvent>=1){
+							if($today==$comparewith)
+							{	
+								echo "class='todayEventHoliday'";
+								echo "align='center' width='40px'>$i</td>";
+							}
+							else
+							{
+								echo "class='holidayEvent'";
+								echo "align='center' width='40px'>$i</td>";
+							}
+							
+						}
+						
+						else if($today==$comparewith){
+						
+							echo "class='todayHoliday'";
+							echo "align='center' width='40px'>$i</td>";
+
+						}
+						
+						else
+						{
+							echo "class='holiday'";
+							echo "align='center' width='40px'>$i</td>";
+						}
+	
 					}
+					
 					else
 					{
-						echo "<td align='center' width='40px'>$i</td>";
+						if($noOfEvent>=1){
+							if($today==$comparewith)
+							{	
+								echo "class='todayEvent'";
+								echo "align='center' width='40px'>$i</a></td>";
+							}
+							
+							else
+							{
+								echo "class='event'";
+								echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></td>";
+								
+								
+							
+							 
+							}
+							
+						}
+						
+						else if($today==$comparewith){
+						
+							echo "class='today'";
+							echo "align='center' width='40px'>$i</td>";
+							
+
+						}
+						
+						else
+						{
+							echo "align='center' width='40px'>$i</td>";
+						}
+						
+						
+						
 					}
+					
+					
+					
+					
+					
+				
+					
 					
 				
 				}
 			
 				echo "</tr>";
 			?>
-		</table>
-		</div>
+			
+			
+			</table>
+		
+		
+		<?php
+		
+		if(isset($_SESSION['Catagory']))
+		{
+			if($_SESSION['Catagory']=='customer')
+			{
+				echo "I am pukaaaaaaaaa";
+			}
+			
+		}
+
+		
+		$sql="select * from calendar where sp_id='".$user."' group by jobDate" ;
+		$result = mysqli_query($database,$sql) or die(mysqli_error($database));
+		while($job = mysqli_fetch_assoc($result))
+		{
+		
+		$jobdate=$job['jobDate'];
+		$timestamp= strtotime($jobdate);
+		$m= date('n',$timestamp);
+	
+		
+			if($m==$month)
+			{
+				$da= date('j',$timestamp);
+				
+				echo "<style>
+	
+				#divtoshow{$da} {
+				border: 1px solid #000000;
+				box-shadow: 2px 5px 5px #7c7c7c;
+				background-color: #ffffff;
+				position:absolute;
+				height:100px;
+				width:200px;
+				display: none;
+				z-index:10;
+				}
+				
+				
+				#spanhovering{$da}{
+				cursor: pointer;
+				}
+
+				</style>";
+				
+				
+					
+				echo "
+				<div id=\"divtoshow{$da}\" style=\"display:none\">
+				
+				<div id=\"divinside\"><p align='center'>
+				".date('jS F, Y',$timestamp)." <p>
+				</div>
+				
+				<div id='divinsidebody'>
+				";
+				
+				
+				
+				$sqldate="select * from calendar where sp_id='".$user."' and jobDate='".$jobdate."'";
+				$resultdate = mysqli_query($database,$sqldate) or die(mysqli_error($database));
+
+				while($jobdate = mysqli_fetch_assoc($resultdate))
+				{
+				echo $jobdate['title']."<br>";
+				
+				}
+				echo "</div>
+				
+				
+				<div id=\"divinsideimage\"><img width=\"50\" height=\"50\" src=\"calendar/helmet.png\">
+				</div>
+
+				</div>
+				
+				<script>
+				$(\"#spanhovering{$da}\").hover(function(event) {
+					$(\"#divtoshow{$da}\").css({top: event.x}).show();
+				}, function() {
+					$(\"#divtoshow{$da}\").hide();
+				});
+
+
+				</script>";
+			
+			
+			}
+		
+		}
+		
+
+		
+				
+?>
+<script src=\"jquery.min.js\"></script>	
+	
+		
+	</div>	
 	 </body>
 </html>
