@@ -37,6 +37,24 @@
 	 
 	 	
 		<?php
+		
+			if(isset($_SESSION['Catagory']))
+			{
+							if($_SESSION['Catagory']=='customer')
+							{
+								$customer=1;
+							}
+							else{
+								$customer=0;
+							}
+							
+			}
+			else{
+					$customer=0;
+					
+			}
+					
+		
 			if(isset($_GET['month']))
 			{
 				$month=$_GET['month'];
@@ -178,145 +196,445 @@
 				
 				for($i=1;$i<$NumberofDays+1;$i++,$counter++){
 				
+					
 					$dateformatEach=$i." ".$monthInWord." ".$year;
 					$eachday=strtotime($dateformatEach);
+					$today=date("m/d/Y");
+					$currentday=date("m/d/Y",$eachday);
 					
-					if($i==1)
+					
+					
+					if($today>=$currentday)
 					{
-						$firstDay=date("w",$eachday); //1-6
-						if($firstDay==0) //on sunday
+								
+						if($i==1)
 						{
+							$firstDay=date("w",$eachday); //1-6
+							if($firstDay==0) //on sunday
+							{
+							
+								for($j=0;$j<6;$j++,$counter++)
+									{
+										echo "<td 'align='center' width='30px'>&nbsp;</td>";
+										
+									
+									}
+							}
+							
 						
-							for($j=0;$j<6;$j++,$counter++)
+							
+							else{
+							
+								for($j=0;$j<$firstDay-1;$j++,$counter++)
 								{
-									echo "<td 'align='center' width='30px'>&nbsp;</td>";
+									echo "<td align='center' width=40px'>&nbsp;</td>";
 									
 								
 								}
-						}
-						
-					
-						
-						else{
-						
-							for($j=0;$j<$firstDay-1;$j++,$counter++)
-							{
-								echo "<td align='center' width=40px'>&nbsp;</td>";
-								
-							
 							}
+						
+						}
+						
+						if($counter%7==0 && $i!=1 )
+						{
+									echo "</tr><tr height='20px'>";
+						}
+						
+						
+						
+						$monthstring=$month;
+						$monthlength=strlen($monthstring);
+						$daystring=$i;
+						$daylength=strlen($daystring);
+						
+						if($monthlength<=1){
+							$monthstring="0".$monthstring;
+						}
+						if($daylength<=1){
+							$daystring="0".$daystring;
 						}
 					
+						
+						
+						$comparewith=$monthstring.'/'.($daystring).'/'.$year;
+						
+						
+						$dayOnWeek=date("w",$eachday);
+						
+						echo "<td ";
+						
+						
+					
+						
+				
+					
+						$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
+						$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
+						$noOfEvent=mysqli_num_rows($resultsp);
+						
+		
+						$dayOnWeek=date("w",$eachday);
+						
+						if($dayOnWeek==0 ||$dayOnWeek==6)
+						{
+							if($noOfEvent>=1){
+								if($today==$comparewith)
+								{	
+									echo "class='todayEventHoliday'";
+									echo "align='center' width='40px'>$i</td>";
+								}
+								else
+								{
+									echo "class='holidayEvent'";
+									echo "align='center' width='40px'>$i</td>";
+								}
+								
+							}
+							
+							else if($today==$comparewith){
+							
+								echo "class='todayHoliday'";
+								echo "align='center' width='40px'>$i</td>";
+
+							}
+							
+							else
+							{
+								echo "class='holiday'";
+								echo "align='center' width='40px'>$i</td>";
+							}
+		
+						}
+						
+						else
+						{
+							if($noOfEvent>=1){
+								if($today==$comparewith)
+								{	
+									echo "class='todayEvent'";
+									echo "align='center' width='40px'>$i</a></td>";
+								}
+								
+								else
+								{
+									echo "class='event'";
+									echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></td>";
+									
+									
+								
+								 
+								}
+								
+							}
+							
+							else if($today==$comparewith){
+							
+								echo "class='today'";
+								echo "align='center' width='40px'>$i</td>";
+								
+
+							}
+							
+							else
+							{
+								echo "align='center' width='40px'>$i</td>";
+							}
+							
+							
+							
+						}
+						
 					}
 					
-					if($counter%7==0 && $i!=1 )
+						
+					else//create links to create appointments if a customer
 					{
+						
+						if($customer==1)
+						{
+							
+							if($i==1)
+							{
+									$firstDay=date("w",$eachday); //1-6
+									
+									if($firstDay==0) //on sunday
+									{
+									
+										for($j=0;$j<6;$j++,$counter++)
+											{
+												echo "<td 'align='center' width='30px'>&nbsp;</td>";
+												
+											
+											}
+									}
+									
+								
+									else{
+									
+										for($j=0;$j<$firstDay-1;$j++,$counter++)
+										{
+											echo "<td align='center' width=40px'>&nbsp;</td>";
+												
+											
+										}
+									}
+								
+							}
+								
+							if($counter%7==0 && $i!=1 )
+							{
 								echo "</tr><tr height='20px'>";
-					}
-					
-					
-					
-					$monthstring=$month;
-					$monthlength=strlen($monthstring);
-					$daystring=$i;
-					$daylength=strlen($daystring);
-					
-					if($monthlength<=1){
-						$monthstring="0".$monthstring;
-					}
-					if($daylength<=1){
-						$daystring="0".$daystring;
-					}
-				
-					$today=date("m/d/Y");
-					
-					$comparewith=$monthstring.'/'.($daystring).'/'.$year;
-					
-					
-					$dayOnWeek=date("w",$eachday);
-					
-					echo "<td ";
-					
-					
-				
-					
-			
-				
-					$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
-					$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
-					$noOfEvent=mysqli_num_rows($resultsp);
-					
-	
-					$dayOnWeek=date("w",$eachday);
-					
-					if($dayOnWeek==0 ||$dayOnWeek==6)
-					{
-						if($noOfEvent>=1){
-							if($today==$comparewith)
-							{	
-								echo "class='todayEventHoliday'";
-								echo "align='center' width='40px'>$i</td>";
 							}
-							else
-							{
-								echo "class='holidayEvent'";
-								echo "align='center' width='40px'>$i</td>";
+								
+								
+								
+							$monthstring=$month;
+							$monthlength=strlen($monthstring);
+							$daystring=$i;
+							$daylength=strlen($daystring);
+								
+							if($monthlength<=1){
+								$monthstring="0".$monthstring;
 							}
-							
-						}
-						
-						else if($today==$comparewith){
-						
-							echo "class='todayHoliday'";
-							echo "align='center' width='40px'>$i</td>";
 
-						}
-						
-						else
-						{
-							echo "class='holiday'";
-							echo "align='center' width='40px'>$i</td>";
-						}
-	
-					}
-					
-					else
-					{
-						if($noOfEvent>=1){
-							if($today==$comparewith)
-							{	
-								echo "class='todayEvent'";
-								echo "align='center' width='40px'>$i</a></td>";
+							if($daylength<=1){
+								$daystring="0".$daystring;
 							}
 							
-							else
-							{
-								echo "class='event'";
-								echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></td>";
+								
+								
+							$comparewith=$monthstring.'/'.($daystring).'/'.$year;
+								
+								
+							$dayOnWeek=date("w",$eachday);
+								
+							echo "<td ";
 								
 								
 							
-							 
-							}
-							
-						}
+								
 						
-						else if($today==$comparewith){
-						
-							echo "class='today'";
-							echo "align='center' width='40px'>$i</td>";
 							
+							$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
+							$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
+							$noOfEvent=mysqli_num_rows($resultsp);
+								
+				
+							$dayOnWeek=date("w",$eachday);
+								
+							if($dayOnWeek==0 ||$dayOnWeek==6)
+							{
+								if($noOfEvent>=1){
+									if($today==$comparewith)
+									{	
+										echo "class='todayEventHoliday'";
+										echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+									}
+									else
+									{
+										echo "class='holidayEvent'";
+										echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+									}
+										
+								}
+								else if($today==$comparewith){
+									
+									echo "class='todayHoliday'";
+									echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
 
+								}
+									
+								else
+								{
+									echo "class='holiday'";
+									echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+								}
+				
+							}
+								
+							else
+							{
+								if($noOfEvent>=1){
+									if($today==$comparewith)
+									{	
+											echo "class='todayEvent'";
+											echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+									}
+										
+									else
+									{
+											echo "class='event'";
+											echo "align='center' width='40px'><span id='spanhovering{$i}'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></span></td>";
+																	
+										 
+									}
+										
+								}
+									
+								else if($today==$comparewith){
+									
+									echo "class='today'";
+									echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+										
+
+								}
+									
+								else
+								{
+									echo "align='center' width='40px'><a href=appointment.php?user=".$user."&date=".$comparewith."&month=".$month."&year=".$year.">$i</a></td>";
+								}
+									
+								
+								
+							}
 						}
+						
 						
 						else
 						{
-							echo "align='center' width='40px'>$i</td>";
+							if($i==1)
+							{
+									$firstDay=date("w",$eachday); //1-6
+									
+									if($firstDay==0) //on sunday
+									{
+									
+										for($j=0;$j<6;$j++,$counter++)
+											{
+												echo "<td 'align='center' width='30px'>&nbsp;</td>";
+												
+											
+											}
+									}
+									
+								
+									else{
+									
+										for($j=0;$j<$firstDay-1;$j++,$counter++)
+										{
+											echo "<td align='center' width=40px'>&nbsp;</td>";
+												
+											
+										}
+									}
+								
+							}
+								
+							if($counter%7==0 && $i!=1 )
+							{
+								echo "</tr><tr height='20px'>";
+							}
+								
+								
+								
+							$monthstring=$month;
+							$monthlength=strlen($monthstring);
+							$daystring=$i;
+							$daylength=strlen($daystring);
+								
+							if($monthlength<=1){
+								$monthstring="0".$monthstring;
+							}
+
+							if($daylength<=1){
+								$daystring="0".$daystring;
+							}
+							
+								
+								
+							$comparewith=$monthstring.'/'.($daystring).'/'.$year;
+								
+								
+							$dayOnWeek=date("w",$eachday);
+								
+							echo "<td ";
+								
+								
+							
+								
+						
+							
+							$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
+							$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
+							$noOfEvent=mysqli_num_rows($resultsp);
+								
+				
+							$dayOnWeek=date("w",$eachday);
+								
+							if($dayOnWeek==0 ||$dayOnWeek==6)
+							{
+								if($noOfEvent>=1){
+									if($today==$comparewith)
+									{	
+										echo "class='todayEventHoliday'";
+										echo "align='center' width='40px'>$i</td>";
+									}
+									else
+									{
+										echo "class='holidayEvent'";
+										echo "align='center' width='40px'>$i</td>";
+									}
+										
+								}
+								else if($today==$comparewith){
+									
+									echo "class='todayHoliday'";
+									echo "align='center' width='40px'>$i</td>";
+
+								}
+									
+								else
+								{
+									echo "class='holiday'";
+									echo "align='center' width='40px'>$i</td>";
+								}
+				
+							}
+								
+							else
+							{
+								if($noOfEvent>=1){
+									if($today==$comparewith)
+									{	
+											echo "class='todayEvent'";
+											echo "align='center' width='40px'>$i</a></td>";
+									}
+										
+									else
+									{
+											echo "class='event'";
+											echo "align='center' width='40px'><span id='spanhovering{$i}'>$i</span></td>";
+																	
+										 
+									}
+										
+								}
+									
+								else if($today==$comparewith){
+									
+									echo "class='today'";
+									echo "align='center' width='40px'>$i</td>";
+										
+
+								}
+									
+								else
+								{
+									echo "align='center' width='40px'>$i</td>";
+								}
+									
+								
+							}	
+						
 						}
 						
-						
-						
 					}
+					
+					
+					
+					
+					
+					
 					
 					
 					
@@ -337,14 +655,7 @@
 		
 		<?php
 		
-		if(isset($_SESSION['Catagory']))
-		{
-			if($_SESSION['Catagory']=='customer')
-			{
-				echo "I am pukaaaaaaaaa";
-			}
-			
-		}
+	
 
 		
 		$sql="select * from calendar where sp_id='".$user."' group by jobDate" ;
