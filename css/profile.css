@@ -1,7 +1,7 @@
 #apDivContainer{
 	position: absolute;
 	left: 50px;
-	top: 100px;
+	top: 135px;
 	width: 1041px;
 	height: 2322px;
 	z-index: 1;
@@ -28,6 +28,7 @@
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
+	padding: 30px;
 }
 
 #apDivWorkHistory{
@@ -39,6 +40,7 @@
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;	
+	padding :30px;
 }
 
 #apDivContactBox{
@@ -83,7 +85,7 @@
 }
 
 p{
-	line-height: 50%;
+	line-height: 18px;
 }
 
 #apDivTitle {
@@ -97,7 +99,7 @@ p{
 
 #apDivContactInfo {
 	position: absolute;
-	left: 29px;
+	left: 30px;
 	top: 14px;
 	width: 275px;
 	height: 209px;

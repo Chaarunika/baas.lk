@@ -4,6 +4,13 @@
 <head>
 	<title>baas.lk</title>
 
+	<!-- Bootstrap  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
 	<link href="Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
@@ -14,7 +21,15 @@
 	<link href="css/profile.css" rel="stylesheet" />
 </head>
 
+<style type="text/css">
 
+#subMenu{
+	position: absolute;
+	top: 90px;
+	width: 100%;
+	left :50px;
+}
+</style>
 <body>
 
 	<?php 
@@ -22,7 +37,12 @@
 	//session_start();
 	include_once('_database/database.php'); 
 	include_once('functions/functions.php');
+
 	?>
+
+
+	
+
 
 	<?php 	
 	if(isset($_SESSION['userID']))
@@ -52,8 +72,18 @@
 	</div>
 </div>
 
+	<div id="subMenu">
+		<ul class="nav nav-tabs">
+		  	<li role="presentation" class="active"><a href="profile.php">Overview</a></li>
+		 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
+		 	<li role="presentation"><a href="#">Messages</a></li>
+		</ul>
+	</div>
 
 <div id="apDivContainer">
+
+	
+
 
     <div id="apDivMainInfo">
     	<div id="apDivTitle">
@@ -63,9 +93,10 @@
         	if(isset($user['user_firstname'])){ 
         		echo $user['user_firstname']." ".$user['user_lastname'] ;
         	}?>
+        	<br><br>
       	</p>    
 
-        <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
+        <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
         <p>Catagory : <?php if(isset($sp['catagory'])) { echo $sp['catagory'] ;} ?></p>
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>

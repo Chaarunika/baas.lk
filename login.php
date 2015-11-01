@@ -67,7 +67,7 @@ function myFunction() {
 </div>
 
 <script>
-myFunction(); 
+//myFunction(); 
 </script>
 
 

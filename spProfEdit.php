@@ -3,12 +3,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
-<?php require_once('libraries/password_compatibility_library.php') ?>;
-<?php require_once('config/config.php') ?>;
+<?php require_once('libraries/password_compatibility_library.php') ; ?>
+<?php require_once('config/config.php'); ?>
 <link rel="stylesheet" type="text/css" href="css/spProfEdit.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
+
+<!-- Bootstrap  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
 <style type="text/css">
-	
+
+	#subMenu{
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  left :50px;
+}
 </style>
 
 
@@ -127,6 +142,15 @@ function selectFunction(variable){
 <body>
 
 <?php include ("header.php"); ?>
+
+  <div id="subMenu">
+    <ul class="nav nav-tabs">
+      <li role="presentation" ><a href="profile.php">Overview</a></li>
+      <li role="presentation" class="active"><a href="spProfEdit.php">Edit Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+  </div>
+
 <div id="spProfEditContainer"> 
 
 
@@ -158,7 +182,7 @@ function selectFunction(variable){
 		<a href="#">
 		<div id="apDivTopic2" style= "top:130px">
 		  <div id="apDivBar2" ></div>
-		  <div id="apDivTag2" onclick = "selectFunction(2)">Edir your Work Information</div>
+		  <div id="apDivTag2" onclick = "selectFunction(2)">Edit your Work Information</div>
 		</div>
         </a>
 
