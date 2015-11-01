@@ -72,8 +72,7 @@ function Fun() {
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
-		  			if( $_SESSION['Catagory']== "sp"){
-					echo"<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>";
+		  			if( $_SESSION['Catagory']== "sp"){					
 					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					echo"<li><a href=\"../BAAS_LK/profile.php\">ProfileSP</a></li>";
 					echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";

@@ -4,12 +4,12 @@
 <head>
 	<title>baas.lk</title>
 
-	<!-- Bootstrap  
+	<!-- Bootstrap  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
 
 	<link href="Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
@@ -72,13 +72,15 @@
 	</div>
 </div>
 
-	<div id="subMenu">
-		<ul class="nav nav-tabs">
-		  	<li role="presentation" class="active"><a href="profile.php">Overview</a></li>
-		 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
-		 	<li role="presentation"><a href="#">Messages</a></li>
-		</ul>
-	</div>
+	<?php if(!isset($_GET['user']))	{	?>
+		<div id="subMenu">
+			<ul class="nav nav-tabs">
+			  	<li role="presentation" class="active"><a href="profile.php">Overview</a></li>
+			 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
+			 	<li role="presentation"><a href="#">Messages</a></li>
+			</ul>
+		</div>
+	<?php } ?>
 
 <div id="apDivContainer">
 
