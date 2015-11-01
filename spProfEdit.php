@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
-
+<?php require_once('libraries/password_compatibility_library.php') ?>;
+<?php require_once('config/config.php') ?>;
 <link rel="stylesheet" type="text/css" href="css/spProfEdit.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <style type="text/css">
@@ -447,21 +448,22 @@ if (!$conn) {
   </div>
       <div id="apDivOptionBox3">
 	  
-	   <form id="form2" name="form3" method="post" action="spProfEdit.php">
+	   <form id="form4" name="form4" method="post" action="spProfEdit.php">
      <p>
-       <label for="optionalEmail">Old Password</label>
-       <input type="text" name="optionalEmail" id="optionalEmail" />
+       <label for="oldPassword">Old Password</label>
+       <input type="password"  name="oldPassword" id="oldPassword" autocomplete="off" required/>
      </p>
      <p>
-       <label for="primaryMobileNo">New Password</label>
-       <input type="text" name="primaryMobile" id="primaryMobile" required/>
+       <label for="newPassword">New Password</label>
+       <input type="password"  name="newPassword" id="newPassword" autocomplete="off" required/>
      </p>
      <p>
-       <label for="optionalMobile">Confirm Password</label>
-       <input type="text" name="optionalMobile" id="optionalMobile" />
+       <label for="confirmPassword">Confirm Password</label>
+
+       <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" required/>
      </p>
      <p>
-       <input type="submit" name="saveContact" id="saveContact" value="Change" />
+       <input type="submit" name="password" id="password" value="Change" />
      </p>
 
      <?php
@@ -483,6 +485,52 @@ if (!$conn) {
 
 
   }
+  
+  if(isset($_POST["oldPassword"]) )
+  {
+  $oldPassword = $_POST["oldPassword"];
+  $newPassword = $_POST["newPassword"];
+  $confirmPassword = $_POST["confirmPassword"];
+  
+	$sqlget = "select * from users where user_id='".$_SESSION['userID']."'";  
+	$row=mysqli_query($conn, $sqlget);
+	$result=mysqli_fetch_assoc($row);
+	
+	
+	if(password_verify($oldPassword,$result['user_password_hash']))
+	{
+		if( $newPassword==$confirmPassword)
+		{
+			$hash_cost_factor = HASH_COST_FACTOR;
+			$newPasswordhash = password_hash($newPassword, PASSWORD_DEFAULT, array('cost' => 	$hash_cost_factor));
+		
+			$sql = "UPDATE users SET user_password_hash = '".$newPasswordhash."' where user_name='"	.$_SESSION['username']."'";
+	  
+			mysqli_query($conn, $sql);
+			header('Location:login.php?logout');
+		}
+		else
+		{
+		
+		echo "new password and confirm password doesn't match";
+		
+		}
+			
+	}
+	
+	else
+	{		
+	echo "Old password is wrong";
+			
+	
+	}
+  
+	 
+ 
+  }
+
+
+  
 
   ?>
 

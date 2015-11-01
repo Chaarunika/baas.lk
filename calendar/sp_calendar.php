@@ -391,8 +391,24 @@
 
 				while($jobdate = mysqli_fetch_assoc($resultdate))
 				{
-				echo $jobdate['title']."<br>";
-				
+					echo "Job :".$jobdate['title']."<br>";
+					
+					if($jobdate['accepted']==0)
+					{
+						echo "Status : Pending";
+						
+					}
+					else if($jobdate['accepted']==1)
+					{
+						echo "Status :Agreed";
+						
+					}
+					else if($jobdate['accepted']==2)
+					{
+						echo "Status : Cancelled";
+						
+					}
+					
 				}
 				echo "</div>
 				

@@ -1,4 +1,25 @@
 
+#manageAppointments{
+	position: absolute;
+	width: 1041px;
+	height:100px;
+	z-index: 2;
+	background-color: rgba(200,200,200,0.8);
+	}
+
+#manageAppointmentsInside{
+	position: absolute;
+	width: 500px;
+	height:60px;
+	top:20px;
+	left:270px;
+	border-radius:20px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.6);
+	    box-shadow: 2px 5px 5px #7c7c7c;
+	}	
+	
+	
 #apDivMainInfo{
 	position: absolute;
 	left: 500px;
@@ -26,7 +47,7 @@
 #calendarBox{
 	position: absolute;
 	left: 80px;
-	top: 100px;
+	top: 150px;
 	width: 330px;
 	height: 247px;
 	z-index: 2;
