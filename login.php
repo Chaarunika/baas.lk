@@ -37,7 +37,7 @@
 <body>
 
 	
-	<?php include_once('header.php'); ?>
+	
 
 	<?php //include 'functions/functions.php' ?>
 	
@@ -108,7 +108,7 @@ if ($login->checkloginstatus() == true) {
 </div>	
  
 
-
+<?php include_once('header.php'); ?>
 
 </html>
 
