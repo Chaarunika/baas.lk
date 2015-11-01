@@ -67,7 +67,7 @@ function Fun() {
 		<ul>
 	  		<li><a href="../BAAS_LK/index.php">Home</a></li>
 	  		<li><a href="../BAAS_LK/index.php">Wiki</a></li>
-	  		<li><a href="../BAAS_LK/faq.php">FAQ</a></li>
+	  		<li><a href="../BAAS_LK/faq.php">FAQ</a></li>	  		
 	  		
 
 	  		<?php
@@ -85,6 +85,7 @@ function Fun() {
 			   		echo"<li><a href=\"../BAAS_LK/profileCustomer.php\">ProfileCu</a></li>";
 					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
+					echo "<li><a href=\"../BAAS_LK/postjob.php\">Post A Job</a></li>";
 					//echo"<li><a href=\"../BAAS_LK/profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 			   		}
 
@@ -94,8 +95,9 @@ function Fun() {
 	</div>
 </div>
 
+<!--
 <div id="messageBox"> 
-	<?php 
+	<?php /*
 	include 'functions/functions.php';
 	
 	if(isset($_SESSION['message'])){
@@ -104,9 +106,11 @@ function Fun() {
 		unset($_SESSION['message']);
 	}
 
-	
+	*/
 	?> 
 </div>
+
+-->
 
 
 

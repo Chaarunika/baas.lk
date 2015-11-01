@@ -12,13 +12,21 @@
 
 #apDivSearchBar {
 	position: absolute;
-	left: 100px;
+	left: 50px;
 	top: 88px;
 	width: 960px;
 	height: 180px;
 	z-index: 8;
 	background-color: rgba(51,51,51,0.7);
 	border-radius: 20px;
+}  
+
+#searchBox {
+	//position: absolute;
+	//left :200px;
+	//top:100px;
+	//width: 100%;
+	
 }  
 
 .SearchBar {
@@ -34,7 +42,7 @@
 }
 
 .check {
-	color: rgba(255,255,255,0.5);
+	color: rgba(255,255,255,1);
 	position: absolute;
 	left: 693px;
 	top: 81px;
