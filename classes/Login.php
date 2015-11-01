@@ -14,8 +14,9 @@ class Login
 
     public function __construct()
     {
-      
+        if (session_status() == PHP_SESSION_NONE) {
         session_start();
+        }
 		
 		//login with session data
 		if (isset($_GET["logout"])) {
@@ -124,6 +125,7 @@ class Login
             $sth->execute(array(':user_name' => $user_name, ':user_last_failed_login' => time()));
        
 			echo PASSWORD_WRONG;
+            $_SESSION['message'] = PASSWORD_WRONG;
 				
             // has the user activated their account with the verification email
             } else if ($result_row->user_active != 1) {

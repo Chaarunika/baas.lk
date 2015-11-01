@@ -1,7 +1,8 @@
+
 #apDivProfBox {
 	position: absolute;
-	left: 100px;
-	top: 80px;
+	left: 50px;
+	top: 100px;
 	width: 727px;
 	height: 600px;
 	z-index: 1;
@@ -17,13 +18,15 @@
 	border-right-color: rgba(212,212,212,1);
 	border-bottom-color: rgba(212,212,212,1);
 	border-left-color: rgba(212,212,212,1);
-	visibility: visible;	
+	visibility: visible;
+	
 }
 
-#spProfEditContainer{
+#spProfEditContainer
+{
 	position: relative;
-}
 
+}
 #apDivProfAbout {
 	position: absolute;
 	left: 0px;
@@ -36,8 +39,7 @@
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
 }
-
-#apDivIcon{
+#apDivIcon {
 	position: absolute;
 	left: 2px;
 	top: 0px;
@@ -45,7 +47,6 @@
 	height: 43px;
 	z-index: 3;
 }
-
 #apDivAbout {
 	position: absolute;
 	left: 61px;
@@ -58,7 +59,6 @@
 	font-weight: bold;
 	color: rgba(0,0,0,1);
 }
-
 #apDivTopicList {
 	position: absolute;
 	left: 2px;
@@ -68,7 +68,6 @@
 	bottom: 0px;
 	border-right: thin solid rgba(212,212,212,1);
 }
-
 #apDivTopic0,#apDivTopic1,#apDivTopic2,#apDivTopic3 {
 	position: absolute;
 	left: 0px;
@@ -85,9 +84,9 @@
 	border-bottom :3px groove red;
 	border-left :3px groove red;
 	height : 60px;
-	*/	
-}
-
+	*/
+	
+	}
 #apDivBar0,#apDivBar1,#apDivBar2,#apDivBar3 {
 	position: absolute;
 	left: 0px;
@@ -96,7 +95,6 @@
 	height: 98%;
 	z-index: 2;
 }
-
 #apDivTag0 ,#apDivTag1,#apDivTag2 ,#apDivTag3{
 	position: relative;
 	left: 10%;
@@ -117,10 +115,10 @@
 	background-color :orange;	
 }
 
-#apDivTag0:hover,#apDivTag1:hover,#apDivTag2:hover,#apDivTag3:hover{	
+#apDivTag0:hover,#apDivTag1:hover,#apDivTag2:hover,#apDivTag3:hover{
+	
 	color: rgba(0,0,0,1);
 } 
-
 #apDivOptionBox1,#apDivOptionBox2, #apDivOptionBox0, #apDivOptionBox3 {
 	position: absolute;
 	left: 220px;
@@ -131,7 +129,6 @@
 	visibility : visible;
 	box-sizing: border-box;
 }
-
 #apDivOptionBox0{
 	box-sizing: border-box;
 	left: 210px;
@@ -145,15 +142,15 @@
 	
 #apDivOptionBox1{
 	visibility : hidden;
-}
+	}
 	
 #apDivOptionBox2{
 	visibility :hidden;
-}
+	}
 	
 #apDivOptionBox3{
 	visibility :hidden;
-}
+	}
 
 #apDivName {
 	position: relative;
@@ -166,7 +163,6 @@
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
 }
-
 #apDivBirthDate {
 	position: relative;
 	left: 0px;
@@ -178,7 +174,6 @@
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
 }
-
 #apDivGender {
 	position: relative;
 	left: 0px;
@@ -190,7 +185,6 @@
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
 }
-
 #apDivLanguage {
 	position: relative;
 	top: auto;
@@ -204,7 +198,6 @@
 	right: 0px;
 	bottom: auto;
 }
-
 #apDiv1 {
 	position: absolute;
 	left: 300px;
@@ -220,21 +213,15 @@ label {
 	position: relative;
 	vertical-align: middle;
 	}
-
-input[type=text],input[type=password],input[type=submit],input[type=email]  {
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=email]  {
 	display: block;
 	margin-bottom: 15px;
 	vertical-align: middle;
-}
-
+	}
 input[type=checkbox] {
-	margin-bottom: 15px;	
-}
-
-.img-circleTable {		
-	border-radius: 50%;
-	background-repeat: no-repeat;
-	background-position: center center;// Center image in the circle
-    background-size: cover; // Make sure it covers the circle, as there is no bg repeat; 	
-	border: 1px solid rgba(51,51,51,0.7);
-}
+	margin-bottom: 15px;
+	
+	}

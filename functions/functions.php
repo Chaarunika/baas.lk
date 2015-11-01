@@ -51,4 +51,18 @@
 		return $result;
 	}
 
+	function display_error($error){
+
+		$out = "<div class=\"alert alert-danger fade in\">";
+        $out .= "<a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>";
+        $out .= "<strong>Error!</strong>";
+        $out .= $error;
+    	$out .= "</div>";
+
+    	//echo $out;
+    	return $out;
+	}
+
+	
+
 ?>

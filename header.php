@@ -66,16 +66,17 @@ function Fun() {
 	<div id ="menu" class="menubar">
 		<ul>
 	  		<li><a href="../BAAS_LK/index.php">Home</a></li>
-	  		<li><a href="../BAAS_LK/menu.php">Bidd</a></li>
 	  		<li><a href="../BAAS_LK/index.php">Wiki</a></li>
 	  		<li><a href="../BAAS_LK/faq.php">FAQ</a></li>
-	  		<li><a href="../BAAS_LK/index.php">Messages</a></li>
+	  		
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
 		  			if( $_SESSION['Catagory']== "sp"){
 					echo"<li><a href=\"../BAAS_LK/spProfEdit.php\">Profile Edit</a></li>";
+					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					echo"<li><a href=\"../BAAS_LK/profile.php\">ProfileSP</a></li>";
+					echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
 
 
 			   		//echo"<li><a href=\"../BAAS_LK/profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
@@ -83,6 +84,8 @@ function Fun() {
 
 			   		if( $_SESSION['Catagory']== "customer"){
 			   		echo"<li><a href=\"../BAAS_LK/profileCustomer.php\">ProfileCu</a></li>";
+					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
+					echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
 					//echo"<li><a href=\"../BAAS_LK/profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 			   		}
 
@@ -90,6 +93,20 @@ function Fun() {
 			?>  
 		</ul>
 	</div>
+</div>
+
+<div id="messageBox"> 
+	<?php 
+	include 'functions/functions.php';
+	
+	if(isset($_SESSION['message'])){
+		$message = display_error($_SESSION['message']); 
+		echo $message;
+		unset($_SESSION['message']);
+	}
+
+	
+	?> 
 </div>
 
 

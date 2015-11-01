@@ -198,22 +198,7 @@ if (!$conn) {
   $userID = $_SESSION['userID']; 
   
 ?>
-
-
-
-
-
-
-
-  
-
-
-
-  
-
-  
-
-     
+    
   <div id="apDivOptionBox0">
 
     <form id="form1" name="form1" method="post" action="spProfEdit.php">

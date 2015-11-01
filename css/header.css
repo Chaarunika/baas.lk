@@ -1,3 +1,10 @@
+#messageBox {
+	position:  relative;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
+}
+
 .userpicture{
 	position:fixed;
 	z-index:10;
@@ -13,7 +20,7 @@
 }
 
 #apDivHeaderContainer {
-	position: absolute;
+	position: relative;
 	left: 0px;
 	top: 0px;
 	width: 100%;

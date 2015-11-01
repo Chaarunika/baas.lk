@@ -7,6 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 
 <link href="main.css" rel="stylesheet">
 <link href="login.css" rel="stylesheet">
@@ -20,29 +26,22 @@
 	left: 207px;
 	top: 300px;
 }
+
+#apDivRand {
+	position:relative;
+	}
 </style>
 </head>
 
 
 <body>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 
- 
-<p>&nbsp;</p>
-<div id="signupbox">
-  <div id="newto">
-    <p>New to baas.lk?</p>
-  </div>
-  <div id="signupnow">
-  <a href="signup.php">Sign UP NOW! </a></div>
-</div>
+	
+	<?php include_once('header.php'); ?>
 
-</body>
+	<?php //include 'functions/functions.php' ?>
+	
+
 
 <?php
 
@@ -57,15 +56,23 @@ require_once('classes/Login.php');
 
 ?>
 
-<div id="apDiv1">
-<?php $login = new Login(); ?>
+<script>
+function myFunction() {
+    location.reload(true);
+}
+</script>
 
+<div id="apDiv1">
+<?php $login = new Login(); 	?>
 </div>
 
-<?php
-include('header.php'); 
+<script>
+myFunction(); 
+</script>
 
-?>
+
+
+
 
 <div id="login-form-box">
 
@@ -77,7 +84,8 @@ include('header.php');
 
 if ($login->checkloginstatus() == true) {
    	
-		header("Location:http://localhost/BAAS_LK/profile.php");
+
+		header("Location:http://localhost/BAAS_LK/index.php");
 	}
 	
 	else 
