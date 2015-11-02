@@ -39,8 +39,10 @@
   			<a href = "fbLogin/fbSignupStatus.php?catagory=customer">
   			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
   			</a>
-
+			
+			<a href = "google/customer.php">
    			<p><img src="images/googleSignup.png" width="255" height="54" /></p>
+			</a>
 		</div>
 
 		

@@ -44,9 +44,9 @@
   			<a href = "fbLogin/fbSignupStatus.php?catagory=sp">
   			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
   			</a>
-  			<a href = "google/index.php">
+  			<a href = "google/sp.php">
    			<p><img src="images/googleSignup.png" width="255" height="54" /></p>
-   			</a>
+			</a>
 		</div>
 
 		

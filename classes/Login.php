@@ -33,7 +33,7 @@ class Login
 			}
 		 // if user has an active session on the server
 		else if(!empty($_SESSION['username']) && ($_SESSION['loginstatus'] == 1)) {
-			echo "session";
+			//echo "session";
             $this->loginWithSessionData();}
           
 
