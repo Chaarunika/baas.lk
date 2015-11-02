@@ -1,10 +1,22 @@
+<?php include_once ('_database/database.php') ?>
 
 <?php
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+if(isset($_POST['submitJob'])){
+    echo "Successfully";
+    $jobType = $_POST['jobType'];
+	$jobDesc = $_POST['jobDesc'];
+    $jobArea =$_POST['jobArea'];
+    $jobAddress= $_POST['jobAddress'];
+    $jobTel = $_POST['jobTel'];
+
+	$sql = " INSERT INTO postjob2 (job_type,job_description,area,address,tel_num) VALUES ('$jobType','$jobDesc','$jobArea','$jobAddress','jobTel' )";
 	
-	$conn = new MySQLi("localhost","root","","baaslk");
-	mysqli_query($conn,"INSERT INTO postjob2 (job_type,job_description,area,address,tel_num) VALUES ('$_POST[type]','$_POST[job]','$_POST[area]','$_POST[add]','$_POST[tel]')");
-	echo "Successfully";
+
+    if (mysqli_query($dbConnection,$sql) ) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 
 }
 ?>
@@ -16,10 +28,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <br>
     </div>
     
-    <form action = "" method = "post">
+    <form action = "index.php" method = "post">
     
     <div id = "a2">
-        <center>Select Job Type <select name="type" class = "type"> 
+        <center>Select Job Type 
+        <select name="jobType" class = "type" required /> 
         <option> Architect</option>
         <option>  Draftsman</option>
         <option> Landscape Designer </option>
@@ -49,14 +62,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     <div id = "a3">
     	<center>
-    	Job Description <br> <textarea name ="job" cols= "32" rows= "4" class = "jobd"> </textarea>
+    	Job Description <br> <textarea name ="jobDesc" cols= "32" rows= "4" class = "jobd" required >  </textarea>
     	</center>
     	</div>
     <br>
     
     <div id = "a7">
     	<center>
-        Select Area <select name = "area" class= "area"> 
+        Select Area <select name = "jobArea" class= "area" required /> 
         <option>Colombo</option>
         <option>Kandy</option>
         <option>Kurunegala</option>
@@ -89,14 +102,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     <div id="a4"> 
     	<center>
-    	Address <br> <textarea name = "add" cols = "20" rows = "3" class="add"> </textarea>
+    	Address <br> <textarea name = "jobAddress" cols = "20" rows = "3" class="add" required >  </textarea>
     	</center>
     </div>
     <br>
     
     <div id="a5">
     	<center>
-    	Telephone Number <br> <input type="text" name="tel" class= "tel" >
+    	Telephone Number <br> <input type="text" name="jobTel" class= "tel" required /> 
       
     	</center>
     </div>
@@ -104,7 +117,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     <div id="a6">
         <center>
-        <input type="submit" name="submit" value= "POST JOB" class = "post" >
+        <input type="submit" name="submitJob" value= "POST JOB" class = "post" >
         </center>
     </div>
     </form>
