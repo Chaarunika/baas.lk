@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
-<link href ="header.css" rel = "stylesheet" >
+<link href ="css/header.css" rel = "stylesheet" >
 <style type="text/css">
 
 .spUser {
@@ -47,7 +47,7 @@
 
 <body>
 
-
+<?php include 'header.php';?>
 
 <form id="form1" name="form1" method="post" action="selectUserFB.php"> 
   <input name="generalUser" type="submit" class="generalUser" id="generalUser" value="" /> 

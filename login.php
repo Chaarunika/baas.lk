@@ -37,7 +37,7 @@
 <body>
 
 	
-	<?php include_once('header.php'); ?>
+	
 
 	<?php //include 'functions/functions.php' ?>
 	
@@ -102,13 +102,13 @@ if ($login->checkloginstatus() == true) {
   
  
   
-  <a href = "fbLogin/fbSignupStatus.php">
+  <a href = "fbLogin/fbSignupStatus_login.php">
   <div id="facebook"><img src="images/facebook-login.png" alt="" width="150" height="33" /></div>
   </a>
 </div>	
  
 
-
+<?php include_once('header.php'); ?>
 
 </html>
 

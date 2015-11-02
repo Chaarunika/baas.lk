@@ -1,0 +1,29 @@
+.spUser{
+	background-image: url(../images/spUser.JPG);
+	position: absolute;
+	width: 536px;
+	height: 424px;
+	left: 650px;
+	top: 120px;
+}
+
+.spUser:hover{
+	background-image: url(../images/spUser2.JPG);
+	cursor: pointer;
+	cursor: hand;
+}
+
+.generalUser {
+	background-image: url(../images/generalUser.JPG);
+	position: absolute;
+	left: 100px;
+	top: 120px;
+	width: 536px;
+	height: 425px;
+}
+
+.generalUser:hover{			
+	background-image: url(../images/generalUser2.JPG);
+	cursor: pointer;
+	cursor: hand;			
+}

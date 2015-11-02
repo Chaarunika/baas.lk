@@ -36,7 +36,7 @@
   			<p style="font-size:20px">Fed up with filling forms...???</p>
   			<p style="font-size:20px">Try easy signup solutions..</p>
 
-  			<a href = "fbLogin/fbSignupStatus.php">
+  			<a href = "fbLogin/fbSignupStatus.php?catagory=customer">
   			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
   			</a>
 
