@@ -76,6 +76,7 @@ function Fun() {
 					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					echo"<li><a href=\"../BAAS_LK/profile.php\">ProfileSP</a></li>";
 					echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
+					echo"<li><a href=\"../BAAS_LK/findjob.php\">Jobs</a></li>";
 
 
 			   		//echo"<li><a href=\"../BAAS_LK/profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
@@ -95,22 +96,7 @@ function Fun() {
 	</div>
 </div>
 
-<!--
-<div id="messageBox"> 
-	<?php /*
-	include 'functions/functions.php';
-	
-	if(isset($_SESSION['message'])){
-		$message = display_error($_SESSION['message']); 
-		echo $message;
-		unset($_SESSION['message']);
-	}
 
-	*/
-	?> 
-</div>
-
--->
 
 
 

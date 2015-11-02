@@ -1,13 +1,16 @@
-<!HTML DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <style>
 #mainm{
 	width:950px;
 	height:auto;
-	float:left}
+	float:left;
+}
 
 #main{
+	position: absolute;
+	top :80px;
 	width: 600px;
 	height: 1000px;
 	background:#FC3;
@@ -72,11 +75,14 @@
 	font:"Courier New", Courier, monospace;
 	border-color:#F30;	
 	border-radius: 20px;}
+
 </style>
 
-<head>
+<link rel="stylesheet" type="text/css" href="css/header.css">
+</head>
 <body>
 
+<?php include 'header.php'; ?>
 <div id = "mainm">
 <div id="main">
 	<div id = "b1">
@@ -120,7 +126,7 @@
     </div>
     <div id = "b3"> <center>
     <?php
-	$conn = new MySQLi("localhost","root","","bass1");
+	$conn = new MySQLi("localhost","root","","baaslk");
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 	$sql = "SELECT *FROM postjob2 WHERE area = '$_POST[search]'";
@@ -157,39 +163,7 @@ $conn -> close();
 
 }
 ?>
-<?php
-$query = "SELECT * FROM postjob2 ORDER BY time DESC LIMIT 5";
-$result2 = mysqli_query($conn, $query );
-$row = mysqli_fetch_array($result2,MYSQL_ASSOC);
 
-if($result2 -> num_rows >0){
-	while($row = $result2 -> fetch_assoc()){
-		echo $row['job_description'];
-		echo "<br>";
-		echo "TP : ";
-		echo $row['tel_num'];
-		echo "<br>";
-		echo "Address : ";
-		echo $row['address'];
-		echo "<br>";
-		$t = preg_split("/(?<=\w)\b\s*/", $row["time"]);
-		echo "Posted Date : ";
-		echo $t[0];
-		echo $t[1];
-		echo $t[2];
-		echo "<br>";
-		echo "Posted Time : ";
-		echo $t[3];
-		echo $t[4];
-		echo $t[5];
-		echo "<br><br>";
-		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-		echo "<br><br>";
-		
-		}
-}
-
-?>
 
 </center>
 </div>

@@ -249,7 +249,16 @@ if($k !=0)
 		echo "<div id=\"apDivResultBox{$i}\">";
 		echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
 		echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
-		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
+		if(isset($_SESSION['Catagory'])){
+			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
+			echo "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+		}
+
+		else{
+			echo "</div>" ;
+		}
+		
 		echo "</div>";		
 		$i++;
 	  	}
@@ -262,7 +271,16 @@ if($k !=0)
 			echo "<div id=\"apDivResultBox{$i}\">";
 			echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
 			echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
-			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]. "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
+			if(isset($_SESSION['Catagory'])){
+				if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
+				echo "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+			}
+
+			else{
+				echo "</div>" ;
+			}
+			
 			echo "</div>";
 
 			$i++;
