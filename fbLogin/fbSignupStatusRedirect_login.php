@@ -78,11 +78,7 @@ if (isset($accessToken)) {
 	}
 	else{
 
-		if(isset($_SESSION['Catagory']))
-		{
-			header('location:login.php') ;
-		}
-	
+		header('location: selectUserFB.php');
 	}
 }
 	?>

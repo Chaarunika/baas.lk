@@ -11,13 +11,9 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email']; // optional
-$loginUrl = $helper->getLoginUrl('http://localhost/BAAS_LK/fbLogin/fbSignupStatusRedirect.php', $permissions);
+$loginUrl = $helper->getLoginUrl('http://localhost/BAAS_LK/fbLogin/fbSignupStatusRedirect_login.php', $permissions);
 
-
-if(isset($_GET['catagory']))
-{
-	$_SESSION['Catagory']=$_GET['catagory'];
-}
+//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 
 header('location:'.$loginUrl);
 ?>

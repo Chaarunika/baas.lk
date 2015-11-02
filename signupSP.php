@@ -25,6 +25,8 @@
 
 	// create the registration object
 	$registration = new Registration();
+	
+	
 	?>
 
 	<div id ="apDivBox">
@@ -33,15 +35,18 @@
 
 		<?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
 
+		
+	
 		<div id="apDivFbLogin">
   			<p style="font-size:20px">Fed up with filling forms...???</p>
   			<p style="font-size:20px">Try easy signup solutions..</p>
-
-  			<a href = "fbLogin/fbSignupStatus.php">
+			
+  			<a href = "fbLogin/fbSignupStatus.php?catagory=sp">
   			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
   			</a>
-  			
+  			<a href = "google/index.php">
    			<p><img src="images/googleSignup.png" width="255" height="54" /></p>
+   			</a>
 		</div>
 
 		
@@ -88,10 +93,20 @@
     	}
 	}
 	?>
-
-	<?php if(isset($_SESSION)){
+	
+	<?php
+	
+	if(isset($_SESSION)){
 	session_destroy();
-	}?>
+	
+	}
+	
+	
+	?>
+	
+	
+	
+	
 </body>
 
 </html>

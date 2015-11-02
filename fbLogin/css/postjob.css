@@ -1,0 +1,84 @@
+
+#postJobBox{
+	width: 300px;
+	height: 550px;
+	top : 100px ;
+	background:#FC3;
+	/* float:right;
+	//right: 20px; */
+	border-style: solid;
+	border-radius : 10px;
+	font-style:oblique;
+}
+
+#a1{
+	width:300px;
+	}
+	
+#a2{
+	width:300px;
+	float:left;
+	//background:#FF3;
+	/*border-bottom-style:dotted;
+	border-top-style:dotted;*/
+	}
+#a3{
+	width:300px;
+	//background:#FF3;
+	/*border-bottom-style:dotted;
+	border-top-style:dotted;*/
+	}
+#a4{
+	width:300px;
+	//background:#FF3;
+	/*border-bottom-style:dotted;
+	border-top-style:dotted;*/
+	}
+#a5{
+	width:300px;
+	//background:#FF3;
+	/*border-bottom-style:dotted;
+	border-top-style:dotted;*/
+	}
+#a6{
+	width:100px;
+	float:right;
+	//background-color:#FF3;
+	/*border-bottom-style:dotted;
+	border-top-style:dotted;
+	border-left-style:dotted;*/
+	}
+#a7{
+	width:300px;
+	//background:#FF3;
+	/*border-bottom-style:dotted;
+	border-top-style:dotted;*/
+	}
+.post{
+	//background-color:#F90;
+	font:"Courier New", Courier, monospace;
+	//border-color:#F30;	
+	border-radius: 20px;
+	}
+.jobd{
+	//background-color:#FFA;
+	border-radius : 20px;
+	}
+.type{
+	//background-color:#FFA;
+	/*font-style:oblique;*/
+	border-radius : 20px;
+	float:right;
+	}
+.add{
+	//background-color:#FFA;
+	border-radius: 20px;
+	}
+.tel{
+	//background-color:#FFA;
+	border-radius: 20px;
+	}
+.area{
+	//background-color:#FF6;
+	border-radius: 20px;
+	}
