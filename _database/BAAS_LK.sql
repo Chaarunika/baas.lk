@@ -208,7 +208,7 @@ INSERT INTO `baaslk`.`fanswer` (`question_id`, `a_id`, `user`, `userphoto`, `a_a
 CREATE TABLE IF NOT EXISTS `baaslk`.`fquestions` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
   `user` varchar(65) NOT NULL DEFAULT '',
-  `userphoto` varchar(65) NOT NULL DEFAULT '',
+  `userphoto` varchar(255) NOT NULL DEFAULT '',
   `topic` varchar(255) NOT NULL DEFAULT '',
   `detail` longtext NOT NULL,
   `datetime` varchar(25) NOT NULL DEFAULT '',

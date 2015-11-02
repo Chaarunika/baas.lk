@@ -1,50 +1,185 @@
- <?php include 'homeheader.php' ?>
-<html>
-
-<head>
-
-<title>baas.lk</title>
-
-<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff"><link href="navbar/navigation.css" rel="stylesheet">
-<link href="header.css" rel="stylesheet">
-<link href="footer.css" rel="stylesheet">
+<?php include "header.php" ?>
+<style>
+ #coverPics{
+	width: 100%
+	top:0px;
+	background-image: url('images/cover2.jpg');
+	height: 100%
+}
+</style>
+<div id="coverPics">
+</div>
 
 <style type="text/css">
-#apDiv7 {
-	position:absolute;
-	left:89px;
-	top:116px;
-	width:812px;
-	height:2614px;
-	z-index:1;
-}
 
+
+p{	
+	color: rgba(51,51,51,1);
+	font-size:18px;
+	}
+
+h3{
+	line-height: 40%;	
+
+}
+ .FAQ { 
+ 		cursor:hand; cursor:pointer;
+        border:1px solid darkorange;
+        border-radius: 10px;
+        width:250px; 
+        background-color: #f0f0f0;
+       // padding :5px;  	
+        
+        
+    }
+
+ .FAA { 
+ 	display:none;	
+ 	 }
+
+
+#apDivTitle{
+	position: absolute;
+	left: 40px;
+	top: 93px;
+	width: 302px;
+	height: 105px;
+	z-index: 111;
+}
+#show1{
+	position:absolute;
+	left:500px;
+	top:150px;
+	width:628px;
+	height:347px;
+	z-index:2;
+	background-color:#CCC;
+	border-radius : 40px;
+	
+}
+#show2 {
+	position:absolute;
+	left:500px;
+	top:150px;
+	width:628px;
+	height:347px;
+	z-index:2;
+	background-color:#CCC;
+	border-radius : 40px;
+}
+#show3 {
+	position:absolute;
+	left:500px;
+	top:150px;
+	width:628px;
+	height:347px;
+	z-index:2;
+	background-color:#CCC;
+	border-radius : 40px;
+}
+#show4 {
+	position:absolute;
+	left:500px;
+	top:150px;
+	width:628px;
+	height:347px;
+	z-index:2;
+	background-color:#CCC;
+	border-radius : 40px;
+}
 </style>
-<div id="apDiv7">
-  <p>
-    <?php include "category.php"; ?>
-  </p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
+<script type="text/javascript">
+	function toggle(Info) {
+  		var CState = document.getElementById(Info);
+		var CState1 = document.getElementById('show1');
+		var CState2 = document.getElementById('show2');
+		var CState3 = document.getElementById('show3');
+		var CState4 = document.getElementById('show4');
+		if(Info =="show1")
+		{
+			CState2.style.display = 'none';
+			CState3.style.display = 'none';
+			CState4.style.display = 'none';
+		}
+		else if(Info =="show2")
+		{
+			CState1.style.display = 'none';
+			CState3.style.display = 'none';
+			CState4.style.display =  'none';
+		}
+			else if(Info =="show3")
+		{
+			CState1.style.display = 'none';
+			CState2.style.display = 'none';
+			CState4.style.display = 'none';
+		}
+			else if(Info =="show4")
+		{
+			CState1.style.display = 'none' ;
+			CState2.style.display =  'none' ;
+			CState3.style.display = 'none';
+		}
+		
+		
+  		CState.style.display = (CState.style.display != 'block') ? 'block' : 'none';
+		}
+</script>
+
+<div  id="apDivTitle">
+<h1 align="left">Manage Options</h1>
+<div class="FAQ" onClick="toggle('show1')">	
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">  Service Provider</h3>
 </div>
+<DIV class="FAQ" onClick="toggle('show2')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Customer</h3>
+</DIV>
+<DIV class="FAQ" onClick="toggle('show3')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Forum</h3>
+</DIV>
+<DIV class="FAQ" onClick="toggle('show4')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Jobs</h3>
+ </DIV>
+
+</div>
+
+<div id="show1" class="FAA">
+ <p>&nbsp;</p>
+<table width="500" align="center" cellspacing="20" >
+      	  <tr >
+        <td width="25%" height="100" align="center"><a href="spremove.php"><img src="images/1.jpg" height="100" width="100"></img></a></td>
+        <td width="25%" height="100" align="center"><img src="images/2.jpg" height="100" width="100" ></img></td>
+        </tr>
+        <tr>
+         <td width="25%" height="50" align="center" class="tablefont"><a href="spremove.php"><strong>Remove Account</strong></a></td>
+         <td width="25%" height="50" align="center" class="tablefont"><strong>Create New Account</strong></td>
+         </tr>
+    </table>
+</div>
+<div id="show2" class="FAA">
+ <p>&nbsp;</p>
+<table width="500" align="center" cellspacing="20" >
+      	  <tr >
+        <td width="25%" height="100" align="center"><a href="cmremove.php"><img src="images/1.jpg" height="100" width="100"></img></a></td>
+        </tr>
+        <tr>
+         <td width="25%" height="50" align="center" class="tablefont"><a href="cmremove.php"><strong>Remove Account</strong></a></td>
+         </tr>
+    </table>
+
+</div>
+
+<div id="show3" class="FAA">
+ <p>&nbsp;</p>
+<table width="500" align="center" cellspacing="20" >
+      	  <tr >
+        <td width="25%" height="100" align="center"><a href="forumremove.php"><img src="images/4.jpg" height="100" width="100"></img></a></td>
+        </tr>
+        <tr>
+         <td width="25%" height="50" align="center" class="tablefont"><a href="forumremove.php"><strong>Remove Topic</strong></a></td>
+         </tr>
+    </table>
+</div>
+<div id="show4" class="FAA">
+</div>
+
+

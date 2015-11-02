@@ -86,7 +86,7 @@ function Fun() {
 			   		echo"<li><a href=\"../BAAS_LK/profileCustomer.php\">ProfileCu</a></li>";
 					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
-					echo "<li><a href=\"../BAAS_LK/postjob.php\">Post A Job</a></li>";
+					//echo "<li><a href=\"../BAAS_LK/postjob.php\">Post A Job</a></li>";
 					//echo"<li><a href=\"../BAAS_LK/profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 			   		}
 

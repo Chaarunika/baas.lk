@@ -72,7 +72,7 @@
 	padding: 4px 10px;
 	margin: 0px 1px 0px 0px;
 	font: bold 0.7em sans-serif;
-	background-color: #ff3;
+	background-color: #ffcc00;
 	list-style: none;
 	border-left: solid 1px #CCC;
 	border-bottom: solid 1px #999;
@@ -83,6 +83,7 @@
 	cursor: pointer;
 	font-size: 14px;
 	color: #000;
+	
 }
 
 /* This selector is an example of how to change the appearnce of a tab button
@@ -138,7 +139,8 @@
 	border-bottom: solid 1px #CCC;
 	border-top: solid 1px #999;
 	border-right: solid 1px #999;
-	background-color: #666;
+	background-color:   #9C9C9C;
+	
 }
 
 /* This is the selector for the Content panel. The Content panel holds the

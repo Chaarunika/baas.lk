@@ -1,23 +1,8 @@
 <?php
-
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'baaslk';
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
+include "dbconnect.php"; 
 session_start();
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_POST['textfield'];
+$password = $_POST['textfield2'];
 
 $username = stripslashes($username);
 $password = stripslashes($password);
@@ -40,9 +25,5 @@ header("location:index.php");
 
 }
 
-
 $conn->close();
 ?>
-
-
-

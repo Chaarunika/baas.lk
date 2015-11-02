@@ -209,12 +209,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	z-index: 2;
 }
 
+#coverPics{
+	width: 100%;
+	top:0px;
+	background-image: url('images/cover.jpg');
+	height: 768px;
+	z-index: 0;
+	
+
+}
+
 </style>
 </head>
 
 <body>
+	
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
+
+
 
 <?php 
 	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly

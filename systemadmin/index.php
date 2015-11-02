@@ -1,9 +1,6 @@
 <html>
-
 <head>
-
 <title>baas.lk</title>
-
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
@@ -20,76 +17,200 @@
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff"><link href="navbar/navigation.css" rel="stylesheet">
-<link href="header.css" rel="stylesheet">
-<link href="footer.css" rel="stylesheet">
-<?php include 'header.php' ?>
+<meta name="theme-color" content="#ffffff">
+<link href="css/header.css" rel="stylesheet">
+<script>
+
+function Fun() {	
+	
+	setInterval(function(){	
+	var widthVal = window.innerWidth;	
+	console.log(widthVal);
+		if (widthVal >1100)
+			{
+			document.getElementById("main-header").style.right ="30%";
+			}
+			
+		else if(widthVal >1024){
+			document.getElementById("main-header").style.right ="15%";
+			}
+		else{
+			document.getElementById("main-header").style.visibility = "hidden" ;
+			document.getElementById("menu").style.visibility = "hidden" ;
+			//document.getElementById("sinhala").style.visibility = "hidden" ;		
+			//document.getElementById("tamil").style.visibility = "hidden" ;
+			document.getElementById("apDivBaasLk").style.fontSize = "30px" ;
+			document.getElementById("apDivBaasLk").style.top = "30px" ;
+			document.getElementById("tamil").style.right = "0px" ;
+			document.getElementById("sinhala").style.right = "45px" ;
+			}
+			
+			
+		
+			},500);
+		
+
+}
+</script>
+
+<script>
+window.onload = Fun;
+</script>
 
 <style>
 #apDiv7 {
 	position: absolute;
-	left: 94px;
-	top: 254px;
-	width: 396px;
+	left: 380px;
+	top: 226px;
+	width: 413px;
 	height: 240px;
 	z-index: 6;
+	background-color: #CCCCCC;
 }
 #apDiv11 {
 	position:absolute;
-	left:73px;
-	top:206px;
+	left:352px;
+	top:190px;
 	width:252px;
 	height:38px;
 	z-index:7;
 }
 
+.submit {
+	font-size: 14px;
+	font-weight: bolder;
+	background-color: #FC0;
+	position: absolute;
+	left: 193px;
+	width: 102px;
+	height: 31px;
+}
+#apDiv1 {
+	position:absolute;
+	border:1px #333 solid;
+	border-radius:40px;
+	left:448px;
+	top:155px;
+	width:417px;
+	height:454px;
+	z-index:1;
+	color: #CCC;
+	background-color: #CCCCCC;
+}
+#apDiv2 {
+	position:absolute;
+	left:17px;
+	top:36px;
+	width:387px;
+	height:351px;
+	z-index:2;
+	color: #000;
+	font-weight: bold;
+	font-size: 24px;
+}
+#apDiv3 {
+	border:1px #333 solid;
+	border-radius:40px;
+	position:absolute;
+	left:85px;
+	top:12px;
+	width:226px;
+	height:46px;
+	z-index:3;
+	font-size: 36px;
+	font-weight: bold;
+	color: #000;
+	background-color: #FFCC00;
+	text-align: center;
+}
+
+
+.usetex {
+	position: absolute;
+	width: 342px;
+	height: 51px;
+	left: 14px;
+	top: 112px;
+	background-color: #FFF;
+	font-size: 16px;
+}
+.password {
+	position: absolute;
+	width: 342px;
+	height: 49px;
+	left: 14px;
+	top: 214px;
+	background-color: #FFF;
+	font-size: 16px;
+}
+.login {
+	position: absolute;
+	left: 125px;
+	top: 307px;
+	width: 138px;
+	height: 35px;
+	font-weight: bold;
+	font-size: 18px;
+}
+#coverPics{
+	width: 100%
+	top:0px;
+	background-image: url('images/cover.jpg');
+	height: 100%
+}
 </style>
-
-
 </head>
-
 <body>
+<div id="apDivHeaderContainer">
+<div id="apDivLogo">
+<a href="index.php"><img src="images/logo.png" width="80" height="68" alt="Bass Logo"> </a>
+</div>
+<div id="apDivUBar1"></div>
+<div id="apDivUBar2"></div>
+<div id="apDivBaasLk">baas.lk</div>
+<div id="main-header">	
+"The best way to find a builder"	
+</div>
+</div>
 
 
+
+<div id="apDiv1">
+<div id="apDiv3">Admin Login</div>
 <div id="apDiv2">
-  <p><em><strong>The best way to find a builder</strong></em></p>
+  <form name="form1" method="post" action="login.php">
+    <p>&nbsp;</p>
+    <p>Username</p>
+    <p>
+      <label for="textfield"></label>
+      <input name="textfield" type="text" class="usetex" placeholder="      Username" id="textfield" autofocus required>
+      <input name="button" type="submit" class="login" id="button" value="Login">
+    </p>
+    <p>&nbsp;</p>
+    <p>Password</p>
+    <p>
+      <label for="textfield2"></label>
+      <input name="textfield2" type="password" placeholder="      Password" class="password" id="textfield2" required>
+  </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </form>
+
 </div>
-<div id="apDiv5">
-  <p>baas.lk    </p>
-  <p>All Rights Reserved </p>
 </div>
 
-
-
-
-<div id="apDiv7">
-<form method="post" action="login.php">
-<p>
-<label> Username  </label>
-<input name="username" type="text">
-</p>
-
-<p>
-<label> Password  </label>
- <input name="password" type="password" >
-</p>
-
-<p><input name="remember" type="checkbox" value="">
-<label> Remember me  </label>
-</p>
-<input id="button" name="Login" type="submit" value="Login">
-</form>
+<div id="coverPics">
 </div>
-<div id="apDiv11"><strong>System Administrator Login :</strong></div>
-</body>
+
+</body></html>
 
 
-</html>
-
-
-</body>
-
-</html>
 
 
 

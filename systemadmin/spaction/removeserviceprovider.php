@@ -1,4 +1,4 @@
-<?php include 'homeheader.php';?>
+
 <link href="header.css" rel="stylesheet">
 <style type="text/css">
 #apDiv1 {
@@ -26,9 +26,10 @@
 	position:absolute;
 	left:94px;
 	top:7px;
-	width:1123px;
+	width:605px;
 	height:43px;
 	z-index:2;
+	border-radius:20px
 }
 .serachbar {
 	position: absolute;
@@ -56,9 +57,9 @@
 }
 #apDiv4 {
 	position:absolute;
-	left:246px;
+	left:37px;
 	top:297px;
-	width:1068px;
+	width:1277px;
 	height:716px;
 	z-index:2;
 }
