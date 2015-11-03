@@ -26,6 +26,30 @@
 }
 </style>
 
+<script type="text/javascript">
+
+function ValidateMobNumber(txtMobId) {
+  var fld = document.getElementById(txtMobId);
+
+  if (fld.value == "") {
+  return false;
+ }
+  if (isNaN(fld.value)) {
+  alert("The phone number contains illegal characters.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+ else if (!(fld.value.length == 10)) {
+  alert("The phone number is the wrong length. \nPlease enter 10 digit mobile no.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+
+}
+
+</script>
 
 <script>
 
@@ -366,11 +390,11 @@ if (!$conn) {
      </p>
      <p>
        <label for="primaryMobileNo">Primary Mobile No</label>
-       <input type="text" name="primaryMobile" id="primaryMobile" required/>
+       <input type="text" name="primaryMobile" id="primaryMobile" onblur="return ValidateMobNumber('primaryMobile')"  required/>
      </p>
      <p>
        <label for="optionalMobile">Secondary Mobile No</label>
-       <input type="text" name="optionalMobile" id="optionalMobile" />
+       <input type="text" name="optionalMobile" id="optionalMobile" onblur="return ValidateMobNumber('optionalMobile')"  />
      </p>
      <p>
        <input type="submit" name="saveContact" id="saveContact" value="Save" />

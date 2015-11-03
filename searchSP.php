@@ -117,7 +117,7 @@ echo "
 	left: 91px;
 	top: ". $distance. "px;
 	width: 955px;
-	height: 182px;
+	height: 100px;
 	z-index: 1;
 	border-top-style: solid;
 	border-right-style: solid;

@@ -64,7 +64,6 @@
       	</p>    
 
         <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
-        <p>Catagory : <?php if(isset($sp['catagory'])) { echo $sp['catagory'] ;} ?></p>
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       
@@ -78,11 +77,10 @@
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
         <p style="font-size:20px">Contact Details</p>    
-        <p>Contact No : <?php if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
+        <p>Contact No : <?php // if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
         <p>Email : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
-        <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>  
-        <p>Optional Contact No : <?php if(isset($sp['opContactNo'])) { echo $sp['opContactNo'];} ?></p>    
-        <p>Optional Email : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>       
+        <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>          
+            
         </div>           
     </div>
     
