@@ -1,11 +1,10 @@
-
-
+<link rel="stylesheet" type="text/css" href="css/header.css">
 <?php include_once ('header.php')?>
 
 <?php
 
 
-require_once("_database/database.php");
+require_once("_database/databasebid.php");
 
 
 $accountid=$_SESSION['userID'];
@@ -48,13 +47,22 @@ $town=$_POST['town'];
 
 
 
-    $sql=" INSERT INTO  tblbiditems (accountid, biditem, biddesc, town, closingtime ) VALUES ('$accountid' , '$item' , '$description' ,'$town', '$closingtime' )";
+    $sql=" INSERT INTO baaslk.tblbiditems (accountno, biditem, biddesc, town, closingtime ) VALUES ($accountid , '".$item."' , '".$description."' ,'".$town."', '".$closingtime."' )";
     
-    $result = mysqli_query($dbConnection,$sql);
+    $result = mysqli_query($database,$sql);
+	
+	
     
     if(!$result){
       die("Database query failed.");
-    }    
+    }
+	
+	else
+	{
+		
+		echo $result;
+		echo "sdgfsdgf";	
+	}
 
     $mess= "Auction item $item sucessfully created";
 

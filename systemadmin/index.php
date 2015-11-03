@@ -89,35 +89,35 @@ window.onload = Fun;
 	position:absolute;
 	border:1px #333 solid;
 	border-radius:40px;
-	left:448px;
-	top:155px;
-	width:417px;
-	height:454px;
+	left:145px;
+	top:218px;
+	width:339px;
+	height:308px;
 	z-index:1;
 	color: #CCC;
 	background-color: #CCCCCC;
 }
 #apDiv2 {
 	position:absolute;
-	left:17px;
-	top:36px;
+	left:7px;
+	top:0px;
 	width:387px;
 	height:351px;
 	z-index:2;
 	color: #000;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 20px;
 }
 #apDiv3 {
 	border:1px #333 solid;
 	border-radius:40px;
 	position:absolute;
-	left:85px;
-	top:12px;
-	width:226px;
-	height:46px;
+	left:87px;
+	top:4px;
+	width:170px;
+	height:34px;
 	z-index:3;
-	font-size: 36px;
+	font-size: 25px;
 	font-weight: bold;
 	color: #000;
 	background-color: #FFCC00;
@@ -127,26 +127,26 @@ window.onload = Fun;
 
 .usetex {
 	position: absolute;
-	width: 342px;
-	height: 51px;
-	left: 14px;
-	top: 112px;
+	width: 277px;
+	height: 39px;
+	left: 20px;
+	top: 94px;
 	background-color: #FFF;
 	font-size: 16px;
 }
 .password {
 	position: absolute;
-	width: 342px;
-	height: 49px;
-	left: 14px;
-	top: 214px;
+	width: 276px;
+	height: 41px;
+	left: 23px;
+	top: 184px;
 	background-color: #FFF;
 	font-size: 16px;
 }
 .login {
 	position: absolute;
-	left: 125px;
-	top: 307px;
+	left: 96px;
+	top: 253px;
 	width: 138px;
 	height: 35px;
 	font-weight: bold;
@@ -191,7 +191,7 @@ window.onload = Fun;
     <p>
       <label for="textfield2"></label>
       <input name="textfield2" type="password" placeholder="      Password" class="password" id="textfield2" required>
-  </p>
+</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>

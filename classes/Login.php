@@ -108,7 +108,7 @@ class Login
          // if this user not exists
          if (! isset($result_row->user_id)) {
          
-            echo "Login Failed!!!";
+            echo LOGIN_FAILED;
 				
         } else if (($result_row->user_failed_logins >= 3) && ($result_row->user_last_failed_login > (time() - 30))) {
 			

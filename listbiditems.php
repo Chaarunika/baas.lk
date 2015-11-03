@@ -1,15 +1,16 @@
 <?php
 include_once('header.php');
-require_once("_database/database.php");
+require_once("_database/databasebid.php");
+
 
 ?>
 
 
 
 <?php
-$url1=$_SERVER['REQUEST_URI'];
+/*$url1=$_SERVER['REQUEST_URI'];
 
-header("Refresh: 1; URL=$url1");
+header("Refresh: 1; URL=$url1");*/
 
 ?>
 
@@ -79,13 +80,14 @@ header("Refresh: 1; URL=$url1");
 
 
 
-$sql="SELECT tblbiditems.biditemid, tblbiditems.biditem, tblbiditems.biddesc, tblbiditems.town, tblbiditems.closingtime FROM tblbiditems  ";
+$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems";
 
-$result = mysqli_query($dbConnection,$sql);
+$result = mysqli_query($database,$sql);
     
-    if(!$result){
-      die("Database query failed.");
-    }    
+    
+if (false === $result) {
+    echo mysqli_error();
+}	
 
 echo "<ul>";
 
@@ -107,7 +109,7 @@ $seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
 $itemid=$row['biditemid'];
 $item=$row['biditem'];
 
-$auctionby= "me";//$row['username'];
+//$auctionby= $row['user_name'];
 
 
 
@@ -121,21 +123,25 @@ $auctionby= "me";//$row['username'];
 //table
 
 
-/*
-   $query_1 = "SELECT max(bidprice) FROM auction.tblbidhistory WHERE biditemid = ";
-   $query_1 .= "(SELECT biditemid FROM auction.tblbiditems WHERE biditem = '{$row['biditem']}') GROUP BY biditemid;";
+
+   $query_1 = "SELECT max(bidprice) FROM baaslk.tblbidhistory WHERE biditemid = ";
+   $query_1 .= "(SELECT biditemid FROM baaslk.tblbiditems WHERE biditem = '{$row['biditem']}') GROUP BY biditemid;";
    
-   $result1 = mysqli_query($dbConnection,$query_1);
+   $result_1 = mysqli_query($database,$query_1);
+   
+   if (false === $result) {
+    echo mysqli_error();
+}
     
-    if(!$result1){
+   /* if(!$result_1){
       die("Database query failed.");
-    }    
+    }  */  
 
-   $row_1=mysqli_fetch_array($result_1); */
+   $row_1=mysqli_fetch_array($result_1); 
    
-   //echo $row_1['max(bidprice)'];
+  // echo $row_1['max(bidprice)'];
 
-//while($row    = mysql_fetch_assoc($result)){
+//($row    = mysql_fetch_assoc($result)){
 
 
   
@@ -144,8 +150,8 @@ $auctionby= "me";//$row['username'];
   $out .= "<td style='width:550px' >" . $row['biddesc'] . "</td>";
   $out .= "<td style='width:200px'>" .$row['town'] . "</td>";
   $out .= "<td style='width:200px'>" ."$days_remaining"." days" ." "."$hours_remaining"." hrs"." "."$minutes_remaining"." mins"." "."$seconds_remaining"." secs"."</td>";
-  $out .= "<td style='width:200px'>" . "max" .  "</td>";
-  //$out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
+  
+  $out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
   $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 	
   $out .= "</tr>";
   }

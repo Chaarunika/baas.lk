@@ -2,7 +2,7 @@
 include_once ('header.php');
 
 
-require_once("_database/database.php");
+require_once("_database/databasebid.php");
 
 ?>
 

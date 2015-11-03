@@ -120,7 +120,7 @@ include ('header.php') ;
 
 <tr><td>Bid Closing Time</td>
 <td> <input name="closingtime" id="demo3" size="25" width="100">
-<a href="javascript:NewCal('demo3','mmmddyyyy',true,12)"><img src="cal.gif" width="50" height="50" border="0" alt="Pick a date"></a></td>
+<a href="javascript:NewCal('demo3','mmmddyyyy',true,12)"><img src="pics/cal.gif" width="50" height="50" border="0" alt="Pick a date"></a></td>
 <!--<td>&nbsp;</td>-->
 </tr>
 

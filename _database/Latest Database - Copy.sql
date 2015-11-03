@@ -48,9 +48,6 @@ CREATE TABLE IF NOT EXISTS `calendar` (
 -- Dumping data for table `calendar`
 --
 
-INSERT INTO `calendar` (`calendar_id`, `title`, `detail`, `jobDate`, `dateAdded`, `location`, `jobtime`, `contactno`, `customer_id`, `sp_id`, `accepted`) VALUES
-(1, 'cdv', 'fb', '10/30/2015', '2015-10-30', '', '', '', 5, 4, 0),
-(2, 'dfg', 'ijio', '10/30/2015', '2015-10-30', 'ijio', 'oikjo', 'o', 5, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `area`, `dob`, `gender`, `address`, `languages`) VALUES
-(1, 17, 775669875, NULL, NULL, 'Kalutara', '1973-06-05', 'Male', 'No6.kaluthra', NULL);
+(1, 17, 712310111, NULL, NULL, 'Colombo', '1973-06-05', 'Male', 'Kollupitiya,Colombo 03', NULL);
 
 -- --------------------------------------------------------
 
@@ -101,11 +98,6 @@ CREATE TABLE IF NOT EXISTS `fanswer` (
 -- Dumping data for table `fanswer`
 --
 
-INSERT INTO `fanswer` (`question_id`, `a_id`, `user`, `userphoto`, `a_answer`, `a_datetime`, `user_catagory`) VALUES
-(1, 1, 'janith', 'j-606575988.png', 'go to srch br', '23/09/15 07:24:23', 'sp'),
-(1, 2, 'kamal', '90496-404584807.jpg', 'go to hmpg', '23/09/15 07:30:14', 'customer'),
-(1, 3, 'janith', 'j-606575988.png', 'jllkj', '15/10/15 16:40:26', 'sp'),
-(4, 1, 'janith', 'avatar/default.jpg', 'Answer this', '02/11/15 13:14:31', 'sp');
 
 -- --------------------------------------------------------
 
@@ -130,10 +122,6 @@ CREATE TABLE IF NOT EXISTS `fquestions` (
 -- Dumping data for table `fquestions`
 --
 
-INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetime`, `view`, `reply`, `user_catagory`) VALUES
-(1, 'janith', 'j-606575988.png', 'find a baas', 'hw to find a baas', '23/09/15 07:23:51', 43, 3, 'sp'),
-(3, 'hashini', 'default.jpg', 'i want to buy bus', 'how to find a bus', '16/10/15 11:49:45', 8, 0, 'sp'),
-(4, 'janith', 'avatar/default.jpg', 'How to build', 'Building', '02/11/15 01:14:11', 4, 1, 'sp');
 
 -- --------------------------------------------------------
 
@@ -286,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `tblbidhistory` (
   `bidprice` bigint(20) NOT NULL,
   `dtesubmitted` datetime NOT NULL,
   PRIMARY KEY (`bidhistoryid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `tblbidhistory`
@@ -305,8 +293,7 @@ INSERT INTO `tblbidhistory` (`bidhistoryid`, `accountid`, `biditemid`, `bidprice
 (30, 8, 83, 80000, '2015-11-02 14:45:34'),
 (31, 19, 82, 58000, '2015-11-02 15:05:30'),
 (32, 20, 82, 65000, '2015-11-02 15:08:20'),
-(33, 1, 82, 68000, '2015-11-02 19:45:49'),
-(34, 1, 100, 89998, '2015-11-02 23:01:54');
+(33, 1, 82, 68000, '2015-11-02 19:45:49');
 
 -- --------------------------------------------------------
 
@@ -324,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `tblbiditems` (
   `closingtime` text NOT NULL,
   PRIMARY KEY (`biditemid`),
   KEY `user_id` (`accountno`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=99 ;
 
 --
 -- Dumping data for table `tblbiditems`
@@ -334,9 +321,7 @@ INSERT INTO `tblbiditems` (`biditemid`, `accountno`, `biditem`, `biddesc`, `town
 (73, '8', '  Prime Property At Piachaud Gardens', '58.8125 Perch Prime Land In Piachaud Gardens The Most Prestigious Area In Kandy (in Front Of Light House Church) For Sale. Suitable For Educational Institute, Mansion, Apartment Project Or Tourism Project', 'Anuradhapura', '', 'Nov-30-2015 04:29:04 AM'),
 (76, '8', 'Land in Haragama, Kandy', '*10km to Kandy town.\r\n*50m to Kandy-Badulla Rd.\r\n*Excellent neighbourhood.\r\n*Clear deed.\r\n*Close to the Royal park land sale.\r\n*Untroubled place to liv', 'Kandy', '', 'Dec-28-2015 05:58:56 AM'),
 (77, '8', ' Kandy - Kengalla Residential Land For Sale', 'Extent : 12.674 Perches\r\nLocated on Kengalla - Malpana Road\r\n01 Km to Kandy - Digana Main Road\r\nResidential Location\r\n\r\n', 'Kandy', '', 'Dec-23-2015 07:10:07 AM'),
-(82, '9', 'Brighter Park', 'Facilities_\r\n- Water -\r\n- Electricity -\r\n- 20 feet wide access roads - Bank loan facilities\r\n- Better quiet residential environment - \r\n- Clear deed -\r\n\r\nPrice can be negotiated.', 'Homagama', '', 'Dec-22-2015 07:21:12 AM'),
-(99, '1', 'methviru land', 'i want to buy a land ', 'colombo', '', 'Nov-18-2015 07:59:08 PM'),
-(100, '1', 'jlj', 'jklkj', 'jljk', '', 'jklkj');
+(82, '9', 'Brighter Park', 'Facilities_\r\n- Water -\r\n- Electricity -\r\n- 20 feet wide access roads - Bank loan facilities\r\n- Better quiet residential environment - \r\n- Clear deed -\r\n\r\nPrice can be negotiated.', 'Homagama', '', 'Dec-22-2015 07:21:12 AM');
 
 -- --------------------------------------------------------
 

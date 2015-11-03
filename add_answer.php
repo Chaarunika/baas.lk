@@ -3,7 +3,6 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 $user= $_SESSION['username'];
-$userphoto=$_SESSION['user_avatar'];
 $usercatagory=$_SESSION['Catagory'];
 $userphoto=$_SESSION['url'];
 
@@ -47,7 +46,7 @@ if($result2){
 $tbl_name2="fquestions";
 $sql3="UPDATE $tbl_name2 SET reply='$Max_id' WHERE id='$id'";
 $result3=mysql_query($sql3);
-header('Location: forum.php');
+header('Location: view_topic.php?id='.$id.'');
    exit();
 }
 else {
@@ -56,4 +55,6 @@ echo "ERROR";
  
 // Close connection
 mysql_close();
+
+
 ?>

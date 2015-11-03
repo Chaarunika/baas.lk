@@ -53,7 +53,7 @@ h3{
 	width:628px;
 	height:347px;
 	z-index:2;
-	background-color:#CCC;
+	background-color: rgba(51,51,51,0.4);
 	border-radius : 40px;
 	
 }
@@ -64,7 +64,7 @@ h3{
 	width:628px;
 	height:347px;
 	z-index:2;
-	background-color:#CCC;
+	background-color:rgba(51,51,51,0.4);
 	border-radius : 40px;
 }
 #show3 {
@@ -74,7 +74,7 @@ h3{
 	width:628px;
 	height:347px;
 	z-index:2;
-	background-color:#CCC;
+	background-color:rgba(51,51,51,0.4);
 	border-radius : 40px;
 }
 #show4 {
@@ -84,7 +84,7 @@ h3{
 	width:628px;
 	height:347px;
 	z-index:2;
-	background-color:#CCC;
+	background-color:rgba(51,51,51,0.4);
 	border-radius : 40px;
 }
 </style>

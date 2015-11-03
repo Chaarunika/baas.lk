@@ -102,7 +102,7 @@
       	</p>    
 
         <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
-        <p>Catagory : <?php if(isset($sp['catagory'])) { echo $sp['catagory'] ;} ?></p>
+        <p>Catagory : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       	<!--
@@ -152,15 +152,15 @@
 		<div id="galleryBox">
 
 			<div class="wrapper-inner-content-image">    
-				<img src="Gallery/_assets/9.jpg"/>
-				<img src="Gallery/_assets/8.jpg"/>
-				<img src="Gallery/_assets/7.jpg"/>
-				<img src="Gallery/_assets/6.jpg"/>
-				<img src="Gallery/_assets/5.jpg"/>
-				<img src="Gallery/_assets/4.jpg"/>
-				<img src="Gallery/_assets/3.jpg"/>
-				<img src="Gallery/_assets/2.jpg"/>   
-				<img src="Gallery/_assets/1.jpg"/>    
+				<img src="Gallery/_assets/90.jpg"/>
+				<img src="Gallery/_assets/80.jpg"/>
+				<img src="Gallery/_assets/70.jpg"/>
+				<img src="Gallery/_assets/60.jpg"/>
+				<img src="Gallery/_assets/50.jpg"/>
+				<img src="Gallery/_assets/40.jpg"/>
+				<img src="Gallery/_assets/30.jpg"/>
+				<img src="Gallery/_assets/20.jpg"/>   
+				<img src="Gallery/_assets/10.jpg"/>    
     			
 				<div class="wrapper-inner-content-image-hover">
 					<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>

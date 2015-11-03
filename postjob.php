@@ -1,3 +1,28 @@
+<script type="text/javascript">
+
+function ValidateMobNumber(txtMobId) {
+  var fld = document.getElementById(txtMobId);
+
+  if (fld.value == "") {
+  return false;
+ }
+  if (isNaN(fld.value)) {
+  alert("The phone number contains illegal characters.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+ else if (!(fld.value.length == 10)) {
+  alert("The phone number is the wrong length. \nPlease enter 10 digit mobile no.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+
+}
+
+</script>
+
 <?php include_once ('_database/database.php') ?>
 
 <?php
@@ -9,7 +34,7 @@ if(isset($_POST['submitJob'])){
     $jobAddress= $_POST['jobAddress'];
     $jobTel = $_POST['jobTel'];
 
-	$sql = " INSERT INTO postjob2 (job_type,job_description,area,address,tel_num) VALUES ('$jobType','$jobDesc','$jobArea','$jobAddress','jobTel' )";
+	$sql = " INSERT INTO postjob2 (job_type,job_description,area,address,tel_num) VALUES ('$jobType','$jobDesc','$jobArea','$jobAddress',$jobTel )";
 	
 
     if (mysqli_query($dbConnection,$sql) ) {
@@ -109,7 +134,7 @@ if(isset($_POST['submitJob'])){
     
     <div id="a5">
     	<center>
-    	Telephone Number <br> <input type="text" name="jobTel" class= "tel" required /> 
+    	Telephone Number <br> <input type="text" name="jobTel" id="jobTel" class= "tel" onblur="return ValidateMobNumber('jobTel')" required /> 
       
     	</center>
     </div>

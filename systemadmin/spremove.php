@@ -80,9 +80,10 @@ $found =0;
 $sql = "SELECT * FROM users CROSS JOIN serviceprovider WHERE users.user_id=serviceprovider.user_id";
 $result = mysqli_query($conn, $sql);
 $word =mysql_real_escape_string(stripslashes($_POST['textfield']));
+$word = str_replace(' ','',$word);
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-       $string = $row['user_name'];	   
+       $string = $row['user_name'].$row['category'].$row['area'];	   
 	   $line = strtolower($string);
 	   if(strpos($line,strtolower($word))>-1) 
 	   {	++$found;
@@ -109,17 +110,19 @@ if (mysqli_num_rows($result) > 0) {
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
+<td width="100%" bgcolor="#F8F7F1"><table><tr>
 <td width="25%" bgcolor="#F8F7F1"><img src="\BAAS_LK\<?php echo $row['user_avatar'];?>" alt="" border=3 height=30 width=30></img></td>
-<td width="75%"bgcolor="#F8F7F1" align="left"><a href= "/BAAS_LK/systemadmin/profile.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
+<td width="75%"bgcolor="#F8F7F1" align="right"><a href= "/BAAS_LK/systemadmin/profile.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
+</tr></table></td>
 </tr>
 <tr>
-<td width="75%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']." || ".$row['category']; ?></strong></td>
+<td width="100%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']." || ".$row['category']; ?></strong></td>
 </tr>
 <tr>
-<td width="75%" bgcolor="#F8F7F1"><strong><?php echo $row['descr']; ?></strong></td>
+<td width="100%" bgcolor="#F8F7F1"><strong><?php echo $row['descr']; ?></strong></td>
 </tr>
 <tr>
-<td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "sp".",".$row["sp_id"].",".$row["user_id"];?>" onclick="msg()"><img src="images/remove.jpg" alt="" border=3 height=50 width=50></img></a></td>
+<td width="100%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "sp".",".$row["sp_id"].",".$row["user_id"];?>" onclick="msg()"><img src="images/remove.jpg" alt="" border=3 height=50 width=50></img></a></td>
 </tr>
 </table></td>
 </tr>

@@ -3,23 +3,21 @@
 <head>
 <style>
 #mainm{
+	position: absolute;
 	width:950px;
 	height:auto;
-	float:left;
+	//float:left;
+	left: 100px;
 }
 
 #main{
 	position: absolute;
 	top :80px;
 	width: 600px;
-	height: 1000px;
-	background:#FC3;
+	height: 70px;
+	background:#f0f0f0;
 	float:right;
-	font-family:Verdana, Geneva, sans-serif;
-	border-bottom-style:dotted;
-	border-left-style:dotted;
-	border-right-style:dotted;
-	border-top-style:dotted;
+	font-family:Verdana, Geneva, sans-serif;	
 	font-style:oblique;
 	border-radius:20px;
 }
@@ -30,33 +28,33 @@
 #b2{
 	width:600px;
 	float:left;
-	background:#FF3;
-	background-color:#BA812C;
+	background:rgba(51,51,51,0.2);
+	//background-color:#BA812C;
 	border-bottom-style:dotted;
 	border-top-style:dotted;
 	}
 #b3{
 	width:600px;
-	background:#FF3;
+	background-color: #f0f0f0 ;
 	/*border-bottom-style:dotted;
 	border-top-style:dotted;*/
 	}
 #a4{
 	width:600px;
-	background:#FF3;
+	//background:#FF3;
 	border-bottom-style:dotted;
 	border-top-style:dotted;
 	}
 #a5{
 	width:600px;
-	background:#FF3;
+	//background:#FF3;
 	border-bottom-style:dotted;
 	border-top-style:dotted;
 	}
 #a6{
 	width:600px;
 	float:right;
-	background-color:#FF3;
+	//background-color:#FF3;
 	border-color:#900;
 	border-bottom-style:dotted;
 	border-top-style:dotted;
@@ -73,15 +71,22 @@
 	border-radius : 20px;}
 .find{
 	font:"Courier New", Courier, monospace;
-	border-color:#F30;	
+	//border-color:#F30;	
 	border-radius: 20px;}
+
+#jobLogo{
+	position: absolute;
+	left: 800px;
+	top : 160px;
+}
 
 </style>
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
-
+<div id ="jobLogo"> <img src="images/logojob.png">
+</div>
 <?php include 'header.php'; ?>
 <div id = "mainm">
 <div id="main">
@@ -129,7 +134,7 @@
 	$conn = new MySQLi("localhost","root","","baaslk");
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-	$sql = "SELECT *FROM postjob2 WHERE area = '$_POST[search]'";
+	$sql = "SELECT *FROM postjob2 WHERE area = 'Colombo' ORDER BY job_id DESC";
 	$result = $conn->query($sql);
 if($result -> num_rows >0){
 	echo "<br><br>";
@@ -154,6 +159,7 @@ if($result -> num_rows >0){
 		echo $t[4];
 		echo $t[5];
 		echo "<br><br>";
+		echo "<hr>";
 		}
 }else{
 	echo " Sorry, No jobs your searched area. ";

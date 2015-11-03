@@ -48,9 +48,6 @@ CREATE TABLE IF NOT EXISTS `calendar` (
 -- Dumping data for table `calendar`
 --
 
-INSERT INTO `calendar` (`calendar_id`, `title`, `detail`, `jobDate`, `dateAdded`, `location`, `jobtime`, `contactno`, `customer_id`, `sp_id`, `accepted`) VALUES
-(1, 'cdv', 'fb', '10/30/2015', '2015-10-30', '', '', '', 5, 4, 0),
-(2, 'dfg', 'ijio', '10/30/2015', '2015-10-30', 'ijio', 'oikjo', 'o', 5, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `area`, `dob`, `gender`, `address`, `languages`) VALUES
-(1, 17, 775669875, NULL, NULL, 'Kalutara', '1973-06-05', 'Male', 'No6.kaluthra', NULL);
+(1, 17, 712310111, NULL, NULL, 'Colombo', '1973-06-05', 'Male', 'Kollupitiya,Colombo 03', NULL);
 
 -- --------------------------------------------------------
 
@@ -101,11 +98,6 @@ CREATE TABLE IF NOT EXISTS `fanswer` (
 -- Dumping data for table `fanswer`
 --
 
-INSERT INTO `fanswer` (`question_id`, `a_id`, `user`, `userphoto`, `a_answer`, `a_datetime`, `user_catagory`) VALUES
-(1, 1, 'janith', 'j-606575988.png', 'go to srch br', '23/09/15 07:24:23', 'sp'),
-(1, 2, 'kamal', '90496-404584807.jpg', 'go to hmpg', '23/09/15 07:30:14', 'customer'),
-(1, 3, 'janith', 'j-606575988.png', 'jllkj', '15/10/15 16:40:26', 'sp'),
-(4, 1, 'janith', 'avatar/default.jpg', 'Answer this', '02/11/15 13:14:31', 'sp');
 
 -- --------------------------------------------------------
 
@@ -130,10 +122,6 @@ CREATE TABLE IF NOT EXISTS `fquestions` (
 -- Dumping data for table `fquestions`
 --
 
-INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetime`, `view`, `reply`, `user_catagory`) VALUES
-(1, 'janith', 'j-606575988.png', 'find a baas', 'hw to find a baas', '23/09/15 07:23:51', 43, 3, 'sp'),
-(3, 'hashini', 'default.jpg', 'i want to buy bus', 'how to find a bus', '16/10/15 11:49:45', 8, 0, 'sp'),
-(4, 'janith', 'avatar/default.jpg', 'How to build', 'Building', '02/11/15 01:14:11', 4, 1, 'sp');
 
 -- --------------------------------------------------------
 
@@ -340,6 +328,7 @@ INSERT INTO `tblbiditems` (`biditemid`, `accountno`, `biditem`, `biddesc`, `town
 
 -- --------------------------------------------------------
 
+--
 --
 -- Table structure for table `users`
 --

@@ -98,7 +98,7 @@ $result = mysqli_query($connection,$query);
 
 <head>
 <meta charset="utf-8">
-<title>Hello World</title>
+<title>baas.lk</title>
 
 <link href="css/header.css" rel="stylesheet">
 <link href="css/searchBar.css" rel="stylesheet">
@@ -114,10 +114,10 @@ for($i=0; $i<$k;$i++){
 echo "
 #apDivResultBox{$i} {
 	position: relative;
-	left: 91px;
+	left: 50px;
 	top: ". $distance. "px;
 	width: 955px;
-	height: 100px;
+	height: 140px;
 	z-index: 1;
 	border-top-style: solid;
 	border-right-style: solid;
@@ -128,6 +128,7 @@ echo "
 	border-bottom-color: rgba(102,102,102,1);
 	border-left-color: rgba(102,102,102,1);
 	border-radius: 20px;
+	background-color: #f0f0f0;
 }
 #apDivResultPic{$i}  {
 	position: absolute;
@@ -219,6 +220,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 }
 
+#adBox{
+	position: absolute;
+	top: 100px;
+	left: 1050px;
+	height:500px;
+	width: 260px;
+	background-color: #f0f0f0;
+}
 </style>
 </head>
 
@@ -227,7 +236,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 
-
+<div id="adBox">
+Advertisements
+<hr>
+<img src="images/ad.png">
+</div>
 
 <?php 
 	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly
@@ -265,7 +278,7 @@ if($k !=0)
 		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
 		if(isset($_SESSION['Catagory'])){
 			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
-			echo "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+			echo "<hr> <a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View Profile</a></div>";
 		}
 
 		else{

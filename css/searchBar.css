@@ -12,16 +12,12 @@
 
 #apDivSearchBar {
 	position: absolute;
-	left: 30px;
+	left: 50px;
 	top: 88px;
 	width: 960px;
 	height: 180px;
 	z-index: 8;
-<<<<<<< HEAD
-	background-color: rgba(214,214,194,0.6);
-=======
-	background-color: rgba(210, 232, 255 ,1) ; //rgba(255,0,255,0.1);
->>>>>>> 59d79a7637205ff2627a09eed67f09f725746013
+	background-color: rgba(240, 240, 240,0.4) ;
 	border-radius: 20px;
 
 }  

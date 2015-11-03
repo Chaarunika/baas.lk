@@ -167,9 +167,9 @@
 		<div id="calendaryear">
 		<table  >
 			<tr id='heading'>
-				<td align="center" ><img src='calendar/images/left_arrow.png' onclick="goLastMonth(<?php echo $user.",".$month.",".$year?>)"></td>
+				<td align="center" ><img src='/BAAS_LK/calendar/images/left_arrow.png' onclick="goLastMonth(<?php echo $user.",".$month.",".$year?>)"></td>
 				<td width='250px' align="center"><?php echo $MonthName,"  " ,$year ?></td>
-				<td><img src='calendar/images/right_arrow.png'  onclick="goNextMonth(<?php echo  $user.",".$month.",".$year?>)"></td>
+				<td><img src='/BAAS_LK/calendar/images/right_arrow.png'  onclick="goNextMonth(<?php echo  $user.",".$month.",".$year?>)"></td>
 			</tr>
 		</table>
 		</div>

@@ -11,6 +11,7 @@ $bidprice=$_POST['bidprice'];
 $sql= "insert into tblbidhistory(accountid,biditemid,bidprice,dtesubmitted) values($accountid, $itemid,$bidprice, NOW())";
 $result=mysql_query($sql) or die ("Error in adding bid for item: ".mysql_error());
 
+header('location:listbiditems.php');
 ?>
 
 <html>

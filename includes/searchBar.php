@@ -12,9 +12,10 @@
         <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_0">
         Order By Rating</label><br><br>
 
+        <!--
         <label>
         <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_2">
-        Order By Experience</label><br>
+        Order By Experience</label><br>  -->
       </p>  
    
       <input name="SearchButton" type="submit" class="MyButton" id="SearchButton" value="Submit">
