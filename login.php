@@ -5,6 +5,7 @@
 
 <?php require '_database/database.php';?>
 <head>
+<title>baas.lk</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">   
@@ -23,13 +24,27 @@
 	width:200px;
 	height:30px;
 	z-index:6;
-	left: 207px;
-	top: 300px;
+	left: 400px;
+	top: 230px;
+	font-size:15px;
+	color:red;
+	   font-weight: bold;
 }
 
 #apDivRand {
 	position:relative;
 	}
+	
+#coverPics{
+	width: 100%;
+	top:0px;
+	background-image: url('images/cover.jpg');
+	height: 768px;
+	
+
+}
+	
+	
 </style>
 </head>
 
@@ -61,6 +76,14 @@ function myFunction() {
     location.reload(true);
 }
 </script>
+
+
+
+
+
+<div id="coverPics"></div>
+
+
 
 <div id="apDiv1">
 <?php $login = new Login(); 	?>
