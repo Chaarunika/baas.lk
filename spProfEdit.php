@@ -7,6 +7,7 @@
 <?php require_once('config/config.php'); ?>
 <link rel="stylesheet" type="text/css" href="css/spProfEdit.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
+<link rel="stylesheet" type="text/css" href="css/galleryUpdate.css">
 
 <!-- Bootstrap  -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">   
@@ -21,7 +22,7 @@
 	#subMenu{
   position: absolute;
   top: 90px;
-  width: 100%;
+  width: 90% ;
   left :50px;
 }
 </style>
@@ -166,6 +167,8 @@ function selectFunction(variable){
 <body>
 
 <?php include ("header.php"); ?>
+
+<?php include "galleryUpdate.php" ?>
 
   <div id="subMenu">
     <ul class="nav nav-tabs">

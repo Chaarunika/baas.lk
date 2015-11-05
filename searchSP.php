@@ -128,7 +128,7 @@ echo "
 	border-bottom-color: rgba(102,102,102,1);
 	border-left-color: rgba(102,102,102,1);
 	border-radius: 20px;
-	background-color: #f0f0f0;
+	background-color: rgba(240, 240, 240,0.4) ;
 }
 #apDivResultPic{$i}  {
 	position: absolute;
@@ -221,10 +221,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 }
 
 #adBox{
-	position: absolute;
+	position: fixed;
 	top: 100px;
 	left: 1050px;
-	height:500px;
+	height:550px;
 	width: 260px;
 	background-color: #f0f0f0;
 }
@@ -316,7 +316,7 @@ if($k !=0)
 }
 
 
-else
+if($i == 0)
 {	echo "<div id=\"apDivResultNull\"> <p>NO RESULTS TO BE DISPLAYED</p></div>";
 	
 	}

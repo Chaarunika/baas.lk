@@ -29,7 +29,7 @@
 #subMenu{
 	position: absolute;
 	top: 90px;
-	width: 100%;
+	width: 90%;
 	left :50px;
 }
 </style>

@@ -1,0 +1,171 @@
+
+.avatar-zone{
+    width:90px;
+    height:90px;
+    background-color:#f0f0f0;
+	background-image:url('../images/default.jpg');
+	background-size: contain;
+
+}
+.overlay-layer{
+    width:90px;
+    height:20px;
+    position:absolute;
+    margin-top:-20px;
+    opacity:0.9;
+    background-color:#000000;
+    z-index:8;
+    font-size:20px;
+    color: #FFFFFF;
+    text-align:center;
+    line-height:20px;
+    cursor: pointer;
+	cursor: hand;
+	
+}
+.upload_btn{
+    position:absolute;
+    width:90px;
+    height:20px;
+    margin-top:-20px;
+    z-index:10;
+    opacity:0;    
+	cursor: pointer;
+	cursor: hand;
+	
+}
+
+#workPhoto1 {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+
+#workPhoto2 {
+	position: absolute;
+	left: 130px;
+	top: 10px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+	
+}
+#workPhoto3 {
+	position: absolute;
+	left: 250px;
+	top: 10px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+
+#workPhoto4 {
+	position: absolute;
+	left: 10px;
+	top: 130px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+
+#workPhoto5 {
+	position: absolute;
+	left: 130px;
+	top: 130px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+#workPhoto6 {
+	position: absolute;
+	left: 250px;
+	top: 130px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+
+
+#workPhoto7 {
+	position: absolute;
+	left: 10px;
+	top: 250px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+
+#workPhoto8 {
+	position: absolute;
+	left: 130px;
+	top: 250px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+}
+#workPhoto9 {
+	position: absolute;
+	left: 250px;
+	top: 250px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 5px;
+
+}
+
+#ProfPicChange {
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	width: 100px;
+	height: 100px;
+	z-index: 3;
+	background-color: #cccccc;
+	padding: 4px;
+	border: 1px solid rgba(51,51,51,0.2);
+}
+#galleryAddBox {
+	position: absolute;
+	left: 850px;
+	top: 135px;
+	width: 420px;
+	height: 505px;
+	z-index: 1;
+	background-color: #f0f0f0;
+	border: 1px solid rgba(51,51,51,0.2);
+	padding :10px;
+}
+#workPhotos {
+	position: absolute;
+	left: 20px;
+	top: 120px;
+	width: 370px;
+	height: 370px;
+	z-index: 3;
+	background-color: white;
+	border: 1px solid rgba(51,51,51,0.2);
+}
+.picChange {
+	
+}
