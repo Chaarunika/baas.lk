@@ -1,7 +1,7 @@
 <?php
 include_once('header.php');
-require_once("_database/databasebid.php");
-
+require_once("_database/database.php");
+$_SESSION['accountid'] = $_SESSION['userID'];
 
 ?>
 

@@ -75,7 +75,7 @@ function Fun() {
 		  			if( $_SESSION['Catagory']== "sp"){					
 					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					echo"<li><a href=\"../BAAS_LK/profile.php\">My Profile</a></li>";
-					echo"<li><a href=\"../BAAS_LK/menu.php\">Auction</a></li>";
+					echo"<li><a href=\"../BAAS_LK/listbiditems.php\">Auction</a></li>";
 					echo"<li><a href=\"../BAAS_LK/findjob.php\">Jobs</a></li>";
 
 
@@ -84,6 +84,7 @@ function Fun() {
 
 			   		if( $_SESSION['Catagory']== "customer"){
 			   		echo"<li><a href=\"../BAAS_LK/profileCustomer.php\">My Profile</a></li>";
+					echo"<li><a href=\"../BAAS_LK/listbiditems.php\">Auction</a></li>";
 					echo"<li><a href=\"../BAAS_LK/forum.php\">FORUM</a></li>";
 					//echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
 					//echo "<li><a href=\"../BAAS_LK/postjob.php\">Post A Job</a></li>";

@@ -160,9 +160,9 @@ $item=$_GET['item'];
 <?php
 
 $sql="select biditem,biddesc from tblbiditems where biditemid=$itemid";
-$result=mysql_query($sql) or die ("Cannot verify login: ".mysql_error());
+$result=mysqli_query($sql) or die ("Cannot verify login: ".mysqli_error());
 
-$row=mysql_fetch_array($result);
+$row=mysqli_fetch_array($result);
 
 
 

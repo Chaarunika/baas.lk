@@ -1,15 +1,14 @@
 <?php
 
 session_start();
-require_once("dbconnect.php");
-require_once("checkstatus.php");
+require_once("_database/database.php");
 
 $accountid=$_SESSION['accountid'];
 $itemid=$_POST['itemid'];
 $bidprice=$_POST['bidprice'];
 
 $sql= "insert into tblbidhistory(accountid,biditemid,bidprice,dtesubmitted) values($accountid, $itemid,$bidprice, NOW())";
-$result=mysql_query($sql) or die ("Error in adding bid for item: ".mysql_error());
+$result=mysqli_query($sql) or die ("Error in adding bid for item: ".mysqli_error());
 
 header('location:listbiditems.php');
 ?>
