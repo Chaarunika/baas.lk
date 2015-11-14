@@ -80,7 +80,7 @@
 			<ul class="nav nav-tabs">
 			  	<li role="presentation" class="active"><a href="profile.php">Overview</a></li>
 			 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
-			 	<li role="presentation"><a href="#">Messages</a></li>
+			 	<li role="presentation"><a href="list_pm.php">Messages</a></li>
 			</ul>
 		</div>
 	<?php } ?>
@@ -115,12 +115,14 @@
     
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
-        <p style="font-size:20px">Contact Details</p>    
+        <p style="font-size:20px">Contact Details</p>
+		<p><font align="right"><a href="new_pm.php" class="link_new_pm">Send a message</a></font></p>   
         <p>Contact No : <?php if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
         <p>Email : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
         <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>  
         <p>Optional Contact No : <?php if(isset($sp['opContactNo'])) { echo $sp['opContactNo'];} ?></p>    
-        <p>Optional Email : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>       
+        <p>Optional Email : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>  
+		
         </div>           
     </div>
 
@@ -137,7 +139,7 @@
 		}
 	?>
 	
-    </div>
+  </div>
     
     
     <div id="apDivShortDesc"> 
@@ -151,7 +153,7 @@
 
 		<div id="galleryBox">
 
-			<div class="wrapper-inner-content-image">    
+	  <div class="wrapper-inner-content-image">    
 				<img src="Gallery/_assets/90.jpg"/>
 				<img src="Gallery/_assets/80.jpg"/>
 				<img src="Gallery/_assets/70.jpg"/>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 04, 2015 at 02:48 AM
+-- Generation Time: Nov 14, 2015 at 06:59 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -137,6 +137,29 @@ INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetim
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pm`
+--
+
+CREATE TABLE IF NOT EXISTS `pm` (
+  `id` bigint(20) NOT NULL,
+  `id2` int(11) NOT NULL,
+  `title` varchar(256) NOT NULL,
+  `user1` bigint(20) NOT NULL,
+  `user2` bigint(20) NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` int(10) NOT NULL,
+  `user1read` varchar(3) NOT NULL,
+  `user2read` varchar(3) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `pm`
+--
+
+INSERT INTO `pm` (`id`, `id2`, `title`, `user1`, `user2`, `message`, `timestamp`, `user1read`, `user2read`) VALUES
+(13, 1, 'Testing', 1, 2, 'Testing message', 1446741828, 'yes', 'yes'),
+(13, 2, '', 2, 0, 'Thank you', 1446743093, '', '');
+--
 -- Table structure for table `postjob2`
 --
 
@@ -231,7 +254,7 @@ INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `
 CREATE TABLE IF NOT EXISTS `systemadmin` (
   `sa_id` int(20) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(150) NOT NULL,
   PRIMARY KEY (`sa_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -240,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `systemadmin` (
 --
 
 INSERT INTO `systemadmin` (`sa_id`, `username`, `password`) VALUES
-(1, 'baaslk', '1234567');
+(1, 'baaslk', 'fcea920f7412b5da7be0cf42b8c93759');
 
 -- --------------------------------------------------------
 
