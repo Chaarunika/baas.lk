@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<link href="calendar/calendar.css" rel="stylesheet" type="text/css" />
+	<link href="/BAAS_LK/calendar/calendar.css" rel="stylesheet" type="text/css" />
 	<script>
 		function goLastMonth(month,year)
 		{
@@ -147,7 +147,7 @@
 		<div id="calendaryear">
 		<table  >
 			<tr id='heading'>
-				<td align="center" ><img src='/BAAS_LK/calendar/images/left_arrow.png' onclick="goLastMonth(<?php echo $month.",".$year?>)"></td>
+				<td align="center" ><img src='/BAAS_LK/calendar/images/left_arrow.png' onClick="goLastMonth(<?php echo $month.",".$year?>)"></td>
 				<td width='250px' align="center"><?php echo $MonthName,"  " ,$year ?></td>
 				<td><img src='/BAAS_LK/calendar/images/right_arrow.png'  onclick="goNextMonth(<?php echo $month.",".$year?>)"></td>
 			</tr>
