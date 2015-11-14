@@ -15,7 +15,7 @@
 	z-index:1;
 	left: 25%;
 	top: 116px;
-	
+	padding: 20px;
 	background-color: #f0f0f0;
 	border-radius: 20px;
 	border:1px solid rgba(51,51,51,0.5)

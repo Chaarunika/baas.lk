@@ -142,8 +142,8 @@ p{
 <?php
 //db conection &
 
-require_once("dbconnect.php");
-require_once("checkstatus.php");
+require_once("_database/database.php");
+
 
 
 $accountid=$_SESSION['accountid'];

@@ -4,16 +4,35 @@
 <head>
 	<title>baas.lk</title>
 
+	<!-- Bootstrap  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+	
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 	<link href="/BAAS_LK/Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="/BAAS_LK/Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="/BAAS_LK/Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
 	<link href="/BAAS_LK/Gallery/_css/pop-up-gallery3.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/pop-up-gallery3.js"></script>
+	<link href="/BAAS_LK/css/header.css" rel="stylesheet" />
 	<link href="/BAAS_LK/css/profile.css" rel="stylesheet" />
 </head>
 
+<style type="text/css">
 
+#subMenu{
+	position: absolute;
+	top: 90px;
+	width: 90%;
+	left :50px;
+}
+</style>
 <body>
 
 	<?php 
@@ -21,7 +40,12 @@
 	//session_start();
 	include_once('../_database/database.php'); 
 	include_once('../functions/functions.php');
+
 	?>
+
+
+	
+
 
 	<?php 	
 	if(isset($_SESSION['userID']))
@@ -51,8 +75,20 @@
 	</div>
 </div>
 
+	<?php if(!isset($_GET['user']))	{	?>
+		<div id="subMenu">
+			<ul class="nav nav-tabs">
+			  	<li role="presentation" class="active"><a href="/BAAS_LK/profile.php">Overview</a></li>
+			 	<li role="presentation"><a href="/BAAS_LK/spProfEdit.php">Edit Profile</a></li>
+			 	<li role="presentation"><a href="#">Messages</a></li>
+			</ul>
+		</div>
+	<?php } ?>
 
 <div id="apDivContainer">
+
+	
+
 
     <div id="apDivMainInfo">
     	<div id="apDivTitle">
@@ -62,17 +98,18 @@
         	if(isset($user['user_firstname'])){ 
         		echo $user['user_firstname']." ".$user['user_lastname'] ;
         	}?>
+        	<br><br>
       	</p>    
 
-        <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
-        <p>Catagory : <?php if(isset($sp['catagory'])) { echo $sp['catagory'] ;} ?></p>
+        <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
+        <p>Catagory : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       	<!--
       	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php// echo $_SESSION['url'] ?> "  > </div>  
       	-->
       	<?php //echo $user['user_avatar'] ; ?>
-     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo "/BAAS_LK/".$user['user_avatar'] ;} ?>   > </div>  
+     	<div id="apDivProfPic2"><img class="img-circle2"  src=  /BAAS_LK/<?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
     	
     </div>
     
@@ -115,15 +152,15 @@
 		<div id="galleryBox">
 
 			<div class="wrapper-inner-content-image">    
-				<img src="/BAAS_LK/Gallery/_assets/9.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/8.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/7.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/6.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/5.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/4.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/3.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/2.jpg"/>   
-				<img src="/BAAS_LK/Gallery/_assets/1.jpg"/>    
+				<img src="/BAAS_LK/Gallery/_assets/90.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/80.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/70.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/60.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/50.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/40.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/30.jpg"/>
+				<img src="/BAAS_LK/Gallery/_assets/20.jpg"/>   
+				<img src="/BAAS_LK/Gallery/_assets/10.jpg"/>    
     			
 				<div class="wrapper-inner-content-image-hover">
 					<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
