@@ -30,7 +30,7 @@ header("Refresh: 1; URL=$url1");*/
 	width: 1500px;
 	height: 600px;
 	z-index: 1;
-	background-color: #f0f0f0;
+	//background-color: #f0f0f0;
 		
 }
 
@@ -91,7 +91,7 @@ if (false === $result) {
 
 echo "<ul>";
 
-$out = "<table id='bidtbl' border='1' ><tr><th>Land Name</th><th  word-wrap: break-word; max-width: 150px;>Land descriptiom</th><th>Area</th><th>Remaining time</th>";
+$out = "<table  width=85% id='bidtbl' border='1' ><tr><th>Land Name</th><th  word-wrap: break-word; max-width: 150px;>Land descriptiom</th><th>Area</th><th>Remaining time</th>";
 $out .= "<th>Highest Bid</th><th>Place a bid</th></tr>";
 
 while($row=mysqli_fetch_array($result)){
@@ -146,13 +146,13 @@ $item=$row['biditem'];
 
   
   $out .= "<tr style='height:75px'>";
-  $out .= "<td style='width:200px'>" . $row['biditem'] . "</td>";
-  $out .= "<td style='width:550px' >" . $row['biddesc'] . "</td>";
-  $out .= "<td style='width:200px'>" .$row['town'] . "</td>";
-  $out .= "<td style='width:200px'>" ."$days_remaining"." days" ." "."$hours_remaining"." hrs"." "."$minutes_remaining"." mins"." "."$seconds_remaining"." secs"."</td>";
+  $out .= "<td style='width:10%' 'background-color: black'>" . $row['biditem'] . "</td>";
+  $out .= "<td style='width:30%' >" . $row['biddesc'] . "</td>";
+  $out .= "<td style='width:10%'>" .$row['town'] . "</td>";
+  $out .= "<td style='width:10%'>" ."$days_remaining"." days" ." "."$hours_remaining"." hrs"." "."$minutes_remaining"." mins"." "."$seconds_remaining"." secs"."</td>";
   
-  $out .= "<td style='width:200px'>" . $row_1['max(bidprice)'] .  "</td>";
-  $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 	
+  $out .= "<td style='width:10%'>" . $row_1['max(bidprice)'] .  "</td>";
+  $out .= "<td style='width:10%'>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 	
   $out .= "</tr>";
   }
 $out .= "</table>";
