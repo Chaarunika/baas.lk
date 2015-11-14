@@ -137,6 +137,29 @@ INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetim
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pm`
+--
+
+CREATE TABLE IF NOT EXISTS `pm` (
+  `id` bigint(20) NOT NULL,
+  `id2` int(11) NOT NULL,
+  `title` varchar(256) NOT NULL,
+  `user1` bigint(20) NOT NULL,
+  `user2` bigint(20) NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` int(10) NOT NULL,
+  `user1read` varchar(3) NOT NULL,
+  `user2read` varchar(3) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `pm`
+--
+
+INSERT INTO `pm` (`id`, `id2`, `title`, `user1`, `user2`, `message`, `timestamp`, `user1read`, `user2read`) VALUES
+(13, 1, 'Testing', 1, 2, 'Testing message', 1446741828, 'yes', 'yes'),
+(13, 2, '', 2, 0, 'Thank you', 1446743093, '', '');
+--
 -- Table structure for table `postjob2`
 --
 
