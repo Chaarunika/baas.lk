@@ -4,33 +4,43 @@
 <style type="text/css">
 #apDiv1 {
 	position:absolute;
-	top:120px;
-	width:100%;
+	top:110px;
+	width:589px;
 	height:70px;
 	z-index:16;
 	background-color: #CCCCCC;
+	border-radius: 20px;
+	left: 0px;
 }
 #apDiv2 {
 	position:absolute;
-	left:83px;
-	top:11px;
-	width:439px;
+	left:3px;
+	top:7px;
+	width:576px;
 	height:51px;
 	z-index:17;
-	background-color: #666666;
+	background-color: #CCCCCC;
 	border-radius:20px;
 }
 .searchtext {
 	position: absolute;
-	left: 36px;
-	top: 12px;
-	width: 218px;
-	height: 28px;
+	border-width:3px;
+	border-style: inset;
+	background-color:#000;
+	left: 130px;
+	font-size:20px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	top: 6px;
+	width: 319px;
+	height: 33px;
+}
+.searchtext:focus{
+	color:#FFF;
 }
 .searchbtton {
 	position: absolute;
-	left: 277px;
-	top: 14px;
+	left: 458px;
+	top: 7px;
 	width: 118px;
 	background-color: #FC0;
 	height: 27px;
@@ -38,6 +48,15 @@
 	font-weight: bold;
 }
 
+.notfound {
+	background-color: #f2f2f2;
+	position: absolute;
+	left: 78px;
+	top: 244px;
+	width: 1213px;
+	height: 169px;
+	z-index: 100;
+}
 </style>
 <script type="text/javascript">  
 function msg(){  
@@ -53,7 +72,7 @@ alert("cancel");
 </script>
 </head>
 
-<body>
+<body bgcolor="#f2f2f2">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
@@ -86,8 +105,8 @@ $word = str_replace(' ','',$word);
     <p>
       <label for="textfield"></label>
       <input name="textfield" type="text" class="searchtext" id="textfield" required>
-      <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH TOPIC">
-  </p>
+      <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH">
+ <strong> SEARCH TOPIC</strong></p>
     <p>&nbsp;</p>
   </form>
 </div>
@@ -97,13 +116,13 @@ $word = str_replace(' ','',$word);
 <tr>
 <td>
 <table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
-<tr>
-<td width="10%" align="center" bgcolor="#999"><strong>Remove</strong></td>
-<td width="25%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
-<td width="25%" align="center" bgcolor="#999"><strong>Started by</strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong>Views</strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong>Replies</strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong>Date/Time</strong></td>
+<tr >
+<td width="10%"  align="center" bgcolor="#999"><strong>Remove</strong></td>
+<td width="25%"  align="center" bgcolor="#999"><strong>Discussion</strong></td>
+<td width="25%"  align="center" bgcolor="#999"><strong>Started by</strong></td>
+<td width="15%"  align="center" bgcolor="#999"><strong>Views</strong></td>
+<td width="15%"  align="center" bgcolor="#999"><strong>Replies</strong></td>
+<td width="10%"  align="center" bgcolor="#999"><strong>Date/Time</strong></td>
 </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -124,7 +143,7 @@ while($rows = mysqli_fetch_assoc($result)) {
 	}
 ?>
 <tr>
-<td bgcolor="<?php echo $bgcolor?>" align="center"><a href= "remove.php?detail=<?php  echo "forum".",".$rows['id'];?>" onclick="msg()"><img src="images/rm.jpg" alt="" border=3 height=30 width=30></img></a></td>
+<td bgcolor="<?php echo $bgcolor?>" align="center"><a href= "remove.php?detail=<?php  echo "forum".",".$rows['id'];?>" onClick="msg()"><img src="images/rm.jpg" alt="" border=3 height=30 width=30></img></a></td>
 <td bgcolor="<?php echo $bgcolor?>" align="left" ><a href="view_topic.php?id=<?php echo $rows['id']; ?>" target="_blank"><strong><?php echo $rows['topic']; ?></strong></a><BR></td>
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
@@ -152,17 +171,33 @@ echo $rows['userphoto'];
 </td>
 </tr>
 </table>
+</div>
 
 <?php
 
 if($found == 0)
 {
 ?>
-<table width="300" >
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="notfound">
+<table width="1000" bgcolor:"#cccccc">
 <tr>
-<td width="100%"><?php echo "<br><br><br>Not Founded" ?></td>
+<td width="100%" align="center" bgcolor:"#cccccc"><strong>Not Founded</strong></td>
 </tr>
 </table>
+</div>
 <?php
 }
 
@@ -190,10 +225,10 @@ $colorchange=0;
 $bgcolor="";
 ?>
 <div class="createtabel">
-<table border="0" bordercolor="#666666">
+<table >
 <tr>
 <td>
-<table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
+<table width="1100" height="107" align="center" cellpadding="3"  cellspacing="0"  >
 <tr>
 <td width="10%" align="center" bgcolor="#999"><strong>Remove</strong></td>
 <td width="25%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
@@ -217,7 +252,7 @@ while($rows = mysql_fetch_array($result)){
 		$bgcolor="#EEE";}
 ?>
 <tr>
-<td bgcolor="<?php echo $bgcolor?>" align="center"><a href= "remove.php?detail=<?php  echo "forum".",".$rows['id'];?>" onclick="msg()"><img src="images/rm.jpg" alt="" border=3 height=30 width=30></img></a></td>
+<td bgcolor="<?php echo $bgcolor?>" align="center"><a href= "remove.php?detail=<?php  echo "forum".",".$rows['id'];?>" onClick="msg()"><img src="images/rm.jpg" alt="" border=3 height=30 width=30></img></a></td>
 <td bgcolor="<?php echo $bgcolor?>" align="left" ><a href="view_topic.php?id=<?php echo $rows['id']; ?>" target="_blank" ><strong><?php echo $rows['topic']; ?></strong></a><BR></td>
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
@@ -250,8 +285,8 @@ mysql_close();
     <p>
       <label for="textfield"></label>
       <input name="textfield" type="text" class="searchtext" id="textfield" required>
-      <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH TOPIC">
-  </p>
+      <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH">
+  <strong> SEARCH TOPIC</strong></p>
     <p>&nbsp;</p>
   </form>
 </div>
@@ -259,4 +294,4 @@ mysql_close();
 <?php
 }
 ?>
-
+</body>

@@ -10,7 +10,7 @@
 	<link href="/BAAS_LK/Gallery/_css/pop-up-gallery3.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/pop-up-gallery3.js"></script>
-	<link href="/BAAS_LK/css/profile.css" rel="stylesheet" />
+	<link href="/BAAS_LK/css/profileCustomer.css" rel="stylesheet" />
 </head>
 
 
