@@ -31,6 +31,10 @@
 	height:165px;
 	z-index:5;
 }
+.backto {
+	font-weight: bold;
+	cursor:hand;
+}
 .image2 {
 	position: absolute;
 	left: 44px;
@@ -176,4 +180,7 @@ mysql_close();
 </tr>
 </table>
 </div>
+<p>&nbsp;</p>
+<p class="backto">  	<a href="forum.php">&lt;&lt;BACK TO FORUM</a></p>
+
 </body>

@@ -39,6 +39,10 @@
 	font-family:"Arial Black", Gadget, sans-serif;
 }
 
+.backto {
+	font-weight: bold;
+	cursor:hand;
+}
 </style>
 </head>
 
@@ -46,9 +50,25 @@
 
 
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="backto">  	<a href="forum.php">&lt;&lt;BACK TO FORUM</a></p>
 <p>&nbsp;</p>
 <div class="createtabel">
 <table width="822" align="center" cellpadding="0" cellspacing="1" >

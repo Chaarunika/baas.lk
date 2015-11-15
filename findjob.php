@@ -8,6 +8,7 @@
 	height:auto;
 	//float:left;
 	left: 100px;
+	
 }
 
 #main{
@@ -15,7 +16,7 @@
 	top :80px;
 	width: 600px;
 	height: 70px;
-	background:#f0f0f0;
+	background: rgba(255,255,255,0.5);
 	float:right;
 	font-family:Verdana, Geneva, sans-serif;	
 	font-style:oblique;
@@ -35,7 +36,7 @@
 	}
 #b3{
 	width:600px;
-	background-color: #f0f0f0 ;
+	background: rgba(255,255,255,0.5);
 	/*border-bottom-style:dotted;
 	border-top-style:dotted;*/
 	}
@@ -63,7 +64,9 @@
 .find{
 	background-color:#F90;
 	font:"Courier New", Courier, monospace;
-	border-color:#F30;	
+	border-color:#F30;
+	cursor:hand;
+	
 	}
 .area{
 	background-color:#FFA;
@@ -72,20 +75,73 @@
 .find{
 	font:"Courier New", Courier, monospace;
 	//border-color:#F30;	
-	border-radius: 20px;}
+	border-radius: 20px;
+	cursor:hand;
+		}
 
 #jobLogo{
 	position: absolute;
-	left: 800px;
-	top : 160px;
+	left: 1000px;
+	top : 100px;
+	background: rgba(255,255,255,0.5);
+	border-radius:20px;
+	border-width:3px;
+	border-style:solid;
+	
 }
 
 </style>
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
-<body>
-<div id ="jobLogo"> <img src="images/logojob.png">
+<body bgcolor="#f2f2f2">
+<div id ="jobLogo"> 
+<center>
+    <h2> Recently Posted Jobs </h2>
+    <center>
+    <?php
+	$conn = new MySQLi("localhost","root","","baaslk");
+	$query = "SELECT * FROM postjob2 ORDER BY job_id DESC LIMIT 4";
+	$result2 = mysqli_query($conn, $query );
+	$row = mysqli_fetch_assoc($result2);
+	
+	if($result2 -> num_rows >0){
+		echo "---------------------------------------------------------------------------------.<br>";
+		while($row = $result2 -> fetch_assoc()){
+			echo $row['job_description'];
+			echo "<br>";
+			echo "TP : ";
+			echo $row['tel_num'];
+			echo "<br>";
+			echo "Address : ";
+			echo $row['address'];
+			echo "<br>";
+			$t = preg_split("/(?<=\w)\b\s*/", $row["time"]);
+			echo "Posted Date : ";
+			echo $t[0];
+			echo $t[1];
+			echo $t[2];
+			echo "<br>";
+			echo "Posted Time : ";
+			echo $t[3];
+			echo $t[4];
+			echo $t[5];
+			echo "<br><br>";
+			echo "---------------------------------------------------------------------------------";
+			echo "<br><br>";
+			}
+		}
+	?>
+	</center>
+
+
+
+
+
+
+
+
+
 </div>
 <?php include 'header.php'; ?>
 <div id = "mainm">
@@ -133,8 +189,8 @@
     <?php
 	$conn = new MySQLi("localhost","root","","baaslk");
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-
-	$sql = "SELECT *FROM postjob2 WHERE area = 'Colombo' ORDER BY job_id DESC";
+	$area=$_POST['search'];
+	$sql = "SELECT *FROM postjob2 WHERE area = '$area' ORDER BY job_id DESC";
 	$result = $conn->query($sql);
 if($result -> num_rows >0){
 	echo "<br><br>";
