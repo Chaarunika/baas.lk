@@ -10,10 +10,10 @@
 }
 #apDiv2 {
 	position:absolute;
-	left:239px;
-	top:-30px;
-	width:770px;
-	height:100px;
+	left:-3px;
+	top:-86px;
+	width:560px;
+	height:80px;
 	z-index:2;
 	border-radius: 20px;
 	background-color:#CCC;
@@ -21,8 +21,8 @@
 }
 #publish {
 	position:absolute;
-	left:12px;
-	top:203px;
+	left:28px;
+	top:151px;
 	width:100%;
 	height:1300px;
 	z-index:2;
@@ -30,10 +30,18 @@
 }
 .searchtext {
 	position: absolute;
+	border-width:3px;
+	border-style: inset;
+	background-color:#000;
 	left: 96px;
+	font-size:16px;
+	font-family:"Arial Black", Gadget, sans-serif;
 	top: 11px;
 	width: 319px;
 	height: 33px;
+}
+.searchtext:focus{
+	color:#FFF;
 }
 .searchbutton {
 	position: absolute;
@@ -47,6 +55,7 @@
 	border-radius: 20px;
 }
 </style>
+<body bgcolor="#f2f2f2">
 <div id="apDiv1">
 <div id="apDiv2">
   <form id="form1" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?> ">
@@ -95,20 +104,22 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:100px;
+	left:180px;
 	top:<?php echo 190*$found?>px;
 	width:1000px;
 	height:180px;
 	z-index:2;
 	border-radius: 20px;
-	background-color:#CCC;
+	border-style:solid;
+	border-width:2px;
+	background-color:#F8F7F1;
 	font-weight: bold;	
 }
 </style>
 <div id="ap<?php echo $found; ?>">
-<table width="950" height="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC" >
+<table width="950" height="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#F8F7F1" >
 <tr>
-<td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+<td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
 <td width="25%" bgcolor="#F8F7F1"><img src="\BAAS_LK\<?php echo $row['user_avatar'];?>" alt="" border=3 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "/BAAS_LK/systemadmin/profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
@@ -119,7 +130,7 @@ if (mysqli_num_rows($result) > 0) {
 <td width="75%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']; ?></strong></td>
 </tr>
 <tr>
-<td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "customer".",".$row["customer_id"].",".$row["user_id"];?>" onclick="msg()"><img src="images/remove.jpg" alt="" border=3 height=50 width=50></img></a></td>
+<td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "customer".",".$row["customer_id"].",".$row["user_id"];?>" onClick="msg()"><img src="images/remove.jpg" alt="" border=3 height=50 width=50></img></a></td>
 </tr>
 </table></td>
 </tr>
@@ -133,9 +144,13 @@ if (mysqli_num_rows($result) > 0) {
 if($found == 0)
 {
 ?>
-<table width="300" >
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<table width="1000"  >
 <tr>
-<td width="100%"><?php echo "Not Founded" ?></td>
+<td width="100%" align="center"><strong><?php echo "Not Founded" ?></strong></td>
 </tr>
 </table>
 <?php
@@ -144,5 +159,4 @@ mysqli_close($conn);
 }
 ?>
 </div>
-
-
+</body>

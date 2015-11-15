@@ -1,5 +1,4 @@
-<link href="forum.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/header.css">
+<link href="css/header.css" rel="stylesheet">
 <?php include 'header.php'; ?> 
 <style type="text/css">
 .createtabel {
@@ -32,6 +31,10 @@
 	height:165px;
 	z-index:5;
 }
+.backto {
+	font-weight: bold;
+	cursor:hand;
+}
 .image2 {
 	position: absolute;
 	left: 44px;
@@ -39,10 +42,23 @@
 	top: 34px;
 	height: 175px;
 }
+#answer{
+	border-style: outset;
+	border-width: 3px;
+	border-color: #FC0;
+	background-color:#FC0;
+	cursor:hand;
+	font-weight: bold;
+}
+#a_answer
+{
+	border-width: 3px;
+	border-style:outset;
+}
 </style>
 </head>
 
-<body>
+<body bgcolor="#f2f2f2">
 
 <?php
  
@@ -151,12 +167,12 @@ mysql_close();
 <tr>
 <td valign="top"><strong>Answer</strong></td>
 <td valign="top">:</td>
-<td><textarea name="a_answer" cols="60" rows="7" id="a_answer" required></textarea></td>
+<td><textarea name="a_answer" cols="60" rows="7" id="a_answer"  required></textarea></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td><input name="id" type="hidden" value="<?php echo $id; ?>"></td>
-<td><input type="submit" name="Submit" value="Submit"> </td>
+<td><input type="submit" name="Submit" value="Submit" id="answer"> </td>
 </tr>
 </table>
 </td>
@@ -164,3 +180,7 @@ mysql_close();
 </tr>
 </table>
 </div>
+<p>&nbsp;</p>
+<p class="backto">  	<a href="forum.php">&lt;&lt;BACK TO FORUM</a></p>
+
+</body>

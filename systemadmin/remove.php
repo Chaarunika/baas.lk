@@ -36,6 +36,15 @@ else if($detailarray[0]=='forum')
 	header("location:/BAAS_LK/systemadmin/forumremove.php");
 }
 
+else if($detailarray[0]=='job')
+{
+	$sql1="DELETE FROM postjob2 WHERE job_id=$detailarray[1]";
+	$result1 = mysqli_query($conn, $sql1);
+	
+	
+	header("location:/BAAS_LK/systemadmin/jobremove.php");
+}
+
 
 mysqli_close($conn);
 
