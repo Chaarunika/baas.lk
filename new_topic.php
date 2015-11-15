@@ -1,5 +1,4 @@
 <head>
-<link href="forum.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <?php include 'header.php' ?>
 
@@ -7,86 +6,81 @@
 <style type="text/css">
 .createtabel {
 	position: absolute;
-	left: 139px;
-	top: 165px;
-	width: 971px;
-	height: 140px;
+	left: 168px;
+	top: 222px;
+	width: 917px;
+	height: 290px;
 	z-index :10;
+	background-color:#FFF;
+	border-radius:20px;
+	border-width:3px;
+	border-style: solid;
+	
+	
 }
-#apDiv11 {
-	position:absolute;
-	left:765px;
-	top:333px;
-	width:579px;
-	height:284px;
-	z-index:4;
+
+
+#detail{
+	border-style: inset;
+	border-width: 3px;
+	font-size:14px;
 }
-.image {
-	position: absolute;
-	width: 457px;
-	height: 238px;
-	left: 114px;
-	top: 44px;
+#topic{
+	border-style: inset;
+	border-width: 3px;
+	font-size:16px;
+	font-family:"Arial Black", Gadget, sans-serif;
 }
-#apDiv12 {
-	position:absolute;
-	left:914px;
-	top:150px;
-	width:379px;
-	height:165px;
-	z-index:5;
+#submit{
+	border-style: outset;
+	border-width: 3px;
+	cursor:hand;
+	background-color: #FC0;
+	font-family:"Arial Black", Gadget, sans-serif;
 }
-.image2 {
-	position: absolute;
-	left: 44px;
-	width: 281px;
-	top: 34px;
-	height: 175px;
-}
+
 </style>
 </head>
 
-<body>
+<body bgcolor="#f2f2f2">
 
 
-<body>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="createtabel">
-<table width="800" border="2" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="822" align="center" cellpadding="0" cellspacing="1" >
   <tr>
-<form id="form1" name="form1" method="post" action="add_new_topic.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3" bgcolor="#E6E6E6"><strong>Create New Topic</strong> </td>
-</tr>
-<tr><td></td><tr>
-<tr>
-<td width="14%"><strong>Topic</strong></td>
-<td width="2%">:</td>
-<td width="84%"><input name="topic" type="text" id="topic" size="70%" / required></td>
-</tr>
-<tr><td></td><tr>
-<tr><td></td><tr>
-<tr>
-<td valign="top"><strong>Detail</strong></td>
-<td valign="top">:</td>
-<td><textarea name="detail" cols="75%" rows="10" id="detail" required></textarea></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="Submit" /> 
-</td>
-</tr>
+    <form id="form1" name="form1" method="post" action="add_new_topic.php">
+      <td><table width="100%" border="0" cellpadding="3" cellspacing="1" >
+        <tr>
+          <td colspan="3" ><strong>Create New Topic</strong></td>
+        </tr>
+        <tr> <td></td> </tr><tr> <td></td> </tr>
+        <tr>
+          <td width="14%"><strong>Topic</strong></td>
+          <td width="2%">:</td>
+          <td width="84%"><input name="topic" type="text" id="topic" size="50%" / required></td>
+        </tr>
+        <tr> <td></td></tr> <tr> <td></td></tr>
+        <tr>
+          <td valign="top"><strong>Detail</strong></td>
+          <td valign="top">:</td>
+          <td><textarea name="detail" cols="75%" rows="10" id="detail" required></textarea></td>
+        </tr>
+        <tr> <td></td></tr> <tr> <td></td></tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td><input type="submit" name="Submit" value="Submit" id="submit"/></td>
+        </tr>
+      </table></td>
+    </form>
+  </tr>
 </table>
-</td>
-</form>
-</tr>
-</table>
+<p>&nbsp;</p>
 </div>
 </body>
 </html>
