@@ -110,6 +110,9 @@
 		while($row = $result2 -> fetch_assoc()){
 			echo $row['job_description'];
 			echo "<br>";
+			echo "customer name : ";
+			echo $row['username'];
+			echo "<br>";
 			echo "TP : ";
 			echo $row['tel_num'];
 			echo "<br>";
@@ -197,6 +200,9 @@ if($result -> num_rows >0){
 	while($row = $result-> fetch_assoc()){
 		echo "Description : ";
 		echo $row["job_description"];
+		echo "<br><br>";
+		echo "Customer Name : ";
+		echo $row["username"];
 		echo "<br><br>";
 		echo "Address : ";
 		echo $row["address"];

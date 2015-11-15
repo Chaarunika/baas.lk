@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 14, 2015 at 06:59 AM
+-- Generation Time: Nov 15, 2015 at 09:03 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -104,7 +104,8 @@ CREATE TABLE IF NOT EXISTS `fanswer` (
 
 INSERT INTO `fanswer` (`question_id`, `a_id`, `user`, `userphoto`, `a_answer`, `a_datetime`, `user_catagory`) VALUES
 (6, 1, 'janith', 'avatar/default.jpg', 'its abouth Rs.1000  per day', '03/11/15 09:11:08', 'sp'),
-(11, 1, 'janith', 'avatar/default.jpg', 'i also know', '03/11/15 10:44:20', 'sp');
+(11, 1, 'janith', 'avatar/default.jpg', 'i also know', '03/11/15 10:44:20', 'sp'),
+(6, 2, 'janith', 'avatar/default.jpg', 'ljlj;j;jk', '15/11/15 04:00:14', 'sp');
 
 -- --------------------------------------------------------
 
@@ -130,9 +131,8 @@ CREATE TABLE IF NOT EXISTS `fquestions` (
 --
 
 INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetime`, `view`, `reply`, `user_catagory`) VALUES
-(5, 'customer', 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c2.29.323.323/s50x50/1609612_1377732402489930_288261542_n.jpg?oh=ccd2eb98c450d151a0ae4e1936b26231&oe=56C48967&__gda__=1455077042_0ee4f32401e161acdfb6470b30fdd71c', 'choosing a paint brand', 'What are the best paint materials at market today', '03/11/15 09:09:27', 2, 0, 'customer'),
-(6, 'customer', 'avatar/default.jpg', 'what are the minimum wages for amason', 'please help me to find current  wages for a mason', '03/11/15 09:10:33', 5, 1, 'customer'),
-(11, 'janith', 'avatar/default.jpg', 'New cement', 'I know a new cement', '03/11/15 10:44:01', 3, 1, 'sp');
+(6, 'customer', 'avatar/default.jpg', 'what are the minimum wages for amason', 'please help me to find current  wages for a mason', '03/11/15 09:10:33', 20, 2, 'customer'),
+(11, 'janith', 'avatar/default.jpg', 'New cement', 'I know a new cement', '03/11/15 10:44:01', 7, 1, 'sp');
 
 -- --------------------------------------------------------
 
@@ -158,13 +158,18 @@ CREATE TABLE IF NOT EXISTS `pm` (
 
 INSERT INTO `pm` (`id`, `id2`, `title`, `user1`, `user2`, `message`, `timestamp`, `user1read`, `user2read`) VALUES
 (13, 1, 'Testing', 1, 2, 'Testing message', 1446741828, 'yes', 'yes'),
-(13, 2, '', 2, 0, 'Thank you', 1446743093, '', '');
+(13, 2, '', 2, 0, 'Thank you', 1446743093, '', ''),
+(3, 1, 'jlljl;', 1, 17, 'lj;k;k', 1447560644, 'yes', 'no');
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `postjob2`
 --
 
 CREATE TABLE IF NOT EXISTS `postjob2` (
   `job_id` int(100) NOT NULL AUTO_INCREMENT,
+  `username` varchar(150) NOT NULL,
   `job_type` varchar(100) NOT NULL,
   `job_description` varchar(1000) NOT NULL,
   `area` varchar(50) NOT NULL,
@@ -172,30 +177,22 @@ CREATE TABLE IF NOT EXISTS `postjob2` (
   `tel_num` int(100) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`job_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `postjob2`
 --
 
-INSERT INTO `postjob2` (`job_id`, `job_type`, `job_description`, `area`, `address`, `tel_num`, `time`) VALUES
-(1, 'Consultancy Service', 'I want to build a house quickly', 'Colombo', 'Delkanda, Nugegoda.', 775201412, '0000-00-00 00:00:00'),
-(2, 'Material Supplier', 'I want to 3 sand cubes quickly', 'Colombo', 'weherahena, matara', 712564896, '0000-00-00 00:00:00'),
-(3, 'Contractor', 'I want to build house.', 'Colombo', 'Navinna , Maharagama', 712564896, '0000-00-00 00:00:00'),
-(4, 'Technician', 'I want to wiring my house.', 'Colombo', 'No 23, Matara.', 712564896, '0000-00-00 00:00:00'),
-(5, 'Architect And Designer', 'I want to create a house plan.', 'Kurunegala', 'No 12, Kirulapana.', 712564896, '0000-00-00 00:00:00'),
-(6, 'Architect And Designer', 'I want to create a house plan.', 'Colombo', 'No 12, Kirulapana.', 714563289, '0000-00-00 00:00:00'),
-(7, 'Real Estate Company', 'I want to sold my house.', 'Matara', 'No 78/9, Anagarika Dharmapala Mawatha, Matara.', 112789632, '0000-00-00 00:00:00'),
-(8, 'Real Estate Company', 'I want to sold my house.', 'Colombo', 'No 78/9, Anagarika Dharmapala Mawatha, Matara.', 112789632, '0000-00-00 00:00:00'),
-(9, 'Material Supplier', 'For cements.', 'Colombo', 'No 45/1, Matara.', 712564896, '0000-00-00 00:00:00'),
-(10, 'Material Supplier', 'For cements.', 'Colombo', 'No 45/1, Matara.', 123654789, '0000-00-00 00:00:00'),
-(11, 'Real Estate Company', 'For sell my Home and Land.', 'Colombo', 'Kaburugamuwa, Matara.', 712564896, '0000-00-00 00:00:00'),
-(12, 'Technician', 'For wiring building.', 'Colombo', 'Denipitiya, Weligama.', 712564896, '0000-00-00 00:00:00'),
-(49, 'Interior Designer', '  Interior designer needed for a built house.URGENT', 'Colombo', '  colombo 07', 712564896, '2015-11-03 08:59:39'),
-(50, 'Mason', 'Niawasak kapararu kereemata awashyawa atha. Ikmanin amathanna.', 'Colombo', '  pettah', 712564896, '2015-11-03 09:00:49'),
-(51, 'Contractor', 'Kurunegala niwasak itha ikmanin sadeemata awashya wee atha.amathanna', 'Colombo', '  colombo', 112318333, '2015-11-03 09:07:05'),
-(52, 'Carpenter', '  PAntry cubboard', 'Colombo', '  homagma', 112318333, '2015-11-03 09:35:49'),
-(53, 'Carpenter', '  Pantry cupboard', 'Colombo', '  34,homagama', 717332631, '2015-11-03 10:40:11');
+INSERT INTO `postjob2` (`job_id`, `username`, `job_type`, `job_description`, `area`, `address`, `tel_num`, `time`) VALUES
+(49, 'malith', 'Interior Designer', '  Interior designer needed for a built house.URGENT', 'Colombo', '  colombo 07', 712564896, '2015-11-03 08:59:39'),
+(50, 'customer', 'Mason', 'Niawasak kapararu kereemata awashyawa atha. Ikmanin amathanna.', 'Colombo', '  pettah', 712564896, '2015-11-03 09:00:49'),
+(51, 'customer', 'Contractor', 'Kurunegala niwasak itha ikmanin sadeemata awashya wee atha.amathanna', 'Colombo', '  colombo', 112318333, '2015-11-03 09:07:05'),
+(53, 'customer', 'Carpenter', '  Pantry cupboard', 'Colombo', '  34,homagama', 717332631, '2015-11-03 10:40:11'),
+(54, 'customer', 'Numerology Service', '  i want to meet numerology man, i want meet imidiately, any one meet me', 'Kandy', '  120,vira mawatha,katugastota', 777777777, '2015-11-15 05:49:39'),
+(55, 'root', 'Architect', '  i want to find architect for my house work', 'Ampara', '  no 133, waliwita,kalmune', 778676679, '2015-11-15 08:49:58'),
+(56, 'root', 'Architect', '  ljl;jk', 'Colombo', '  lj;jkl', 778676679, '2015-11-15 08:51:43'),
+(57, 'root', 'Architect', '  ljlj', 'Colombo', '  jlk', 777777777, '2015-11-15 08:53:56'),
+(58, 'customer', 'Architect', '  jljk', 'Colombo', '  jl;k', 778676679, '2015-11-15 08:56:42');
 
 -- --------------------------------------------------------
 
