@@ -174,7 +174,7 @@ function selectFunction(variable){
     <ul class="nav nav-tabs">
       <li role="presentation" ><a href="profile.php">Overview</a></li>
       <li role="presentation" class="active"><a href="spProfEdit.php">Edit Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation"><a href="list_pm.php">Messages</a></li>
     </ul>
   </div>
 

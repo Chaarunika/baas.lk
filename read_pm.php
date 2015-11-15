@@ -12,8 +12,7 @@ include('config.php');
     <body>
 	<?php include 'header.php'?>
     	<div class="header">
-        	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	    </div>
+        	<br /><br /><br /><br />
 <?php
 //We check if the user is logged
 if(isset($_SESSION['username']))
@@ -96,7 +95,7 @@ if(isset($_SESSION['username']))
 					<td class="author center"><?php
 			if($dn2['user_avatar']!='')
 			{
-				echo '<img src="'.htmlentities($dn2['user_avatar']).'" alt="" style="max-width:100px;max-height:100px;" />';
+				echo '<img src="'.htmlentities($dn2['user_avatar']).'" alt="" style="max-width:50px;max-height:50px;" />';
 			}
 			?><br /><?php echo $dn2['user_name']; ?></td>
 					<td class="left"><div class="date">Sent: <?php echo date('m/d/Y H:i:s' ,$dn2['timestamp']); ?></div>

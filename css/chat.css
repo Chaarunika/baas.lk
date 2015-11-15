@@ -7,7 +7,7 @@
 }
 body
 {
-	background:#e2f6ff url('images/background.gif') center top no-repeat;
+	background:none;
 	padding-left:10%;
 	padding-right:10%;
 	font-family:Arial, Geneva, sans-serif;
@@ -108,7 +108,7 @@ td, th
 }
 .content
 {
-	background:url('images/bluec_30p.png');
+	background-color: #f0f0f0;
 	width:65%;
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
@@ -159,6 +159,12 @@ td, th
 {
 	border-top:1px solid #aaaaaa;
 	vertical-align:top;
+	}
+.messages_table th
+{
+	border-top:1px solid #aaaaaa;
+	vertical-align:top;
+	background:#7575a3;
 }
 .author
 {
