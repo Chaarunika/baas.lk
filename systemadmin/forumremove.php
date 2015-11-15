@@ -28,7 +28,7 @@
 	border-style: inset;
 	background-color:#000;
 	left: 130px;
-	font-size:20px;
+	font-size:16px;
 	font-family:"Arial Black", Gadget, sans-serif;
 	top: 6px;
 	width: 319px;

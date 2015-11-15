@@ -34,7 +34,7 @@
 	border-style: inset;
 	background-color:#000;
 	left: 96px;
-	font-size:20px;
+	font-size:16px;
 	font-family:"Arial Black", Gadget, sans-serif;
 	top: 11px;
 	width: 319px;
@@ -130,7 +130,7 @@ if (mysqli_num_rows($result) > 0) {
 <td width="75%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']; ?></strong></td>
 </tr>
 <tr>
-<td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "customer".",".$row["customer_id"].",".$row["user_id"];?>" onclick="msg()"><img src="images/remove.jpg" alt="" border=3 height=50 width=50></img></a></td>
+<td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "customer".",".$row["customer_id"].",".$row["user_id"];?>" onClick="msg()"><img src="images/remove.jpg" alt="" border=3 height=50 width=50></img></a></td>
 </tr>
 </table></td>
 </tr>
