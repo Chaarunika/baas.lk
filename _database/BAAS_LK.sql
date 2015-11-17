@@ -234,8 +234,8 @@ INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `
 (5, 5, 714569872, NULL, NULL, 'HandyMan', 'Matara', 'I m the handy man in matara district', 'I worked Nawaloka construction', '1981-01-10', 'Male', 'No45,weligama', NULL, NULL, NULL, NULL, NULL),
 (8, 8, 785236984, NULL, NULL, 'Plumber', 'NuwaraEliya', 'Im the plumber in nuwaraeliya district', 'I worked ABC project', '1979-08-29', 'Male', 'NO56,Nuwaraeliya', NULL, NULL, NULL, NULL, NULL),
 (9, 9, 125487963, NULL, NULL, 'Plumber', 'Galle', 'Im the plumber in galle district', 'I worked Midigama construction', '1978-02-10', 'Male', 'Karapitiya,galle', NULL, NULL, NULL, NULL, NULL),
-(10, 10, 715463256, NULL, NULL, 'Carpenter', 'Colombo', 'Im the carpenter in colombo district', 'I worked PQR construction', '1975-08-30', 'Male', 'Viraketiya,hambanthota', NULL, NULL, NULL, NULL, NULL),
-(12, 12, 789655566, NULL, NULL, 'Contractor', 'Kandy', 'Im the contractor in kandy district', 'I worked Nawaloka construction', '1973-09-27', 'Male', 'No45, kandy', NULL, NULL, NULL, NULL, NULL),
+(10, 10, 715463256, NULL, NULL, 'Real Estate Company', 'Colombo', 'Land Seller & dealer in colombo district', 'I worked PQR construction', '1975-08-30', 'Male', 'Lucky Lanka Sons,No.456/7,Viraketiya,Hambanthota', 'www.luckylanka.org', NULL, NULL, NULL, NULL),
+(12, 12, 789655566, NULL, NULL, 'Real Estate Company', 'Kandy', 'Im the Real Estate in kandy district', '', '1973-09-27', 'Male', 'No.45,Sri Deerananda Mawatha, kandy', 'www.wijayalankalands.lk', NULL, NULL, NULL, NULL),
 (13, 13, 715899633, NULL, NULL, 'Carpenter', 'Kalutara', 'Im the carpenter in kaluthara district', 'I worked Naguma construction', '1972-08-14', 'Male', 'No78,kaluthra', NULL, NULL, NULL, NULL, NULL),
 (14, 14, 785622456, NULL, NULL, 'Painter', 'Galle', 'Im the painter in galle district', 'I worked ABC project', '1971-01-10', 'Male', 'No20,galle', NULL, NULL, NULL, NULL, NULL),
 (15, 15, 774552236, NULL, NULL, 'Painter', 'Anuradhapura', 'Im the painter in Anuradhapura district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'No2,anuradhapura', NULL, NULL, NULL, NULL, NULL),
@@ -275,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `tblbidhistory` (
   `bidprice` bigint(20) NOT NULL,
   `dtesubmitted` datetime NOT NULL,
   PRIMARY KEY (`bidhistoryid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=133 ;
 
 --
 -- Dumping data for table `tblbidhistory`
@@ -288,8 +288,6 @@ INSERT INTO `tblbidhistory` (`bidhistoryid`, `accountid`, `biditemid`, `bidprice
 (24, 8, 76, 83000, '2015-10-18 06:18:10'),
 (25, 9, 73, 99000, '2015-10-18 07:23:02'),
 (26, 9, 82, 57944, '2015-10-18 07:23:18'),
-(27, 9, 77, 5892200, '2015-10-18 07:23:42'),
-(28, 3, 73, 45, '2015-10-21 18:15:55'),
 (29, 8, 83, 5464, '2015-11-02 14:45:12'),
 (30, 8, 83, 80000, '2015-11-02 14:45:34'),
 (31, 19, 82, 58000, '2015-11-02 15:05:30'),
@@ -297,7 +295,101 @@ INSERT INTO `tblbidhistory` (`bidhistoryid`, `accountid`, `biditemid`, `bidprice
 (33, 1, 82, 68000, '2015-11-02 19:45:49'),
 (34, 1, 100, 89998, '2015-11-02 23:01:54'),
 (35, 1, 73, 100000, '2015-11-03 15:12:23'),
-(36, 1, 73, 100000, '2015-11-03 16:12:59');
+(36, 1, 73, 100000, '2015-11-03 16:12:59'),
+(37, 1, 73, 565400, '2015-11-15 07:30:16'),
+(38, 1, 73, 57500, '2015-11-15 07:31:37'),
+(39, 1, 73, 575000, '2015-11-15 07:31:53'),
+(40, 1, 73, 800000, '2015-11-15 07:33:27'),
+(41, 1, 73, 900000, '2015-11-15 07:35:21'),
+(42, 1, 73, 1000000, '2015-11-15 07:36:43'),
+(43, 1, 73, 1100000, '2015-11-15 07:37:44'),
+(44, 1, 73, 50000, '2015-11-15 07:40:35'),
+(45, 1, 73, 20000, '2015-11-15 07:43:16'),
+(46, 1, 73, 23000, '2015-11-15 07:48:00'),
+(48, 1, 73, 24000, '2015-11-15 07:49:58'),
+(49, 1, 73, 24000, '2015-11-15 07:50:14'),
+(50, 1, 73, 25000, '2015-11-15 07:50:27'),
+(51, 1, 73, 25000, '2015-11-15 07:50:41'),
+(52, 1, 73, 26000, '2015-11-15 07:50:53'),
+(53, 1, 73, 27599, '2015-11-15 07:51:10'),
+(54, 1, 73, 45555, '2015-11-15 07:51:26'),
+(55, 1, 73, 60000, '2015-11-15 07:52:48'),
+(56, 1, 73, 1200000, '2015-11-15 08:00:32'),
+(57, 1, 73, 13000, '2015-11-15 08:00:45'),
+(58, 1, 73, 1300000, '2015-11-15 08:00:59'),
+(59, 1, 73, 45678, '2015-11-15 08:35:02'),
+(60, 1, 73, 45000, '2015-11-15 08:38:18'),
+(61, 1, 73, 50000, '2015-11-15 08:38:31'),
+(62, 1, 77, 2000, '2015-11-15 14:36:15'),
+(63, 1, 82, 72000, '2015-11-15 14:36:34'),
+(64, 1, 82, 73000, '2015-11-15 14:37:37'),
+(66, 1, 76, 85000, '2015-11-15 14:54:34'),
+(67, 1, 76, 86000, '2015-11-15 14:54:49'),
+(68, 1, 76, 87000, '2015-11-15 14:55:21'),
+(69, 1, 76, 89000, '2015-11-15 14:56:23'),
+(70, 1, 120, 50000, '2015-11-15 14:58:15'),
+(71, 1, 120, 60000, '2015-11-15 14:58:52'),
+(72, 1, 120, 70000, '2015-11-15 14:59:30'),
+(73, 1, 120, 80000, '2015-11-15 15:00:34'),
+(74, 1, 120, 90000, '2015-11-15 15:01:11'),
+(75, 1, 120, 100000, '2015-11-15 15:01:43'),
+(76, 1, 120, 110000, '2015-11-15 15:02:58'),
+(77, 1, 135, 1400000, '2015-11-16 15:44:24'),
+(78, 1, 134, 675000, '2015-11-16 15:44:40'),
+(79, 1, 134, 825000, '2015-11-16 15:44:59'),
+(80, 1, 77, 4000000, '2015-11-16 15:45:18'),
+(81, 1, 77, 5600000, '2015-11-16 15:45:34'),
+(82, 25, 76, 4500000, '2015-11-16 15:46:49'),
+(83, 13, 136, 1200000, '2015-11-17 09:14:32'),
+(84, 13, 136, 1225000, '2015-11-17 09:14:46'),
+(85, 13, 136, 1240000, '2015-11-17 09:15:04'),
+(86, 13, 136, 1275000, '2015-11-17 09:15:20'),
+(87, 13, 136, 1230000, '2015-11-17 09:15:36'),
+(88, 8, 136, 1175000, '2015-11-17 09:16:12'),
+(89, 8, 136, 1195000, '2015-11-17 09:16:25'),
+(90, 8, 136, 1425000, '2015-11-17 09:16:36'),
+(91, 8, 136, 1435000, '2015-11-17 09:16:52'),
+(92, 8, 136, 1238000, '2015-11-17 09:17:11'),
+(93, 1, 137, 1875000, '2015-11-17 09:27:45'),
+(94, 1, 137, 1975000, '2015-11-17 09:28:01'),
+(95, 1, 137, 1385000, '2015-11-17 09:28:15'),
+(96, 1, 137, 2075000, '2015-11-17 09:28:32'),
+(97, 1, 137, 2125000, '2015-11-17 09:28:47'),
+(98, 1, 137, 237500, '2015-11-17 09:29:00'),
+(99, 8, 137, 1850000, '2015-11-17 09:29:41'),
+(100, 8, 137, 1875000, '2015-11-17 09:29:55'),
+(101, 8, 137, 1990000, '2015-11-17 09:30:13'),
+(102, 1, 138, 1385000, '2015-11-17 09:36:48'),
+(103, 1, 138, 1000000, '2015-11-17 09:37:01'),
+(104, 1, 138, 1700000, '2015-11-17 09:37:12'),
+(105, 1, 138, 1900000, '2015-11-17 09:37:26'),
+(106, 1, 138, 1925000, '2015-11-17 09:37:40'),
+(107, 1, 138, 194000, '2015-11-17 09:37:49'),
+(108, 8, 138, 198000, '2015-11-17 09:38:32'),
+(109, 8, 138, 1995000, '2015-11-17 09:38:45'),
+(110, 8, 138, 2125000, '2015-11-17 09:38:58'),
+(111, 8, 138, 1800000, '2015-11-17 09:39:09'),
+(112, 1, 139, 2000000, '2015-11-17 09:43:08'),
+(113, 1, 139, 2075000, '2015-11-17 09:43:23'),
+(114, 1, 139, 1975000, '2015-11-17 09:43:38'),
+(115, 1, 139, 1875000, '2015-11-17 09:43:50'),
+(116, 1, 139, 2300000, '2015-11-17 09:44:05'),
+(117, 1, 139, 1775000, '2015-11-17 09:44:17'),
+(118, 1, 139, 2475000, '2015-11-17 09:44:31'),
+(119, 1, 139, 2490000, '2015-11-17 09:44:44'),
+(120, 1, 139, 1875000, '2015-11-17 09:45:06'),
+(121, 1, 140, 4875000, '2015-11-17 09:49:34'),
+(122, 1, 140, 4325000, '2015-11-17 09:49:47'),
+(123, 1, 140, 4275000, '2015-11-17 09:49:59'),
+(124, 1, 140, 4020000, '2015-11-17 09:50:11'),
+(125, 1, 140, 3375000, '2015-11-17 09:50:37'),
+(126, 1, 140, 4925000, '2015-11-17 09:50:52'),
+(127, 8, 140, 4723000, '2015-11-17 09:51:20'),
+(128, 8, 140, 490000, '2015-11-17 09:51:33'),
+(129, 8, 140, 4023000, '2015-11-17 09:51:49'),
+(130, 8, 136, 75000, '2015-11-17 10:29:50'),
+(131, 8, 136, 80000, '2015-11-17 10:30:20'),
+(132, 1, 138, 2126000, '2015-11-17 14:29:24');
 
 -- --------------------------------------------------------
 
@@ -315,23 +407,19 @@ CREATE TABLE IF NOT EXISTS `tblbiditems` (
   `closingtime` text NOT NULL,
   PRIMARY KEY (`biditemid`),
   KEY `user_id` (`accountno`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=103 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=142 ;
 
 --
 -- Dumping data for table `tblbiditems`
 --
 
 INSERT INTO `tblbiditems` (`biditemid`, `accountno`, `biditem`, `biddesc`, `town`, `image_path`, `closingtime`) VALUES
-(73, '8', '  Prime Property At Piachaud Gardens', '58.8125 Perch Prime Land In Piachaud Gardens The Most Prestigious Area In Kandy (in Front Of Light House Church) For Sale. Suitable For Educational Institute, Mansion, Apartment Project Or Tourism Project', 'Anuradhapura', '', 'Nov-30-2015 04:29:04 AM'),
-(76, '8', 'Land in Haragama, Kandy', '*10km to Kandy town.\r\n*50m to Kandy-Badulla Rd.\r\n*Excellent neighbourhood.\r\n*Clear deed.\r\n*Close to the Royal park land sale.\r\n*Untroubled place to liv', 'Kandy', '', 'Dec-28-2015 05:58:56 AM'),
-(77, '8', ' Kandy - Kengalla Residential Land For Sale', 'Extent : 12.674 Perches\r\nLocated on Kengalla - Malpana Road\r\n01 Km to Kandy - Digana Main Road\r\nResidential Location\r\n\r\n', 'Kandy', '', 'Dec-23-2015 07:10:07 AM'),
-(82, '9', 'Brighter Park', 'Facilities_\r\n- Water -\r\n- Electricity -\r\n- 20 feet wide access roads - Bank loan facilities\r\n- Better quiet residential environment - \r\n- Clear deed -\r\n\r\nPrice can be negotiated.', 'Homagama', '', 'Dec-22-2015 07:21:12 AM'),
-(99, '1', 'methviru land', 'i want to buy a land ', 'colombo', '', 'Nov-18-2015 07:59:08 PM'),
-(100, '1', 'jlj', 'jklkj', 'jljk', '', 'jklkj'),
-(101, '1', 'big city', 'I want to sell my land', 'colombo', '', 'Nov-27-2015 03:10:52 PM'),
-(102, '1', 'home land', 'ghsg', 'colombo', '', 'Nov-26-2015 04:12:08 PM');
+(136, '12', 'Prime Property At Piachaud Gardens', '58.8125 Perch Prime Land In Piachaud Gardens to sell @ the best price. The land is situated in the most prestigious area In Kandy (in Front Of Light House Church) Mostly suitable for an educational Institute, Mansion, Apartment Project Or Tourism Project', 'Kandy', 'images.jpg', 'Nov-30-2015 09:00:24 AM'),
+(137, '10', 'Land in Haragama, Kandy', '10km to Kandy town.50m to Kandy-Badulla Rd.Excellent neighbourhood. Clear deed.Close to the Royal park land sale.Untroubled place to live. To be selled @ highest price.', 'Kandy', 'images (2).jpg', 'Dec-15-2015 10:00:00 AM'),
+(138, '10', 'Brighter Park', 'Facilities_ - Water - - Electricity - - 20 feet wide access roads - Bank loan facilities - Better quiet residential environment - - Clear deed - Price can be negotiated', 'Colombo', 'images (1).jpg', 'Dec-31-2015 09:34:18 AM'),
+(139, '10', 'Two Acre Beach Land for Hotel Development', 'Kandy, Aniwatte, Galkanda Road 45p land in residential area. Within the municipal limits. Close proximity to banks, shops and leading schools such as Girls High School, Swarnamali, Pushpadana and Kingswood.', 'Kandy', 'insde photo.jpg', 'Nov-30-2015 09:40:41 AM'),
+(140, '1', '35 Perches Land with a Colonial House for Sale', '35 Perches of Prime land in Colombo 7 On Rajakeeya Mawatha Close to Royal College in Colombo 7. Ideal for a large Residence with renovation or use the land to build a residence in the area. Very Rare Opportunity to buy a land in this area.', 'Colombo', 'house_for_sale_galle_sri lanka_2.jpg', 'Nov-30-2015 09:46:30 AM');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `users`

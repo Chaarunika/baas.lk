@@ -52,115 +52,7 @@ function ValidateMobNumber(txtMobId) {
 
 </script>
 
-<script>
-
-function selectFunction(variable){
-		
-		
-
-		if (variable == 0)
-		{			
-		document.getElementById("apDivTopic0").style.zIndex = 8;
-		
-		document.getElementById("apDivTag0").style.color = "black" ;
-		document.getElementById("apDivTag1").style.color = "grey" ;
-		document.getElementById("apDivTag2").style.color = "grey" ;
-		document.getElementById("apDivTag3").style.color = "grey" ;
-		
-		document.getElementById("apDivOptionBox0").style.visibility = "visible";
-		document.getElementById("apDivOptionBox1").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox2").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox3").style.visibility = "hidden";
-		
-		document.getElementById("apDivBar0").style.background = "orange";
-		document.getElementById("apDivBar1").style.background = "white";
-		document.getElementById("apDivBar2").style.background = "white";
-		document.getElementById("apDivBar3").style.background = "white";
-		
-		document.getElementById("apDivProfBox").style.height = "600px" ;	
-
-		
-		}
-
-		if (variable == 1)
-		{
-			
-		document.getElementById("apDivTopic1").style.zIndex = 8;
-		
-		document.getElementById("apDivTag1").style.color = "black" ;
-		document.getElementById("apDivTag0").style.color = "grey" ;
-		document.getElementById("apDivTag2").style.color = "grey" ;
-		document.getElementById("apDivTag3").style.color = "grey" ;
-		
-		document.getElementById("apDivOptionBox0").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox1").style.visibility = "visible";
-		document.getElementById("apDivOptionBox2").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox3").style.visibility = "hidden";
-		
-		document.getElementById("apDivBar1").style.background = "orange";
-		document.getElementById("apDivBar0").style.background = "white";
-		document.getElementById("apDivBar2").style.background = "white";
-		document.getElementById("apDivBar3").style.background = "white";
-		
-		
-		document.getElementById("apDivProfBox").style.height = "500px" ;
-
-		}
-		if (variable == 2)
-		{
-			
-		document.getElementById("apDivTopic2").style.zIndex = 8;
-		
-		document.getElementById("apDivTag2").style.color = "black" ;
-		document.getElementById("apDivTag1").style.color = "grey" ;
-		document.getElementById("apDivTag0").style.color = "grey" ;
-		document.getElementById("apDivTag3").style.color = "grey" ;
-		
-		document.getElementById("apDivOptionBox0").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox1").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox2").style.visibility = "visible";
-		document.getElementById("apDivOptionBox3").style.visibility = "hidden";
-		
-		document.getElementById("apDivBar2").style.background = "orange";
-		document.getElementById("apDivBar1").style.background = "white";
-		document.getElementById("apDivBar0").style.background = "white";
-		document.getElementById("apDivBar3").style.background = "white";
-		
-		
-		document.getElementById("apDivProfBox").style.height = "600px" ;		
-		
-		}
-		if (variable == 3)
-		{
-			
-		document.getElementById("apDivTopic3").style.zIndex = 8;
-		
-		document.getElementById("apDivTag3").style.color = "black" ;
-		document.getElementById("apDivTag1").style.color = "grey" ;
-		document.getElementById("apDivTag2").style.color = "grey" ;
-		document.getElementById("apDivTag0").style.color = "grey" ;
-		
-		document.getElementById("apDivOptionBox0").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox1").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox2").style.visibility = "hidden";
-		document.getElementById("apDivOptionBox3").style.visibility = "visible";
-		
-		document.getElementById("apDivBar3").style.background = "orange";
-		document.getElementById("apDivBar1").style.background = "white";
-		document.getElementById("apDivBar2").style.background = "white";
-		document.getElementById("apDivBar0").style.background = "white";
-		
-		document.getElementById("apDivProfBox").style.height = "600px" ;
-		
-		
-		}
-		
-		
-	
-	
-} 
-</script>
-
+<script src="javascript/editTable.js"></script>
 
 </head>
 
@@ -254,10 +146,13 @@ if (!$conn) {
   <div id="apDivOptionBox0">
 
     <form id="form1" name="form1" method="post" action="spProfEdit.php">
-      <label for="firstName">First Name</label>
+      <label for="firstName">First Name / Organization Name</label>
       <input type="text" name="firstName" id="firstName" required />
-      <label for="lastName">Last Name</label>
+      <label for="lastName">Last Name / Organization Name</label>
       <input type="text" name="lastName" id="lastName" required />
+
+      <label for="year">Birthdate / Organization Start Date</label>
+      <br>
       <label for="year">Year</label>
       <select name="year" id="year" required>
         <option>1989</option>
@@ -301,6 +196,28 @@ if (!$conn) {
         <option>15</option>
         <option>16</option>
       </select>
+
+      <br><br>
+      <p>
+        <label for="firstLine">Address Line1</label>
+        <input type="text" name="firstLine" id="firstLine" required />
+      </p>
+      <p>
+        <label for="secondLine">Address Line 2</label>
+        <input type="text" name="secondLine" id="secondLine" required />
+      </p>
+      
+        <p><label for="district">District</label><br>
+        <select name="district" id="district" required>
+          <option>Anuradhapura</option>
+          <option>Colombo</option>
+          <option>Kurunegala</option>
+          <option>Kandy</option>
+          <option>Ampara</option>
+        </select>
+      </p> 
+      
+      <!--
       <p>
         <label>
           <input type="radio" name="gender" value="M" id="gender_0" required />
@@ -310,6 +227,9 @@ if (!$conn) {
           <input type="radio" name="gender" value="F" id="gender_1" required />
           Female</label>
       </p>
+
+    -->
+      <br>
       <p>Please Select Preferable Languages to communicate</p>
       <p>
         <label>
@@ -320,26 +240,8 @@ if (!$conn) {
         
         <label>
           <input type="checkbox" name="check" value="E" id="language_2" />English</label>
-      </p>
-      <p>Adress</p>
-      <p>
-        <label for="firstLine">Line1</label>
-        <input type="text" name="firstLine" id="firstLine" required />
-      </p>
-      <p>
-        <label for="secondLine">Line 2</label>
-        <input type="text" name="secondLine" id="secondLine" required />
-      </p>
-      <p>
-        <label for="district">District</label>
-        <select name="district" id="district" required>
-          <option>Anuradhapura</option>
-          <option>Colombo</option>
-          <option>Kurunegala</option>
-          <option>Kandy</option>
-          <option>Ampara</option>
-        </select>
-      </p>
+      </p>      
+      
       <p>
         <input type="submit" name="saveOverview" id="saveOverview" value="Save" />
       </p>      
@@ -452,21 +354,9 @@ if (!$conn) {
         <label for="workHistory">Work History and Experience Details</label>
         <textarea name="workHistory" id="workHistory" cols="45" rows="5" required></textarea>
       </p>
-      <p>Work History Photos</p>
+     
       <p>
-        <label for="attachement1">Attachement1</label>
-        <input type="file" name="attachement1" id="attachement1" />
-      </p>
-      <p>
-        <label for="attachement2">Attachement2</label>
-        <input type="file" name="attachement2" id="attachement2" />
-      </p>
-      <p>
-        <label for="attachement3">Attachement3</label>
-        <input type="file" name="attachement3" id="attachement3" />
-      </p>
-      <p>
-       <input type="submit" name="saveInfo" id="saveInfo" value="Save" />
+       <input type="submit" name="saveInfo" id="saveInfo" value="Save Changes" />
      </p>
     </form>
 

@@ -220,6 +220,7 @@ input[type=email]  {
 	display: block;
 	margin-bottom: 15px;
 	vertical-align: middle;
+	width: 250px;
 	}
 input[type=checkbox] {
 	margin-bottom: 15px;
