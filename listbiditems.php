@@ -23,11 +23,13 @@ header("Refresh: 1; URL=$url1");*/
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <style type="text/css">
 
+
+
 #apDivContainer {
 	position: absolute;
 	left: 5px;
-	top: 300px;
-	width: 1500px;
+	top: 200px;
+	width: 100%
 	height: 600px;
 	z-index: 1;
 	//background-color: #f0f0f0;
@@ -60,6 +62,9 @@ header("Refresh: 1; URL=$url1");*/
     background-color: #;
 }
 
+
+
+
 </style>
 
 
@@ -71,16 +76,18 @@ header("Refresh: 1; URL=$url1");*/
 
 <body>
 
+
+
+
+
 <div id="apDivContainer">
-
-
 <?php
 
 
 
 
-
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems";
+/*$area=$_POST['search'];*/
+$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems ";
 
 $result = mysqli_query($database,$sql);
     
@@ -91,7 +98,7 @@ if (false === $result) {
 
 echo "<ul>";
 
-$out = "<table  width=85% id='bidtbl' border='1' ><tr><th>Land Name</th><th  word-wrap: break-word; max-width: 150px;>Land descriptiom</th><th>Area</th><th>Remaining time</th>";
+$out = "<table id='bidtbl'  width=100%  border='0' ><tr><th>Land Name</th><th  word-wrap: break-word;>Land descriptiom</th><th>Area</th><th>Remaining time</th>";
 $out .= "<th>Highest Bid</th><th>Place a bid</th></tr>";
 
 while($row=mysqli_fetch_array($result)){
@@ -150,7 +157,7 @@ $ownerid=$row['accountno'];
   $out .= "<td style='width:10%' 'background-color: black'>" . $row['biditem'] . "</td>";
   $out .= "<td style='width:30%' >" . $row['biddesc'] . "</td>";
   $out .= "<td style='width:10%'>" .$row['town'] . "</td>";
-  $out .= "<td style='width:10%'>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." "."$seconds_remaining"." Secs"."</td>";
+  $out .= "<td style='width:15%'>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." "."$seconds_remaining"." Secs"."</td>";
   
   $out .= "<td style='width:10%'>" . $row_1['max(bidprice)'] .  "</td>";
   $out .= "<td style='width:10%'>"."<a href=acceptbid.php?itemid=$itemid> View & bid</a>"."</td>"; 	

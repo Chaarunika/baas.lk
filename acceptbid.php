@@ -56,6 +56,7 @@
 	position: absolute;
 	left: 510px;
 	top: 200px;
+	padding: 2px;
 	width: 495px;
 	height: 300px;
 	z-index: 12;
@@ -257,7 +258,7 @@ $row4=mysqli_fetch_array($result4);
   
   <tr>
     <td class="tg-b7b8">Vendor Name :</td>
-    <td class="tg-b7b8"><?php  echo $row2['user_name'] ; ?></td>
+    <td class="tg-b7b8"><?php  echo "<a href=http://localhost/BAAS_LK/profile.php?user=".$row['accountno'].">".$row2['user_name']."</a>" ; ?></td>
    
     </tr>
   <tr>
@@ -267,7 +268,7 @@ $row4=mysqli_fetch_array($result4);
     </tr>
   <tr>
     <td class="tg-yw4l">Web site</td>
-    <td class="tg-yw4l"><?php echo $row4['website'] ?> ;</td>
+    <td class="tg-yw4l"><?php echo "<a href=http://www.google.lk>".$row4['website']."</a>"  ; ?> </td>
    
   </tr>
  

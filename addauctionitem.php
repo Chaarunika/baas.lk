@@ -89,21 +89,16 @@ p{
 <?php
 include ('header.php') ;
 
-
-
 ?>
 
 <div id="apDiv1" >
-
-
 
 <h2>Adding Land</h2>
 <p >Please add the details about the land that you wish to sell...</p>
 
 
 
-
-   <form action="addauctionprocess.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <form action="addauctionprocess.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
 
 <table id="bidtbl"  >
 
@@ -186,10 +181,13 @@ include ('header.php') ;
 
 </form>
 
-
-
-
 </div>
+
+
+
+
+
+</body>
 
 
 

@@ -9,7 +9,7 @@ require_once("_database/database.php");
 
 $accountid=$_SESSION['userID'];
 $item=$_POST['item'];
-$description=htmlentities($_POST['description']);
+$description= ($_POST['description']);
 $closingtime=$_POST['closingtime'];
 $town=$_POST['town'];
 
