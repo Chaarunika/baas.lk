@@ -40,48 +40,45 @@
 }
 
 
- h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    
+ h2{ 
+    font-family:Arial, sans-serif;
 	font-size: 40px;
-	color: #213266;
 	font-weight:bold;}
 	
 	
 	
 #bidtbl {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    
     border-collapse: collapse;
     
 }
 
-#bidtbl td, #bidtbl th { height: 50px;
+#bidtbl td, #bidtbl th { height: 20px;
 
 
-	color: #213266;
-    font-size: 1em;
-  
+	
+    font-size: 20px;
+	font-family:Arial, sans-serif;
     padding: 3px 7px 2px 7px;
 }
 
 #bidtbl th {
-    font-size: 1.1em;
+  
     text-align: left;
     padding-top: 5px;
     padding-bottom: 4px;
-    background-color: #FFBF00;
-    color: #ffffff;
+   font-family:Arial, sans-serif;
 }
 
-#bidtbl tr.alt td {
+#bidtbl tr.alt td { font-family:Arial, sans-serif;
 	
-    color: #000000;
-    background-color: #;
+    
 }
 
-p{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-	color: #213266;
-	font-weight:bold;}
+p{ 
+    font-size: 15px;
+	font-family:Arial, sans-serif;
+	}
 
 
 
@@ -98,19 +95,21 @@ include ('header.php') ;
 
 <div id="apDiv1" >
 
+
+
 <h2>Adding Land</h2>
 <p >Please add the details about the land that you wish to sell...</p>
 
 
 
 
-<form id="form1" name="form1" method="post" action="addauctionprocess.php">
+   <form action="addauctionprocess.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
 
 <table id="bidtbl"  >
 
 <tr>
 <td ><p>Land Name</p></td>
-<td ><input type="text" name="item" id="item" style="width:280px"></td>
+<td ><input type="text" name="item" id="item" style="width:280px" required></td>
 
 </tr>
 
@@ -119,11 +118,11 @@ include ('header.php') ;
 
 <tr>
 <td valign="top"><p>Description</p></td>
-<td><textarea name="description" id="description" cols="45" rows="10"></textarea> </td>
+<td><textarea name="description" id="description" cols="45" rows="10" style="font-family:Arial, sans-serif;" required></textarea> </td>
 </tr>
 
 <tr><td><p>Town</p></td>
-<td><select name=Town>
+<td><select name=town>
 
 
   <option value="Colombo">Colombo</option>
@@ -161,7 +160,7 @@ include ('header.php') ;
 
 
 <tr><td><p>Add Picture</p></td>
-<td><input  name="uploadedimage" enctype="multipart/form=data" class="element file" type="file"/></td>
+<td> <input type="file" name="fileField" id="file"></td>
 </tr>
 
 
@@ -170,14 +169,15 @@ include ('header.php') ;
 
 
 <tr><td><p>Bid Closing Time</p></td>
-<td> <input name="closingtime" id="demo3" size="25" width="280">
+<td> <input name="closingtime" id="demo3" size="25" width="280" required>
 <a href="javascript:NewCal('demo3','mmmddyyyy',true,12)"><img src="pics/cal.gif" width="50" height="50" border="0" alt="Pick a date"></a></td>
 <!--<td>&nbsp;</td>-->
 </tr>
 
 
 <tr><td>&nbsp;</td>
-<td><input type="submit" name="button" id="button" value="submit"/></td>
+<td><input type="submit" name="button" id="button" value="Submit" style="font-family:Arial, sans-serif;"/>
+<input type="reset" name="button" id="button" value="Cancel" style="font-family:Arial, sans-serif;"/></td>
 </tr>
 
 </table>
@@ -191,7 +191,7 @@ include ('header.php') ;
 
 </div>
 
-</body>
+
 
 
 </html>

@@ -4,50 +4,24 @@
 <?php
 
 
-require_once("_database/databasebid.php");
+require_once("_database/database.php");
 
 
 $accountid=$_SESSION['userID'];
 $item=$_POST['item'];
-$description=$_POST['description'];
+$description=htmlentities($_POST['description']);
 $closingtime=$_POST['closingtime'];
 $town=$_POST['town'];
 
-//$imagename=$_POST['uploadedimage'];
- //$target_path = "images/".$imagename;
+$img = $_FILES['fileField']['name'];
+$img_temp = $_FILES['fileField']['tmp_name'];
+$img_path = 'uploaded_img/' . $img;
 
-
- /*function GetImageExtension($imagetype)
-     {
-       if(empty($imagetype)) return false;
-
-       switch($imagetype)
-       {
-          case 'image/bmp': return '.bmp';
-           case 'image/gif': return '.gif';
-           case 'image/jpeg': return '.jpg';
-           case 'image/png': return '.png';
-           default: return false;
-       }
-     }
-
-*/
-
-/*if (!empty($_FILES["uploadedimage"]["name"])) {
-    $file_name=$_FILES["uploadedimage"]["name"];
-    $temp_name=$_FILES["uploadedimage"]["tmp_name"];
-    $imgtype=$_FILES["uploadedimage"]["type"];
-    $ext= GetImageExtension($imgtype);*/
-	
- 
-   
-  //echo $imagename;
-  
- /* if(move_uploaded_file($imagename, $target_path)) {*/
+move_uploaded_file($_FILES['fileField']['tmp_name'],$img_path);
 
 
 
-    $sql=" INSERT INTO baaslk.tblbiditems (accountno, biditem, biddesc, town, closingtime ) VALUES ($accountid , '".$item."' , '".$description."' ,'".$town."', '".$closingtime."' )";
+    $sql=" INSERT INTO baaslk.tblbiditems (accountno, biditem, biddesc, town, image_path, closingtime ) VALUES ($accountid , '".$item."' , '".$description."' ,'".$town."','".$img."', '".$closingtime."' )";
     
     $result = mysqli_query($database,$sql);
 	
@@ -60,8 +34,8 @@ $town=$_POST['town'];
 	else
 	{
 		
-		echo $result;
-		echo "sdgfsdgf";	
+		echo ($result);
+			
 	}
 
     $mess= "Auction item $item sucessfully created";
@@ -121,6 +95,13 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: #ffffff;
 }
 
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;border-width:1px;border-style:solid;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-yw4l{vertical-align:top}
+.tg .tg-b7b8{background-color:#f9f9f9;vertical-align:top}
+
+
 
 </style>
 
@@ -131,7 +112,7 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 <?php  
 	   
 	   
-echo"<div id='apDiv2'>.<h2>$mess.<h2><table id='bidtbl' >
+/*echo"<div id='apDiv2'>.<h2>$mess.<h2><table id='bidtbl' >
 <tr height='100'><th width='200'>Land Name</th><th width='400'>$item</th></tr>
 		<tr height='100'><th width='200'>Land Description</th><th word-wrap: break-word;
 max-width: 150px;>$description</th></tr>
@@ -140,10 +121,35 @@ max-width: 150px;>$description</th></tr>
 		 
 	<p> <a href=menu.php>menu</a></p>
 		 
-		 </div>";
+		 </div>";*/
 		 
 		 ?>
-		 
+
+<div id="apDiv2">
+<table width="500" class="tg" style='border-width:0px'>
+  <tr>
+    <th class="tg-031e" colspan="2">Auction Item Details</th>
+  </tr>
+  <tr>
+    <td class="tg-b7b8">Land Name</td>
+    <td class="tg-b7b8"><?php echo "$item" ; ?></td>
+    
+    </tr>
+  <tr>
+    <td class="tg-yw4l">Description</td>
+    <td class="tg-yw4l"><?php echo "$description" ; ?></td>
+    
+    </tr>
+  <tr>
+    <td class="tg-yw4l">Closing Date</td>
+    <td class="tg-yw4l"><?php echo "$closingtime" ; ?></td>
+   
+  </tr>
+  
+
+
+  </table>		
+</div>  
 
 
 

@@ -26,7 +26,7 @@ header("Refresh: 1; URL=$url1");*/
 #apDivContainer {
 	position: absolute;
 	left: 5px;
-	top: 110px;
+	top: 300px;
 	width: 1500px;
 	height: 600px;
 	z-index: 1;
@@ -80,7 +80,7 @@ header("Refresh: 1; URL=$url1");*/
 
 
 
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems";
+$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems";
 
 $result = mysqli_query($database,$sql);
     
@@ -108,6 +108,7 @@ $seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
 
 $itemid=$row['biditemid'];
 $item=$row['biditem'];
+$ownerid=$row['accountno'];
 
 //$auctionby= $row['user_name'];
 
@@ -149,10 +150,10 @@ $item=$row['biditem'];
   $out .= "<td style='width:10%' 'background-color: black'>" . $row['biditem'] . "</td>";
   $out .= "<td style='width:30%' >" . $row['biddesc'] . "</td>";
   $out .= "<td style='width:10%'>" .$row['town'] . "</td>";
-  $out .= "<td style='width:10%'>" ."$days_remaining"." days" ." "."$hours_remaining"." hrs"." "."$minutes_remaining"." mins"." "."$seconds_remaining"." secs"."</td>";
+  $out .= "<td style='width:10%'>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." "."$seconds_remaining"." Secs"."</td>";
   
   $out .= "<td style='width:10%'>" . $row_1['max(bidprice)'] .  "</td>";
-  $out .= "<td style='width:10%'>"."<a href=acceptbid.php?itemid=$itemid&item=$item> View & bid</a>"."</td>"; 	
+  $out .= "<td style='width:10%'>"."<a href=acceptbid.php?itemid=$itemid> View & bid</a>"."</td>"; 	
   $out .= "</tr>";
   }
 $out .= "</table>";
