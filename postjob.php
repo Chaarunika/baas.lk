@@ -1,3 +1,6 @@
+
+
+	
 <script type="text/javascript">
 
 function ValidateMobNumber(txtMobId) {
@@ -23,18 +26,22 @@ function ValidateMobNumber(txtMobId) {
 
 </script>
 
-<?php include_once ('_database/database.php') ?>
+<?php include_once ('_database/database.php')
+ ?>
 
 <?php
 if(isset($_POST['submitJob'])){
+	
     echo "Successfully";
     $jobType = $_POST['jobType'];
 	$jobDesc = $_POST['jobDesc'];
     $jobArea =$_POST['jobArea'];
     $jobAddress= $_POST['jobAddress'];
     $jobTel = $_POST['jobTel'];
+	$user= $_SESSION['username'];
 
-	$sql = " INSERT INTO postjob2 (job_type,job_description,area,address,tel_num) VALUES ('$jobType','$jobDesc','$jobArea','$jobAddress',$jobTel )";
+
+	$sql = " INSERT INTO postjob2 (username,job_type,job_description,area,address,tel_num) VALUES ('$user','$jobType','$jobDesc','$jobArea','$jobAddress',$jobTel )";
 	
 
     if (mysqli_query($dbConnection,$sql) ) {

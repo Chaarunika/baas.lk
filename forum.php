@@ -5,44 +5,74 @@
 <style type="text/css">
 #apDiv1 {
 	position:absolute;
-	top:120px;
-	width:100%;
-	height:70px;
+	top:122px;
+	width:516px;
+	height:93px;
 	z-index:16;
 	background-color: #CCCCCC;
+	border-radius: 20px;
+	left: 3px;
+}
+.notfound {
+	background-color: #f2f2f2;
+	position: absolute;
+	left: 3px;
+	top: 71px;
+	width: 1216px;
+	height: 60px;
+	z-index: 100;
 }
 #apDiv2 {
 	position:absolute;
-	left:83px;
-	top:11px;
-	width:439px;
-	height:51px;
+	left:15px;
+	top:16px;
+	width:480px;
+	height:62px;
 	z-index:17;
-	background-color: #666666;
+	background-color: #CCCCCC;
 	border-radius:20px;
 }
 .searchtext {
 	position: absolute;
-	left: 36px;
-	top: 12px;
-	width: 218px;
-	height: 28px;
+	border-width:3px;
+	border-style: inset;
+	background-color:#000;
+	left: 8px;
+	font-size:20px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	top: 15px;
+	width: 319px;
+	height: 33px;
+}
+.searchtext:focus{
+	color:#FFF;
 }
 .searchbtton {
 	position: absolute;
-	left: 277px;
-	top: 14px;
+	left: 354px;
+	top: 16px;
 	width: 118px;
 	background-color: #FC0;
-	height: 27px;
+	height: 33px;
 	border-radius:20px;
+	border-style:outset;
+	border-width:3px;
+	cursor:hand;
 	font-weight: bold;
 }
+#newdiscuss
+{
+	border-width:4px;
+	border-style:outset;
+	border-color:#999;
+	cursor:hand;
+}
+#newdiscuss
 
 </style>
 </head>
 
-<body>
+<body bgcolor="#f2f2f2">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
@@ -148,11 +178,15 @@ echo $rows['userphoto'];
 if($found == 0)
 {
 ?>
-<table width="300" >
+
+<div class="notfound">
+<table width="1077" bgcolor:"#cccccc">
 <tr>
-<td width="100%"><?php echo "<br><br><br>Not Founded" ?></td>
+<td width="100%" align="center" bgcolor:"#cccccc"><p>&nbsp;</p>
+  <p><strong>Not Founded</strong></p></td>
 </tr>
 </table>
+</div>
 <?php
 }
 
@@ -251,3 +285,4 @@ mysql_close();
 }
 ?>
 
+</body>

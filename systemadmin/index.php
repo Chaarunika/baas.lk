@@ -95,7 +95,7 @@ window.onload = Fun;
 	height:308px;
 	z-index:1;
 	color: #CCC;
-	background-color: #CCCCCC;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 #apDiv2 {
 	position:absolute;
@@ -133,6 +133,7 @@ window.onload = Fun;
 	top: 94px;
 	background-color: #FFF;
 	font-size: 16px;
+	font-family:"Arial Black", Gadget, sans-serif;
 }
 .password {
 	position: absolute;
@@ -142,6 +143,7 @@ window.onload = Fun;
 	top: 184px;
 	background-color: #FFF;
 	font-size: 16px;
+	font-family:"Arial Black", Gadget, sans-serif;
 }
 .login {
 	position: absolute;
@@ -151,12 +153,16 @@ window.onload = Fun;
 	height: 35px;
 	font-weight: bold;
 	font-size: 18px;
+	cursor:hand;
 }
 #coverPics{
 	width: 100%
 	top:0px;
 	background-image: url('images/cover.jpg');
 	height: 100%
+}
+#apDiv1 #apDiv2 form p {
+	color: #FFF;
 }
 </style>
 </head>

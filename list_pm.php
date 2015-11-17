@@ -8,12 +8,38 @@ include('config.php');
         <link href="css/chat.css" rel="stylesheet" title="Style" />
         <title>Personal Messages</title>
 		<link href="css/header.css" rel="stylesheet">
+		<!-- Bootstrap  -->
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+		<style type="text/css">
+
+			#subMenu{
+		  position: absolute;
+		  top: 90px;
+		  width: 90% ;
+		  left :50px;
+		}
+		</style>
     </head>
     <body>
 	<?php include 'header.php'?>
     	<div class="header">
-        	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        	<br /><br /><br /><br />
 	    </div>
+			<?php if(!isset($_GET['user']))	{	?>
+		<div id="subMenu">
+			<ul class="nav nav-tabs">
+			  	<li role="presentation"><a href="profile.php">Overview</a></li>
+			 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
+			 	<li role="presentation" class="active"><a href="list_pm.php">Messages</a></li>
+			</ul>
+		</div>
+	<?php } ?>
         <div class="content">
 <?php
 //We check if the user is logged
@@ -101,6 +127,5 @@ else
 }
 ?>
 		</div>
-		<div class="foot"><a href="profile.php">Back to My Profile</a></div>
 	</body>
 </html>

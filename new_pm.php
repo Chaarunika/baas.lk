@@ -12,7 +12,7 @@ include('config.php');
     <body>
 	<?php include 'header.php'?>
     	<div class="header">
-        	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        	<br /><br /><br /><br />
 	    </div>
 <?php
 //We check if the user is logged

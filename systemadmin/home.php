@@ -180,6 +180,15 @@ h3{
     </table>
 </div>
 <div id="show4" class="FAA">
+ <p>&nbsp;</p>
+<table width="500" align="center" cellspacing="20" >
+      	  <tr >
+        <td width="25%" height="100" align="center"><a href="jobremove.php"><img src="images/4.jpg" height="100" width="100"></img></a></td>
+        </tr>
+        <tr>
+         <td width="25%" height="50" align="center" class="tablefont"><a href="jobremove.php"><strong>Remove Jobs</strong></a></td>
+         </tr>
+    </table>
 </div>
 
 
