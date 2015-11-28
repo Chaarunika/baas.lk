@@ -1,12 +1,4 @@
 <?php include "header.php" ?>
-<style>
- #coverPics{
-	width: 100%
-	top:0px;
-	background-image: url('images/cover2.jpg');
-	height: 100%
-}
-</style>
 <div id="coverPics">
 </div>
 
@@ -25,7 +17,6 @@ h3{
  .FAQ { 
  		cursor:hand; cursor:pointer;
         border:1px solid darkorange;
-        border-radius: 10px;
         width:250px; 
         background-color: #f0f0f0;
        // padding :5px;  	
@@ -40,52 +31,51 @@ h3{
 
 #apDivTitle{
 	position: absolute;
-	left: 40px;
-	top: 93px;
+	left: 7px;
+	top: 57px;
 	width: 302px;
 	height: 105px;
 	z-index: 111;
 }
 #show1{
 	position:absolute;
-	left:500px;
-	top:150px;
-	width:628px;
-	height:347px;
+	left:260px;
+	top:140px;
+	width:1100px;
+	height:600px;
 	z-index:2;
 	background-color: rgba(51,51,51,0.4);
-	border-radius : 40px;
+	
 	
 }
 #show2 {
 	position:absolute;
-	left:500px;
-	top:150px;
-	width:628px;
-	height:347px;
+	left:260px;
+	top:140px;
+	width:1100px;
+	height:600px;
 	z-index:2;
-	background-color:rgba(51,51,51,0.4);
-	border-radius : 40px;
+	background-color: rgba(51,51,51,0.4);
+	
 }
 #show3 {
 	position:absolute;
-	left:500px;
-	top:150px;
-	width:628px;
-	height:347px;
+	left:260px;
+	top:140px;
+	width:1100px;
+	height:600px;
 	z-index:2;
-	background-color:rgba(51,51,51,0.4);
-	border-radius : 40px;
+	background-color: rgba(51,51,51,0.4);
+	
 }
 #show4 {
 	position:absolute;
-	left:500px;
-	top:150px;
-	width:628px;
-	height:347px;
+	left:260px;
+	top:140px;
+	width:1100px;
+	height:600px;
 	z-index:2;
-	background-color:rgba(51,51,51,0.4);
-	border-radius : 40px;
+	background-color: rgba(51,51,51,0.4);
 }
 </style>
 <script type="text/javascript">
@@ -124,6 +114,7 @@ h3{
   		CState.style.display = (CState.style.display != 'block') ? 'block' : 'none';
 		}
 </script>
+<body background="images/cover2.jpg">
 
 <div  id="apDivTitle">
 <h1 align="left">Manage Options</h1>

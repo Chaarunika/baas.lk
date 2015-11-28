@@ -1,11 +1,11 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+include 'sessioncheck.php';
+
+if($_SESSION["username"]){
+	
 $user= $_SESSION['username'];
 $usercatagory=$_SESSION['Catagory'];
 $userphoto=$_SESSION['url'];
-
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password=""; // Mysql password 
@@ -55,6 +55,6 @@ echo "ERROR";
  
 // Close connection
 mysql_close();
-
+}
 
 ?>

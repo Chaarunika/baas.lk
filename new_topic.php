@@ -1,6 +1,9 @@
 <head>
+
 <link rel="stylesheet" type="text/css" href="css/header.css">
-<?php include 'header.php' ?>
+<?php include 'header.php';
+	include 'sessioncheck.php' ;
+?>
 
 
 <style type="text/css">
