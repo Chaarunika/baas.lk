@@ -49,11 +49,11 @@
 }
 
 .notfound {
-	background-color: #f2f2f2;
+	background-color: #fff;
 	position: absolute;
 	left: 78px;
 	top: 244px;
-	width: 1213px;
+	width: 1262px;
 	height: 169px;
 	z-index: 100;
 }
@@ -75,7 +75,7 @@ alert("cancel");
 
 
 
-<body bgcolor="#f2f2f2">
+<body>
 <div id="apDiv1">
 <div id="apDiv2">
 
@@ -122,15 +122,16 @@ $word = str_replace(' ','',$word);
 <table border="0" bordercolor="#666666">
 <tr>
 <td>
-<table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
+<table width="1200" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr >
-<td width="10%"  align="center" bgcolor="#999"><strong>Remove</strong></td>
-<td width="10%"  align="center" bgcolor="#999"><strong>Date/Time</strong></td>
+<td width="8%"  align="center" bgcolor="#999"><strong>Remove</strong></td>
+<td width="8%"  align="center" bgcolor="#999"><strong>Date/Time</strong></td>
 <td width="10%"  align="center" bgcolor="#999"><strong>Job Type</strong></td>
 <td width="30%"  align="center" bgcolor="#999"><strong>Description</strong></td>
-<td width="10%"  align="center" bgcolor="#999"><strong>Area</strong></td>
+<td width="9%"  align="center" bgcolor="#999"><strong>CName</strong></td>
+<td width="7%"  align="center" bgcolor="#999"><strong>Area</strong></td>
 <td width="20%"  align="center" bgcolor="#999"><strong>Address</strong></td>
-<td width="10%"  align="center" bgcolor="#999"><strong>Tele.NO</strong></td>
+<td width="8%"  align="center" bgcolor="#999"><strong>Tele.NO</strong></td>
 
 </tr>
 
@@ -157,6 +158,7 @@ while($rows = mysqli_fetch_assoc($result)) {
 <td bgcolor="<?php echo $bgcolor?>" align="left" ><strong><?php echo $rows['time']; ?></strong></a><BR></td>
 <td align="center" bgcolor="<?php echo $bgcolor	?>"><?php echo $rows['job_type']; ?></td>
 <td align="center" bgcolor="<?php echo $bgcolor	?>"><?php echo $rows['job_description']; ?></td>
+<td align="center" bgcolor="<?php echo $bgcolor	?>"><?php echo $rows['username']; ?></td>
 <td align="center" bgcolor="<?php echo $bgcolor	?>"><?php echo $rows['area']; ?></td>
 <td align="center" bgcolor="<?php echo $bgcolor	?>"><?php echo $rows['address']; ?></td>
 <td align="center" bgcolor="<?php echo $bgcolor	?>"><?php echo $rows['tel_num']; ?></td>
@@ -194,7 +196,7 @@ if($found == 0)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="notfound">
-<table width="1000" bgcolor:"#cccccc">
+<table width="1000" bgcolor:"#fff">
 <tr>
 <td width="100%" align="center" bgcolor:"#cccccc"><strong>Not Founded</strong></td>
 </tr>

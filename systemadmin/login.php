@@ -1,6 +1,5 @@
 <?php
 include "dbconnect.php"; 
-session_start();
 $username = $_POST['textfield'];
 $password = $_POST['textfield2'];
 
@@ -11,14 +10,15 @@ $password = mysql_real_escape_string($password);
 $password = md5($password);
 
 
-$sql="SELECT username,password FROM systemadmin WHERE username='$username' and password='$password'";
+$sql="SELECT adminusername,password FROM systemadmin WHERE adminusername='$username' and password='$password'";
 $result=$conn->query($sql);
 
 echo $result->num_rows; 
 
 if($result->num_rows==1)
 {
-$_SESSION["username"] = $username;
+session_start();
+$_SESSION["adminusername"] = $username;
 header("location:home.php");
 }
 else

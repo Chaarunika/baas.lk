@@ -58,7 +58,7 @@
 </style>
 </head>
 
-<body bgcolor="#f2f2f2">
+<body>
 
 <?php
  

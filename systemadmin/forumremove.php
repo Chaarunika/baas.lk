@@ -72,7 +72,7 @@ alert("cancel");
 </script>
 </head>
 
-<body bgcolor="#f2f2f2">
+<body>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))

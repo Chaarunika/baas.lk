@@ -9,12 +9,12 @@
 	width:516px;
 	height:93px;
 	z-index:16;
-	background-color: #CCCCCC;
+	background-color: rgba(192,192,192,0.2);
 	border-radius: 20px;
 	left: 3px;
 }
 .notfound {
-	background-color: #f2f2f2;
+	background-color: #fff;
 	position: absolute;
 	left: 3px;
 	top: 71px;
@@ -29,23 +29,22 @@
 	width:480px;
 	height:62px;
 	z-index:17;
-	background-color: #CCCCCC;
 	border-radius:20px;
 }
 .searchtext {
 	position: absolute;
 	border-width:3px;
 	border-style: inset;
-	background-color:#000;
+	background-color:#fff;
 	left: 8px;
-	font-size:20px;
+	font-size:15px;
 	font-family:"Arial Black", Gadget, sans-serif;
 	top: 15px;
 	width: 319px;
 	height: 33px;
 }
 .searchtext:focus{
-	color:#FFF;
+	color:#000;
 }
 .searchbtton {
 	position: absolute;
@@ -63,16 +62,16 @@
 #newdiscuss
 {
 	border-width:4px;
-	border-style:outset;
+	
 	border-color:#999;
 	cursor:hand;
 }
-#newdiscuss
+
 
 </style>
 </head>
 
-<body bgcolor="#f2f2f2">
+<body >
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
@@ -180,9 +179,9 @@ if($found == 0)
 ?>
 
 <div class="notfound">
-<table width="1077" bgcolor:"#cccccc">
+<table width="1077" bgcolor:"#fff">
 <tr>
-<td width="100%" align="center" bgcolor:"#cccccc"><p>&nbsp;</p>
+<td width="100%" align="center" bgcolor:"#fff"><p>&nbsp;</p>
   <p><strong>Not Founded</strong></p></td>
 </tr>
 </table>

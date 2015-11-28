@@ -3,7 +3,7 @@
     { 
         session_start(); 
     } 
-    if(!$_SESSION["username"]){
+    if(!$_SESSION["adminusername"]){
         header("location:login.php?session=notset");
 	
     }

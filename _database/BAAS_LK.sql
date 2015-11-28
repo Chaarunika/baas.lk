@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 15, 2015 at 09:03 AM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.12
+-- Host: 127.0.0.1
+-- Generation Time: Nov 28, 2015 at 06:59 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `baaslk`
 --
-CREATE DATABASE IF NOT EXISTS `baaslk` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `baaslk`;
 
 -- --------------------------------------------------------
 
@@ -132,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `fquestions` (
 
 INSERT INTO `fquestions` (`id`, `user`, `userphoto`, `topic`, `detail`, `datetime`, `view`, `reply`, `user_catagory`) VALUES
 (6, 'customer', 'avatar/default.jpg', 'what are the minimum wages for amason', 'please help me to find current  wages for a mason', '03/11/15 09:10:33', 20, 2, 'customer'),
-(11, 'janith', 'avatar/default.jpg', 'New cement', 'I know a new cement', '03/11/15 10:44:01', 7, 1, 'sp');
+(11, 'janith', 'avatar/default.jpg', 'New cement', 'I know a new cement', '03/11/15 10:44:01', 8, 1, 'sp');
 
 -- --------------------------------------------------------
 
@@ -250,7 +248,7 @@ INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `
 
 CREATE TABLE IF NOT EXISTS `systemadmin` (
   `sa_id` int(20) NOT NULL,
-  `username` varchar(20) NOT NULL,
+  `adminusername` varchar(20) NOT NULL,
   `password` varchar(150) NOT NULL,
   PRIMARY KEY (`sa_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -259,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `systemadmin` (
 -- Dumping data for table `systemadmin`
 --
 
-INSERT INTO `systemadmin` (`sa_id`, `username`, `password`) VALUES
+INSERT INTO `systemadmin` (`sa_id`, `adminusername`, `password`) VALUES
 (1, 'baaslk', 'fcea920f7412b5da7be0cf42b8c93759');
 
 -- --------------------------------------------------------
@@ -407,7 +405,7 @@ CREATE TABLE IF NOT EXISTS `tblbiditems` (
   `closingtime` text NOT NULL,
   PRIMARY KEY (`biditemid`),
   KEY `user_id` (`accountno`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=142 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=141 ;
 
 --
 -- Dumping data for table `tblbiditems`
@@ -420,6 +418,7 @@ INSERT INTO `tblbiditems` (`biditemid`, `accountno`, `biditem`, `biddesc`, `town
 (139, '10', 'Two Acre Beach Land for Hotel Development', 'Kandy, Aniwatte, Galkanda Road 45p land in residential area. Within the municipal limits. Close proximity to banks, shops and leading schools such as Girls High School, Swarnamali, Pushpadana and Kingswood.', 'Kandy', 'insde photo.jpg', 'Nov-30-2015 09:40:41 AM'),
 (140, '1', '35 Perches Land with a Colonial House for Sale', '35 Perches of Prime land in Colombo 7 On Rajakeeya Mawatha Close to Royal College in Colombo 7. Ideal for a large Residence with renovation or use the land to build a residence in the area. Very Rare Opportunity to buy a land in this area.', 'Colombo', 'house_for_sale_galle_sri lanka_2.jpg', 'Nov-30-2015 09:46:30 AM');
 
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `users`
