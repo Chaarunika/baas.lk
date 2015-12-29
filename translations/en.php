@@ -9,7 +9,7 @@ define("REMEMBER_ME", "Keep me logged in");
 define("LOGIN", "Login");
 define("REGISTER", "Register");
 define("FORGOT_MY_PASSWORD", "I forgot my password");
-
+define("TheBestWay", "The best way to find a builder");
  
 define("PASSWORD_WRONG", "Password is wrong");
 define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");

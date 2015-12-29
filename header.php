@@ -1,7 +1,9 @@
 <?php 
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
 ?>
 
 <script>
@@ -59,9 +61,22 @@ function Fun() {
 	<div id="apDivUBar1"></div>
 	<div id="apDivUBar2"></div>
 	<div id="apDivBaasLk">baas.lk</div>
-	<div id="sinhala"><a href=""><img src="images/sinhala.png"></a></div>
+	<?php
+	if($_SESSION['language']=='sinhala')
+	{
+		echo "<div id='sinhala'><a href='english.php'><img src='images/english.png' height='22' width='40'></a></div>";
+	}
+
+	else
+	{
+		echo "<div id='sinhala'><a href='sinhala.php'><img src='images/sinhala.png'></a></div>";
+	}
+
+	?>
 	<div id="tamil"><img src="images/tamil.png"></div>
-	<div id="main-header">"The best way to find a builder"</div>
+	<div id="main-header">
+	<?php echo TheBestWay;?>
+	</div>
 
 	<div id ="menu" class="menubar">
 		<ul>
