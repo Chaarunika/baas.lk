@@ -9,8 +9,78 @@ define("REMEMBER_ME", "Keep me logged in");
 define("LOGIN", "Login");
 define("REGISTER", "Register");
 define("FORGOT_MY_PASSWORD", "I forgot my password");
-define("TheBestWay", "The best way to find a builder");
- 
+
+//header
+
+
+define("THEBESTWAY", "\"The best way to find a builder\"");
+define("HOME", "Home");
+define("WIKI", "Wiki");
+define("FAQ", "FAQ");
+define("FORUM", "FORUM");
+
+
+//searchbar
+
+//catagory
+
+define("SUBMIT_SEARCH", "Search");
+define("ORDER", "Order By Rating");
+define("ALL", "ALL");
+define("ARCHI_DESIGN", "Architect and Designer");
+define("BUILDER", "Builder");
+define("CONSULTANCYSERVICE", "Consultancy Service");
+define("CONTRACTOR", "Contractor");
+define("ELECTRICIAN", "Electrician");
+define("MASON", "Mason");
+define("MATERIAL", "Material Supplier");
+define("REALESTATECOMPANY", "Real Estate Company");
+define("TECHNICIAN", "Technician");
+define("CARPENTER", "Carpenter");
+define("HANDYMAN", "HandyMan");
+define("PAINTER", "Painter");
+define("PLUMBER", "Plumber");
+
+
+//area
+
+define("ANYAREA", "ANY AREA");
+define("COLOMBO", "Colombo");
+define("KANDY", "Kandy");
+define("KURUNEGALA", "Kurunegala");
+define("AMPARA", "Ampara");
+define("ANURA", "Anuradhapura");
+define("BADULLA", "Badulla");
+define("BATTICALOA", "Batticaloa");
+define("GALLE", "Galle");
+define("GAMPAHA", "Gampaha");
+define("HAMBANTOTA", "Hambantota");
+define("JAFFNA", "Jaffna");
+define("KALUTARA", "Kalutara");
+define("KEGALLE", "Kegalle");
+define("KILINOCHCHI", "Kilinochchi");
+define("MANNAR", "Mannar");
+define("MATALE", "Matale");
+define("MATARA", "Matara");
+define("MONERAGALA", "Moneragala");
+define("MULLITIVU", "Mullaitivu");
+define("NUWARAELIYA", "Nuwara Eliya");
+define("POLONNARUWA", "Polonnaruwa");
+define("PUTTALAMA", "Puttalam");
+define("RATNAPURA", "Ratnapura");
+define("TRINCOMALEE", "Trincomalee");
+define("VAVUNIYA", "Vavuniya");
+
+
+//define("", "");
+
+
+
+
+
+
+
+/*
 define("PASSWORD_WRONG", "Password is wrong");
 define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
 
@@ -85,3 +155,4 @@ define("WORDING_RESET_PASSWORD", "Reset my password");
 define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
+*/

@@ -48,12 +48,44 @@ function Fun() {
 	}
 
 	else{
-		echo "
-			<div id=\"joinus\">
-			<a href=\"selectUser.php\"><img src=\"images/joinus.png\"></a></div>
 
-			<div id=\"login\">
-			<a href=\"login.php\"><img src=\"images/login.png\"></a></div>";
+			if(isset($_SESSION['language']))
+			{
+				if($_SESSION['language']=='sinhala')
+				{
+			
+					echo "
+					<div id=\"joinus\">
+					<a href=\"selectUser.php\"><img src=\"images/joinus_sinhala.png\"></a></div>
+
+					<div id=\"login\">
+					<a href=\"login.php\"><img src=\"images/login_sinhala.png\"></a></div>";
+				}
+
+				else
+				{
+					echo "
+					<div id=\"joinus\">
+					<a href=\"selectUser.php\"><img src=\"images/joinus.png\"></a></div>
+
+					<div id=\"login\">
+					<a href=\"login.php\"><img src=\"images/login.png\"></a></div>";
+				}
+	
+			}
+
+			else
+			{
+				echo "
+					<div id=\"joinus\">
+					<a href=\"selectUser.php\"><img src=\"images/joinus.png\"></a></div>
+
+					<div id=\"login\">
+					<a href=\"login.php\"><img src=\"images/login.png\"></a></div>";
+			}
+
+
+
 	}
 	?>
 
@@ -62,9 +94,20 @@ function Fun() {
 	<div id="apDivUBar2"></div>
 	<div id="apDivBaasLk">baas.lk</div>
 	<?php
-	if($_SESSION['language']=='sinhala')
-	{
+
+
+	if(isset($_SESSION['language'])){
+		if($_SESSION['language']=='sinhala')
+		{
 		echo "<div id='sinhala'><a href='english.php'><img src='images/english.png' height='22' width='40'></a></div>";
+		}
+
+
+		else
+		{
+		echo "<div id='sinhala'><a href='sinhala.php'><img src='images/sinhala.png'></a></div>";
+		}
+	
 	}
 
 	else
@@ -75,15 +118,15 @@ function Fun() {
 	?>
 	<div id="tamil"><img src="images/tamil.png"></div>
 	<div id="main-header">
-	<?php echo TheBestWay;?>
+	<?php echo THEBESTWAY;?>
 	</div>
 
 	<div id ="menu" class="menubar">
 		<ul>
-	  		<li><a href="../BAAS_LK/index.php">Home</a></li>
-	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page">Wiki</a></li>
-	  		<li><a href="../BAAS_LK/faq.php">FAQ</a></li>	 
-			<li><a href="../BAAS_LK/forum.php">FORUM</a></li>";
+	  		<li><a href="../BAAS_LK/index.php"><?php echo HOME; ?></a></li>
+	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo WIKI; ?></a></li>
+	  		<li><a href="../BAAS_LK/faq.php"><?php echo FAQ; ?></a></li>	 
+			<li><a href="../BAAS_LK/forum.php"><?php echo FORUM; ?></a></li>
 	  		
 
 	  		<?php

@@ -34,6 +34,7 @@
 
 <body>
 
+
 	<?php 
 
 	session_start();
@@ -64,9 +65,10 @@
 	}
 
 
-	?>
+?>
 	
-	
+
+		
 	<?php include 'header.php' ?>
 
 	<div id="coverPics"></div>

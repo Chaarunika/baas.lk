@@ -54,16 +54,42 @@
 	
 	
 
-	<?php //include 'functions/functions.php' ?>
+
 	
 
+<?php 
 
-<?php
+	session_start();
+
+
+	if(isset($_SESSION['language'])){
+		if($_SESSION['language'] == 'sinhala')
+		{
+			include 'translations/si.php' ;
+		}
+
+		else if($_SESSION['language'] == 'tamil')
+		{
+			include 'translations/ta.php' ;
+		}
+
+		else if($_SESSION['language'] == 'english')
+		{
+			include 'translations/en.php' ;
+		}
+	}
+
+	else
+	{
+		include 'translations/en.php' ;
+		//
+
+	}
+
 
 
 require_once('libraries/password_compatibility_library.php');
 require_once('config/config.php');
-require_once('translations/en.php');
 require_once('libraries/PHPMailer.php');
 require_once('classes/Login.php');
 

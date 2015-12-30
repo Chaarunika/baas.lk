@@ -10,7 +10,7 @@
       <p class="check">     
         <label>
         <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_0">
-        Order By Rating</label><br><br>
+        <?php echo ORDER?></label><br><br>
 
         <!--
         <label>
@@ -18,54 +18,54 @@
         Order By Experience</label><br>  -->
       </p>  
    
-      <input name="SearchButton" type="submit" class="MyButton" id="SearchButton" value="Submit">
+      <input name="SearchButton" type="submit" class="MyButton" id="SearchButton" value=<?php echo SUBMIT_SEARCH;?>>
       
       <label for="Select"></label>
       <select name="category" class="Dropdn" id="Select" >
-        <option  <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "ALL"){echo "selected";} } ?>  >ALL</option>
-        <option<?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Architect and Designer"){echo "selected";} } ?> >Architect and Designer </option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Builder"){echo "selected";} } ?> >Builder</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Consultancy Service"){echo "selected";} } ?> >Consultancy Service</option>
-        <option<?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Contractor"){echo "selected";} } ?> >Contractor</option>
-    	  <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Electrician"){echo "selected";} } ?> >Electrician</option>
-    	  <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Mason"){echo "selected";} } ?> >Mason</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Material Supplier"){echo "selected";} } ?> >Material Supplier</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Real Estate Company"){echo "selected";} } ?> >Real Estate Company</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Technician"){echo "selected";} } ?> >Technician</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Carpenter"){echo "selected";} } ?>  >Carpenter</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "HandyMan"){echo "selected";} } ?> >HandyMan</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Painter"){echo "selected";} } ?> >Painter</option>
-        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== "Plumber"){echo "selected";} } ?> >Plumber</option>
+        <option  <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== ALL){echo "selected";} } ?><?php  echo ">".ALL; ?></option>
+        <option<?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== ARCHI_DESIGN){echo "selected";} } ?> <?php  echo ">".ARCHI_DESIGN; ?> </option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== BUILDER){echo "selected";} } ?> <?php  echo ">".BUILDER; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== CONSULTANCYSERVICE){echo "selected";} } ?><?php  echo ">".CONSULTANCYSERVICE; ?></option>
+        <option<?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== CONTRACTOR){echo "selected";} } ?> <?php  echo ">".CONTRACTOR; ?></option>
+    	  <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== ELECTRICIAN){echo "selected";} } ?> <?php  echo ">".ELECTRICIAN; ?></option>
+    	  <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== MASON){echo "selected";} } ?> <?php  echo ">".MASON; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== MATERIAL){echo "selected";} } ?> <?php  echo ">".MATERIAL; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== REALESTATECOMPANY){echo "selected";} } ?> <?php  echo ">".REALESTATECOMPANY; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== TECHNICIAN){echo "selected";} } ?> <?php  echo ">".TECHNICIAN; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== CARPENTER){echo "selected";} } ?> <?php  echo ">".CARPENTER; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== HANDYMAN){echo "selected";} } ?><?php  echo ">".HANDYMAN; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== PAINTER){echo "selected";} } ?> <?php  echo ">".PAINTER; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchCategory'])) {if($_SESSION['tempSearchCategory']== PLUMBER){echo "selected";} } ?><?php  echo ">".PLUMBER; ?></option>
       </select>
 
       <label for="Area"></label>
       <select name="location" size="1" class="SearchTerm" id="Area">
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "ANY AREA"){echo "selected";} } ?> >ANY AREA</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Colombo"){echo "selected";} } ?> >Colombo</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Kandy"){echo "selected";} } ?> >Kandy</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Kurunegala"){echo "selected";} } ?> >Kurunegala</option>     
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Ampara"){echo "selected";} } ?> >Ampara</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Anuradhapura"){echo "selected";} } ?> >Anuradhapura</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Badulla"){echo "selected";} } ?> >Badulla</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Batticaloa"){echo "selected";} } ?> >Batticaloa</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Galle"){echo "selected";} } ?> >Galle</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Gampaha"){echo "selected";} } ?> >Gampaha</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Hambantota"){echo "selected";} } ?> >Hambantota</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Jaffna"){echo "selected";} } ?> >Jaffna</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Kalutara"){echo "selected";} } ?> >Kalutara</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Kegalle"){echo "selected";} } ?> >Kegalle</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Kilinochchi"){echo "selected";} } ?> >Kilinochchi</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Mannar"){echo "selected";} } ?> >Mannar</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Matale"){echo "selected";} } ?> >Matale</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Matara"){echo "selected";} } ?> >Matara</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Moneragala"){echo "selected";} } ?> >Moneragala</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Mullaitivu"){echo "selected";} } ?> >Mullaitivu</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Nuwara Eliya"){echo "selected";} } ?> >Nuwara Eliya</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Polonnaruwa"){echo "selected";} } ?> >Polonnaruwa</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Puttalam"){echo "selected";} } ?> >Puttalam</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Ratnapura"){echo "selected";} } ?> >Ratnapura</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Trincomalee"){echo "selected";} } ?> >Trincomalee</option>
-        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== "Vavuniya"){echo "selected";} } ?> >Vavuniya</option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== ANYAREA){echo "selected";} } ?> <?php  echo ">".ANYAREA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== COLOMBO){echo "selected";} } ?>  <?php  echo ">".COLOMBO; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== KANDY){echo "selected";} } ?>  <?php  echo ">".KANDY; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== KURUNEGALA){echo "selected";} } ?> <?php  echo ">".KURUNEGALA; ?></option>     
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== AMPARA){echo "selected";} } ?>  <?php  echo ">".AMPARA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== ANURA){echo "selected";} } ?>  <?php  echo ">".ANURA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== BADULLA){echo "selected";} } ?> <?php  echo ">".BADULLA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== BATTICALOA){echo "selected";} } ?>  <?php  echo ">".BATTICALOA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== GALLE){echo "selected";} } ?> <?php  echo ">".GALLE; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== GAMPAHA){echo "selected";} } ?>  <?php  echo ">".GAMPAHA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== HAMBANTOTA){echo "selected";} } ?>  <?php  echo ">".HAMBANTOTA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== JAFFNA){echo "selected";} } ?>  <?php  echo ">".JAFFNA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== KALUTARA){echo "selected";} } ?>  <?php  echo ">".KALUTARA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== KEGALLE){echo "selected";} } ?>  <?php  echo ">".KEGALLE; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== KILINOCHCHI){echo "selected";} } ?>  <?php  echo ">".KILINOCHCHI; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== MANNAR){echo "selected";} } ?>  <?php  echo ">".MANNAR; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== MATALE){echo "selected";} } ?> <?php  echo ">".MATALE; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== MATARA){echo "selected";} } ?>  <?php  echo ">".MATARA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== MONERAGALA){echo "selected";} } ?>  <?php  echo ">".MONERAGALA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== MULLITIVU){echo "selected";} } ?>  <?php  echo ">".MULLITIVU; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== NUWARAELIYA){echo "selected";} } ?>  <?php  echo ">".NUWARAELIYA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== POLONNARUWA){echo "selected";} } ?> <?php  echo ">".POLONNARUWA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== PUTTALAMA){echo "selected";} } ?> <?php  echo ">".PUTTALAMA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== RATNAPURA){echo "selected";} } ?>  <?php  echo ">".RATNAPURA; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== TRINCOMALEE){echo "selected";} } ?>  <?php  echo ">".TRINCOMALEE; ?></option>
+        <option <?php if(isset($_SESSION['tempSearchArea'])) {if($_SESSION['tempSearchArea']== VAVUNIYA){echo "selected";} } ?>  <?php  echo ">".VAVUNIYA; ?></option>
       </select>      
     </form>
   </div>

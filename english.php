@@ -4,7 +4,7 @@ session_start();
 
 $_SESSION['language']='english';
 
-header('Location:http://localhost/BAAS_LK/index.php');
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 
 
 

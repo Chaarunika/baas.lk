@@ -82,12 +82,12 @@
 
 @font-face {
     font-family: Bauhaus93;
-    src: url(../fonts/baasFont.ttf);
+    src: url(../fonts/BAUHS93.woff);
 }
 
 @font-face {
     font-family: MC;
-    src: url(../fonts/bestWayFont.ttf);
+    src: url(../fonts/MTCORSVA.woff);
 }
 
 #apDivBaasLk {
