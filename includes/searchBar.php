@@ -4,7 +4,7 @@
     <label for="SearchBar"></label>
     <label for="Area"></label>
     
-    <form name="formSearch" method="post" action="searchSP.php">
+    <form name="formSearch" method="post" action= "searchSP.php" >
       
       <input name="SearchBar" type="text" class="SearchBar" id="SearchBar" <?php if(isset($_SESSION['tempSearchTerm'] )) { echo "value =\"".$_SESSION['tempSearchTerm']."\" " ; } else{ echo "value= \"\" ";} ?> >   
       <p class="check">     
