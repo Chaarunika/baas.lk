@@ -123,21 +123,21 @@ function Fun() {
 
 	<div id ="menu" class="menubar">
 		<ul>
-	  		<li><a href="../BAAS_LK/index.php"><?php echo @HOME; ?></a></li>
+	  		<li><a href="index.php"><?php echo @HOME; ?></a></li>
 	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo @WIKI; ?></a></li>
-	  		<li><a href="../BAAS_LK/faq.php"><?php echo @FAQ; ?></a></li>	 
-			<li><a href="../BAAS_LK/forum.php"><?php echo @FORUM; ?></a></li>
+	  		<li><a href="faq.php"><?php echo @FAQ; ?></a></li>	 
+			<li><a href="forum.php"><?php echo @FORUM; ?></a></li>
 	  		
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
 		  			if( $_SESSION['Catagory']== "sp"){					
-					echo"<li><a href=\"../BAAS_LK/profile.php\">My Profile</a></li>";
-					echo"<li><a href=\"../BAAS_LK/listbiditems.php\">Auction</a></li>";
-					echo"<li><a href=\"../BAAS_LK/findjob.php\">Jobs</a></li>";
+					echo"<li><a href=\"profile.php\">My Profile</a></li>";
+					echo"<li><a href=\"listbiditems.php\">Auction</a></li>";
+					echo"<li><a href=\"indjob.php\">Jobs</a></li>";
 
 
-			   		//echo"<li><a href=\"../BAAS_LK/profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
+			   		//echo"<li><a href=\"profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 
 			   		$foldername = "Gallery/galleryUploads/".$_SESSION['username']; 
  					if(!file_exists ( $foldername)){ 
@@ -146,11 +146,11 @@ function Fun() {
 			   		}
 
 			   		if( $_SESSION['Catagory']== "customer"){
-			   		echo"<li><a href=\"../BAAS_LK/profileCustomer.php\">My Profile</a></li>";
-					echo"<li><a href=\"../BAAS_LK/listbiditems.php\">Auction</a></li>";
-					//echo"<li><a href=\"../BAAS_LK/menu.php\">Bidd</a></li>";
-					//echo "<li><a href=\"../BAAS_LK/postjob.php\">Post A Job</a></li>";
-					//echo"<li><a href=\"../BAAS_LK/profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
+			   		echo"<li><a href=\"profileCustomer.php\">My Profile</a></li>";
+					echo"<li><a href=\"listbiditems.php\">Auction</a></li>";
+					//echo"<li><a href=\"menu.php\">Bidd</a></li>";
+					//echo "<li><a href=\"postjob.php\">Post A Job</a></li>";
+					//echo"<li><a href=\"profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 			   		}
 
 				}

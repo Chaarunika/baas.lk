@@ -64,6 +64,7 @@
 	$result2 = get_serviceprovider_details($userID);
 	$sp = mysqli_fetch_assoc($result2);
 	
+
 	?>
 
 
@@ -171,11 +172,6 @@ echo "
 		
         </div>           
     </div>
-
-    <div id="apDivRating">
-
-    </div>
-	
 	
     <div id="calendarBox">
 	
@@ -201,8 +197,12 @@ echo "
     
 
 	<div id="galleryBox">
-
-	<?php $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/" ?>
+	<?php 
+	$result = get_user_details($userID); //need this otherwise not working
+	$user = mysqli_fetch_assoc($result); //need this otherwise not working
+	$foldername = "Gallery/galleryUploads/".$user['user_name']."/"; 	
+	?>
+	
 	  
 	<div class="wrapper-inner-content-image">    
 		<img src="  

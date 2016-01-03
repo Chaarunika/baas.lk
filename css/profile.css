@@ -14,16 +14,17 @@
 	left: 30px;
 	top: 20px;
 	width: 501px;
-	height: 173px;
+	min-height: 173px;
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
+	padding: 10px;
 }
 
 #apDivShortDesc{
 	position: absolute;
 	left: 31px;
-	top: 435px;
+	top: 450px;
 	width: 501px;
 	height: 180px;
 	z-index: 2;
@@ -35,7 +36,7 @@
 #apDivWorkHistory{
 	position: absolute;
 	left: 31px;
-	top: 635px;
+	top: 650px;
 	width: 501px;
 	height: 173px;
 	z-index: 2;
@@ -49,7 +50,7 @@
 	left: 31px;
 	top: 215px;
 	width: 501px;
-	height: 190px;
+	height: 210px;
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
