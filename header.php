@@ -116,7 +116,7 @@ function Fun() {
 	}
 
 	?>
-	<div id="tamil"><img src="images/tamil.png"></div>
+	<div id="tamil"><a href="tamil.php"><img src="images/tamil.png"></a></div>
 	<div id="main-header">
 	<?php echo @THEBESTWAY ; ?>
 	</div>
