@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+include ('_database/database.php');
 
 
 $foldername = "Gallery/galleryUploads/{$_SESSION['username']}"; 
@@ -67,6 +68,14 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+if($_POST['galleryNum'] == 0){
+    $sql = "UPDATE  users SET user_avatar= '$target_file' WHERE user_name= '$_SESSION[username]'";
+    $result = mysqli_query($dbConnection,$sql) or die(mysqli_error($dbConnection)); 
+    $_SESSION['url'] = $target_file ;
+}
+
+
 if($uploadOk != 0){
     
     header('location:spProfEdit.php') ;

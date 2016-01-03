@@ -3,8 +3,10 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
-
+include ('_database/database.php');
+$sql = "SELECT user_avatar FROM users where user_name='$_SESSION[username]' ";
+$result = mysqli_query($dbConnection,$sql) or die(mysqli_error($dbConnection)); 
+$rws = mysqli_fetch_array($result);
 
 $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/";
 ?>
@@ -22,7 +24,7 @@ $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/";
             echo $foldername."0.jpg" ; 
           } 
           else{
-            echo "Gallery/galleryUploads/default.gif";
+            echo $rws['user_avatar'];
           } 
         ?>
         )" 
