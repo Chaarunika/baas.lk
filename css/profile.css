@@ -106,10 +106,12 @@ p{
 	z-index: 2;
 }
 
+
+
 #galleryBox{
 	position: absolute;
 	left: 639px;
-	top: 350px;
+	top: 300px;
 	width: 340px;
 	height: 343px;
 	z-index: 2;
