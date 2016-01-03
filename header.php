@@ -118,15 +118,15 @@ function Fun() {
 	?>
 	<div id="tamil"><img src="images/tamil.png"></div>
 	<div id="main-header">
-	<?php echo THEBESTWAY;?>
+	<?php echo @THEBESTWAY ; ?>
 	</div>
 
 	<div id ="menu" class="menubar">
 		<ul>
-	  		<li><a href="../BAAS_LK/index.php"><?php echo HOME; ?></a></li>
-	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo WIKI; ?></a></li>
-	  		<li><a href="../BAAS_LK/faq.php"><?php echo FAQ; ?></a></li>	 
-			<li><a href="../BAAS_LK/forum.php"><?php echo FORUM; ?></a></li>
+	  		<li><a href="../BAAS_LK/index.php"><?php echo @HOME; ?></a></li>
+	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo @WIKI; ?></a></li>
+	  		<li><a href="../BAAS_LK/faq.php"><?php echo @FAQ; ?></a></li>	 
+			<li><a href="../BAAS_LK/forum.php"><?php echo @FORUM; ?></a></li>
 	  		
 
 	  		<?php
@@ -138,6 +138,11 @@ function Fun() {
 
 
 			   		//echo"<li><a href=\"../BAAS_LK/profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
+
+			   		$foldername = "Gallery/galleryUploads/".$_SESSION['username']; 
+ 					if(!file_exists ( $foldername)){ 
+ 						mkdir($foldername, 7777);
+						}
 			   		}
 
 			   		if( $_SESSION['Catagory']== "customer"){

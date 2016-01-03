@@ -151,25 +151,117 @@
     <p style="line-height: 130%;"> <?php if(isset($sp['workInfo'])) { echo $sp['workInfo'];} ?></div>
     
 
-		<div id="galleryBox">
+	<div id="galleryBox">
 
-	  <div class="wrapper-inner-content-image">    
-				<img src="Gallery/_assets/90.jpg"/>
-				<img src="Gallery/_assets/80.jpg"/>
-				<img src="Gallery/_assets/70.jpg"/>
-				<img src="Gallery/_assets/60.jpg"/>
-				<img src="Gallery/_assets/50.jpg"/>
-				<img src="Gallery/_assets/40.jpg"/>
-				<img src="Gallery/_assets/30.jpg"/>
-				<img src="Gallery/_assets/20.jpg"/>   
-				<img src="Gallery/_assets/10.jpg"/>    
-    			
-				<div class="wrapper-inner-content-image-hover">
-					<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
-                   
-				</div>  
-			</div>
-		</div>	
+	<?php $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/" ?>
+	  
+	<div class="wrapper-inner-content-image">    
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."9.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."8.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."7.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."6.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."5.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."4.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."3.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."2.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."1.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		
+		<div class="wrapper-inner-content-image-hover">
+			<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
+           
+		</div>  
+	</div>
+</div>	
 
     
 </div>
