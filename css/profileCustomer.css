@@ -1,11 +1,12 @@
 #apDivContainer{
 	position: absolute;
 	left: 50px;
-	top: 100px;
-	width: 1100px;
-	height: 2322px;
+	top: 135px;
+	width: 1300px;
+	height: 480px;
 	z-index: 1;
-	background-color: #f0f0f0;		
+	background-color: #f0f0f0;	
+		
 }
 
 #apDivMainInfo{
@@ -17,6 +18,13 @@
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
 	border-radius: 20px;
+}
+
+#subMenu{
+	position: absolute;
+	top: 90px;
+	width: 90%;
+	left :50px;
 }
 
 #apDivShortDesc{
@@ -56,11 +64,12 @@
 	position: absolute;
 	left: 550px;
 	top: 16px;
-	width: 520px;
+	width: 650px;
 	height: 400px;
 	z-index: 2;
 	background-color: rgba(255,255,255,0.5);
-	border-radius: 20px;
+	border-radius: 8px;
+
 }
 
 #appointmentBody{
@@ -93,7 +102,7 @@
 }
 
 p{
-	line-height: 50%;
+	line-height: 18px;
 }
 
 #apDivTitle {

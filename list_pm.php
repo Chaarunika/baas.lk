@@ -27,30 +27,43 @@ include('config.php');
 		</style>
     </head>
     <body>
-	<?php include 'header.php'?>
+	<?php include 'header.php' ?>
+
+	<?php
+	//We check if the user is logged
+	if(isset($_SESSION['username']))
+	{
+	//We list his messages in a table
+	//Two queries are executes, one for the unread messages and another for read messages
+	$req1 = mysql_query('select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, users.user_id as userid, users.user_name from pm as m1, pm as m2,users where ((m1.user1="'.$_SESSION['userID'].'" and m1.user1read="no" and users.user_id=m1.user2) or (m1.user2="'.$_SESSION['userID'].'" and m1.user2read="no" and users.user_id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
+	$req2 = mysql_query('select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, users.user_id as userid, users.user_name from pm as m1, pm as m2,users where ((m1.user1="'.$_SESSION['userID'].'" and m1.user1read="yes" and users.user_id=m1.user2) or (m1.user2="'.$_SESSION['userID'].'" and m1.user2read="yes" and users.user_id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
+
+	?>
+
     	<div class="header">
         	<br /><br /><br /><br />
 	    </div>
 			<?php if(!isset($_GET['user']))	{	?>
 		<div id="subMenu">
 			<ul class="nav nav-tabs">
-			  	<li role="presentation"><a href="profile.php">Overview</a></li>
-			 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
-			 	<li role="presentation" class="active"><a href="list_pm.php">Messages</a></li>
+				<?php
+				if( $_SESSION['Catagory']== "sp"){
+					echo "<li role=\"presentation\"><a href=\"profile.php\">Overview</a></li>";
+					echo "<li role=\"presentation\"><a href=\"spProfEdit.php\">Edit Profile</a></li>";
+				}
+				else{
+					echo "<li role=\"presentation\"><a href=\"profileCustomer.php\">Overview</a></li>";
+				}
+			  	
+			 	
+
+			 	?>
+			 	<li role="presentation" class="active"><a href="list_pm.php">Messages <span class="badge"><?php echo intval(mysql_num_rows($req1)); ?></span></a></li>
 			</ul>
 		</div>
 	<?php } ?>
         <div class="content">
-<?php
-//We check if the user is logged
-if(isset($_SESSION['username']))
-{
-//We list his messages in a table
-//Two queries are executes, one for the unread messages and another for read messages
-$req1 = mysql_query('select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, users.user_id as userid, users.user_name from pm as m1, pm as m2,users where ((m1.user1="'.$_SESSION['userID'].'" and m1.user1read="no" and users.user_id=m1.user2) or (m1.user2="'.$_SESSION['userID'].'" and m1.user2read="no" and users.user_id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
-$req2 = mysql_query('select m1.id, m1.title, m1.timestamp, count(m2.id) as reps, users.user_id as userid, users.user_name from pm as m1, pm as m2,users where ((m1.user1="'.$_SESSION['userID'].'" and m1.user1read="yes" and users.user_id=m1.user2) or (m1.user2="'.$_SESSION['userID'].'" and m1.user2read="yes" and users.user_id=m1.user1)) and m1.id2="1" and m2.id=m1.id group by m1.id order by m1.id desc');
 
-?>
 
 <h1>Personal messages</h1><br /><br/>
 <a href="new_pm.php" class="link_new_pm">Compose New Message</a><br />
