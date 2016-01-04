@@ -3,6 +3,7 @@
 
 <head>
 	<title>baas.lk</title>
+	<meta charset="UTF-8">
 
 <link href="css/header.css" rel="stylesheet">
 
@@ -86,7 +87,10 @@ h3{
 <body>
 
 
-<?php include('header.php'); ?>
+<?php
+include_once 'translations/si.php' ;
+ include('header.php');
+ ?>
 
 <div  id="apDivTitle">
 

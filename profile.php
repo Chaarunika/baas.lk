@@ -138,12 +138,11 @@ echo "
     <div id="apDivMainInfo">
     	<div id="apDivTitle">
 
-        <p style="font-size:30px"> 
+        <p style="font-size:30px ;line-height: 100%"> 
         	<?php         	
         	if(isset($user['user_firstname'])){ 
         		echo $user['user_firstname']." ".$user['user_lastname'] ;
-        	}?>
-        	<br><br>
+        	}?>        	
       	</p>    
 
         <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
@@ -163,7 +162,13 @@ echo "
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
         <p style="font-size:20px">Contact Details</p>
-		<p><font align="right"><a href="new_pm.php" class="link_new_pm">Send a message</a></font></p>   
+        <?php
+        if(isset($_GET['user']))
+		{
+		echo "<p><font align='right'><a href='new_pm.php' class='link_new_pm'>Send a message</a></font></p> " ;
+		}
+		?>
+		 
         <p>Contact No : <?php if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
         <p>Email : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
         <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>  

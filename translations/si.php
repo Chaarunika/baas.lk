@@ -1,5 +1,5 @@
-<?PHP
-
+<?php
+echo "translation_sinhala";
 
 define("DATABASE_ERROR","දත්ත පද්ධතියේ දෝෂයකි.");
 define("LOGIN_FAILED", "ඇතුල්වීම වලංගු නැත.");

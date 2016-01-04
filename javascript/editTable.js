@@ -17,7 +17,7 @@ function selectFunction(variable){
 		document.getElementById("apDivBar1").style.background = "white";
 		document.getElementById("apDivBar2").style.background = "white";
 		document.getElementById("apDivBar3").style.background = "white";
-		document.getElementById("apDivProfBox").style.height = "600px" ;	
+		document.getElementById("apDivProfBox").style.height = "500px" ;	
 	}
 
 	if (variable == 1){			
@@ -59,7 +59,7 @@ function selectFunction(variable){
 		document.getElementById("apDivBar0").style.background = "white";
 		document.getElementById("apDivBar3").style.background = "white";		
 		
-		document.getElementById("apDivProfBox").style.height = "600px" ;		
+		document.getElementById("apDivProfBox").style.height = "500px" ;		
 	}
 	
 	if (variable == 3){			
@@ -79,6 +79,6 @@ function selectFunction(variable){
 		document.getElementById("apDivBar1").style.background = "white";
 		document.getElementById("apDivBar2").style.background = "white";
 		document.getElementById("apDivBar0").style.background = "white";		
-		document.getElementById("apDivProfBox").style.height = "600px" ;		
+		document.getElementById("apDivProfBox").style.height = "500px" ;		
 	}	
 } 

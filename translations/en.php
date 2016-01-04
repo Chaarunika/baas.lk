@@ -1,5 +1,5 @@
 <?php
-
+echo "translation_english";
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
@@ -156,3 +156,5 @@ define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
 */
+
+?>

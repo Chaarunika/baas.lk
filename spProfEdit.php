@@ -2,7 +2,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>baas.lk</title>
 <?php require_once('libraries/password_compatibility_library.php') ; ?>
 <?php require_once('config/config.php'); ?>
 <link rel="stylesheet" type="text/css" href="css/spProfEdit.css">
@@ -142,111 +142,8 @@ if (!$conn) {
   $userID = $_SESSION['userID']; 
   
 ?>
-    
-  <div id="apDivOptionBox0">
-
-    <form id="form1" name="form1" method="post" action="spProfEdit.php">
-      <label for="firstName">First Name / Organization Name</label>
-      <input type="text" name="firstName" id="firstName" required />
-      <label for="lastName">Last Name / Organization Name</label>
-      <input type="text" name="lastName" id="lastName" required />
-
-      <label for="year">Birthdate / Organization Start Date</label>
-      <br>
-      <label for="year">Year</label>
-      <select name="year" id="year" required>
-        <option>1989</option>
-        <option>1990</option>
-        <option>1991</option>
-        <option>1992</option>
-        <option>1993</option>
-        <option>1994</option>
-        <option>1995</option>
-        <option>1996</option>
-        <option>1997</option>
-        <option>1998</option>
-        <option>1999</option>
-        <option>2000</option>
-      </select>
-      <label for="month">Month</label>
-      <select name="month" id="month" required>
-        <option>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-      </select>
-      <label for="date">Date</label>
-      <select name="date" id="date" required>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-        <option>13</option>
-        <option>14</option>
-        <option>15</option>
-        <option>16</option>
-      </select>
-
-      <br><br>
-      <p>
-        <label for="firstLine">Address Line1</label>
-        <input type="text" name="firstLine" id="firstLine" required />
-      </p>
-      <p>
-        <label for="secondLine">Address Line 2</label>
-        <input type="text" name="secondLine" id="secondLine" required />
-      </p>
-      
-        <p><label for="district">District</label><br>
-        <select name="district" id="district" required>
-          <option>Anuradhapura</option>
-          <option>Colombo</option>
-          <option>Kurunegala</option>
-          <option>Kandy</option>
-          <option>Ampara</option>
-        </select>
-      </p> 
-      
-      <!--
-      <p>
-        <label>
-          <input type="radio" name="gender" value="M" id="gender_0" required />
-          Male</label>
-        <br />
-        <label>
-          <input type="radio" name="gender" value="F" id="gender_1" required />
-          Female</label>
-      </p>
-
-    -->
-      <br>
-      <p>Please Select Preferable Languages to communicate</p>
-      <p>
-        <label>
-        <input type="checkbox" name="check" value="S" id="language_0" />Sinhala</label>
-        
-        <label>
-          <input type="checkbox" name="check" value="T" id="language_1"  />Tamil</label>
-        
-        <label>
-          <input type="checkbox" name="check" value="E" id="language_2" />English</label>
-      </p>      
-      
-      <p>
-        <input type="submit" name="saveOverview" id="saveOverview" value="Save" />
-      </p>      
-    </form>
-
+  
+<?php include_once('includes/apDivOptionBox0.php') ?>
 
 
 <?php
@@ -259,7 +156,7 @@ if (!$conn) {
   $year = $_POST["year"];
   $month = $_POST["month"];
   $date = $_POST["date"];
-  $gender = $_POST["gender"];  
+  //$gender = $_POST["gender"];  
   $firstLine = $_POST["firstLine"];
   $secondLine = $_POST["secondLine"];
   $area = $_POST["district"];
@@ -269,7 +166,7 @@ if (!$conn) {
   echo $firstName;
  
   $sql = "UPDATE users SET user_firstName = '$firstName' , user_lastname = '$lastName' WHERE user_id = $userID";
-  $sql2 = "UPDATE serviceprovider SET area= '$area' , dob = '$dob' , gender = '$gender' ,address = '$address' WHERE user_id = $userID";
+  $sql2 = "UPDATE serviceprovider SET area= '$area' , dob = '$dob' , gender = 'M' ,address = '$address' WHERE user_id = $userID";
 
   if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) ) {
     echo "New record created successfully";
@@ -283,27 +180,9 @@ if (!$conn) {
 
    ?>
 
-  </div>
   
-  
-  
- <div id="apDivOptionBox1">
-   <form id="form2" name="form2" method="post" action="spProfEdit.php">
-     <p>
-       <label for="optionalEmail">Optional Email</label>
-       <input type="text" name="optionalEmail" id="optionalEmail" />
-     </p>
-     <p>
-       <label for="primaryMobileNo">Primary Mobile No</label>
-       <input type="text" name="primaryMobile" id="primaryMobile" onblur="return ValidateMobNumber('primaryMobile')"  required/>
-     </p>
-     <p>
-       <label for="optionalMobile">Secondary Mobile No</label>
-       <input type="text" name="optionalMobile" id="optionalMobile" onblur="return ValidateMobNumber('optionalMobile')"  />
-     </p>
-     <p>
-       <input type="submit" name="saveContact" id="saveContact" value="Save" />
-     </p>
+  <?php include_once('includes/apDivOptionBox1.php') ?>
+
 
      <?php
 
@@ -327,39 +206,7 @@ if (!$conn) {
 
   ?>
 
-   </form>
-
-
-
-
-
- </div>
- 
- 
-  <div id="apDivOptionBox2">
-    <form action="spProfEdit.php" method="post" enctype="multipart/form-data" name="form3" id="form3">
-      <p>
-        <label for="spCategory">Service Provider Category</label>
-        <select name="spCategory" id="spCategory">
-          <option>Electrician</option>
-          <option>Mason</option>
-          <option>Plumber</option>
-        </select>
-      </p>
-      <p>
-        <label for="shortDescription">A short Description about You</label>
-        <textarea name="shortDescription" id="shortDescription" cols="45" rows="5" required></textarea>
-      </p>
-      <p>
-        <label for="workHistory">Work History and Experience Details</label>
-        <textarea name="workHistory" id="workHistory" cols="45" rows="5" required></textarea>
-      </p>
-     
-      <p>
-       <input type="submit" name="saveInfo" id="saveInfo" value="Save Changes" />
-     </p>
-    </form>
-
+ <?php include_once('includes/apDivOptionBox2.php') ?>
 
   <?php
 
@@ -386,26 +233,8 @@ if (!$conn) {
 
   ?>
 
-  </div>
-      <div id="apDivOptionBox3">
-	  
-	   <form id="form4" name="form4" method="post" action="spProfEdit.php">
-     <p>
-       <label for="oldPassword">Old Password</label>
-       <input type="password"  name="oldPassword" id="oldPassword" autocomplete="off" required/>
-     </p>
-     <p>
-       <label for="newPassword">New Password</label>
-       <input type="password"  name="newPassword" id="newPassword" autocomplete="off" required/>
-     </p>
-     <p>
-       <label for="confirmPassword">Confirm Password</label>
-
-       <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" required/>
-     </p>
-     <p>
-       <input type="submit" name="password" id="password" value="Change" />
-     </p>
+  
+  <?php include_once('includes/apDivOptionBox3.php') ?>
 
      <?php
 
@@ -475,12 +304,7 @@ if (!$conn) {
 
   ?>
 
-   </form>
-	  
-	  
-	  
-	  
-	  </div>
+   
 </div>
 
 </div>

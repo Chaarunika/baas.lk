@@ -6,6 +6,28 @@ if (session_status() == PHP_SESSION_NONE) {
 
 ?>
 
+<?php 
+if(isset($_SESSION['language'])){
+
+	if($_SESSION['language'] == 'sinhala'){
+		include_once 'translations/si.php' ;
+	}
+
+	else if($_SESSION['language'] == 'tamil'){
+		include_once 'translations/ta.php' ;
+	}
+
+	else if($_SESSION['language'] == 'english')
+	{
+		include_once 'translations/en.php' ;
+	}
+}
+
+else{
+	include_once 'translations/en.php' ;
+} 
+?>
+
 <script>
 
 function Fun() {	
@@ -125,7 +147,7 @@ function Fun() {
 		<ul>
 	  		<li><a href="index.php"><?php echo @HOME; ?></a></li>
 	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo @WIKI; ?></a></li>
-	  		<li><a href="faq.php"><?php echo @FAQ; ?></a></li>	 
+	  		<li><a href="faq.php"><?php echo FAQ; ?></a></li>	 
 			<li><a href="forum.php"><?php echo @FORUM; ?></a></li>
 	  		
 

@@ -4,7 +4,7 @@
 	left: 50px;
 	top: 135px;
 	width: 727px;
-	height: 600px;
+	height: 500px;
 	z-index: 1;
 	border-top-width: thin;
 	border-right-width: thin;
@@ -124,11 +124,12 @@
 	left: 220px;
 	top: 57px;
 	width: 474px;
-	height: 604px;
+	height: 450px;
 	z-index: 3;
 	visibility : visible;
 	box-sizing: border-box;
 }
+/*
 #apDivOptionBox0{
 	box-sizing: border-box;
 	left: 210px;
@@ -137,7 +138,7 @@
 	visibility : visible;
 	position: absolute;
 	width: 645px;
-}
+} */
 
 	
 #apDivOptionBox1{

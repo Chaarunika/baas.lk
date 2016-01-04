@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <?php include 'header.php'; ?> 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <link rel="stylesheet" type="text/css" href="css/forum.css" >
