@@ -65,7 +65,51 @@
 	$sp = mysqli_fetch_assoc($result2);
 	
 	?>
-  
+
+
+<?php 
+echo "
+<script type=\"text/javascript\">(function(d, t, e, m){    
+    
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: \"".$user['user_id']."\",
+            uid: \"5c4f6f81191890288de05d59c79ac9ea\",
+            source: \"website\",
+            options: {
+                \"advanced\": {
+                    \"font\": {
+                        \"size\": \"14px\"
+                    },
+                    \"text\": {
+                        \"rateAwful\": \"Not Good\",
+                        \"rateThis\": \"Rate\"
+                    }
+                },
+                \"size\": \"medium\",
+                \"style\": \"oxygen1\",
+                \"isDummy\": false
+            } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = \"rw-js\",
+        l = d.location, ck = \"Y\" + t.getFullYear() + 
+        \"M\" + t.getMonth() + \"D\" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf(\"DBG=\") > -1) ? \"\" : \".min\"),
+        a = (\"https:\" == p ? \"secure.\" + m + \"js/\" : \"js.\" + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = \"text/javascript\";
+    rw.src = p + \"//\" + a + \"external\" + f + \".js?ck=\" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), \"script\", \"rating-widget.com/\"));
+</script> ";
+
+?>
+
 <div id="fullscreen">
 	<div id="fullscreen-inner">
 		<div id="fullscreen-inner-left" class="fullscreen-inner-button"><span class="icon-caret-left"></span></div>
@@ -104,6 +148,8 @@
         <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
         <p>Catagory : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
         <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
+
+        <div class="rw-ui-container"></div> 
         </div>
       	<!--
       	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php// echo $_SESSION['url'] ?> "  > </div>  
@@ -126,6 +172,9 @@
         </div>           
     </div>
 
+    <div id="apDivRating">
+
+    </div>
 	
 	
     <div id="calendarBox">
@@ -151,25 +200,117 @@
     <p style="line-height: 130%;"> <?php if(isset($sp['workInfo'])) { echo $sp['workInfo'];} ?></div>
     
 
-		<div id="galleryBox">
+	<div id="galleryBox">
 
-	  <div class="wrapper-inner-content-image">    
-				<img src="Gallery/_assets/90.jpg"/>
-				<img src="Gallery/_assets/80.jpg"/>
-				<img src="Gallery/_assets/70.jpg"/>
-				<img src="Gallery/_assets/60.jpg"/>
-				<img src="Gallery/_assets/50.jpg"/>
-				<img src="Gallery/_assets/40.jpg"/>
-				<img src="Gallery/_assets/30.jpg"/>
-				<img src="Gallery/_assets/20.jpg"/>   
-				<img src="Gallery/_assets/10.jpg"/>    
-    			
-				<div class="wrapper-inner-content-image-hover">
-					<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
-                   
-				</div>  
-			</div>
-		</div>	
+	<?php $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/" ?>
+	  
+	<div class="wrapper-inner-content-image">    
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."9.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."8.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."7.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."6.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."5.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."4.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."3.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."2.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		<img src="  
+			<?php 
+	  		$target_file = $foldername."1.jpg";
+	  		if (file_exists($target_file)){
+	   		 echo $target_file; 
+	  		} 
+	  		else{
+	    		echo "Gallery/galleryUploads/default.gif";
+	 		} 
+			?>
+		"/>
+		
+		<div class="wrapper-inner-content-image-hover">
+			<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
+           
+		</div>  
+	</div>
+</div>	
 
     
 </div>
