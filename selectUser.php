@@ -3,6 +3,7 @@
 
 <head>	
 	<title>baas.lk</title>
+	<meta charset="UTF-8">
 	<link href ="css/header.css" rel = "stylesheet" >
 	<link href ="css/selectUser.css" rel = "stylesheet" >	
 </head>

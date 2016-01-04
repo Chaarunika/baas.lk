@@ -140,15 +140,15 @@ function Fun() {
 	?>
 	<div id="tamil"><a href="tamil.php"><img src="images/tamil.png"></a></div>
 	<div id="main-header">
-	<?php echo @THEBESTWAY ; ?>
+	<?php echo THEBESTWAY ; ?>
 	</div>
 
 	<div id ="menu" class="menubar">
 		<ul>
-	  		<li><a href="index.php"><?php echo @HOME; ?></a></li>
-	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo @WIKI; ?></a></li>
+	  		<li><a href="index.php"><?php echo HOME; ?></a></li>
+	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo WIKI; ?></a></li>
 	  		<li><a href="faq.php"><?php echo FAQ; ?></a></li>	 
-			<li><a href="forum.php"><?php echo @FORUM; ?></a></li>
+			<li><a href="forum.php"><?php echo FORUM; ?></a></li>
 	  		
 
 	  		<?php
@@ -156,7 +156,7 @@ function Fun() {
 		  			if( $_SESSION['Catagory']== "sp"){					
 					echo"<li><a href=\"profile.php\">My Profile</a></li>";
 					echo"<li><a href=\"listbiditems.php\">Auction</a></li>";
-					echo"<li><a href=\"indjob.php\">Jobs</a></li>";
+					echo"<li><a href=\"findjob.php\">Jobs</a></li>";
 
 
 			   		//echo"<li><a href=\"profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";

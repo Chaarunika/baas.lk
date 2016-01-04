@@ -122,27 +122,20 @@ function ValidateMobNumber(txtMobId) {
 
 
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "baaslk";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-
- // include ('_database/database.php');
-
-
-  $userID = $_SESSION['userID']; 
-  
+  include_once ('_database/database.php');
+  $userID = $_SESSION['userID'];  
 ?>
-  
+
+<?php   
+  include_once('functions/functions.php');
+
+  $result = get_user_details($userID);
+  $user = mysqli_fetch_assoc($result);  
+
+  $result2 = get_serviceprovider_details($userID);
+  $sp = mysqli_fetch_assoc($result2);
+?>
+
 <?php include_once('includes/apDivOptionBox0.php') ?>
 
 
@@ -163,15 +156,15 @@ if (!$conn) {
 
   $dob = $year."/".$month."/".$date;
   $address = $firstLine.",".$secondLine.",".$area ; 
-  echo $firstName;
+  
  
   $sql = "UPDATE users SET user_firstName = '$firstName' , user_lastname = '$lastName' WHERE user_id = $userID";
   $sql2 = "UPDATE serviceprovider SET area= '$area' , dob = '$dob' , gender = 'M' ,address = '$address' WHERE user_id = $userID";
 
-  if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2) ) {
+  if (mysqli_query($dbConnection, $sql) && mysqli_query($dbConnection, $sql2) ) {
     echo "New record created successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);
   }
 
 
@@ -195,10 +188,10 @@ if (!$conn) {
   $sql = "UPDATE serviceprovider SET opEmail = '$optionalEmail' , contactNo = '$primaryMobile' , opContactNo='$optionalMobile' WHERE user_id = $userID ";
   
 
-  if (mysqli_query($conn, $sql)  ) {
+  if (mysqli_query($dbConnection, $sql)  ) {
     echo "Conatct Info recorded created successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);
   }
 
 
@@ -222,10 +215,10 @@ if (!$conn) {
   $sql = "UPDATE serviceprovider SET workInfo = '$workHistory' , category = '$spCategory' , descr ='$shortDescription' WHERE user_id = $userID ";
   
 
-  if (mysqli_query($conn, $sql)  ) {
+  if (mysqli_query($dbConnection, $sql)  ) {
     echo "Conatct Info recorded created successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);
   }
 
   
@@ -247,10 +240,10 @@ if (!$conn) {
   $sql = "UPDATE serviceprovider SET opEmail = '$optionalEmail' , contactNo = '$primaryMobile' , opContactNo='$optionalMobile' WHERE user_id = $userID ";
   
 
-  if (mysqli_query($conn, $sql)  ) {
+  if (mysqli_query($dbConnection, $sql)  ) {
     echo "Conatct Info recorded created successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);
   }
 
 
@@ -263,7 +256,7 @@ if (!$conn) {
   $confirmPassword = $_POST["confirmPassword"];
   
 	$sqlget = "select * from users where user_id='".$_SESSION['userID']."'";  
-	$row=mysqli_query($conn, $sqlget);
+	$row=mysqli_query($dbConnection, $sqlget);
 	$result=mysqli_fetch_assoc($row);
 	
 	
@@ -276,7 +269,7 @@ if (!$conn) {
 		
 			$sql = "UPDATE users SET user_password_hash = '".$newPasswordhash."' where user_name='"	.$_SESSION['username']."'";
 	  
-			mysqli_query($conn, $sql);
+			mysqli_query($dbConnection, $sql);
 			header('Location:login.php?logout');
 		}
 		else
@@ -309,7 +302,7 @@ if (!$conn) {
 
 </div>
 <?php
-mysqli_close($conn);
+mysqli_close($dbConnection);
 ?>
 </body>
 </html>

@@ -3,14 +3,15 @@
 
     <form id="form1" name="form1" method="post" action="spProfEdit.php">
       <label for="firstName">First Name / Organization Name</label>
-      <input type="text" name="firstName" id="firstName" required />
+      <input type="text" name="firstName" id="firstName" <?php if(isset($user['user_firstname'])) echo "value='".$user['user_firstname']."'"; ?> required />
       <label for="lastName">Last Name / Organization Name</label>
-      <input type="text" name="lastName" id="lastName" required />
+      <input type="text" name="lastName" id="lastName" <?php if(isset($user['user_lastname'])) echo "value='".$user['user_lastname']."'"; ?> required />
 
+    
       <label for="year">Birthdate / Organization Start Date</label>
       <br>
       <label for="year">Year</label>
-      <select name="year" id="year" required>
+      <select name="year" id="year" required>  
         <option>1989</option>
         <option>1990</option>
         <option>1991</option>
@@ -93,11 +94,11 @@
       <br><br>
       <p>
         <label for="firstLine">Address Line1</label>
-        <input type="text" name="firstLine" id="firstLine" required />
+        <input type="text" name="firstLine" id="firstLine" <?php if(isset($sp['address'])) echo "value='".$sp['address']."'"; ?> required />
       </p>
       <p>
         <label for="secondLine">Address Line 2</label>
-        <input type="text" name="secondLine" id="secondLine" required />
+        <input type="text" name="secondLine" id="secondLine" <?php if(isset($sp['area'])) echo "value='".$sp['area']."'"; ?> required />
       </p>
       
         <p><label for="district">District</label><br>
