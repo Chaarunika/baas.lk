@@ -232,9 +232,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 </head>
 
 <body>
-	
+
+
+
+
+	<?php 
+
+	if (session_status() == PHP_SESSION_NONE) {
+    	session_start();
+	}
+
+
+
+	if(isset($_SESSION['language'])){
+		if($_SESSION['language'] == 'sinhala')
+		{
+			include 'translations/si.php' ;
+		}
+
+		else if($_SESSION['language'] == 'tamil')
+		{
+			include 'translations/ta.php' ;
+		}
+
+		else if($_SESSION['language'] == 'english')
+		{
+			include 'translations/en.php' ;
+		}
+	}
+
+	else
+	{
+		include 'translations/en.php' ;
+		//
+
+	}
+
+
+?>
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
+
+
+
 
 <div id="adBox">
 Advertisements
@@ -245,13 +285,13 @@ Advertisements
 <?php 
 	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly
 		{ 
-			header("location:../BAAS_LK/index.php");
+			//header("location:../BAAS_LK/index.php");
 		}   
 ?>
 
 <?php 
 
-$word =mysql_real_escape_string(stripslashes($word));
+@$word =mysql_real_escape_string(stripslashes($word));
 $word = str_replace(' ','',$word);
 
 
