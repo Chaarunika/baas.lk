@@ -128,7 +128,7 @@ echo "
 	border-bottom-color: rgba(102,102,102,1);
 	border-left-color: rgba(102,102,102,1);
 	border-radius: 20px;
-	background-color: rgba(240, 240, 240,0.4) ;
+	background-color: rgba(240, 240, 240,0.8) ;
 }
 #apDivResultPic{$i}  {
 	position: absolute;
@@ -228,13 +228,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	width: 260px;
 	background-color: #f0f0f0;
 }
+
+#coverPics{
+	position: absolute;
+	width: 800px;
+	height: 500px;	
+	background-image: url('images/cover1.jpg');
+	z-index: 0;
+
+}
+
+#back{
+	position: absolute;
+	margin-top: 100px;
+	
+}
+
 </style>
 </head>
 
 <body>
 
 
-
+	<div id="back">
+	<div id="coverPics"></div>
+	</div>
 
 	<?php 
 

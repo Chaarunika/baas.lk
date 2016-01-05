@@ -170,6 +170,7 @@ function Fun() {
 			   		if( $_SESSION['Catagory']== "customer"){
 			   		echo"<li><a href=\"profileCustomer.php\">My Profile</a></li>";
 					echo"<li><a href=\"listbiditems.php\">Auction</a></li>";
+					echo"<li><a href=\"findjob.php\">Jobs</a></li>";
 					//echo"<li><a href=\"menu.php\">Bidd</a></li>";
 					//echo "<li><a href=\"postjob.php\">Post A Job</a></li>";
 					//echo"<li><a href=\"profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";

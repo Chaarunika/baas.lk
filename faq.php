@@ -88,7 +88,6 @@ h3{
 
 
 <?php
-include_once 'translations/si.php' ;
  include('header.php');
  ?>
 
