@@ -128,7 +128,7 @@ echo "
 	border-bottom-color: rgba(102,102,102,1);
 	border-left-color: rgba(102,102,102,1);
 	border-radius: 20px;
-	background-color: rgba(240, 240, 240,0.4) ;
+	background-color: rgba(240, 240, 240,0.8) ;
 }
 #apDivResultPic{$i}  {
 	position: absolute;
@@ -228,12 +228,66 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	width: 260px;
 	background-color: #f0f0f0;
 }
+
+#coverPics{
+	position: absolute;
+	width: 800px;
+	height: 500px;	
+	background-image: url('images/cover1.jpg');
+	z-index: 0;
+
+}
+
+#back{
+	position: absolute;
+	margin-top: 100px;
+	
+}
+
 </style>
 </head>
 
 <body>
 
 
+	<div id="back">
+	<div id="coverPics"></div>
+	</div>
+
+	<?php 
+
+	if (session_status() == PHP_SESSION_NONE) {
+    	session_start();
+	}
+
+
+
+	if(isset($_SESSION['language'])){
+		if($_SESSION['language'] == 'sinhala')
+		{
+			include 'translations/si.php' ;
+		}
+
+		else if($_SESSION['language'] == 'tamil')
+		{
+			include 'translations/ta.php' ;
+		}
+
+		else if($_SESSION['language'] == 'english')
+		{
+			include 'translations/en.php' ;
+		}
+	}
+
+	else
+	{
+		include 'translations/en.php' ;
+		//
+
+	}
+
+
+?>
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 
