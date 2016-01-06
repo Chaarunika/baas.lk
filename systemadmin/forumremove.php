@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?> 
-<link rel="stylesheet" type="text/css" href="/BAAS_LK/css/forum.css" >
+<link rel="stylesheet" type="text/css" href="../css/forum.css" >
 
 <style type="text/css">
 #apDiv1 {
@@ -77,26 +77,14 @@ alert("cancel");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
 {
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "baaslk";
+include "../_database/database.php";
 $tbl_name="fquestions"; 
 $colorchange=0;
 $bgcolor="";
-
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 $found =0;
 $sql = "SELECT * FROM $tbl_name ORDER BY id DESC";;
-$result = mysqli_query($conn, $sql);
-$word =mysql_real_escape_string(stripslashes($_POST['textfield']));
+$result = mysqli_query($database, $sql);
+$word =stripslashes($_POST['textfield']);
 $word = str_replace(' ','',$word);
 ?>
 <div id="apDiv1">
@@ -201,26 +189,19 @@ if($found == 0)
 <?php
 }
 
-mysqli_close($conn);
+mysqli_close($database);
 
 }
 }
 else{
  
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="baaslk"; // Database name 
+include "../_database/database.php"; 
 $tbl_name="fquestions"; // Table name 
- 
-// Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
  
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
  
-$result=mysql_query($sql);
+$result=mysqli_query($database,$sql);
 $colorchange=0;
 $bgcolor="";
 ?>
@@ -241,7 +222,7 @@ $bgcolor="";
 <?php
  
 // Start looping table row
-while($rows = mysql_fetch_array($result)){
+while($rows = mysqli_fetch_array($result)){
 	$colorchange=$colorchange+1;
 	if($colorchange%2==1)
 	{
@@ -272,7 +253,7 @@ echo $rows['userphoto'];
 <?php
 // Exit looping and close connection 
 }
-mysql_close();
+mysqli_close($database);
 ?>
 </table>
 </td>

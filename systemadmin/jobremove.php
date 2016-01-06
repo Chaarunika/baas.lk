@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-<link rel="stylesheet" type="text/css" href="/BAAS_LK/css/forum.css" >
+<link rel="stylesheet" type="text/css" href="../css/forum.css" >
 <style type="text/css">
 #apDiv1 {
 	position:absolute;
@@ -96,25 +96,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
 {
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "baaslk";
+include "../_database/database.php";
 $tbl_name="postjob2"; 
 $colorchange=0;
 $bgcolor="";
 
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 $found =0;
 $sql = "SELECT * FROM $tbl_name ORDER BY job_id ";;
-$result = mysqli_query($conn, $sql);
-$word =mysql_real_escape_string(stripslashes($_POST['textfield']));
+$result = mysqli_query($database, $sql);
+$word =stripslashes($_POST['textfield']);
 $word = str_replace(' ','',$word);
 ?>
 
@@ -204,5 +195,5 @@ if($found == 0)
 </div>
 <?php
 }
-mysqli_close($conn);
+mysqli_close($database);
 }}
