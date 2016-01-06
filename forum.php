@@ -1,7 +1,12 @@
-<?php include 'header.php'; ?> 
+
+<!DOCTYPE html>
+<html>
+
+<head>
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <link rel="stylesheet" type="text/css" href="css/forum.css" >
-
+<meta charset="UTF-8">
+<title>baas.lk</title>
 <style type="text/css">
 #apDiv1 {
 	position:absolute;
@@ -69,9 +74,13 @@
 
 
 </style>
+
+
 </head>
 
 <body >
+<?php include 'header.php'; ?> 
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
@@ -266,3 +275,4 @@ mysqli_close($database);
 ?>
 
 </body>
+</html>

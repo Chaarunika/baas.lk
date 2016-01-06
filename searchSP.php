@@ -297,7 +297,7 @@ if($k !=0)
 		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
 		if(isset($_SESSION['Catagory'])){
 			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
-			echo "<hr> <a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View Profile</a></div>";
+			echo "<hr> <a href= \"profile.php?user=". $row["user_id"]. " \">Click to View Profile</a></div>";
 		}
 
 		else{

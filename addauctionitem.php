@@ -1,7 +1,7 @@
-<!DOCTYPE html >
-
 <html>
-<head><title>baas.lk</title>
+<head>
+
+<title>baas.lk</title>
 
 <script language="javascript" type="text/javascript" src="javascript/datetimepicker.js"></script>
 <link rel="stylesheet" type="text/css" href="css/header.css">
@@ -84,41 +84,35 @@ p{
 
 </style>
 </head>
+
 <body>
 
-<?php
-include ('header.php') ;
-
-?>
+<?php include ('header.php') ; ?>
 
 <div id="apDiv1" >
 
 <h2>Adding Land</h2>
-<p >Please add the details about the land that you wish to sell...</p>
 
+<p>Please add the details about the land that you wish to sell...</p>
 
+<form action="addauctionprocess.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
 
-  <form action="addauctionprocess.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
-
-<table id="bidtbl"  >
+<table id="bidtbl">
 
 <tr>
 <td ><p>Land Name</p></td>
 <td ><input type="text" name="item" id="item" style="width:280px" required></td>
-
 </tr>
-
-
-
+<tr></tr>
 
 <tr>
 <td valign="top"><p>Description</p></td>
-<td><textarea name="description" id="description" cols="45" rows="10" style="font-family:Arial, sans-serif;" required></textarea> </td>
+<td><pre><textarea name="description" id="description" cols="45" rows="10" style="font-family:Arial, sans-serif;" required></textarea></pre> </td>
 </tr>
 
-<tr><td><p>Town</p></td>
+<tr>
+<td><p>Town</p></td>
 <td><select name=town>
-
 
   <option value="Colombo">Colombo</option>
   <option value="Kandy">Kandy</option>
@@ -148,48 +142,34 @@ include ('header.php') ;
   
 
 </select>
-
 </td>
 </tr>
 
-
-
-<tr><td><p>Add Picture</p></td>
+<tr>
+<td><p>Add Picture</p></td>
 <td> <input type="file" name="fileField" id="file"></td>
 </tr>
 
-
-
-
-
-
-<tr><td><p>Bid Closing Time</p></td>
+<tr>
+<td><p>Bid Closing Time</p></td>
 <td> <input name="closingtime" id="demo3" size="25" width="280" required>
 <a href="javascript:NewCal('demo3','mmmddyyyy',true,12)"><img src="pics/cal.gif" width="50" height="50" border="0" alt="Pick a date"></a></td>
-<!--<td>&nbsp;</td>-->
+</tr>
+
+<tr>
+<td><p>Minimum Bid price</p></td>
+<td> <input  type="number" name="minimumbid" required min=0 /></td>
 </tr>
 
 
-<tr><td>&nbsp;</td>
+<tr>
+<td>&nbsp;</td>
 <td><input type="submit" name="button" id="button" value="Submit" style="font-family:Arial, sans-serif;"/>
 <input type="reset" name="button" id="button" value="Cancel" style="font-family:Arial, sans-serif;"/></td>
 </tr>
 
 </table>
-
-
-
 </form>
-
 </div>
-
-
-
-
-
 </body>
-
-
-
-
 </html>

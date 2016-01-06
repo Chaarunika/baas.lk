@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <style type="text/css">
+
 #apDivContainer {
 	position: absolute;
 	left: 220px;
@@ -31,16 +32,7 @@
 
 
 
-#apDivWorkHistory{
-	position: absolute;
-	left: 31px;
-	top: 600px;
-	width: 501px;
-	height: 173px;
-	z-index: 2;
-	background-color: #E6E6E6;
-	border-radius: 20px;	
-	}
+
 	
 #landimage1{
 	position: absolute;
@@ -78,24 +70,26 @@
 #addbid{
 	position: absolute;
 	left: 550px;
-	top: 550px;
+	top: 700px;
 	width: 400px;
-	height: 350px;
+	height: 200px;
 	z-index: 14;
 	background-color:rgba(255,255,255,.5);
 	border-radius: 20px;	
 	}
-
-#apDivpic {
+	
+#time{
 	position: absolute;
 	left: 550px;
-	top: 215px;
+	top: 550px;
 	width: 400px;
-	height: 370px;
-	z-index: 1;
-	background-color:#E6E6E6;
-		
-}
+	height: 50px;
+	z-index: 33;
+	background-color:rgba(255,255,255,.5);
+	border-radius: 20px;
+	
+	}
+
 
 
 .img-circleBid {
@@ -128,41 +122,15 @@ p{
 	z-index: 2;
 }
 
-#apDivContactInfo {
-	position: absolute;
-	left: 29px;
-	top: 14px;
-	width: 275px;
-	height: 209px;
-	z-index: 2;
-}
-#galleryBox{
-	position: absolute;
-	left: 639px;
-	top: 334px;
-	width: 340px;
-	height: 343px;
-	z-index: 2;
-	}
-.bidtbl {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color:#ffcc00;
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: #f0f0f0;
 }
 
-.bidtbl2 {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 1em;
-	color:#ffcc00;
-    
-}
 
-.bidtbl3 {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-	color:#ffcc00;
-    
-}
+
+
+
 
 
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;border-width:1px;border-style:solid;}
@@ -173,7 +141,10 @@ p{
 
 
 
-
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: #f0f0f0;
+}
 
 
 
@@ -192,20 +163,12 @@ p{
 
 
 <?php
-//db conection &
+
 
 require_once("_database/database.php");
-
-
-
 $accountid=$_SESSION['accountid'];
 $itemid=$_GET['itemid'];
-
-
 ?>
-
-<html>
-<head><title> accept bid</title></head>
 
 <body>
 
@@ -214,7 +177,6 @@ $itemid=$_GET['itemid'];
 $sql="select * from tblbiditems where biditemid=$itemid LIMIT 1";
 $result=mysqli_query($database,$sql) or die ("Cannot verify login: ".mysqli_error() );
 $row=mysqli_fetch_array($result);
-
 
 $sql2="select * from users where user_id=".$row['accountno'] ;
 $result2=mysqli_query($database,$sql2) or die ("Cannot verify login: ".mysqli_error());
@@ -227,13 +189,6 @@ $row3=mysqli_fetch_array($result3);
 $sql4="select * from serviceprovider where  user_id=".$row['accountno']  ;
 $result4=mysqli_query($database,$sql4) or die ("Cannot verify login: ".mysqli_error());
 $row4=mysqli_fetch_array($result4);
-
-
-
-
-
-
-
 
 ?>
   
@@ -251,102 +206,68 @@ $row4=mysqli_fetch_array($result4);
     <div id="apDivMainInfo">
     	<div id="apDivTitle">
 	
-		
-	
-		
 		<table width="500" class="tg" style="border-width:0px">
-  
-  <tr>
-    <td class="tg-b7b8">Vendor Name :</td>
-    <td class="tg-b7b8"><?php  echo "<a href=http://localhost/BAAS_LK/profile.php?user=".$row['accountno'].">".$row2['user_name']."</a>" ; ?></td>
-   
-    </tr>
-  <tr>
-    <td class="tg-yw4l">Address</td>
-    <td class="tg-yw4l"><?php echo $row4['address'] ; ?></td>
-   
-    </tr>
-  <tr>
-    <td class="tg-yw4l">Web site</td>
-    <td class="tg-yw4l"><?php echo "<a href=http://www.google.lk>".$row4['website']."</a>"  ; ?> </td>
-   
-  </tr>
- 
- 
-  </table>
+		<tr>
+		<td class="tg-b7b8">Vendor Name :</td>
+		<td class="tg-b7b8"><?php  echo "<a href=http://localhost/BAAS_LK/profile.php?user=".$row['accountno'].">".$row2['user_name']."</a>" ; ?></td>
+		</tr>
 		
-         
+		<tr>
+		<td class="tg-b7b8">Address</td>
+		<td class="tg-b7b8"><?php echo $row4['address'] ; ?></td>
+		</tr>
+		
+		<tr>
+		<td class="tg-b7b8">Web site</td>
+		<td class="tg-b7b8"><?php echo "<a href=http://www.google.lk>".$row4['website']."</a>"  ; ?> </td>
+		</tr>
+ 
+		</table> 
         </div>
 		
       <div id="landimage1">
-	  
-	  
 	  <img width="500px" height="300px" src="uploaded_img/<?php echo($row['image_path'])	  ?>">
-	  
 	  </div>
 	  
-	   <div id="landimage2">
-	   		
-		<table width="500" class="tg" style="border-width:0px">
-  
-  <tr>
-    <td class="tg-b7b8"></td>
-	 <td class="tg-b7b8"></td>
-    <td class="tg-b7b8"> <?php echo $row['biddesc'] ;?></td>
-   
-    </tr>
-	</table>
-	  
-	  
-	  </div>
+		<div id="landimage2">	
+		<table max width="500" class="tg" style="border-width:0px">
+		<tr>
+		<td class="tg-b7b8" maxwidth="500" > <?php echo $row['biddesc'] ;?></td>
+		</tr>
+		</table>
+		</div>
 	  
 	  <div id="listofbids">
-	  <?php
 
-	  	 /* $out = "<table  width=500  border='1' ><tr><th>Bid id</th><th >bid value</th><th>Remaining time</th>";
-
-
- $out .= "<tr style='height:75px'>";
-  $out .= "<td >" . $row3['bidhistoryid'] . "</td>";
-  $out .= "<td>" . $row3['bidprice'] . "</td>";
-  $out .= "<td>" .$row3['dtesubmitted'] . "</td>"; 
-  
-  
-  
-  
-  $out .= "</table>";
-echo"{$out}</ul>"; */
-
-	  ?>
 	  
 	    <?php
-			$out1="<table width='500' class='tg' style='border-width:0px'>"; 
-	$out1 .=	"<tr>";
-	$out1 .="<th class='tg-031e' colspan='3'>Latest Bids</th>";
-	$out1 .=		"</tr>";
-	$out1 .=		"<tr>";
-	$out1 .=		"<td class='tg-b7b8'>Bid id</td>";
-	$out1 .=	"<td class='tg-b7b8'>Bid value</td>";
-	$out1 .=		"<td class='tg-b7b8'>Time of bid</td>";
-	$out1 .=		"</tr>";
+			$out1="<table width='500' class='tg' style='border-width:10px'>"; 
+			$out1 .="<tr>";
+			$out1 .="<th class='tg-031e' colspan='3'>Latest Bids</th>";
+			$out1 .="</tr>";
+			$out1 .="<tr>";
+			$out1 .="<td class='tg-b7b8'>Bid id</td>";
+			$out1 .="<td class='tg-b7b8'>Bid value</td>";
+			$out1 .="<td class='tg-b7b8'>Time of bid</td>";
+			$out1 .="</tr>";
 	
-	echo ($out1) ;
+			echo ($out1) ;
 	
-		while($row3=mysqli_fetch_array($result3)){
+			while($row3=mysqli_fetch_array($result3)){
 		
 	
   
 
-  $out="<tr>";
-   $out .= "<td class='tg-b7b8'>".$row3['bidhistoryid']. "</td>";
-   $out .="<td class='tg-b7b8'>".$row3['bidprice']."</td>";
-   $out .= "<td class='tg-b7b8'>".$row3['dtesubmitted']."</td>";
-   $out .="</tr>";
+			$out="<tr>";
+			$out .= "<td class='tg-b7b8'>".$row3['bidhistoryid']. "</td>";
+			$out .="<td class='tg-b7b8'>".$row3['bidprice']."</td>";
+			$out .= "<td class='tg-b7b8'>".$row3['dtesubmitted']."</td>";
+			$out .="</tr>";
  
   
   
   
-  echo ($out);
+			echo ($out);
   
   }
    echo ('</table>');
@@ -357,7 +278,72 @@ echo"{$out}</ul>"; */
 	  
 	  </div>
 	  
-	  <div id="addbid">
+	  
+<?php
+
+$sql5="SELECT max(bidprice) FROM baaslk.tblbidhistory WHERE biditemid =$itemid LIMIT 1";
+$result5= mysqli_query($database,$sql5);
+$row5=mysqli_fetch_array($result5); 
+
+$date= strtotime($row['closingtime']);
+$remaining = $date - time();
+$days_remaining = floor($remaining / 86400);
+$hours_remaining = floor(($remaining % 86400) / 3600);
+$minutes_remaining = floor((($remaining % 86400) % 3600)/60);
+$seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
+
+?>
+	  
+	  <div id="time" class="tg"  onload="countdown()">
+	  
+	  <script type="text/javascript">
+
+
+ var hour = '<?php echo $hours_remaining; ?>';
+ var min = '<?php echo $minutes_remaining; ?>'; 
+ var sec = '<?php echo $seconds_remaining; ?>'; 
+
+function countdown() {
+ if(sec <= 0 && min > 0) {
+  sec = 59;
+  min -= 1;
+ }
+ else if(min <= 0 && sec <= 0) {
+  min = 0;
+  sec = 0;
+ }
+ else {
+  sec -= 1;
+ }
+ 
+ if(min <= 0 && hour > 0) {
+  min = 59;
+  hour -= 1;
+ }
+ 
+  if(hour <= 0 ) {
+  hour = 23;
+  
+ }
+ 
+ 
+ 
+ var pat = /^[0-9]{1}$/;
+ sec = (pat.test(sec) == true) ? '0'+sec : sec;
+ min = (pat.test(min) == true) ? '0'+min : min;
+ hour = (pat.test(hour) == true) ? '0'+hour : hour;
+ 
+ 
+ 
+ document.getElementById('time').innerHTML =" <?php echo $days_remaining; ?> Days "+hour+" Hours "+min+" minutes "+sec+" seconds ";
+ setTimeout("countdown()",1000);
+ }
+ countdown();
+</script>
+	  
+	  </div>
+	  
+	    <div id="addbid" >
 	  <?php
 	  
 	 /* echo $row3['bidprice'] ;
@@ -381,37 +367,20 @@ echo"{$out}</ul>"; */
 
 ?>
 
-<?php
 
-$sql5="SELECT max(bidprice) FROM baaslk.tblbidhistory WHERE biditemid =$itemid LIMIT 1";
-$result5= mysqli_query($database,$sql5);
-$row5=mysqli_fetch_array($result5); 
 
-$date= strtotime($row['closingtime']);
-$remaining = $date - time();
-$days_remaining = floor($remaining / 86400);
-$hours_remaining = floor(($remaining % 86400) / 3600);
-$minutes_remaining = floor((($remaining % 86400) % 3600)/60);
-$seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
-
-?>
-
-	<table width="400" class="tg" style="border-width:0px">
+	<table width="400" class="tg" style="border-width:10px">
   
   <tr>
     <td class="tg-b7b8">Current Highest Bid</td>
     <td class="tg-b7b8"><?php  echo $row5['max(bidprice)']; ?></td>
    
-    </tr>
-  <tr>
-    <td class="tg-yw4l">Time Remaining</td>
-    <td class="tg-yw4l"><?php echo ($days_remaining) ; ?>Days &nbsp<?php echo ($hours_remaining) ; ?>Hrs &nbsp<?php echo ($minutes_remaining) ; ?>mins</td>
-   
-    </tr>
+  </tr>
+  
  <form  method="post" action="acceptbidprocess.php">
   <tr>
     <td class="tg-yw4l">Bid price</td>
-    <td class="tg-yw4l"> <input  type="number" name="bidprice" id="bidprice" required min=0 /><br/>
+    <td class="tg-yw4l">Rs. <input  type="number" name="bidprice" id="bidprice" required min= <?php echo ($row['minimumbid'])  ?> /><br/>
 	<input   type= "hidden" name="itemid" id="itemid" value="<?php echo"$itemid";?>"/> </td>
    
   </tr>
@@ -450,8 +419,7 @@ else{}
   
     
     
-    <div class="bidtbl3" id="apDivShortDesc">
-    </div>
+    <
     
    
 	
