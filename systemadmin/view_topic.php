@@ -44,21 +44,13 @@
 
 <?php
  
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="baaslk"; // Database name 
+include "../_database/database.php";
 $tbl_name="fquestions"; // Table name 
- 
-// Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
- 
-// get value of id that sent from address bar 
+
 $id=$_GET['id'];
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
-$result=mysql_query($sql);
-$rows=mysql_fetch_array($result);
+$result=mysqli_query($database,$sql);
+$rows=mysqli_fetch_array($result);
 ?>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -89,8 +81,8 @@ echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
  // metana database ake tiyena answer eliyata gannawa.
 $tbl_name2="fanswer"; // Switch to table "forum_answer"
 $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
-$result2=mysql_query($sql2);
-while($rows=mysql_fetch_array($result2)){
+$result2=mysqli_query($database,$sql2);
+while($rows=mysqli_fetch_array($result2)){
 ?>
 <table align="center" width="1000">
 <tr>
@@ -122,22 +114,22 @@ echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
 }
  
 $sql3="SELECT view FROM $tbl_name WHERE id='$id'";
-$result3=mysql_query($sql3);
-$rows=mysql_fetch_array($result3);
+$result3=mysqli_query($database,$sql3);
+$rows=mysqli_fetch_array($result3);
 $view=$rows['view'];
  
 // if have no counter value set counter = 1
 if(empty($view)){
 $view=1;
 $sql4="INSERT INTO $tbl_name(view) VALUES('$view') WHERE id='$id'";
-$result4=mysql_query($sql4);
+$result4=mysqli_query($database,$sql4);
 }
  
 // count more value
 $addview=$view+1;
 $sql5="update $tbl_name set view='$addview' WHERE id='$id'";
-$result5=mysql_query($sql5);
-mysql_close();
+$result5=mysqli_query($database,$sql5);
+mysqli_close($database);
 ?>
  
 </div>

@@ -4,13 +4,13 @@
 <head>
 	<title>baas.lk</title>
 
-	<link href="/BAAS_LK/Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
-	<link href="/BAAS_LK/Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
-	<link href="/BAAS_LK/Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
-	<link href="/BAAS_LK/Gallery/_css/pop-up-gallery3.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/pop-up-gallery3.js"></script>
-	<link href="/BAAS_LK/css/profileCustomer.css" rel="stylesheet" />
+	<link href="../Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
+	<link href="../Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
+	<link href="../Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
+	<link href="../Gallery/_css/pop-up-gallery3.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../Gallery/_scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../Gallery/_scripts/pop-up-gallery3.js"></script>
+	<link href="../css/profileCustomer.css" rel="stylesheet" />
 </head>
 
 
@@ -70,7 +70,7 @@
      	<!--
       	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php //echo $_SESSION['url'] ?> "  > </div>  
       	-->
-     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo "/BAAS_LK/".$user['user_avatar'] ;} ?>   > </div>  
+     	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo "../".$user['user_avatar'] ;} ?>   > </div>  
     	
      </div>
     

@@ -17,7 +17,7 @@ h3{
  .FAQ { 
  		cursor:hand; cursor:pointer;
         border:1px solid darkorange;
-        width:250px; 
+        width:200px; 
         background-color: #f0f0f0;
        // padding :5px;  	
         
@@ -31,51 +31,66 @@ h3{
 
 #apDivTitle{
 	position: absolute;
-	left: 7px;
-	top: 57px;
-	width: 302px;
-	height: 105px;
+	left: 1px;
+	top: 79px;
+	width: 202px;
+	height: 262px;
 	z-index: 111;
 }
 #show1{
 	position:absolute;
-	left:260px;
-	top:140px;
-	width:1100px;
-	height:600px;
+	left:204px;
+	top:79px;
+	width:85%;
+	height:500;
 	z-index:2;
-	background-color: rgba(51,51,51,0.4);
-	
+	background-color: rgba(192,192,192,1);	
 	
 }
 #show2 {
 	position:absolute;
-	left:260px;
-	top:140px;
-	width:1100px;
-	height:600px;
+	left:204px;
+	top:79px;
+	width:85%;
+	height:auto;
 	z-index:2;
-	background-color: rgba(51,51,51,0.4);
-	
+	background-color: rgba(192,192,192,1);
 }
 #show3 {
 	position:absolute;
-	left:260px;
-	top:140px;
-	width:1100px;
-	height:600px;
+	left:204px;
+	top:79px;
+	width:85%;
+	height:auto;
 	z-index:2;
-	background-color: rgba(51,51,51,0.4);
-	
+	background-color: rgba(192,192,192,1);
 }
 #show4 {
 	position:absolute;
-	left:260px;
-	top:140px;
-	width:1100px;
-	height:600px;
+	left:204px;
+	top:79px;
+	width:85%;
+	height:auto;
 	z-index:2;
-	background-color: rgba(51,51,51,0.4);
+	background-color: rgba(192,192,192,1);
+}
+#showspremove {
+	position:absolute;
+	left:0px;
+	top:50px;
+	height:auto;
+	width:100%;
+	z-index:2;
+	background-color: rgba(192,192,192,1);
+}
+#showcreate {
+	position:absolute;
+	left:0px;
+	top:50px;
+	height:700px;
+	width:100%;
+	z-index:2;
+	background-color: rgba(192,192,192,1);
 }
 </style>
 <script type="text/javascript">
@@ -114,12 +129,35 @@ h3{
   		CState.style.display = (CState.style.display != 'block') ? 'block' : 'none';
 		}
 </script>
-<body background="images/cover2.jpg">
+<script type="text/javascript">
+function showremove()
+{
+	var remove = document.getElementById('showspremove');
+	var create = document.getElementById('showcreate');
+	remove.style.display = 'block';
+	create.style.display = 'none';
+	clear(create);
+}
+function showcreate()
+{
+	var create = document.getElementById('showcreate');
+	var remove = document.getElementById('showspremove');
+	create.style.display = 'block';
+	remove.style.display = 'none';
+	clear(remove);
+}
+function clear(value)
+{
+	value.reset();
+	
+	
+}
+</script>
+<body >
 
 <div  id="apDivTitle">
-<h1 align="left">Manage Options</h1>
-<div class="FAQ" onClick="toggle('show1')">	
-<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">  Service Provider</h3>
+  <div class="FAQ" onClick="toggle('show1')">
+    <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">  Service Provider</h3>
 </div>
 <DIV class="FAQ" onClick="toggle('show2')">
 <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Customer</h3>
@@ -133,19 +171,22 @@ h3{
 
 </div>
 
-<div id="show1" class="FAA">
- <p>&nbsp;</p>
-<table width="500" align="center" cellspacing="20" >
-      	  <tr >
-        <td width="25%" height="100" align="center"><a href="spremove.php"><img src="images/1.jpg" height="100" width="100"></img></a></td>
-        <td width="25%" height="100" align="center"><a href="createprofile.php"><img src="images/2.jpg" height="100" width="100" ></img></a></td>
-        </tr>
-        <tr>
-         <td width="25%" height="50" align="center" class="tablefont"><a href="spremove.php"><strong>Remove Account</strong></a></td>
-         <td width="25%" height="50" align="center" class="tablefont"><a href="createprofile.php"><strong>Create New Account</strong></a></td>
+<div id="show1" >
+<table width="350" align="left" cellspacing="20" >
+          <tr>
+         <td  align="left"  ><a href="#" onClick="return showremove()"><h3>View Account</h3></a></td>
+         <td  align="left"><a href="#" onClick="return showcreate()"><h3>Create New Account</h3></a></td>
          </tr>
     </table>
+
+<div id="showspremove" >
+<?php include 'spremove.php'; ?>
 </div>
+<div id="showcreate" class="FAA" >
+<?php include 'createprofile.php'; ?>
+</div>
+</div>
+
 <div id="show2" class="FAA">
  <p>&nbsp;</p>
 <table width="500" align="center" cellspacing="20" >
@@ -180,6 +221,8 @@ h3{
          <td width="25%" height="50" align="center" class="tablefont"><a href="jobremove.php"><strong>Remove Jobs</strong></a></td>
          </tr>
     </table>
+    
 </div>
+
 
 

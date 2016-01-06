@@ -84,11 +84,11 @@ alert("cancel");
 <?php
 if ( isset($_POST['button']))
 {
-include 'dbconnect.php';
+include '../_database/database.php';
 $found =0;
 $sql = "SELECT * FROM users CROSS JOIN customer WHERE users.user_id=customer.user_id";
-$result = mysqli_query($conn, $sql);
-$word =mysql_real_escape_string(stripslashes($_POST['textfield']));
+$result = mysqli_query($database, $sql);
+$word =stripslashes($_POST['textfield']);
 $word = str_replace(' ','',$word);
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
@@ -122,7 +122,7 @@ if (mysqli_num_rows($result) > 0) {
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
 <td width="25%" bgcolor="#F8F7F1"><img src="\BAAS_LK\<?php echo $row['user_avatar'];?>" alt="" border=3 height=30 width=30></img></td>
-<td width="75%"bgcolor="#F8F7F1" align="right"><a href= "/BAAS_LK/systemadmin/profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
+<td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
 </td>
@@ -155,7 +155,7 @@ if($found == 0)
 </table>
 <?php
 }//if found
-mysqli_close($conn);
+mysqli_close($database);
 }
 ?>
 </div>

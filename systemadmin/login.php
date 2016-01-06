@@ -1,5 +1,5 @@
 <?php
-include "dbconnect.php"; 
+include '../_database/database.php';
 $username = $_POST['textfield'];
 $password = $_POST['textfield2'];
 
@@ -11,7 +11,7 @@ $password = md5($password);
 
 
 $sql="SELECT adminusername,password FROM systemadmin WHERE adminusername='$username' and password='$password'";
-$result=$conn->query($sql);
+$result=$database->query($sql);
 
 echo $result->num_rows; 
 
@@ -27,5 +27,5 @@ header("location:index.php");
 
 }
 
-$conn->close();
+$database->close();
 ?>

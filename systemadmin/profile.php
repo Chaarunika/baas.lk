@@ -14,14 +14,14 @@
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-	<link href="/BAAS_LK/Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
-	<link href="/BAAS_LK/Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
-	<link href="/BAAS_LK/Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
-	<link href="/BAAS_LK/Gallery/_css/pop-up-gallery3.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="/BAAS_LK/Gallery/_scripts/pop-up-gallery3.js"></script>
-	<link href="/BAAS_LK/css/header.css" rel="stylesheet" />
-	<link href="/BAAS_LK/css/profile.css" rel="stylesheet" />
+	<link href="../Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
+	<link href="../Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
+	<link href="../Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
+	<link href="../Gallery/_css/pop-up-gallery3.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../Gallery/_scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../Gallery/_scripts/pop-up-gallery3.js"></script>
+	<link href="../css/header.css" rel="stylesheet" />
+	<link href="../css/profile.css" rel="stylesheet" />
 </head>
 
 <style type="text/css">
@@ -78,8 +78,8 @@
 	<?php if(!isset($_GET['user']))	{	?>
 		<div id="subMenu">
 			<ul class="nav nav-tabs">
-			  	<li role="presentation" class="active"><a href="/BAAS_LK/profile.php">Overview</a></li>
-			 	<li role="presentation"><a href="/BAAS_LK/spProfEdit.php">Edit Profile</a></li>
+			  	<li role="presentation" class="active"><a href="../profile.php">Overview</a></li>
+			 	<li role="presentation"><a href="../spProfEdit.php">Edit Profile</a></li>
 			 	<li role="presentation"><a href="#">Messages</a></li>
 			</ul>
 		</div>
@@ -109,7 +109,7 @@
       	<div id="apDivProfPic2"><img class="img-circle2"  src= " <?php// echo $_SESSION['url'] ?> "  > </div>  
       	-->
       	<?php //echo $user['user_avatar'] ; ?>
-     	<div id="apDivProfPic2"><img class="img-circle2"  src=  /BAAS_LK/<?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
+     	<div id="apDivProfPic2"><img class="img-circle2"  src=  ../<?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
     	
     </div>
     
@@ -152,15 +152,15 @@
 		<div id="galleryBox">
 
 			<div class="wrapper-inner-content-image">    
-				<img src="/BAAS_LK/Gallery/_assets/90.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/80.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/70.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/60.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/50.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/40.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/30.jpg"/>
-				<img src="/BAAS_LK/Gallery/_assets/20.jpg"/>   
-				<img src="/BAAS_LK/Gallery/_assets/10.jpg"/>    
+				<img src="../Gallery/_assets/90.jpg"/>
+				<img src="../Gallery/_assets/80.jpg"/>
+				<img src="../Gallery/_assets/70.jpg"/>
+				<img src="../Gallery/_assets/60.jpg"/>
+				<img src="../Gallery/_assets/50.jpg"/>
+				<img src="../Gallery/_assets/40.jpg"/>
+				<img src="../Gallery/_assets/30.jpg"/>
+				<img src="../Gallery/_assets/20.jpg"/>   
+				<img src="../Gallery/_assets/10.jpg"/>    
     			
 				<div class="wrapper-inner-content-image-hover">
 					<div class="wrapper-inner-content-image-hover-cercle"><span class="icon-search"></span></div>
