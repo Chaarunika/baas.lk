@@ -14,6 +14,7 @@ $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/";
 
 <div id="galleryAddBox">
 	
+  <!-- Profile Pic updated -->
   <form  id="uploadform0" enctype="multipart/form-data" method="post" action="upload.php">
     <div id= "ProfPicChange"  class= "picChange">
       <div class="avatar-zone" 

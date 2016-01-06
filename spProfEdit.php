@@ -32,6 +32,7 @@
 
 <script type="text/javascript">
 
+// Java script validation function
 function ValidateMobNumber(txtMobId) {
   var fld = document.getElementById(txtMobId);
 
@@ -55,15 +56,15 @@ function ValidateMobNumber(txtMobId) {
 
 </script>
 
-<script src="javascript/editTable.js"></script>
+<script src="javascript/editTable.js"></script> <!-- sevice provider edit table  -->
 
 </head>
 
 <body>
 
-<?php include ("header.php"); ?>
+<?php include ("header.php"); ?>  <!--Including header -->
 
-<?php include "galleryUpdate.php" ?>
+<?php include "galleryUpdate.php" ?>  <!-- Galley box update function -->
 
   <div id="subMenu">
     <ul class="nav nav-tabs">
@@ -144,6 +145,8 @@ function ValidateMobNumber(txtMobId) {
 
 <?php
 
+  //basic information Edit update functions and sql connections
+
   if(isset($_POST["firstName"]) )
   {
 
@@ -182,6 +185,7 @@ function ValidateMobNumber(txtMobId) {
 
      <?php
 
+     //Contact information Edit update functions and sql connections
   if(isset($_POST["optionalEmail"]) )
   {
   $optionalEmail = $_POST["optionalEmail"];
@@ -205,7 +209,7 @@ function ValidateMobNumber(txtMobId) {
  <?php include_once('includes/apDivOptionBox2.php') ?>
 
   <?php
-
+  //work information Edit update functions and sql connections
   if(isset($_POST["spCategory"]) )
   {
   $spCategory = $_POST["spCategory"];
@@ -251,7 +255,7 @@ function ValidateMobNumber(txtMobId) {
 
 
   }
-  
+  //password changeinformation Edit update functions and sql connections
   if(isset($_POST["oldPassword"]) )
   {
   $oldPassword = $_POST["oldPassword"];
