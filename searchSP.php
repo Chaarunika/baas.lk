@@ -4,23 +4,8 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 ?>
 
-<?php 
-	
-	// Create Database Connection
-	
-	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "";
-	$dbname = "baaslk";
-	$connection = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-	
-	if(mysqli_connect_errno()){
-		die("Database connection failed: ".
-			mysqli_connect_error().
-			"(".mysqli_connect_errno().")"
-			);
-			}
-?>
+<?php include_once ('_database/database.php'); ?>
+
 
 <?php
 	$area = $_POST["location"];
@@ -73,7 +58,7 @@ if (session_status() == PHP_SESSION_NONE) {
 		}
 	}
 	
-	$result = mysqli_query($connection,$query);
+	$result = mysqli_query($dbConnection,$query);
 	if(!$result){
 		die("Database query failed.");
 	}
@@ -88,7 +73,7 @@ $k++;
 }
 	
 
-$result = mysqli_query($connection,$query);
+$result = mysqli_query($dbConnection,$query);
 
 ?>
 
@@ -128,7 +113,7 @@ echo "
 	border-bottom-color: rgba(102,102,102,1);
 	border-left-color: rgba(102,102,102,1);
 	border-radius: 20px;
-	background-color: rgba(240, 240, 240,0.8) ;
+	background-color: rgba(240, 240, 240,0.9) ;
 }
 #apDivResultPic{$i}  {
 	position: absolute;
@@ -220,13 +205,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 }
 
-#adBox{
-	position: fixed;
+#addBox{
+	position: absolute;
 	top: 100px;
 	left: 1050px;
 	height:550px;
 	width: 260px;
-	background-color: #f0f0f0;
+	//background-color: #f0f0f0;
+
 }
 
 #coverPics{
@@ -241,6 +227,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 #back{
 	position: absolute;
 	margin-top: 100px;
+	left:0px;
 	
 }
 
@@ -249,56 +236,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 <body>
 
-
-	<div id="back">
-	<div id="coverPics"></div>
+	<div id='back'>
+	<div id='coverPics'></div>
 	</div>
 
+
+	
 	<?php 
 
 	if (session_status() == PHP_SESSION_NONE) {
     	session_start();
 	}
 
-
-
-	if(isset($_SESSION['language'])){
-		if($_SESSION['language'] == 'sinhala')
-		{
-			include 'translations/si.php' ;
-		}
-
-		else if($_SESSION['language'] == 'tamil')
-		{
-			include 'translations/ta.php' ;
-		}
-
-		else if($_SESSION['language'] == 'english')
-		{
-			include 'translations/en.php' ;
-		}
-	}
-
-	else
-	{
-		include 'translations/en.php' ;
-		//
-
-	}
-
-
 ?>
+
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 
 
 
-
-<div id="adBox">
-Advertisements
-<hr>
-<img src="images/ad.png">
+<div id='addBox' >Advertisements<hr>
+<img src="images/ad.jpg" alt="add" style="width:250px;height:500px;">
 </div>
+
+
 
 <?php 
 	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly
@@ -380,6 +341,8 @@ if($i == 0)
 	}
 ?>
 
+	
+
 
 
 </body>
@@ -387,5 +350,5 @@ if($i == 0)
 <?php mysqli_free_result($result); ?>
 
 <?php 
-mysqli_close($connection);
+mysqli_close($dbConnection);
 ?>

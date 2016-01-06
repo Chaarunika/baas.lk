@@ -36,6 +36,7 @@
 #back{
 	position: absolute;
 	margin-top: 100px;
+	left: 0px;
 	
 }
 </style>

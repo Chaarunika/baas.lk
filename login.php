@@ -98,7 +98,7 @@ function myFunction() {
 if ($login->checkloginstatus() == true) {
    	
 
-		header("Location:http://localhost/BAAS_LK/index.php");
+		header("Location:index.php");
 	}
 	
 	else 
