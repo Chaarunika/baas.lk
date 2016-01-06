@@ -234,42 +234,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 <body>
 
 
-
-
-	<?php 
-
-	if (session_status() == PHP_SESSION_NONE) {
-    	session_start();
-	}
-
-
-
-	if(isset($_SESSION['language'])){
-		if($_SESSION['language'] == 'sinhala')
-		{
-			include 'translations/si.php' ;
-		}
-
-		else if($_SESSION['language'] == 'tamil')
-		{
-			include 'translations/ta.php' ;
-		}
-
-		else if($_SESSION['language'] == 'english')
-		{
-			include 'translations/en.php' ;
-		}
-	}
-
-	else
-	{
-		include 'translations/en.php' ;
-		//
-
-	}
-
-
-?>
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 

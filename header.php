@@ -28,34 +28,6 @@ else{
 } 
 ?>
 
-<script>
-
-function Fun() {	
-
-	setInterval( function(){		
-		var widthVal = window.innerWidth;	
-		console.log(widthVal);
-		if (widthVal >1100){		
-			document.getElementById("main-header").style.right ="30%";
-			}		
-		else if(widthVal >1024){
-			document.getElementById("main-header").style.right ="15%";
-			}
-		else{
-			document.getElementById("main-header").style.visibility = "hidden" ;
-			document.getElementById("menu").style.visibility = "hidden" ;
-			//document.getElementById("sinhala").style.visibility = "hidden" ;		
-			//document.getElementById("tamil").style.visibility = "hidden" ;
-			document.getElementById("apDivBaasLk").style.fontSize = "30px" ;
-			document.getElementById("apDivBaasLk").style.top = "30px" ;
-			document.getElementById("tamil").style.right = "0px" ;
-			document.getElementById("sinhala").style.right = "45px" ;
-			}			
-	},500 );
-}
-</script>
-
-<script>//window.onload = Fun;</script>
 
 <div id="apDivHeaderContainer">
 
@@ -139,7 +111,29 @@ function Fun() {
 
 	?>
 	<div id="tamil"><a href="tamil.php"><img src="images/tamil.png"></a></div>
-	<div id="main-header">
+
+	<?php
+
+	if(isset($_SESSION['language'])){
+		if($_SESSION['language']=='tamil')
+		{
+			echo "<div id=\"main-header-tamil\">";
+		}
+
+		else
+		{
+			echo "<div id=\"main-header\">";
+		}
+
+	}
+	else
+	{
+		echo "<div id=\"main-header\">";
+	}
+
+	?>
+
+	
 	<?php echo THEBESTWAY ; ?>
 	</div>
 

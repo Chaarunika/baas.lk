@@ -4,8 +4,15 @@ session_start();
 
 $_SESSION['language']='english';
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+if($_SERVER['HTTP_REFERER']!='http://localhost/BAAS_LK/searchSP.php')
+{
+	header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
 
+else
+{
+	header('Location: http://localhost/BAAS_LK/index.php');
+}
 
 
 ?>
