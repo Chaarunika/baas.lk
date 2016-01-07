@@ -132,7 +132,7 @@
 #sinhala{
 	position: absolute;
 	left: 900px;
-	top: 53px;
+	top: 30px;
 	width: 40px;
 	height: 19px;
 	z-index: 3;	
@@ -141,7 +141,7 @@
 #tamil{
 	position: absolute;
 	left: 950px;
-	top: 53px;
+	top: 30px;
 	width: 47px;
 	height: 20px;
 	z-index: 1;	

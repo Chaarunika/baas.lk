@@ -89,7 +89,7 @@ if(isset($_POST['jobDesc'])){
             <br><br>
 
             <label> Job Description </label>            
-            <textarea class='jobText' placeholder="Short Job Description" name ="jobDesc" required></textarea>
+            <textarea class='jobText' placeholder="Short Job Description" name ="jobDesc" maxlength="150" required></textarea>
             <br><br>
             <label> Address </label>
             <textarea class='jobText' name = "jobAddress" placeholder="Address" required></textarea>

@@ -63,6 +63,18 @@
     	return $out;
 	}
 
+	function get_recent_job_details(){
+		global $dbConnection;
+		
+		$query = "SELECT * FROM postjob2 ORDER BY job_id DESC LIMIT 10" ;
+		$result = mysqli_query($dbConnection,$query);
+		
+		if(!$result){
+			die("Database query failed.");
+		}
+		return $result;
+	}
+
 	
 
 ?>
