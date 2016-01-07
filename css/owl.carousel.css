@@ -1,6 +1,14 @@
 /* 
  *  Owl Carousel - Animate Plugin
  */
+
+ .item{
+  background-color:#90C5A9;
+  //text-align: center;
+  padding: 10px;
+  
+}
+
 .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
   animation-duration: 1000ms;
@@ -52,12 +60,14 @@
  *  Core Owl Carousel CSS File
  */
 .owl-carousel {
+  top: 420px;
   display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1;
+  background-color:blue;
 }
 .owl-carousel .owl-stage {
   position: relative;
