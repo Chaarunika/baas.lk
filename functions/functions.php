@@ -77,7 +77,7 @@
 
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;
-    $ago = new DateTime($datetime);
+    $ago = new DateTime($datetime, new DateTimeZone('Asia/Colombo'));
     $diff = $now->diff($ago);
 
     $diff->w = floor($diff->d / 7);

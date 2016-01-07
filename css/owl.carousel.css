@@ -3,11 +3,31 @@
  */
 
  .item{
-  background-color:#90C5A9;
+  //position: relative;
+  //min-height: 220px;
+  background-color:#f8f8f8;
   //text-align: center;
   padding: 10px;
-  
+  border: 1px solid rgba(240,240,1,1);
+
 }
+
+.owl-carousel {
+  top: 450px;
+  display: none;
+  width: 75%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: absolute;
+  z-index: 1;
+  background-color:#f0f0f0;
+  //border: 1px solid rgba(240,240,1,1);
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+
 
 .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
@@ -59,20 +79,7 @@
 /* 
  *  Core Owl Carousel CSS File
  */
-.owl-carousel {
-  top: 420px;
-  display: none;
-  width: 100%;
-  -webkit-tap-highlight-color: transparent;
-  /* position relative and z-index fix webkit rendering fonts issue */
-  position: relative;
-  z-index: 1;
-  background-color:blue;
-}
-.owl-carousel .owl-stage {
-  position: relative;
-  -ms-touch-action: pan-Y;
-}
+
 .owl-carousel .owl-stage:after {
   content: ".";
   display: block;

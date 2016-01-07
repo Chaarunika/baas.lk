@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
       
       $post = "<div class='item'>";
-      $post .= "<span>".strtoupper ( $row['job_type'] )." NEEDED..!!</span><br><br>";
+      $post .= "<b><span style='padding:5px;text-align:center;position:absolute;background-color:#c9d8c5; width:90%'>".strtoupper ( $row['job_type'] )." WANTED..!!</span><br></b><br>";
       $post .= "Location : {$row['area']} | Contact :{$row['tel_num']}";
       //$post .= "Location : {$row['address']} <br>";     
       $post .= "<br><p> {$row['job_description']} </p>";          
