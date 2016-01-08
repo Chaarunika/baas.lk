@@ -150,7 +150,7 @@ define("OVERVIEW", "நமெந்");
 define("EDITPROFILE", "லநலஸஸ");
 define("MESSAGES", "ஹரரேர");
 define("MEMBERSINCE", "ஸம்க வகேர");
-define("CATAGORY", " நேநவ");
+define("CATEGORY", " நேநவ");
 define("AREA", "லநகபேம");
 define("CONTACTDETAILS", "மஸகேகத நகவஸகத");
 define("EMAIL", "பில்ல");
@@ -193,6 +193,20 @@ define("OCTOMBER", "ஸநவல");
 define("NOVEMBER", "மநவலந");
 define("DECEMBER", "நஸநெந");
 
+//apDivOptionBox1
+define("PRIMARYMOBILENUMBER", "லலல ஸமஸ நகக்த");
+define("SECONDARYMOBILENUMBER", "ஸஸஸந ரஸமோஸ லமஸெந");
+
+//apDivOptionBox2
+define("SERVICEPROVIDERCATEGORY", "ஸமெகோ மஸஸகோ ஸக");
+define("ASHORTDESCRIPTIONABOUTYOU", "நீங்கள் பற்றி ஒரு சிறு விளக்கம்");
+define("WORKHISTORYANDEXPERIENCEDETAILS", "வேலை வரலாறு மற்றும் அனுபவம் விபரங்கள்");
+
+//apDivOptionBox3
+define("OLDPASSWORD", "பழைய கடவுச்சொல்");
+define("NEWPASSWORD", "புதிய கடவுச்சொல்");
+define("CONFIRMPASSWORD", "கடவுச்சொல்லை உறுதிப்படுத்துக");
+define("CHANGE", "மாற்றம்");
 
 
 

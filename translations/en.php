@@ -159,7 +159,7 @@ define("OVERVIEW", "Over View");
 define("EDITPROFILE", "Edit Profile");
 define("MESSAGES", "Messages");
 define("MEMBERSINCE", "Member Since");
-define("CATAGORY", "Catagory");
+define("CATEGORY", "Category");
 define("AREA", "Area");
 define("CONTACTDETAILS", "Contact Details");
 define("EMAIL", "Email");
@@ -202,6 +202,23 @@ define("OCTOMBER", "Octomber");
 define("NOVEMBER", "November");
 define("DECEMBER", "December");
 
+//apDivOptionBox1
+define("PRIMARYMOBILENUMBER", "Primary Mobile Number");
+define("SECONDARYMOBILENUMBER", "Secondary Mobile Number");
+
+//apDivOptionBox2
+define("SERVICEPROVIDERCATEGORY", "Service Provider Category");
+define("ASHORTDESCRIPTIONABOUTYOU", "A Short Description About You");
+define("WORKHISTORYANDEXPERIENCEDETAILS", "Work History and Experience Details");
+
+//apDivOptionBox3
+define("OLDPASSWORD", "Old Password");
+define("NEWPASSWORD", "New Password");
+define("CONFIRMPASSWORD", "Confirm Password");
+define("CHANGE", "CHANGE");
+
+//findjob
+define("RECENTLYPOSTEDJOBS", "Recently Posted Jobs");
 
 
 

@@ -147,7 +147,7 @@ echo "
       	</p>    
 
         <p><?php echo MEMBERSINCE ; ?> : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
-        <p><?php echo CATAGORY ; ?> : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
+        <p><?php echo CATEGORY ; ?> : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
         <p><?php echo AREA ; ?> : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
 
         <div class="rw-ui-container"></div> 
