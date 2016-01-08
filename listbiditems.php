@@ -146,69 +146,7 @@
 	
 	
 
- <?php
- /*
- // $conn = new MySQLi("localhost","root","","baaslk");
-  if($_SERVER["REQUEST_METHOD"]=="POST"){
-		$sql2 = "SELECT *FROM tblbiditems WHERE town = '$_POST[search]'";
-    //$result2 = $database->query($sql2);
-	$result2 = mysqli_query($database,$sql2);
-    if($result2){
-	
-	
-		
-	
-	
-    
-    
-    echo "<ul>";  
-
-      while($row=mysqli_fetch_array($result2)){
-
-        $date= strtotime($row['closingtime']);
-        $remaining = $date - time();
-        $days_remaining = floor($remaining / 86400);
-        $hours_remaining = floor(($remaining % 86400) / 3600);
-        $minutes_remaining = floor((($remaining % 86400) % 3600)/60);
-        $seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
-
-        $itemid=$row['biditemid'];
-        $item=$row['biditem'];
-        $ownerid=$row['accountno'];
-
-        $query_1 = "SELECT max(bidprice) FROM baaslk.tblbidhistory WHERE biditemid = ";
-        $query_1 .= "(SELECT biditemid FROM baaslk.tblbiditems WHERE biditem = '{$row['biditem']}') GROUP BY biditemid;";
-        $result_1 = mysqli_query($database,$query_1);
-           
-            if (false === $result2) {
-            echo mysqli_error();
-          }
-		  
-              
-        $row_1=mysqli_fetch_array($result_1); 
-           
-        $out .= "<tr style='height:75px'>";
-        $out .= "<td style='width:5%' 'background-color: black'>" . $row['biditemid'] . "</td>";
-        $out .= "<td style='width:10%' 'background-color: black'>" . $row['biditem'] . "</td>";
-        $out .= "<td style='width:30%' >" . $row['biddesc'] . "</td>";
-        $out .= "<td style='width:10%'>" .$row['town'] . "</td>";
-        $out .= "<td style='width:15%'>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." "."$seconds_remaining"." Secs"."</td>";
-        $out .= "<td style='width:10%'>" . $row_1['max(bidprice)'] .  "</td>";
-        $out .= "<td style='width:10%'>"."<a href=acceptbid.php?itemid=$itemid> View & bid</a>"."</td>";  
-        $out .= "</tr>";
-        }
-
-        $out .= "</table>";
-        echo"{$out}</ul>";
-  }
-  else{
-  echo " Sorry, No bidds your searched area. ";
-  }
-$database -> close();
-  //echo "Successfully";
-}
-*/
-?>
+ 
 
 	
 </div>
@@ -221,25 +159,6 @@ $database -> close();
 
 
 
-/*
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems WHERE baaslk.tblbiditems.town = '$_POST[search]' " ;
-									}
-else{
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems  " ;
-	}
-	
-	\
-	
-	if($_SERVER["REQUEST_METHOD"]=="POST"){
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems WHERE baaslk.tblbiditems.biditemid = '$_POST[search]' " ;
-									}
-else{
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems  " ;
-	}
-
-	
-	*/
 	
 $sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems  " ;
 	
@@ -306,24 +225,7 @@ $row=mysqli_fetch_array($result);
         }
 
         $out .= "</table>";
-        echo"{$out};
-		}
- 
-
-
-
-
-
-
-
-
-
-
-
-
-</ul></table>; "
-
-
+        echo $out;
 ?>
 
 

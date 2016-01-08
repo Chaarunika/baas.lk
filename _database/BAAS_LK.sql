@@ -402,6 +402,7 @@ CREATE TABLE IF NOT EXISTS `tblbiditems` (
   `biddesc` varchar(500) NOT NULL,
   `town` varchar(100) NOT NULL,
   `image_path` varchar(200) NOT NULL,
+  `minimumbid` bigint(20) NOT NULL,
   `closingtime` text NOT NULL,
   PRIMARY KEY (`biditemid`),
   KEY `user_id` (`accountno`)
