@@ -30,12 +30,8 @@
 	border-radius: 20px;
 }
 
-
-
-
-	
 #landimage1{
-	position: absolute;
+	position: absolute; //asa
 	left: 2px;
 	top: 200px;
 	width: 500px;
