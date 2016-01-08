@@ -132,7 +132,7 @@ while($rows=mysqli_fetch_array($result2)){
 echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
 <td width="95%"><table width="100%" border="0" align="right" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
 <tr>
-<td bgcolor="#ccc"><strong>RE :</strong></td>
+<td bgcolor="#ccc"><strong><?php echo RE ; ?> :</strong></td>
 </tr>
 <tr>
 <td bgcolor="#ccc" align="left"><?php echo "by ".$rows['user']."  -    ".$rows['a_datetime']; ?></td>
@@ -180,7 +180,7 @@ mysqli_close($database);
 <tr>
 <td valign="top"><strong><?php echo ANSWER ; ?></strong></td>
 <td valign="top">:</td>
-<td><textarea name="a_answer" cols="60" rows="7" id="a_answer"  required></textarea></td>
+<td><textarea name="a_answer" cols="60" rows="7" id="a_answer" placeholder="<?php echo ENTERYOURANSWER ; ?>..."  required></textarea></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
@@ -194,6 +194,6 @@ mysqli_close($database);
 </table>
 </div>
 <p>&nbsp;</p>
-<p class="backto">  	<a href="forum.php">&lt;&lt;BACK TO FORUM</a></p>
+<p class="backto">  	<a href="forum.php">&lt;&lt;<?php echo BACKTOFORUM ; ?></a></p>
 
 </body>

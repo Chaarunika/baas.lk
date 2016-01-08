@@ -127,7 +127,6 @@ define("ENTERYOURQUESTION", "உங்கள் கேள்வி சேர்�
 
 //forum
 define("ADDNEWTOPIC", "புதிய தலைப்பை சேர்க்க");
-define("ADDNEWTOPIC", "අලුත් මාතෘකාව එක් කරන්න");
 define("DISCUSSION", "கலந்துரையாடல்");
 define("STARTEDBY", "மூலம் தொடங்கியது");
 define("VIEWS", "பார்வைகள்");
@@ -137,6 +136,35 @@ define("TIME", " மற்றும் நேரம்");
 
 //view topic
 define("ANSWER", "பதிலும்");
+define("BACKTOFORUM", "ஜோேஹ");
+define("RE", "பதிலும்");
+define("ENTERYOURANSWER", "மநவலத லகதஸ கரத பேநல");
+
+
+//new topic
+define("TOPIC", "தலைப்பை");
+define("DETAIL", "நகவஸகத");
+
+//profile
+define("OVERVIEW", "நமெந்");
+define("EDITPROFILE", "லநலஸஸ");
+define("MESSAGES", "ஹரரேர");
+define("MEMBERSINCE", "ஸம்க வகேர");
+define("CATAGORY", " நேநவ");
+define("AREA", "லநகபேம");
+define("CONTACTDETAILS", "மஸகேகத நகவஸகத");
+define("EMAIL", "பில்ல");
+define("ADDRESS", "மநவவவல");
+define("OPTIONALCONTACTNO", "லலஸ நமநவ லபபவல");
+define("OPTIONALEMAIL", "லலஸ பில்ல");
+define("ABOUTUS", "ஜஸம தத்மய");
+define("WORKHISTORY", "மோே ஸநிம");
+
+//spProfEdit
+define("EDITBASICINFORMATION", "மஸம மவக மநஸலஸ");
+define("EDITYOURCONTACTDETAILS", "ஸககோ மஸெஸ");
+define("EDITYOURWORKINFORMATION", "ஸக்க ஸெஸக");
+define("PASSWORDCHANGE", "நகரக மஸோ");
 
 
 

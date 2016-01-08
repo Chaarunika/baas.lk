@@ -64,9 +64,9 @@ function ValidateMobNumber(txtMobId) {
 
   <div id="subMenu">
     <ul class="nav nav-tabs">
-      <li role="presentation" ><a href="profile.php">Overview</a></li>
-      <li role="presentation" class="active"><a href="spProfEdit.php">Edit Profile</a></li>
-      <li role="presentation"><a href="list_pm.php">Messages</a></li>
+      <li role="presentation" ><a href="profile.php"><?php echo OVERVIEW ; ?></a></li>
+      <li role="presentation" class="active"><a href="spProfEdit.php"><?php echo EDITPROFILE ; ?></a></li>
+      <li role="presentation"><a href="list_pm.php"><?echo MESSAGES ; ?></a></li>
     </ul>
   </div>
 
@@ -79,7 +79,7 @@ function ValidateMobNumber(txtMobId) {
 
 		<div id="apDivIcon"><img src="images/face.png" width="40" height="39" alt="icon" /></div>
 
-		<div id="apDivAbout">Edit Profile</div>
+		<div id="apDivAbout"><?php echo EDITPROFILE ; ?></div>
     </div>
 
   <div id="apDivTopicList">
@@ -87,28 +87,28 @@ function ValidateMobNumber(txtMobId) {
 		<a href="#">
 		<div id="apDivTopic0">
 			<div id="apDivBar0"> </div>
-		  <div id="apDivTag0" onclick = "selectFunction(0);">Edit Basic Information</div>
+		  <div id="apDivTag0" onclick = "selectFunction(0);"><?php echo EDITBASICINFORMATION ; ?></div>
 		</div>
     	</a>
 
 		<a href="#">
 		<div id="apDivTopic1" style= "top:65px">
 		  <div id="apDivBar1" ></div>
-		  <div id="apDivTag1" onclick = "selectFunction(1)">Edit your Contact details</div>
+		  <div id="apDivTag1" onclick = "selectFunction(1)"><?php echo EDITYOURCONTACTDETAILS ; ?></div>
 		</div>
         </a>
 
 		<a href="#">
 		<div id="apDivTopic2" style= "top:130px">
 		  <div id="apDivBar2" ></div>
-		  <div id="apDivTag2" onclick = "selectFunction(2)">Edit your Work Information</div>
+		  <div id="apDivTag2" onclick = "selectFunction(2)"><?php echo EDITYOURWORKINFORMATION ; ?></div>
 		</div>
         </a>
 
 		<a href="#">
 		<div id="apDivTopic3" style= "top:195px">
 		  <div id="apDivBar3"></div>
-		  <div id="apDivTag3" onclick = "selectFunction(3)">Password Change</div>
+		  <div id="apDivTag3" onclick = "selectFunction(3)"><?php echo PASSWORDCHANGE ; ?></div>
 		</div>
         </a>
 

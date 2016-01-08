@@ -50,7 +50,7 @@ define("PLUMBER", "Plumber");
 define("ANYAREA", "ANY AREA");
 define("COLOMBO", "Colombo");
 define("KANDY", "Kandy");
-define(" ", "Kurunegala");
+define("KURUNEGALA", "Kurunegala");
 define("AMPARA", "Ampara");
 define("ANURA", "Anuradhapura");
 define("BADULLA", "Badulla");
@@ -136,7 +136,7 @@ define("ENTERYOURQUESTION", "Enter Your Question");
 
 
 //forum
-define("ADDNEWTOPIC", "Add New Topic");
+define("ADDNEWTOPIC", "ADD NEW TOPIC");
 define("DISCUSSION", "Discussion");
 define("STARTEDBY", "Started By");
 define("VIEWS", "Views");
@@ -146,6 +146,34 @@ define("TIME", " & Time");
 
 //view topic
 define("ANSWER", "Answer");
+define("BACKTOFORUM", "  BACK");
+define("RE", "Reply");
+define("ENTERYOURANSWER", "Enter Your Answer");
+
+//new topic
+define("TOPIC", "TOPIC");
+define("DETAIL", "DETAIL");
+
+//profile
+define("OVERVIEW", "Over View");
+define("EDITPROFILE", "Edit Profile");
+define("MESSAGES", "Messages");
+define("MEMBERSINCE", "Member Since");
+define("CATAGORY", "Catagory");
+define("AREA", "Area");
+define("CONTACTDETAILS", "Contact Details");
+define("EMAIL", "Email");
+define("ADDRESS", "Address");
+define("OPTIONALCONTACTNO", "Optional Contact Number");
+define("OPTIONALEMAIL", "Optional Email");
+define("ABOUTUS", "About Us");
+define("WORKHISTORY", "Work History");
+
+//spProfEdit
+define("EDITBASICINFORMATION", "Edit Basic Information");
+define("EDITYOURCONTACTDETAILS", "Edit Your Contact Details");
+define("EDITYOURWORKINFORMATION", "Edit Your Work Information");
+define("PASSWORDCHANGE", "Password Change");
 
 
 

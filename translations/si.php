@@ -130,6 +130,41 @@ define("TIME", " සහ වෙලාව");
 
 //view topic
 define("ANSWER", "පිළිතුර");
+define("BACKTOFORUM", "  පසු");
+define("RE", "පිළිතුර");
+define("ENTERYOURANSWER", "ඔබගේ පිළිතුර ඇතුලත් කරන්න");
+
+//new topic
+define("TOPIC", "මාතෘකාව");
+define("DETAIL", "විස්තරය");
+
+//profile
+define("OVERVIEW", "සාරාංශය");
+define("EDITPROFILE", "නැවත සැකසීම");
+define("MESSAGES", "පණිවිඩ");
+define("MEMBERSINCE", "සාමාජික දිනය");
+define("CATAGORY", "සේවා වර්ගය");
+define("AREA", "ප්‍රදේශය");
+define("CONTACTDETAILS", "සබදතා තොරතුරු");
+define("EMAIL", "ඊ-මේල්");
+define("ADDRESS", "ලිපිනය");
+define("OPTIONALCONTACTNO", "වෙනත් දුරකථන අංකය");
+define("OPTIONALEMAIL", "වෙනත් ඊ-මේල්");
+define("ABOUTUS", "අප ගැන");
+define("WORKHISTORY", "වැඩ ඉතිහාසය");
+
+//spProfEdit
+define("EDITBASICINFORMATION", "මුලික තොරතුරු සැකසීම");
+define("EDITYOURCONTACTDETAILS", "සබදතා තොරතුරු සැකසීම");
+define("EDITYOURWORKINFORMATION", "වැඩ තොරතුරු සැකසීම");
+define("PASSWORDCHANGE", "මුරපදය වෙනස් කිරීම");
+
+
+
+
+
+
+
 
 
 
