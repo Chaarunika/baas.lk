@@ -175,6 +175,39 @@ define("EDITYOURCONTACTDETAILS", "Edit Your Contact Details");
 define("EDITYOURWORKINFORMATION", "Edit Your Work Information");
 define("PASSWORDCHANGE", "Password Change");
 
+//apDivOptionBox0
+define("FIRSTNAME", "First Name");
+define("ORGANIZATIONNAME", " Organization Name");
+define("LASTNAME", "Last Name");
+define("BIRTHDATE", "Birth Date");
+define("ORGANIZATIONSTARTDATE", " Organization Start Date");
+define("YEAR", "Year");
+define("MONTH", "Month");
+define("DATE", "Date");
+define("ADDRESSLINE1", "Address Line 1");
+define("ADDRESSLINE2", "Address Line 2");
+define("DISTRICT", "District");
+define("SAVE", "SAVE");
+
+define("JANUARY", "January");
+define("FEBRUARY", "February");
+define("MARCH", "March");
+define("APRIL", "April");
+define("MAY", "May");
+define("JUNE", "June");
+define("JULY", "July");
+define("AUGUEST", "Augest");
+define("SEPTEMBER", "September");
+define("OCTOMBER", "Octomber");
+define("NOVEMBER", "November");
+define("DECEMBER", "December");
+
+
+
+
+
+
+
 
 
 //define("", "");

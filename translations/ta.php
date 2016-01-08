@@ -166,6 +166,34 @@ define("EDITYOURCONTACTDETAILS", "ஸககோ மஸெஸ");
 define("EDITYOURWORKINFORMATION", "ஸக்க ஸெஸக");
 define("PASSWORDCHANGE", "நகரக மஸோ");
 
+//apDivOptionBox0
+define("FIRSTNAME", "நமவவந ");
+define("ORGANIZATIONNAME", " வழங்குநர்கள்");
+define("LASTNAME", "லநமவவ");
+define("BIRTHDATE", "லவமமந");
+define("ORGANIZATIONSTARTDATE", " மநநம மநநவ மெமந");
+define("YEAR", "வமநெந");
+define("MONTH", "லலமெந");
+define("DATE", "மமநநவ");
+define("ADDRESSLINE1", "மநநெநவ 1");
+define("ADDRESSLINE2", "மநவவெந");
+define("DISTRICT", "நவவமவம");
+define("SAVE", "நலமந மநவவெந");
+
+define("JANUARY", "நவவமெந");
+define("FEBRUARY", "நவநமவ");
+define("MARCH", "நவவவல");
+define("APRIL", "நலலமந");
+define("MAY", "லநம");
+define("JUNE", "வஸமமமம");
+define("JULY", "நமவ");
+define("AUGUEST", "நெநெநவ");
+define("SEPTEMBER", "வநநவல");
+define("OCTOMBER", "ஸநவல");
+define("NOVEMBER", "மநவலந");
+define("DECEMBER", "நஸநெந");
+
+
 
 
 //define("", "");
