@@ -18,13 +18,16 @@ define("HOME", "Home");
 define("WIKI", "Wiki");
 define("FAQ", "FAQ");
 define("FORUM", "FORUM");
+define("MYPROFILE", "MY PROFILE");
+define("AUCTION", "AUCTION");
+define("JOBS", "JOBS");
 
 
 //searchbar
 
 //catagory
 
-define("SUBMIT_SEARCH", "Search");
+define("SUBMIT_SEARCH", "SEARCH");
 define("ORDER", "Order By Rating");
 define("ALL", "ALL");
 define("ARCHI_DESIGN", "Architect and Designer");
@@ -47,7 +50,7 @@ define("PLUMBER", "Plumber");
 define("ANYAREA", "ANY AREA");
 define("COLOMBO", "Colombo");
 define("KANDY", "Kandy");
-define("KURUNEGALA", "Kurunegala");
+define(" ", "Kurunegala");
 define("AMPARA", "Ampara");
 define("ANURA", "Anuradhapura");
 define("BADULLA", "Badulla");
@@ -70,6 +73,80 @@ define("PUTTALAMA", "Puttalam");
 define("RATNAPURA", "Ratnapura");
 define("TRINCOMALEE", "Trincomalee");
 define("VAVUNIYA", "Vavuniya");
+
+
+//post a job
+define("POSTYOURJOB", "Post Your Job");
+define("SELECTJOBTYPE", "Select Job Type");
+define("SELECTAREA", "Select Area");
+define("JOBDESCRIPTION", "Job Description");
+define("ADDRESS", "Address");
+define("CONTACTNUMBER", "Contact Number");
+define("POSTJOB", "Post Job");
+define("ENTERSHORTDESCRIPTION", "Enter Short Description about your job...");
+define("ENTERADDRESS", "Enter Address...");
+define("ENTERYOURTELEPHONENUMBER", "Enter your Telephone Number...");
+
+//FAQ
+define("FREQUETLYASKEDQUESTIONS", "Frequently Asked Questions...?");
+define("FAQQ1", "What Is Baas.lk");
+define("FAQA1", "We are an online constructional suuport service provider who are capable of providing all the support services for constructions. 
+	 We support all the phases of constructions from purchasing a land up to completing the construction.
+	 You can use our valuable services by just sign in up to our system.
+	 No matter if you are a customer or a service provider feel free to use our excellent services.");
+define("FAQQ2", "Why it's important to me");
+define("FAQA2A", "In your busy life you may not comfortable of wasting yout time in finding constructional service providers. 
+ Rather than searching for people here and there you and just find hundreds of service providers where you can compare
+them with each other.");
+define("FAQA2B", "Or if you are interested to gather some knowledge about constructions just use our services to gain your knowledge");
+define("FAQQ3", "How can I find service providers");
+define("FAQA3", "Just click on the service you want and meet hundreds of service providers waiting for you. 
+ Choose service providers based on their performance or  choose the ones who are closer to you");
+define("FAQQ4", "How can I trust those service providers");
+define("FAQA4", "Yes, There are lot of raising concerns about the trustworthyness about the service providers. 
+ So we provide a feedback platform and a rating platform where the customers can rate their service providers 
+ after they receive their service. 
+ This should provide a clear platform for the potential customers when choosing service providers");
+define("FAQQ5", "How can I choose the right service provider");
+define("FAQA5", "You can use our rating systems and feedback systems in deciding the correct service providers. 
+And service providers are maintaining their own profiles reflecting their own capabilities. Rather than selecting a service provider based on
+others recommendations you can make better decisions about different service providers through us");
+define("FAQQ6", "What if those service providers fail me");
+define("FAQA6", "Yes it is true that we hold no responsibility about service providers own work. But we assure you that you can make
+ better decisions based on our rating systems and feedback systems. There will be no room for the game players in our web portal");
+define("FAQQ7", "What if I'm a Service Provider");
+define("FAQA7", "Service providers may use our bunch of services to promote themselves and attract more and more customers for you. 
+ If you are capable of providing an excellent service; Here is the platform for you to enter a huge new market");
+define("FAQQ8", "How can do my payments through this site");
+define("FAQA8", "Sorry. As a web portal we do not provide any srvice related to money transactions between servie providers and customers. 
+ We just provide services to bridg the communication gap between the service providers and the customers.
+ You are kindly requested to be responsible for your own money transactions");
+define("FAQQ9", "Can I acquire any knowledge related to constructions from you");
+define("FAQA9", "There are seperate user forums as well as a complete wiki about constructions providing up to date valuable information. Feel free to use our knowledge
+ sources to enhance your knowledge. And it is important to note that the Wiki is open for unregistered users as well. And if you are an expert in
+ constructional expert you can contribute your knowledge to enhance the quality of Wiki and forums");
+define("FAQQ10", "In what parts of constructions you provide support");
+define("FAQA10", "We provide support services for almost every phase of domestic constructions. And it is clear that most of these support services can be used for other
+ constructional purposes as well. In simple we are a one stop on line solution for the constructional industry in Sri Lanka");
+define("NOSOLUTIONTOYOURPROBLEMHERE", "No solution to your problem here");
+define("ASKTHEADMIN", "Ask The Admin");
+define("YOURQUESTIONPOSTED", "Your Questions posted here will be directed to website administrators");
+define("POST", "POST");
+define("ENTERYOURQUESTION", "Enter Your Question");
+
+
+//forum
+define("ADDNEWTOPIC", "Add New Topic");
+define("DISCUSSION", "Discussion");
+define("STARTEDBY", "Started By");
+define("VIEWS", "Views");
+define("REPLIES", "Replies");
+define("DATE", "Date");
+define("TIME", " & Time");
+
+//view topic
+define("ANSWER", "Answer");
+
 
 
 //define("", "");

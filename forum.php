@@ -102,7 +102,7 @@ $word = str_replace(' ','',$word);
     <p>
       <label for="textfield"></label>
       <input name="textfield" type="text" class="searchtext" id="textfield" required>
-      <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH TOPIC">
+      <input name="button" type="submit" class="searchbtton" id="button" value=" <?php echo SUBMIT_SEARCH ; ?> ">
   </p>
     <p>&nbsp;</p>
   </form>
@@ -114,7 +114,7 @@ $word = str_replace(' ','',$word);
 <td>
 <table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr >
-<td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="Add a new discussion topic"></form></td>
+<td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="<?php echo ADDNEWTOPIC ; ?>"></form></td>
 </tr>
 <tr>
 <td width="30%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
@@ -208,14 +208,14 @@ $bgcolor="";
 <td>
 <table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr >
-<td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="Add a new discussion topic"></form></td>
+<td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="<?php echo ADDNEWTOPIC ; ?>"></form></td>
 </tr>
 <tr>
-<td width="30%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
-<td width="30%" align="center" bgcolor="#999"><strong>Started by</strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong>Views</strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong>Replies</strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong>Date/Time</strong></td>
+<td width="30%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
+<td width="30%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo DATE ; ?><?php echo TIME ; ?> </strong></td>
 </tr>
  
 <?php
@@ -264,7 +264,7 @@ mysqli_close($database);
     <p>
       <label for="textfield"></label>
       <input name="textfield" type="text" class="searchtext" id="textfield" required>
-      <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH TOPIC">
+      <input name="button" type="submit" class="searchbtton" id="button" value=" <?php echo SUBMIT_SEARCH ; ?> ">
   </p>
     <p>&nbsp;</p>
   </form>
