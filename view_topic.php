@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
 <link href="css/header.css" rel="stylesheet">
+
 <?php include 'header.php'; ?> 
+
 <style type="text/css">
 .createtabel {
 	position: absolute;
@@ -55,7 +61,22 @@
 	border-width: 3px;
 	border-style:outset;
 }
+.postButton{
+width:50%;
+height:40px;
+margin-top:15px;
+margin-bottom:15px;
+background-color:rgba(240,240,240,0.8);
+border:1px solid rgba(0,0,0,0.2);
+border-radius:3px;
+font-family:'Fauna One',serif;
+font-weight:500;
+font-size:14px;
+border-style: solid;
+border-width: 1px;
+}
 </style>
+
 </head>
 
 <body>
@@ -157,14 +178,14 @@ mysqli_close($database);
 <td>
 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
-<td valign="top"><strong>Answer</strong></td>
+<td valign="top"><strong><?php echo ANSWER ; ?></strong></td>
 <td valign="top">:</td>
 <td><textarea name="a_answer" cols="60" rows="7" id="a_answer"  required></textarea></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td><input name="id" type="hidden" value="<?php echo $id; ?>"></td>
-<td><input type="submit" name="Submit" value="Submit" id="answer"> </td>
+<td><input type="submit" class="postButton" name="Submit" value="<?php echo POST ; ?>"  id="answer"> </td>
 </tr>
 </table>
 </td>
