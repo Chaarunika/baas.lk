@@ -6,7 +6,7 @@ include('config.php');
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="css/chat.css" rel="stylesheet" title="Style" />
-        <title>Personal Messages</title>
+        <title> <?php echo PERSONALMESSAGES ; ?></title>
 		<link href="css/header.css" rel="stylesheet">
 		<!-- Bootstrap  -->
 		 <meta name="viewport" content="width=device-width, initial-scale=1.0">   
@@ -58,22 +58,22 @@ include('config.php');
 			 	
 
 			 	?>
-			 	<li role="presentation" class="active"><a href="list_pm.php">Messages <span class="badge"><?php echo intval(mysql_num_rows($req1)); ?></span></a></li>
+			 	<li role="presentation" class="active"><a href="list_pm.php"><?php echo MESSAGES ; ?> <span class="badge"><?php echo intval(mysql_num_rows($req1)); ?></span></a></li>
 			</ul>
 		</div>
 	<?php } ?>
         <div class="content">
 
 
-<h1>Personal messages</h1><br /><br/>
-<a href="new_pm.php" class="link_new_pm">Compose New Message</a><br />
-<h3>Unread Messages(<?php echo intval(mysql_num_rows($req1)); ?>):</h3>
+<h1><?php echo PERSONALMESSAGES ; ?></h1><br /><br/>
+<a href="new_pm.php" class="link_new_pm"><?php echo COMPOSENEWMESSAGES ; ?></a><br />
+<h3><?php echo UNREADMESSAGES ; ?>(<?php echo intval(mysql_num_rows($req1)); ?>):</h3>
 <table>
 	<tr>
-    	<th class="title_cell">Title</th>
-        <th>No of Replies</th>
-        <th>Participant</th>
-        <th>Date of creation</th>
+    	<th class="title_cell"><?php echo TITLE ; ?></th>
+        <th><?php echo NOOFREPLIES ; ?></th>
+        <th><?php echo PARTICIPANT ; ?></th>
+        <th><?php echo DATEOFCREATION ; ?></th>
     </tr>
 <?php
 //We display the list of unread messages
@@ -93,20 +93,20 @@ if(intval(mysql_num_rows($req1))==0)
 {
 ?>
 	<tr>
-    	<td colspan="4" class="center">You have no unread message.</td>
+    	<td colspan="4" class="center"><?php echo YOUHAVENOREADMESSAGE ; ?>.</td>
     </tr>
 <?php
 }
 ?>
 </table>
 <br />
-<h3>Read Messages(<?php echo intval(mysql_num_rows($req2)); ?>):</h3>
+<h3><?php echo READMESSAGES ; ?>(<?php echo intval(mysql_num_rows($req2)); ?>):</h3>
 <table>
 	<tr>
     	<th class="title_cell">Title</th>
-        <th>No. of Replies</th>
-        <th>Participant</th>
-        <th>Date of creation</th>
+        <th><?php echo NOOFREPLIES ; ?></th>
+        <th><?php echo PARTICIPANT ; ?></th>
+        <th><?php echo DATEOFCREATION ; ?></th>
     </tr>
 <?php
 //We display the list of read messages
@@ -126,7 +126,7 @@ if(intval(mysql_num_rows($req2))==0)
 {
 ?>
 	<tr>
-    	<td colspan="4" class="center">You have no read message.</td>
+    	<td colspan="4" class="center"><?php echo YOUHAVENOREADMESSAGE ; ?>.</td>
     </tr>
 <?php
 }

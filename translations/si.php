@@ -201,7 +201,19 @@ define("NEWPASSWORD", "නව මුරපදය ");
 define("CONFIRMPASSWORD", "මුරපදය සහතික කරන්න");
 define("CHANGE", "වෙනස් කරන්න");
 
+//list_pm
+define("PERSONALMESSAGES", "පුද්ගලික පණිවිඩ");
+define("COMPOSENEWMESSAGES", "නව කෙටි පණිවිඩයක් ඇමිණීම");
+define("TITLE", "මාතෘකාව");
+define("UNREADMESSAGES", "නොකියවූ පණිවිඩ");
+define("NOOFREPLIES", "පිළිතුරු සංඛ්යාව");
+define("PARTICIPANT", "සහභාගිවන්නා");
+define("DATEOFCREATION", "තැනූ දිනය");
+define("YOUHAVENOREADMESSAGE", "කියවීමට පණිවිඩ නැත");
+define("READMESSAGES", "කියා වූ පණිවිඩ");
 
+//profileCustomer
+define("YOURRECENTAPPOINTMENTS", "ඔබේ දැන්වීම් පත්වීම්");
 
 
 

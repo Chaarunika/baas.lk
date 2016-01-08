@@ -217,8 +217,21 @@ define("NEWPASSWORD", "New Password");
 define("CONFIRMPASSWORD", "Confirm Password");
 define("CHANGE", "CHANGE");
 
-//findjob
-define("RECENTLYPOSTEDJOBS", "Recently Posted Jobs");
+//list_pm
+define("PERSONALMESSAGES", "Personal messages");
+define("COMPOSENEWMESSAGES", "Compose New Messages");
+define("TITLE", "Title");
+define("UNREADMESSAGES", "Unread Messages");
+define("NOOFREPLIES", "No of Replies");
+define("PARTICIPANT", "Participant");
+define("DATEOFCREATION", "Date of creation");
+define("YOUHAVENOREADMESSAGE", "You have no read message");
+define("READMESSAGES", "Read Messages");
+
+//profileCustomer
+define("YOURRECENTAPPOINTMENTS", "Your Recent Appointments");
+
+
 
 
 

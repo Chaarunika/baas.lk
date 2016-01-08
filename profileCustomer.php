@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
 	<title>baas.lk</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
@@ -48,8 +49,8 @@
 
 <div id="subMenu">
 	<ul class="nav nav-tabs">
-	  	<li role="presentation" class="active"><a href="profileCustomer.php">Overview</a></li>	 	
-	 	<li role="presentation"><a href="list_pm.php">Messages </a></li>
+	  	<li role="presentation" class="active"><a href="profileCustomer.php"><?php echo OVERVIEW ; ?></a></li>	 	
+	 	<li role="presentation"><a href="list_pm.php"><?php echo MESSAGES ; ?> </a></li>
 	</ul>
 </div>
 
@@ -65,8 +66,8 @@
         	}?>
       	</p>    
       	<br>
-        <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
-        <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
+        <p><?php echo MEMBERSINCE ; ?> : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
+        <p><?php echo AREA ; ?> : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       
      	<!--
@@ -78,10 +79,10 @@
     
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
-        <p style="font-size:20px">Contact Details</p>    
-        <p>Contact No : <?php // if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
-        <p>Email : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
-        <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>          
+        <p style="font-size:20px"><?php echo CONTACTDETAILS ; ?></p>    
+        <p><?php echo CONTACTNUMBER ; ?> : <?php // if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
+        <p><?php echo EMAIL  ; ?> : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
+        <p><?php echo ADDRESS ; ?> : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>          
             
         </div>           
     </div>
@@ -89,7 +90,7 @@
     <div id="appointmentBox">
 	
 		 <div id="appointmentBody">
-		<p align='center' style='font-size:30px'>Your RecentAppointments</p><br><br>
+		<p align='center' style='font-size:30px'><?php echo YOURRECENTAPPOINTMENTS ; ?></p><br><br>
 
 		<?php
 		$customer=$_SESSION['userID'];

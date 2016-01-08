@@ -208,6 +208,20 @@ define("NEWPASSWORD", "புதிய கடவுச்சொல்");
 define("CONFIRMPASSWORD", "கடவுச்சொல்லை உறுதிப்படுத்துக");
 define("CHANGE", "மாற்றம்");
 
+//list_pm
+define("PERSONALMESSAGES", "தனிப்பட்ட செய்திகள்");
+define("COMPOSENEWMESSAGES", "புதிய செய்திகள் எழுதவும்");
+define("TITLE", "தலைப்பு");
+define("UNREADMESSAGES", "படிக்காத செய்திகள்");
+define("NOOFREPLIES", "பதில்கள் இல்லை");
+define("PARTICIPANT", "பங்கேற்பாளர்");
+define("DATEOFCREATION", "உருவாக்கிய நாள்");
+define("YOUHAVENOREADMESSAGE", "நீங்கள் எந்த தகவல் படிக்க வேண்டும்");
+define("READMESSAGES", "செய்திகளை வாசி");
+
+//profileCustomer
+define("YOURRECENTAPPOINTMENTS", "உங்கள் சமீபத்திய நியமனங்கள்");
+
 
 
 //define("", "");
