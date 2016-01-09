@@ -4,19 +4,54 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 ?>
 
-<?php include_once ('_database/database.php'); ?>
+<?php 
+if(isset($_SESSION['language'])){
+
+	if($_SESSION['language'] == 'sinhala'){
+		include_once 'translations/si.php' ;
+	}
+
+	else if($_SESSION['language'] == 'tamil'){
+		include_once 'translations/ta.php' ;
+	}
+
+	else if($_SESSION['language'] == 'english')
+	{
+		include_once 'translations/en.php' ;
+	}
+}
+
+else{
+	include_once 'translations/en.php' ;
+} 
+?>
+
+
+<?php 
+include_once ('_database/database.php');
+include_once('functions/translationFunctions.php')
+ ?>
 
 <?php 
 	if( !isset($_GET['SearchButton']))  //Handling error if someone tries loading searchSp.php directly
 		{ 
-			$area = "ANY AREA";
-			$cat =  "ALL";
-
+			$area = ANYAREA;
+			$cat =  ALL ;
 		}   
 
-	else{
+	else{			
+			
 			$area = $_GET["location"];
+			$areaEnglish = $area;
+			$areaSinhala = sinhala_to_english($area);
+			$areaTamil = tamil_to_english($area);
+					
 			$cat = $_GET["category"];
+			$catEnglish = $cat;
+			$catSinhala = sinhala_to_english($cat);
+			$catTamil = tamil_to_english($cat);
+	
+			
 	}
 ?>
 
@@ -24,17 +59,13 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <?php
 
-	if(isset($_GET['SearchBar']) == FALSE)
-	{
+	if(isset($_GET['SearchBar']) == FALSE){
 		$word = "";
 	}
 	else{
 		$word = $_GET['SearchBar'] ;
 	}
 	$_SESSION['tempSearchTerm'] = $word ;
-	
-	
-
 	$_SESSION['tempSearchCategory'] = $cat ;
 	$_SESSION['tempSearchArea'] = $area;
 	
@@ -42,32 +73,32 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
 <?php
-	if($area == "ANY AREA" && $cat == "ALL")
+	if($area == ANYAREA  && $cat ==ALL )
 	{
 		if(1)
 		{
 		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (users.user_id=serviceprovider.user_id)";
 		}
 	}
-	else if($area == "ANY AREA")
+	else if($area == ANYAREA)
 	{
 		if(1)
 		{
-		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (category = '$cat' ) AND (users.user_id=serviceprovider.user_id)";
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (category = '$catEnglish' or category = '$catSinhala' or category = '$catTamil' ) AND (users.user_id=serviceprovider.user_id)";
 		}
 	}
-	else if($cat == "ALL")
+	else if($cat == ALL)
 	{
 		if(1)
 		{
-		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (area = '$area' ) AND (users.user_id=serviceprovider.user_id)";
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (area = '$areaEnglish' or area='$areaSinhala' or area = '$areaTamil') AND (users.user_id=serviceprovider.user_id)";
 		}
 	}
 	else
 	{
 		if(1)
 		{
-		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE (area = '$area' && category = '$cat' ) AND (users.user_id=serviceprovider.user_id)";
+		$query = "SELECT * FROM users CROSS JOIN serviceprovider WHERE ((category = '$catEnglish' or category = '$catSinhala' or category = '$catTamil' ) and (area = '$areaEnglish' or area='$areaSinhala' or area = '$areaTamil') ) AND (users.user_id=serviceprovider.user_id)";
 		}
 	}
 	
@@ -253,16 +284,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	<div id='coverPics'></div>
 	</div>
 
-
 	
-	<?php 
-
-	if (session_status() == PHP_SESSION_NONE) {
-    	session_start();
-	}
-
-?>
-
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 
@@ -343,7 +365,7 @@ if($k !=0)
 
 
 if($i == 0)
-{	echo "<div id=\"apDivResultNull\"> <p>NO RESULTS TO BE DISPLAYED</p></div>";
+{	echo "<div id=\"apDivResultNull\"> <p>".NORESULTS."</p></div>";
 	
 	}
 ?>

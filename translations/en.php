@@ -1,5 +1,6 @@
 <?php
 
+$languageTranslated = "english"
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
@@ -24,6 +25,7 @@ define("JOBS", "JOBS");
 
 
 //searchbar
+define("NORESULTS", "NO RESULTS TO BE DISPLAYED");
 
 //catagory
 
@@ -158,6 +160,7 @@ define("DETAIL", "DETAIL");
 define("OVERVIEW", "Over View");
 define("EDITPROFILE", "Edit Profile");
 define("MESSAGES", "Messages");
+define("MESSAGETAB", "Messages");
 define("MEMBERSINCE", "Member Since");
 define("CATEGORY", "Category");
 define("AREA", "Area");
@@ -252,18 +255,33 @@ define("SEARCHBYAREA", "Search By Area");
 define("SEARCH", "SEARCH");
 define("NOJOBSSEARCHAREA", "Sorry, No Jobs Searched Area.");
 
+//addauctionitem
+define("REALESTATEAUCTION", "Real State Auction");
+define("LANDNAME", "Land Name");
+define("TOWN", "Town");
+define("DESCRIPTION", "Description");
+define("ADDPICTURE", "Add Picture");
+define("UPLOAD", "Upload");
+define("BIDCLOSINGTIME", "Bid Closing Time");
+define("MINIMUMBIDPRICE", "Minimum Bid Price");
+define("CHOOSEFILE", "Choose Photo");
+define("SELECTDATEFROMTHECALENDAR", "Select Date From Calendar");
+define("RS", "Rs");
 
-
+//signup
+define("CREATEYOURBAASACCOUNT", "Create Your Baas.lk Account");
+define("FEDUPWITHFILLINGFORMS", "Fed Up With Filling Form");
+define("TRYEASYSIGNUPSOLUTION", "Try Easy Signup Solution");
+define("CHOOSEYOURUSERNAME", "Choose Your Username");
+define("EMAILADDRESS", "Email Address (verification Required)");
+define("CREATEAPASSWORD", "Create a password (minimun 6 characters)");
+define("CONFIRMYOURPASSWORD", "Confirm your password");
+define("SIGNUP", "SIGNUP");
 
 
 
 
 //define("", "");
-
-
-
-
-
 
 
 /*
@@ -341,6 +359,6 @@ define("WORDING_RESET_PASSWORD", "Reset my password");
 define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
-*/
 
+*/
 ?>

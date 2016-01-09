@@ -37,15 +37,7 @@ $foldername = "Gallery/galleryUploads/".$_SESSION['username']."/";
   </form>
 	
 
-<!--
-  <input type="submit" value="1" name="submit">
-  <form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
--->
-    
+   
   <div id="workPhotos">
   		
   <form  id="uploadform1" enctype="multipart/form-data" method="post" action="upload.php">
