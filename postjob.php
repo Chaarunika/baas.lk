@@ -21,7 +21,7 @@ if(isset($_POST['jobDesc'])){
         //SMS send function
 
          
-             /*
+             
 
         $sql2 = "SELECT DISTINCT contactNo FROM serviceprovider WHERE category='$jobType' AND area='$jobArea' ";
         $result2 = mysqli_query($dbConnection,$sql2);
@@ -32,17 +32,17 @@ if(isset($_POST['jobDesc'])){
             curl_setopt($ch, CURLOPT_URL, "http://baas.lk/serverip.php"); 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
             $output = curl_exec($ch);      
-            curl_close($ch);
-
-            //echo $row['contactNo']."";
+            curl_close($ch);         
 
             $ch = curl_init();   
-            $gatewayURL =    "http://".$output.":9090/sendsms?phone=".$row['contactNo']."&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."%0a"."&password=123456";
-            echo $gatewayURL;
-            curl_setopt($ch, CURLOPT_URL, $gatewayURL); 
+            //$gatewayURL =    "http://".$output.":9090/sendsms?phone=".$row['contactNo']."&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."%0a"."&password=123456";
+            $textitURL = "http://www.textit.biz/sendmsg/index.php?id=94776014365&password=6065&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."&to=".$row['contactNo'];
+            
+            //curl_setopt($ch, CURLOPT_URL, $gatewayURL); 
+            curl_setopt($ch, CURLOPT_URL, $textitURL); 
             $output = curl_exec($ch);          
             curl_close($ch);               
-        }  */
+        }  
      }  
 
      else {

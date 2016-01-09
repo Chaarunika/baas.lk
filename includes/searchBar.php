@@ -10,7 +10,7 @@
       <p class="check">     
         <label>
         <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_0">
-        <?php echo ORDER?></label><br><br>
+        <?php echo ORDER ?></label><br><br>
 
         <!--
         <label>
