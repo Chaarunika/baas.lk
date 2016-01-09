@@ -42,16 +42,48 @@ include_once('functions/translationFunctions.php')
 	else{			
 			
 			$area = $_GET["location"];
-			$areaEnglish = $area;
-			$areaSinhala = sinhala_to_english($area);
-			$areaTamil = tamil_to_english($area);
-					
 			$cat = $_GET["category"];
-			$catEnglish = $cat;
-			$catSinhala = sinhala_to_english($cat);
-			$catTamil = tamil_to_english($cat);
-	
-			
+
+			$areaEnglish= $area;
+			$areaSinhala= $area;
+			$areaTamil = $area;	
+
+			$catEnglish= $cat;
+			$catSinhala= $cat;
+			$catTamil= $cat;
+
+				/*
+			if($languageTranslated=="english"){
+				$areaEnglish= $area;
+				$areaSinhala= english_to_sinhala($area);
+				$areaTamil = english_to_tamil($area);	
+
+				$catEnglish= $cat;
+				$catSinhala= english_to_sinhala($cat);
+				$catTamil= english_to_sinhala($cat);
+			}
+
+			elseif($languageTranslated=="sinhala"){
+				$areaEnglish= sinhala_to_english($area);
+				$areaSinhala= $area;
+				$areaTamil = sinhala_to_tamil($area);	
+
+				$catEnglish= sinhala_to_english($cat);
+				$catSinhala= $cat;
+				$catTamil= sinhala_to_tamil($cat);	
+			}
+
+			else{
+				$areaEnglish= tamil_to_english($area);
+				$areaSinhala= tamil_to_sinhala($area);
+				$areaTamil = $area;	
+
+				$catEnglish= tamil_to_english($cat);
+				$catSinhala= tamil_to_sinhala($cat);
+				$catTamil= $cat;
+
+			}			
+			*/
 	}
 ?>
 
@@ -195,7 +227,7 @@ echo "
 }
 
 ";
-$distance = $distance + 30;
+$distance = $distance + 10;
 }
 
 
@@ -321,7 +353,7 @@ if($k !=0)
 
 		if($word== ""){
 		echo "<div id=\"apDivResultBox{$i}\">";
-		echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
+		echo "<div id=\"apDivResultPic\"> <img src=\"".$row['user_avatar']."\" width=\"40\" height=\"40\" alt=\"facePic\"></div>";
 		echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
 		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
 		if(isset($_SESSION['Catagory'])){
@@ -339,11 +371,11 @@ if($k !=0)
 
 		else{
 
-	  		if(strpos(strtolower($string),strtolower($word))>-1 ){
+	  		if(strpos(strtolower($string),strtolower($word))>-1 ){   
 	   		
 	   		++$found;
 			echo "<div id=\"apDivResultBox{$i}\">";
-			echo "<div id=\"apDivResultPic\"> <img src=\"images/face.png\" width=\"51\" height=\"51\" alt=\"facePic\"></div>";
+			echo "<div id=\"apDivResultPic\"> <img src=\"".$row['user_avatar']."\" width=\"40\" height=\"40\" alt=\"facePic\"></div>";
 			echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
 			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
 			if(isset($_SESSION['Catagory'])){

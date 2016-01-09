@@ -1,6 +1,6 @@
 <?php
 
-$languageTranslated = "english"
+$languageTranslated = "english";
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
@@ -76,6 +76,9 @@ define("RATNAPURA", "Ratnapura");
 define("TRINCOMALEE", "Trincomalee");
 define("VAVUNIYA", "Vavuniya");
 
+//job bar
+define("JOBLOCATION", "Location");
+define("JOBCONTACT","Contact");
 
 //post a job
 define("POSTYOURJOB", "Post Your Job");
