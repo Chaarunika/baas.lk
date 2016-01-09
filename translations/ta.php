@@ -265,6 +265,17 @@ define("SELECTDATEFROMTHECALENDAR", "இலிருந்து தேதிய
 define("RS", "ரூ");
 
 
+//signup
+define("CREATEYOURBAASACCOUNT", "உங்கள் Baas.lk கணக்கு உருவாக்");
+define("FEDUPWITHFILLINGFORMS", "படிவம் பூர்த்தி அலுத்து");
+define("TRYEASYSIGNUPSOLUTION", "தீர்வு செய்");
+define("CHOOSEYOURUSERNAME", "உங்கள் பயனர் பெயர் தேர்வு");
+define("EMAILADDRESS", "மின்னஞ்சல் முகவரி (சரிபார்த்தல் தேவை)");
+define("CREATEAPASSWORD", "கடவுச்சொல்லை உருவாக்குக (குறைந்தபட்ச 6 எழுத்துக்கள்)");
+define("CONFIRMYOURPASSWORD", "உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்");
+define("SIGNUP", "பதிவு");
+
+
 //define("", "");
 
 

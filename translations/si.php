@@ -254,6 +254,16 @@ define("CHOOSEFILE", "පින්තුරය තෝරන්න");
 define("SELECTDATEFROMTHECALENDAR", "දින දර්ශනයෙන් දිනය තෝරන්න");
 define("RS", "රු");
 
+//signup
+define("CREATEYOURBAASACCOUNT", "ඔබේ Baas.lk ගිණුමක් නිර්මාණය කරන්න");
+define("FEDUPWITHFILLINGFORMS", "පෝරම පුරවලා එපා වෙලාද ");
+define("TRYEASYSIGNUPSOLUTION", "පභසුවෙන් SIGNUP වෙන්න ");
+define("CHOOSEYOURUSERNAME", "ඔයාගේ පරිශීලක නාමය ඇතුලත් කරන්න");
+define("EMAILADDRESS", "විද්යුත් තැපැල් ලිපිනය (තහවුරු අත්යාවශ්යයි)");
+define("CREATEAPASSWORD", "මුර පදයක් දෙන්න (අවම අකුරු 6)");
+define("CONFIRMYOURPASSWORD", "ඔබගේ මුරපදය තහවුරු කරන්න");
+define("SIGNUP", "ලියාපදිංචි වන්න");
+
 
 define("PASSWORD_WRONG", "මුරපදය වැරදියි");
 define("ACCOUNT_NOT_ACTIVATED", "ඔබගේ ගිණුම තවමත් සක්‍රීය වී නැත. ඊ-මේල්යෙ තහවුරු කිරීමේ සම්බන්ධතාවය මත ක්ලික් කරන්න.");

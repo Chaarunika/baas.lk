@@ -271,12 +271,23 @@ define("CHOOSEFILE", "Choose Photo");
 define("SELECTDATEFROMTHECALENDAR", "Select Date From Calendar");
 define("RS", "Rs");
 
+//signup
+define("CREATEYOURBAASACCOUNT", "Create Your Baas.lk Account");
+define("FEDUPWITHFILLINGFORMS", "Fed Up With Filling Form");
+define("TRYEASYSIGNUPSOLUTION", "Try Easy Signup Solution");
+define("CHOOSEYOURUSERNAME", "Choose Your Username");
+define("EMAILADDRESS", "Email Address (verification Required)");
+define("CREATEAPASSWORD", "Create a password (minimun 6 characters)");
+define("CONFIRMYOURPASSWORD", "Confirm your password");
+define("SIGNUP", "SIGNUP");
+
+
 
 
 //define("", "");
 
 
-
+/*
 define("PASSWORD_WRONG", "Password is wrong");
 define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
 
@@ -352,5 +363,5 @@ define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
 
-
+*/
 ?>
