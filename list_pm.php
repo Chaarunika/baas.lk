@@ -6,6 +6,7 @@ include('config.php');
     <head>
     	<title>baas.lk</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>baas.lk</title>
         <link href="css/chat.css" rel="stylesheet" title="Style" />
         <title> <?php echo PERSONALMESSAGES ; ?></title>
 		<link href="css/header.css" rel="stylesheet">

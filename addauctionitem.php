@@ -146,6 +146,12 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 .tg .tg-yw4l{vertical-align:top}
 .tg .tg-b7b8{background-color:#f9f9f9;vertical-align:top}
 
+#addLandDisplayTable{
+  position: absolute;
+  left: 750px;
+  top:200px;
+}
+
 </style>
 
 
