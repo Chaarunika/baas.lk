@@ -1,3 +1,4 @@
+
 <?php
 
 //login
@@ -81,7 +82,7 @@ define("POSTYOURJOB", "உங்கள் வேலை பதிவு");
 define("SELECTJOBTYPE", "வாடிக்கையாளர்களின் வகை தேர்ந்தெடுக்கவும்");
 define("SELECTAREA", "பகுதி தேர்ந்தெடு");
 define("JOBDESCRIPTION", "தேவை விளக்கம்");
-define("ADDRESS", "முகவரி");
+define("JOBADDRESS", "முகவரி");
 define("CONTACTNUMBER", "தொலைபேசி எண்");
 define("POSTJOB", "போஸ்ட்");
 define("ENTERSHORTDESCRIPTION", "உங்கள் வேலை பற்றி குறுகிய விளக்கம் சேர்க்கவும் ...");
@@ -131,8 +132,7 @@ define("DISCUSSION", "கலந்துரையாடல்");
 define("STARTEDBY", "மூலம் தொடங்கியது");
 define("VIEWS", "பார்வைகள்");
 define("REPLIES", "பதிலும்");
-define("DATE", "தேதி");
-define("TIME", " மற்றும் நேரம்");
+define("DATEANDTIME", "தேதி மற்றும் நேரம்");
 
 //view topic
 define("ANSWER", "பதிலும்");

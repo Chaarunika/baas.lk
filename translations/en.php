@@ -80,7 +80,7 @@ define("POSTYOURJOB", "Post Your Job");
 define("SELECTJOBTYPE", "Select Job Type");
 define("SELECTAREA", "Select Area");
 define("JOBDESCRIPTION", "Job Description");
-define("ADDRESS", "Address");
+define("JOBADDRESS", "Address");
 define("CONTACTNUMBER", "Contact Number");
 define("POSTJOB", "Post Job");
 define("ENTERSHORTDESCRIPTION", "Enter Short Description about your job...");
@@ -141,8 +141,7 @@ define("DISCUSSION", "Discussion");
 define("STARTEDBY", "Started By");
 define("VIEWS", "Views");
 define("REPLIES", "Replies");
-define("DATE", "Date");
-define("TIME", " & Time");
+define("DATEANDTIME", "Date & Time");
 
 //view topic
 define("ANSWER", "Answer");

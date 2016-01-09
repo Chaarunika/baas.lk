@@ -120,7 +120,7 @@ if(isset($_POST['jobDesc'])){
             <label> <?php echo JOBDESCRIPTION; ?> </label>            
             <textarea class='jobText' placeholder="<?php echo ENTERSHORTDESCRIPTION ; ?>" name ="jobDesc" maxlength="150" required></textarea>
             <br><br>
-            <label> <?php echo ADDRESS ; ?></label>
+            <label> <?php echo JOBADDRESS ; ?></label>
             <textarea class='jobText' name = "jobAddress" placeholder="<?php echo ENTERADDRESS ; ?>" required></textarea>
             <br><br>
             <label> <?php echo CONTACTNUMBER ; ?> </label>

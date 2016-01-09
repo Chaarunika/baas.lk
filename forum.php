@@ -117,11 +117,11 @@ $word = str_replace(' ','',$word);
 <td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="<?php echo ADDNEWTOPIC ; ?>"></form></td>
 </tr>
 <tr>
-<td width="30%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
-<td width="30%" align="center" bgcolor="#999"><strong>Started by</strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong>Views</strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong>Replies</strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong>Date/Time</strong></td>
+<td width="30%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
+<td width="30%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
 </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -215,7 +215,7 @@ $bgcolor="";
 <td width="30%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
 <td width="15%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
 <td width="15%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo DATE ; ?><?php echo TIME ; ?> </strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
 </tr>
  
 <?php
