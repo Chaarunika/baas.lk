@@ -195,9 +195,10 @@ echo "
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	width: 49px;
-	height: 38px;
+	width: 40px;
+	height: 40px;
 	z-index: 2;
+	border: 3px solid rgba(153,153,153,1);
 }
 #apDivResultName{$i}  {
 	position: absolute;
