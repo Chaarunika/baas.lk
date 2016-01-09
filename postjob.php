@@ -21,7 +21,7 @@ if(isset($_POST['jobDesc'])){
         //SMS send function
 
          
-             
+             /*
 
         $sql2 = "SELECT DISTINCT contactNo FROM serviceprovider WHERE category='$jobType' AND area='$jobArea' ";
         $result2 = mysqli_query($dbConnection,$sql2);
@@ -42,8 +42,8 @@ if(isset($_POST['jobDesc'])){
             curl_setopt($ch, CURLOPT_URL, $gatewayURL); 
             $output = curl_exec($ch);          
             curl_close($ch);               
-        }
-     } 
+        }  */
+     }  
 
      else {
     echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);

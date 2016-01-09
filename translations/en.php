@@ -1,5 +1,5 @@
 <?php
-echo "translation_english";
+
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
