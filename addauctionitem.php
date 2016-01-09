@@ -161,50 +161,50 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 <?php include ('header.php') ; ?>
 
 <div id="apDiv1" >
-  <p style="text-align:center ;font-size:18px">Real Estate Auction</p>
+  <p style="text-align:center ;font-size:18px"><?php echo REALESTATEAUCTION ; ?> </p>
 
   <form action="addauctionitem.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
 
-    <label>Land Name</label><br>
+    <label><?php echo LANDNAME ; ?> </label><br>
     <input type="text" name="item" id="item" class="addAucSelectInput" required><br><br>
 
-    <label>Town</label><br>
+    <label><?php echo TOWN ; ?></label><br>
     <select name=town class="addAucSelect" >
-      <option value="Colombo">Colombo</option>
-      <option value="Kandy">Kandy</option>
-      <option value="Galle">Galle</option>
-      <option value="Ampara">Ampara</option>
-      <option value="Anuradhapura">Anuradhapura</option>
-      <option value="Badulla">Badulla</option>
-      <option value="Batticaloa">Batticaloa</option>
-      <option value="Gampaha">Gampaha</option>
-      <option value="Hambantota">Hambantota</option>
-      <option value="Jaffna">Jaffna</option>
-      <option value="Kalutara">Kalutara</option>
-      <option value="Kegalle">Kegalle</option>
-      <option value="Kilinochchi">Kilinochchi</option>
-      <option value="Kurunegala">Kurunegala</option>
-      <option value="Mannar">Mannar</option>
-      <option value="Matale">Matale</option>
-      <option value="Matara">Matara</option>
-      <option value="Moneragala">Moneragala</option>
-      <option value="Mullativu">Mullativu</option>
-      <option value="Nuwara Eliya">Nuwara Eliya</option>
-      <option value="Polonnaruwa">Polonnaruwa</option>
-      <option value="Puttalam">Puttalam</option>
-      <option value="Ratnapura">Ratnapura</option>
-      <option value="Trincomalee">Trincomalee</option>
-      <option value="Vavuniya">Vavuniya</option>
+      <option value="Colombo"><?php echo COLOMBO ; ?></option>
+      <option value="Kandy"><?php echo KANDY; ?></option>
+      <option value="Galle"><?php echo KURUNEGALA ; ?></option>
+      <option value="Ampara"><?php echo AMPARA ; ?></option>
+      <option value="Anuradhapura"><?php echo ANURA ; ?></option>
+      <option value="Badulla"><?php echo BADULLA ; ?></option>
+      <option value="Batticaloa"><?php echo BATTICALOA ; ?></option>
+      <option value="Gampaha"><?php echo GALLE ; ?></option>
+      <option value="Hambantota"><?php echo GAMPAHA ; ?></option>
+      <option value="Jaffna"><?php echo HAMBANTOTA ; ?></option>
+      <option value="Kalutara"><?php echo JAFFNA ; ?></option>
+      <option value="Kegalle"><?php echo KALUTARA ; ?></option>
+      <option value="Kilinochchi"><?php echo KEGALLE ; ?></option>
+      <option value="Kurunegala"><?php echo KILINOCHCHI ; ?></option>
+      <option value="Mannar"><?php echo MANNAR ; ?></option>
+      <option value="Matale"><?php echo MATALE ; ?></option>
+      <option value="Matara"><?php echo MATARA ; ?></option>
+      <option value="Moneragala"><?php echo MONERAGALA ; ?></option>
+      <option value="Mullativu"><?php echo MULLITIVU ; ?></option>
+      <option value="Nuwara Eliya"><?php echo NUWARAELIYA ; ?></option>
+      <option value="Polonnaruwa"><?php echo POLONNARUWA ; ?></option>
+      <option value="Puttalam"><?php echo PUTTALAMA ; ?></option>
+      <option value="Ratnapura"><?php echo RATNAPURA ; ?></option>
+      <option value="Trincomalee"><?php echo TRINCOMALEE ; ?></option>
+      <option value="Vavuniya"><?php echo VAVUNIYA ; ?></option>
     </select><br><br>
 
-    <label>Description</label><br>
+    <label><?php echo DESCRIPTION ; ?></label><br>
     <textarea name="description" id="description" class="addAucSelectText" cols="45" rows="5" style="font-family:Arial, sans-serif;" required></textarea><br><br>
    
-    <label>Add Picture</label><br>
+    <label><?php echo ADDPICTURE ; ?></label><br>
 
-    <input id="uploadFile" placeholder="Choose File" style="width:50%;border: 1px solid rgba(240,240,1,1)" disabled="disabled" />
+    <input id="uploadFile" placeholder="<?php echo CHOOSEFILE ; ?>" style="width:50%;border: 1px solid rgba(240,240,1,1)" disabled="disabled" />
         <div class="fileUpload btn btn-primary">
-          <span>Upload</span>
+          <span><?php echo UPLOAD ; ?></span>
           <input id="uploadBtn" name="fileField" type="file" class="upload" />
         </div>
 
@@ -215,20 +215,20 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     </script>
     <br>   
 
-    <label>Bid Closing Time</label><br>
-    <input placeholder="Select date from the calendar" name="closingtime" id="demo3" class="addAucSelectInput" style="width:50%"  readonly  required>
+    <label><?php echo BIDCLOSINGTIME ; ?></label><br>
+    <input placeholder="<?php echo SELECTDATEFROMTHECALENDAR ; ?>" name="closingtime" id="demo3" class="addAucSelectInput" style="width:50%"  readonly  required>
     <a href="javascript:NewCal('demo3','mmmddyyyy',true,12)">
         <img src="pics/cal.png" width="50" height="50" border="0" alt="Pick a date" style="margin-left:10px">
     </a><br><br>
 
-    <label>Minimum Bid price</label><br>
+    <label><?php echo MINIMUMBIDPRICE ; ?></label><br>
     <div class="input-group">
-      <span class="input-group-addon" >Rs.</span>
+      <span class="input-group-addon" ><?php echo RS ; ?>.</span>
         <input type="number" name="minimumbid" required min=0 class="form-control" style="border: 1px solid rgba(240,240,1,1)"  aria-label="Amount (to the nearest dollar)">
       <span class="input-group-addon">.00</span>
     </div>
 
-    <input type="submit" name="button" id="button" class="addAucSelectButton" value="Submit" style="font-family:Arial, sans-serif;"/>  
+    <input type="submit" name="button" id="button" class="addAucSelectButton" value="<?php echo SAVE ; ?>" style="font-family:Arial, sans-serif;"/>  
 
   </form>
 </div>

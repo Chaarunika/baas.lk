@@ -252,9 +252,18 @@ define("SEARCHBYAREA", "Search By Area");
 define("SEARCH", "SEARCH");
 define("NOJOBSSEARCHAREA", "Sorry, No Jobs Searched Area.");
 
-
-
-
+//addauctionitem
+define("REALESTATEAUCTION", "Real State Auction");
+define("LANDNAME", "Land Name");
+define("TOWN", "Town");
+define("DESCRIPTION", "Description");
+define("ADDPICTURE", "Add Picture");
+define("UPLOAD", "Upload");
+define("BIDCLOSINGTIME", "Bid Closing Time");
+define("MINIMUMBIDPRICE", "Minimum Bid Price");
+define("CHOOSEFILE", "Choose Photo");
+define("SELECTDATEFROMTHECALENDAR", "Select Date From Calendar");
+define("RS", "Rs");
 
 
 
@@ -262,11 +271,6 @@ define("NOJOBSSEARCHAREA", "Sorry, No Jobs Searched Area.");
 
 
 
-
-
-
-
-/*
 define("PASSWORD_WRONG", "Password is wrong");
 define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
 
@@ -341,6 +345,6 @@ define("WORDING_RESET_PASSWORD", "Reset my password");
 define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
-*/
+
 
 ?>

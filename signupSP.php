@@ -19,7 +19,6 @@
 	require_once('_database/database.php');
     require_once('libraries/password_compatibility_library.php');
 	require_once('config/configSP.php');	
-	require_once('translations/en.php');
 	require_once('libraries/PHPMailer.php');
 	require_once('classes/RegistrationSP.php');
 
