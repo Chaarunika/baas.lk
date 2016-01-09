@@ -4,6 +4,7 @@ include('config.php');
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+    	<title>baas.lk</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="css/chat.css" rel="stylesheet" title="Style" />
         <title> <?php echo PERSONALMESSAGES ; ?></title>
@@ -52,7 +53,7 @@ include('config.php');
 					echo "<li role=\"presentation\"><a href=\"spProfEdit.php\">Edit Profile</a></li>";
 				}
 				else{
-					echo "<li role=\"presentation\"><a href=\"profileCustomer.php\">Overview</a></li>";
+					echo "<li role=\"presentation\"><a href=\"profileCustomer.php\">". OVERVIEW ."</a></li>";
 				}
 			  	
 			 	
@@ -103,7 +104,7 @@ if(intval(mysql_num_rows($req1))==0)
 <h3><?php echo READMESSAGES ; ?>(<?php echo intval(mysql_num_rows($req2)); ?>):</h3>
 <table>
 	<tr>
-    	<th class="title_cell">Title</th>
+    	<th class="title_cell"><?php echo TITLE ; ?></th>
         <th><?php echo NOOFREPLIES ; ?></th>
         <th><?php echo PARTICIPANT ; ?></th>
         <th><?php echo DATEOFCREATION ; ?></th>

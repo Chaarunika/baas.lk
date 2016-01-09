@@ -52,19 +52,19 @@
 		while($row = $result2 -> fetch_assoc()){
 			echo $row['job_description'];
 			echo "<br>";
-			echo "TP : ";
+			echo TP ." : ";
 			echo $row['tel_num'];
 			echo "<br>";
-			echo "Address : ";
+			echo ADDRESS ." : ";
 			echo $row['address'];
 			echo "<br>";
 			$t = preg_split("/(?<=\w)\b\s*/", $row["time"]);
-			echo "Posted Date : ";
+			echo POSTEDDATE." : ";
 			echo $t[0];
 			echo $t[1];
 			echo $t[2];
 			echo "<br>";
-			echo "Posted Time : ";
+			echo POSTEDTIME." : ";
 			echo $t[3];
 			echo $t[4];
 			echo $t[5];

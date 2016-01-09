@@ -19,7 +19,7 @@ if(isset($_POST['jobDesc'])){
     echo "New record created successfully";
 
         //SMS send function
-
+        /*
          
              
 
@@ -42,7 +42,7 @@ if(isset($_POST['jobDesc'])){
             curl_setopt($ch, CURLOPT_URL, $gatewayURL); 
             $output = curl_exec($ch);          
             curl_close($ch);               
-        }
+        }  */
      } 
 
      else {

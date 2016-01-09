@@ -133,6 +133,7 @@ define("STARTEDBY", "மூலம் தொடங்கியது");
 define("VIEWS", "பார்வைகள்");
 define("REPLIES", "பதிலும்");
 define("DATEANDTIME", "தேதி மற்றும் நேரம்");
+define("NOTFOUND","கிடைக்கவில்லை.");
 
 //view topic
 define("ANSWER", "பதிலும்");
@@ -221,8 +222,27 @@ define("READMESSAGES", "செய்திகளை வாசி");
 
 //profileCustomer
 define("YOURRECENTAPPOINTMENTS", "உங்கள் சமீபத்திய நியமனங்கள்");
+define("YOUHAVENOAPPOINMENTSTOSHOW","நீங்கள் காட்ட இல்லை நியமனங்கள் வேண்டும்.");
 
+//new_pm
+define("NEWMESSAGE", "புதிய செய்தி");
+define("RECIPIENT", "பெறுநர்");
+define("USERNAME", "பயனர் பெயர்");
+define("MESSAGE", "செய்தி");
+define("SEND", "அனுப்பவும்");
+define("GOTOMYPERSONALMESSAGES", "என்னுடைய தனிப்பட்ட செய்திகளுக்கு செல்க");
+define("THEMESSAGESENDSUCCESSFULLY", "சேதி வெற்றிகரமாக அனுப்பப்பட்டது.");
 
+//findjob
+define("RECENTLYPOSTEDJOBS", "சமீபத்தில் இட்ட வேலைகள்");
+define("CUSTOMERNAME", "வாடிக்கையாளர் பெயர்");
+define("TP", "தேள்");
+define("POSTEDDATE", "பிரசுரித்த திகதி");
+define("POSTEDTIME", "நேரம் வெளியிடப்பட்ட");
+define("FINDJOBS", "வேலை தேடல்");
+define("SEARCHBYAREA", "பிராந்தியம் மூலம் தேடல்");
+define("SEARCH", "தேடல்");
+define("NOJOBSSEARCHAREA", "நீங்கள் வேலை பார்த்து.");
 
 //define("", "");
 

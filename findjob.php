@@ -21,7 +21,7 @@
 	background: rgba(255,255,255,0.5);
 	float:right;
 	font-family:Verdana, Geneva, sans-serif;	
-	font-style:oblique;
+	
 	border-radius:20px;
 }
 #b1{
@@ -33,8 +33,7 @@
 	float:left;
 	background:rgba(51,51,51,0.2);
 	//background-color:#BA812C;
-	border-bottom-style:dotted;
-	border-top-style:dotted;
+
 	}
 #b3{
 	width:600px;
@@ -45,23 +44,19 @@
 #a4{
 	width:600px;
 	//background:#FF3;
-	border-bottom-style:dotted;
-	border-top-style:dotted;
+
 	}
 #a5{
 	width:600px;
 	//background:#FF3;
-	border-bottom-style:dotted;
-	border-top-style:dotted;
+
 	}
 #a6{
 	width:600px;
 	float:right;
 	//background-color:#FF3;
 	border-color:#900;
-	border-bottom-style:dotted;
-	border-top-style:dotted;
-	border-left-style:dotted;
+
 	}
 .find{
 	background-color:#F90;
@@ -98,9 +93,11 @@
 </head>
 
 <body >
+
+	<?php include 'header.php'; ?>
 <div id ="jobLogo"> 
 <center>
-    <h2> Recently Posted Jobs </h2>
+    <h2><?php echo RECENTLYPOSTEDJOBS ; ?> </h2>
     <center>
     <?php
 	$conn = new MySQLi("localhost","root","","baaslk");
@@ -113,22 +110,22 @@
 		while($row = $result2 -> fetch_assoc()){
 			echo $row['job_description'];
 			echo "<br>";
-			echo "customer name : ";
+			echo CUSTOMERNAME." : ";
 			echo $row['username'];
 			echo "<br>";
-			echo "TP : ";
+			echo TP." : ";
 			echo $row['tel_num'];
 			echo "<br>";
-			echo "Address : ";
+			echo ADDRESS." : ";
 			echo $row['address'];
 			echo "<br>";
 			$t = preg_split("/(?<=\w)\b\s*/", $row["time"]);
-			echo "Posted Date : ";
+			echo POSTEDDATE ." : ";
 			echo $t[0];
 			echo $t[1];
 			echo $t[2];
 			echo "<br>";
-			echo "Posted Time : ";
+			echo POSTEDTIME." : ";
 			echo $t[3];
 			echo $t[4];
 			echo $t[5];
@@ -149,46 +146,46 @@
 
 
 </div>
-<?php include 'header.php'; ?>
+
 <div id = "mainm">
 <div id="main">
 	<div id = "b1">
-	<center><h2> Find Jobs </h2></center>
+	<center><h2><?php echo FINDJOBS ; ?> </h2></center>
     <br>
     </div>
     <div id="b2">
     <form action="" method="POST">
     <center>
     <br>
-    Search Area <select name= "search" class="area"> 
-    <option>Colombo</option>
-    <option>Kandy</option>
-    <option>Kurunegala</option>
-    <option>Ampara</option>
-    <option>Anuradhapura</option>
-    <option>Badulla</option>
-    <option>Batticaloa</option>
-    <option>Galle</option>
-    <option>Gampaha</option>
-    <option>Hambantota</option>
-    <option>Jaffna</option>
-    <option>Kalutara</option>
-    <option>Kegalle</option>
-    <option>Kilinochchi</option>
-    <option>Mannar</option>
-    <option>Matale</option>
-    <option>Matara</option>
-    <option>Moneragala</option>
-    <option>Mullaitivu</option>
-    <option>Nuwara Eliya</option>
-    <option>Polonnaruwa</option>
-    <option>Puttalam</option>
-    <option>Ratnapura</option>
-    <option>Trincomalee</option>
-    <option>Vavuniya</option>
+    <?php echo SEARCHBYAREA ; ?> <select name= "search" class="area"> 
+    		<option><?php echo COLOMBO ; ?></option>
+            <option><?php echo KANDY; ?></option>
+            <option><?php echo KURUNEGALA ; ?></option>
+            <option><?php echo AMPARA ; ?></option>
+            <option><?php echo ANURA ; ?></option>
+            <option><?php echo BADULLA ; ?></option>
+            <option><?php echo BATTICALOA ; ?></option>
+            <option><?php echo GALLE ; ?></option>
+            <option><?php echo GAMPAHA ; ?></option>
+            <option><?php echo HAMBANTOTA ; ?></option>
+            <option><?php echo JAFFNA ; ?></option>
+            <option><?php echo KALUTARA ; ?></option>
+            <option><?php echo KEGALLE ; ?></option>
+            <option><?php echo KILINOCHCHI ; ?></option>
+            <option><?php echo MANNAR ; ?></option>
+            <option><?php echo MATALE ; ?></option>
+            <option><?php echo MATARA ; ?></option>
+            <option><?php echo MONERAGALA ; ?></option>
+            <option><?php echo MULLITIVU ; ?></option>
+            <option><?php echo NUWARAELIYA ; ?></option>
+            <option><?php echo POLONNARUWA ; ?></option>
+            <option><?php echo PUTTALAMA ; ?></option>
+            <option><?php echo RATNAPURA ; ?></option>
+            <option><?php echo TRINCOMALEE ; ?></option>
+            <option><?php echo VAVUNIYA ; ?></option>
     </select>
     
-    <input type= "submit" name="find" value="FIND" class = "find">
+    <input type= "submit" name="find" value="<?php echo SEARCH ; ?>" class = "find">
     </center>
     </div>
     <div id = "b3"> <center>
@@ -201,25 +198,25 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 if($result -> num_rows >0){
 	echo "<br><br>";
 	while($row = $result-> fetch_assoc()){
-		echo "Description : ";
+		//echo "Description : ";
 		echo $row["job_description"];
 		echo "<br><br>";
-		echo "Customer Name : ";
+		echo CUSTOMERNAME ." : ";
 		echo $row["username"];
 		echo "<br><br>";
-		echo "Address : ";
+		echo ADDRESS." : ";
 		echo $row["address"];
 		echo "<br><br>";
-		echo "Tel No : ";
+		echo TP." : ";
 		echo $row["tel_num"];
 		echo "<br><br>";
 		$t = preg_split("/(?<=\w)\b\s*/", $row["time"]);
-		echo "Posted Date : ";
+		echo POSTEDDATE." : ";
 		echo $t[0];
 		echo $t[1];
 		echo $t[2];
 		echo "<br><br>";
-		echo "Posted Time : ";
+		echo POSTEDTIME." : ";
 		echo $t[3];
 		echo $t[4];
 		echo $t[5];
@@ -227,7 +224,7 @@ if($result -> num_rows >0){
 		echo "<hr>";
 		}
 }else{
-	echo " Sorry, No jobs your searched area. ";
+	echo NOJOBSSEARCHAREA;
 	}
 $conn -> close();
 	//echo "Successfully";
