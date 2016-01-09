@@ -16,7 +16,7 @@ define("FORGOT_MY_PASSWORD", "எனது கடவுச்சொல்ல�
 //header
 
 
-define("THEBESTWAY", "ஒரு  கட்டடம்  கண்டுபிடிக்க  சிறந்த  வழி");
+define("THEBESTWAY", "ஒரு  கட்டடம்  கண்டுபிடிக்க  சிறந்த...");
 define("HOME", "முகப்பு");
 define("WIKI", "விக்கி");
 define("FAQ", "கேள்விகள்");
@@ -248,6 +248,20 @@ define("SEARCHBYAREA", "பிராந்தியம் மூலம் தே
 define("SEARCH", "தேடல்");
 define("NOJOBSSEARCHAREA", "நீங்கள் வேலை பார்த்து.");
 
+//addauctionitem
+define("REALESTATEAUCTION", "சொத்து விற்பனை");
+define("LANDNAME", "மனை பெயர்");
+define("TOWN", "டவுன்");
+define("DESCRIPTION", "விளக்கம்");
+define("ADDPICTURE", "படம் சேர்க்கவும்");
+define("UPLOAD", "பதிவேற்று");
+define("BIDCLOSINGTIME", "ஏலம் நிறைவு நேரம்");
+define("MINIMUMBIDPRICE", "குறைந்தபட்ச முயற்சியில் விலை");
+define("CHOOSEFILE", "படம் தேர்வு");
+define("SELECTDATEFROMTHECALENDAR", "இலிருந்து தேதியைத் தேர்ந்தெடு");
+define("RS", "ரூ");
+
+
 //define("", "");
 
 
@@ -256,25 +270,25 @@ define("NOJOBSSEARCHAREA", "நீங்கள் வேலை பார்த�
 
 
 
-/*
-define("PASSWORD_WRONG", "Password is wrong");
-define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
 
-define("MESSAGE_CAPTCHA_WRONG", "Captcha was wrong!");
-define("MESSAGE_COOKIE_INVALID", "Invalid cookie");
-define("MESSAGE_DATABASE_ERROR", "Database connection problem.");
-define("MESSAGE_EMAIL_ALREADY_EXISTS", "This email address is already registered. Please use the \"I forgot my password\" page if you don't remember it.");
-define("MESSAGE_EMAIL_CHANGE_FAILED", "Sorry, your email changing failed.");
-define("MESSAGE_EMAIL_CHANGED_SUCCESSFULLY", "Your email address has been changed successfully. New email address is ");
-define("MESSAGE_EMAIL_EMPTY", "Email cannot be empty");
-define("MESSAGE_EMAIL_INVALID", "Your email address is not in a valid email format");
-define("MESSAGE_EMAIL_SAME_LIKE_OLD_ONE", "Sorry, that email address is the same as your current one. Please choose another one.");
-define("MESSAGE_EMAIL_TOO_LONG", "Email cannot be longer than 64 characters");
-define("MESSAGE_LINK_PARAMETER_EMPTY", "Empty link parameter data.");
-define("MESSAGE_LOGGED_OUT", "You have been logged out.");
+define("PASSWORD_WRONG", "கடவுச்சொல் தவறு");
+define("ACCOUNT_NOT_ACTIVATED", "உங்கள் கணக்கு இன்னும் இயக்கப்படவில்லை. மெயில் உறுதி இணைப்பை கிளிக் செய்து.");
+
+define("MESSAGE_CAPTCHA_WRONG", "அப்பாவி தவறு.!");
+define("MESSAGE_COOKIE_INVALID", "தவறான குக்கீ");
+define("MESSAGE_DATABASE_ERROR", "தரவுத்தள இணைப்பு பிரச்சினை.");
+define("MESSAGE_EMAIL_ALREADY_EXISTS", "இந்த மின்னஞ்சல் முகவரி ஏற்கனவே பதிவு. தயவு செய்து \"எனது கடவுச்சொல்லை மறந்துவிட்டேன்\" பக்கம் நீங்கள் அதை நினைவில் இல்லை என்றால்.");
+define("MESSAGE_EMAIL_CHANGE_FAILED", "மன்னிக்கவும், உங்கள் மின்னஞ்சல் தோல்வி.");
+define("MESSAGE_EMAIL_CHANGED_SUCCESSFULLY", "உங்கள் மின்னஞ்சல் முகவரியை வெற்றிகரமாக மாற்றப்பட்டுள்ளது. புதிய மின்னஞ்சல் முகவரி ");
+define("MESSAGE_EMAIL_EMPTY", "மின்னஞ்சல் காலியாக இருக்க முடியாது");
+define("MESSAGE_EMAIL_INVALID", "உங்கள் மின்னஞ்சல் முகவரியை ஒரு செல்லுபடியாகும் மின்னஞ்சல் வடிவத்தில் இல்லை");
+define("MESSAGE_EMAIL_SAME_LIKE_OLD_ONE", "மன்னிக்கவும், மின்னஞ்சல் முகவரி, தற்போதைய ஒரு அதே தான். மற்றொன்றைத் தேர்ந்தெடுக்கவும்.");
+define("MESSAGE_EMAIL_TOO_LONG", "மின்னஞ்சல் இனி விட 64 எழுத்துகள் இருக்க முடியாது");
+define("MESSAGE_LINK_PARAMETER_EMPTY", "வெற்று இணைப்பு அளவுரு தரவு.");
+define("MESSAGE_LOGGED_OUT", "நீங்கள் வெளியேற்றப்படுவீர்கள்.");
 // The "login failed"-message is a security improved feedback that doesn't show a potential attacker if the user exists or not
-define("MESSAGE_LOGIN_FAILED", "Login failed.");
-define("MESSAGE_OLD_PASSWORD_WRONG", "Your OLD password was wrong.");
+define("MESSAGE_LOGIN_FAILED", "புகுபதிகை தவறியது.");
+define("MESSAGE_OLD_PASSWORD_WRONG", "உங்கள் பழைய கடவுச்சொல்லை தவறு.");
 define("MESSAGE_PASSWORD_BAD_CONFIRM", "Password and password repeat are not the same");
 define("MESSAGE_PASSWORD_CHANGE_FAILED", "Sorry, your password changing failed.");
 define("MESSAGE_PASSWORD_CHANGED_SUCCESSFULLY", "Password successfully changed!");
@@ -331,4 +345,3 @@ define("WORDING_RESET_PASSWORD", "Reset my password");
 define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
-*/
