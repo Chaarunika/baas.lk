@@ -127,7 +127,6 @@ define("ENTERYOURQUESTION", "உங்கள் கேள்வி சேர்�
 
 //forum
 define("ADDNEWTOPIC", "புதிய தலைப்பை சேர்க்க");
-define("ADDNEWTOPIC", "අලුත් මාතෘකාව එක් කරන්න");
 define("DISCUSSION", "கலந்துரையாடல்");
 define("STARTEDBY", "மூலம் தொடங்கியது");
 define("VIEWS", "பார்வைகள்");
@@ -137,6 +136,91 @@ define("TIME", " மற்றும் நேரம்");
 
 //view topic
 define("ANSWER", "பதிலும்");
+define("BACKTOFORUM", "ஜோேஹ");
+define("RE", "பதிலும்");
+define("ENTERYOURANSWER", "மநவலத லகதஸ கரத பேநல");
+
+
+//new topic
+define("TOPIC", "தலைப்பை");
+define("DETAIL", "நகவஸகத");
+
+//profile
+define("OVERVIEW", "நமெந்");
+define("EDITPROFILE", "லநலஸஸ");
+define("MESSAGES", "ஹரரேர");
+define("MEMBERSINCE", "ஸம்க வகேர");
+define("CATEGORY", " நேநவ");
+define("AREA", "லநகபேம");
+define("CONTACTDETAILS", "மஸகேகத நகவஸகத");
+define("EMAIL", "பில்ல");
+define("ADDRESS", "மநவவவல");
+define("OPTIONALCONTACTNO", "லலஸ நமநவ லபபவல");
+define("OPTIONALEMAIL", "லலஸ பில்ல");
+define("ABOUTUS", "ஜஸம தத்மய");
+define("WORKHISTORY", "மோே ஸநிம");
+
+//spProfEdit
+define("EDITBASICINFORMATION", "மஸம மவக மநஸலஸ");
+define("EDITYOURCONTACTDETAILS", "ஸககோ மஸெஸ");
+define("EDITYOURWORKINFORMATION", "ஸக்க ஸெஸக");
+define("PASSWORDCHANGE", "நகரக மஸோ");
+
+//apDivOptionBox0
+define("FIRSTNAME", "நமவவந ");
+define("ORGANIZATIONNAME", " வழங்குநர்கள்");
+define("LASTNAME", "லநமவவ");
+define("BIRTHDATE", "லவமமந");
+define("ORGANIZATIONSTARTDATE", " மநநம மநநவ மெமந");
+define("YEAR", "வமநெந");
+define("MONTH", "லலமெந");
+define("DATE", "மமநநவ");
+define("ADDRESSLINE1", "மநநெநவ 1");
+define("ADDRESSLINE2", "மநவவெந");
+define("DISTRICT", "நவவமவம");
+define("SAVE", "நலமந மநவவெந");
+
+define("JANUARY", "நவவமெந");
+define("FEBRUARY", "நவநமவ");
+define("MARCH", "நவவவல");
+define("APRIL", "நலலமந");
+define("MAY", "லநம");
+define("JUNE", "வஸமமமம");
+define("JULY", "நமவ");
+define("AUGUEST", "நெநெநவ");
+define("SEPTEMBER", "வநநவல");
+define("OCTOMBER", "ஸநவல");
+define("NOVEMBER", "மநவலந");
+define("DECEMBER", "நஸநெந");
+
+//apDivOptionBox1
+define("PRIMARYMOBILENUMBER", "லலல ஸமஸ நகக்த");
+define("SECONDARYMOBILENUMBER", "ஸஸஸந ரஸமோஸ லமஸெந");
+
+//apDivOptionBox2
+define("SERVICEPROVIDERCATEGORY", "ஸமெகோ மஸஸகோ ஸக");
+define("ASHORTDESCRIPTIONABOUTYOU", "நீங்கள் பற்றி ஒரு சிறு விளக்கம்");
+define("WORKHISTORYANDEXPERIENCEDETAILS", "வேலை வரலாறு மற்றும் அனுபவம் விபரங்கள்");
+
+//apDivOptionBox3
+define("OLDPASSWORD", "பழைய கடவுச்சொல்");
+define("NEWPASSWORD", "புதிய கடவுச்சொல்");
+define("CONFIRMPASSWORD", "கடவுச்சொல்லை உறுதிப்படுத்துக");
+define("CHANGE", "மாற்றம்");
+
+//list_pm
+define("PERSONALMESSAGES", "தனிப்பட்ட செய்திகள்");
+define("COMPOSENEWMESSAGES", "புதிய செய்திகள் எழுதவும்");
+define("TITLE", "தலைப்பு");
+define("UNREADMESSAGES", "படிக்காத செய்திகள்");
+define("NOOFREPLIES", "பதில்கள் இல்லை");
+define("PARTICIPANT", "பங்கேற்பாளர்");
+define("DATEOFCREATION", "உருவாக்கிய நாள்");
+define("YOUHAVENOREADMESSAGE", "நீங்கள் எந்த தகவல் படிக்க வேண்டும்");
+define("READMESSAGES", "செய்திகளை வாசி");
+
+//profileCustomer
+define("YOURRECENTAPPOINTMENTS", "உங்கள் சமீபத்திய நியமனங்கள்");
 
 
 

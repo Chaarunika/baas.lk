@@ -136,7 +136,7 @@ define("ENTERYOURQUESTION", "Enter Your Question");
 
 
 //forum
-define("ADDNEWTOPIC", "Add New Topic");
+define("ADDNEWTOPIC", "ADD NEW TOPIC");
 define("DISCUSSION", "Discussion");
 define("STARTEDBY", "Started By");
 define("VIEWS", "Views");
@@ -146,6 +146,97 @@ define("TIME", " & Time");
 
 //view topic
 define("ANSWER", "Answer");
+define("BACKTOFORUM", "  BACK");
+define("RE", "Reply");
+define("ENTERYOURANSWER", "Enter Your Answer");
+
+//new topic
+define("TOPIC", "TOPIC");
+define("DETAIL", "DETAIL");
+
+//profile
+define("OVERVIEW", "Over View");
+define("EDITPROFILE", "Edit Profile");
+define("MESSAGES", "Messages");
+define("MEMBERSINCE", "Member Since");
+define("CATEGORY", "Category");
+define("AREA", "Area");
+define("CONTACTDETAILS", "Contact Details");
+define("EMAIL", "Email");
+define("ADDRESS", "Address");
+define("OPTIONALCONTACTNO", "Optional Contact Number");
+define("OPTIONALEMAIL", "Optional Email");
+define("ABOUTUS", "About Us");
+define("WORKHISTORY", "Work History");
+
+//spProfEdit
+define("EDITBASICINFORMATION", "Edit Basic Information");
+define("EDITYOURCONTACTDETAILS", "Edit Your Contact Details");
+define("EDITYOURWORKINFORMATION", "Edit Your Work Information");
+define("PASSWORDCHANGE", "Password Change");
+
+//apDivOptionBox0
+define("FIRSTNAME", "First Name");
+define("ORGANIZATIONNAME", " Organization Name");
+define("LASTNAME", "Last Name");
+define("BIRTHDATE", "Birth Date");
+define("ORGANIZATIONSTARTDATE", " Organization Start Date");
+define("YEAR", "Year");
+define("MONTH", "Month");
+define("DATE", "Date");
+define("ADDRESSLINE1", "Address Line 1");
+define("ADDRESSLINE2", "Address Line 2");
+define("DISTRICT", "District");
+define("SAVE", "SAVE");
+
+define("JANUARY", "January");
+define("FEBRUARY", "February");
+define("MARCH", "March");
+define("APRIL", "April");
+define("MAY", "May");
+define("JUNE", "June");
+define("JULY", "July");
+define("AUGUEST", "Augest");
+define("SEPTEMBER", "September");
+define("OCTOMBER", "Octomber");
+define("NOVEMBER", "November");
+define("DECEMBER", "December");
+
+//apDivOptionBox1
+define("PRIMARYMOBILENUMBER", "Primary Mobile Number");
+define("SECONDARYMOBILENUMBER", "Secondary Mobile Number");
+
+//apDivOptionBox2
+define("SERVICEPROVIDERCATEGORY", "Service Provider Category");
+define("ASHORTDESCRIPTIONABOUTYOU", "A Short Description About You");
+define("WORKHISTORYANDEXPERIENCEDETAILS", "Work History and Experience Details");
+
+//apDivOptionBox3
+define("OLDPASSWORD", "Old Password");
+define("NEWPASSWORD", "New Password");
+define("CONFIRMPASSWORD", "Confirm Password");
+define("CHANGE", "CHANGE");
+
+//list_pm
+define("PERSONALMESSAGES", "Personal messages");
+define("COMPOSENEWMESSAGES", "Compose New Messages");
+define("TITLE", "Title");
+define("UNREADMESSAGES", "Unread Messages");
+define("NOOFREPLIES", "No of Replies");
+define("PARTICIPANT", "Participant");
+define("DATEOFCREATION", "Date of creation");
+define("YOUHAVENOREADMESSAGE", "You have no read message");
+define("READMESSAGES", "Read Messages");
+
+//profileCustomer
+define("YOURRECENTAPPOINTMENTS", "Your Recent Appointments");
+
+
+
+
+
+
+
 
 
 
