@@ -17,7 +17,34 @@ if(isset($_POST['jobDesc'])){
     
     if (mysqli_query($dbConnection,$sql) ) {
     echo "New record created successfully";
+
+        //SMS send function
+
+         
+             
+
+        $sql2 = "SELECT DISTINCT contactNo FROM serviceprovider WHERE category='$jobType' AND area='$jobArea' ";
+        $result2 = mysqli_query($dbConnection,$sql2);
+
+        while($row = mysqli_fetch_assoc($result2)) {
+
+            $ch = curl_init(); 
+            curl_setopt($ch, CURLOPT_URL, "http://baas.lk/serverip.php"); 
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+            $output = curl_exec($ch);      
+            curl_close($ch);
+
+            //echo $row['contactNo']."";
+
+            $ch = curl_init();   
+            $gatewayURL =    "http://".$output.":9090/sendsms?phone=".$row['contactNo']."&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."%0a"."&password=123456";
+            echo $gatewayURL;
+            curl_setopt($ch, CURLOPT_URL, $gatewayURL); 
+            $output = curl_exec($ch);          
+            curl_close($ch);               
+        }
      } 
+
      else {
     echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);
      }

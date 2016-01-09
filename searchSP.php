@@ -6,17 +6,30 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <?php include_once ('_database/database.php'); ?>
 
+<?php 
+	if( !isset($_GET['SearchButton']))  //Handling error if someone tries loading searchSp.php directly
+		{ 
+			$area = "ANY AREA";
+			$cat =  "ALL";
+
+		}   
+
+	else{
+			$area = $_GET["location"];
+			$cat = $_GET["category"];
+	}
+?>
+
+
 
 <?php
-	$area = $_POST["location"];
-	$cat = $_POST["category"];
 
-	if(isset($_POST['SearchBar']) == FALSE)
+	if(isset($_GET['SearchBar']) == FALSE)
 	{
 		$word = "";
 	}
 	else{
-		$word = $_POST['SearchBar'] ;
+		$word = $_GET['SearchBar'] ;
 	}
 	$_SESSION['tempSearchTerm'] = $word ;
 	
@@ -261,12 +274,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 
 
-<?php 
-	if( $_POST['SearchButton'] != 'Submit')  //Handling error if someone tries loading searchSp.php directly
-		{ 
-			//header("location:../BAAS_LK/index.php");
-		}   
-?>
 
 <?php 
 
@@ -319,7 +326,7 @@ if($k !=0)
 			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
 			if(isset($_SESSION['Catagory'])){
 				if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
-				echo "<a href= \"../BAAS_LK/profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+				echo "<a href= \"profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
 			}
 
 			else{

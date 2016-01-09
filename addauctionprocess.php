@@ -1,12 +1,13 @@
 <link rel="stylesheet" type="text/css" href="css/header.css">
-<?php include_once ('header.php')?>
+<?php //include_once ('header.php')?>
 
 <?php
+session_start();
 require_once("_database/database.php");
 
 $accountid=$_SESSION['userID'];
 $item=$_POST['item'];
-$description= ($_POST['description']);
+$description= $_POST['description'];
 $closingtime=$_POST['closingtime'];
 $town=$_POST['town'];
 $minimumbid=$_POST['minimumbid'];
@@ -89,25 +90,24 @@ h2{ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 <div id="apDiv2">
 
 <table width="500" class="tg" style='border-width:0px'>
+	<tr>
+		<th class="tg-031e" colspan="2">Auction Item Details</th>
+	</tr>
 
-<tr>
-<th class="tg-031e" colspan="2">Auction Item Details</th>
-</tr>
+	<tr>
+	    <td class="tg-b7b8">Land Name</td>
+	    <td class="tg-b7b8"><?php echo "$item" ; ?></td>
+	</tr>
 
-<tr>
-    <td class="tg-b7b8">Land Name</td>
-    <td class="tg-b7b8"><?php echo "$item" ; ?></td>
-</tr>
+	<tr>
+	    <td class="tg-yw4l">Description</td>
+	    <td class="tg-yw4l"><?php echo "$description" ; ?></td>
+	</tr>
 
-<tr>
-    <td class="tg-yw4l">Description</td>
-    <td class="tg-yw4l"><?php echo "$description" ; ?></td>
-</tr>
-
-<tr>
-    <td class="tg-yw4l">Closing Date</td>
-    <td class="tg-yw4l"><?php echo "$closingtime" ; ?></td>
-</tr>
+	<tr>
+	    <td class="tg-yw4l">Closing Date</td>
+	    <td class="tg-yw4l"><?php echo "$closingtime" ; ?></td>
+	</tr>
   
 </table>		
 </div>

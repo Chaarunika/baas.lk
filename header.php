@@ -162,7 +162,7 @@ else{
 			   		}
 
 			   		if( $_SESSION['Catagory']== "customer"){
-			   		echo"<li><a href='profile.php'>".MYPROFILE."</a></li>";
+			   		echo"<li><a href='profileCustomer.php'>".MYPROFILE."</a></li>";
 					echo"<li><a href='listbiditems.php'>".AUCTION."</a></li>";
 					echo"<li><a href='findjob.php'>".JOBS."</a></li>";
 					//echo"<li><a href=\"menu.php\">Bidd</a></li>";
