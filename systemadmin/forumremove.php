@@ -1,22 +1,25 @@
 <?php include 'header.php'; ?> 
-<link rel="stylesheet" type="text/css" href="../css/forum.css" >
+<?php include "../_database/database.php"; ?>
+<?php include "common.php" ;?>
+<link rel="stylesheet" type="text/css" href="css/forum.css" >
 
+<div id='show1'>
 <style type="text/css">
 #apDiv1 {
 	position:absolute;
-	top:110px;
-	width:589px;
-	height:70px;
+	top:20px;
+	width:500px;
+	height:60px;
 	z-index:16;
 	background-color: #CCCCCC;
 	border-radius: 20px;
-	left: 0px;
+	left: 509px;
 }
 #apDiv2 {
 	position:absolute;
-	left:3px;
+	left:0px;
 	top:7px;
-	width:576px;
+	width:500px;
 	height:51px;
 	z-index:17;
 	background-color: #CCCCCC;
@@ -26,34 +29,32 @@
 	position: absolute;
 	border-width:3px;
 	border-style: inset;
-	background-color:#000;
-	left: 130px;
-	font-size:16px;
+	background-color:#fff;
+	left: 13px;
+	font-size:14px;
 	font-family:"Arial Black", Gadget, sans-serif;
 	top: 6px;
 	width: 319px;
-	height: 33px;
+	height: 28px;
 }
 .searchtext:focus{
-	color:#FFF;
+	color:#000;
 }
 .searchbtton {
 	position: absolute;
-	left: 458px;
+	left: 350px;
 	top: 7px;
 	width: 118px;
 	background-color: #FC0;
 	height: 27px;
-	border-radius:20px;
-	font-weight: bold;
+	
 }
 
 .notfound {
-	background-color: #f2f2f2;
+	background-color: rgba(192,192,192,1);	
 	position: absolute;
-	left: 78px;
-	top: 244px;
-	width: 1213px;
+	top: 100px;
+	width:100%;
 	height: 169px;
 	z-index: 100;
 }
@@ -77,7 +78,6 @@ alert("cancel");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
 {
-include "../_database/database.php";
 $tbl_name="fquestions"; 
 $colorchange=0;
 $bgcolor="";
@@ -94,7 +94,6 @@ $word = str_replace(' ','',$word);
       <label for="textfield"></label>
       <input name="textfield" type="text" class="searchtext" id="textfield" required>
       <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH">
- <strong> SEARCH TOPIC</strong></p>
     <p>&nbsp;</p>
   </form>
 </div>
@@ -194,8 +193,6 @@ mysqli_close($database);
 }
 }
 else{
- 
-include "../_database/database.php"; 
 $tbl_name="fquestions"; // Table name 
  
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
@@ -267,7 +264,7 @@ mysqli_close($database);
       <label for="textfield"></label>
       <input name="textfield" type="text" class="searchtext" id="textfield" required>
       <input name="button" type="submit" class="searchbtton" id="button" value="SEARCH">
-  <strong> SEARCH TOPIC</strong></p>
+ </p>
     <p>&nbsp;</p>
   </form>
 </div>
@@ -276,3 +273,15 @@ mysqli_close($database);
 }
 ?>
 </body>
+</div>
+<style>
+#show1{
+	position:absolute;
+	left:212px;
+	top:79px;
+	width:85%;
+	height:<?php echo 200+($colorchange+1)*55; ?>;
+	z-index:2;
+	background-color: rgba(192,192,192,1);	
+}
+</style>

@@ -19,6 +19,7 @@ if($result->num_rows==1)
 {
 session_start();
 $_SESSION["adminusername"] = $username;
+$_SESSION["nowtab"] = "";
 header("location:home.php");
 }
 else
