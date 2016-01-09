@@ -2,15 +2,15 @@
   <div id="apDivOptionBox0">
 
     <form id="form1" name="form1" method="post" action="spProfEdit.php">
-      <label for="firstName">First Name / Organization Name</label>
+      <label for="firstName"><?php echo FIRSTNAME ; ?> /<?php echo ORGANIZATIONNAME ; ?></label>
       <input type="text" name="firstName" id="firstName" <?php if(isset($user['user_firstname'])) echo "value='".$user['user_firstname']."'"; ?> required />
-      <label for="lastName">Last Name / Organization Name</label>
+      <label for="lastName"><?php echo LASTNAME ; ?> /<?php echo ORGANIZATIONNAME ; ?></label>
       <input type="text" name="lastName" id="lastName" <?php if(isset($user['user_lastname'])) echo "value='".$user['user_lastname']."'"; ?> required />
 
     
-      <label for="year">Birthdate / Organization Start Date</label>
+      <label for="year"><?php echo BIRTHDATE ; ?> /<?php echo ORGANIZATIONSTARTDATE ; ?></label>
       <br>
-      <label for="year">Year</label>
+      <label for="year"><?php echo YEAR ; ?></label>
       <select name="year" id="year" required>  
         <option>1989</option>
         <option>1990</option>
@@ -41,22 +41,22 @@
         <option>2015</option>
         <option>2016</option>
       </select>
-      <label for="month">Month</label>
+      <label for="month"><?php echo MONTH ; ?></label>
       <select name="month" id="month" required>
-        <option>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>Octomber</option>
-        <option>November</option>
-        <option>December</option>       
+        <option><?php echo JANUARY ; ?></option>
+        <option><?php echo FEBRUARY ; ?></option>
+        <option><?php echo MARCH ; ?></option>
+        <option><?php echo APRIL ; ?></option>
+        <option><?php echo MAY ; ?></option>
+        <option><?php echo JUNE ; ?></option>
+        <option><?php echo JULY ; ?></option>
+        <option><?php echo AUGUEST ; ?></option>
+        <option><?php echo SEPTEMBER ; ?></option>
+        <option><?php echo OCTOMBER ; ?></option>
+        <option><?php echo NOVEMBER ; ?></option>
+        <option><?php echo DECEMBER ; ?></option>       
       </select>
-      <label for="date">Date</label>
+      <label for="date"><?php echo DATE ; ?></label>
       <select name="date" id="date" required>
         <option>1</option>
         <option>2</option>
@@ -93,41 +93,41 @@
 
       <br><br>
       <p>
-        <label for="firstLine">Address Line1</label>
+        <label for="firstLine"><?php echo ADDRESSLINE1 ; ?></label>
         <input type="text" name="firstLine" id="firstLine" <?php if(isset($sp['address'])) echo "value='".$sp['address']."'"; ?> required />
       </p>
       <p>
-        <label for="secondLine">Address Line 2</label>
+        <label for="secondLine"><?php echo ADDRESSLINE2 ; ?></label>
         <input type="text" name="secondLine" id="secondLine" <?php if(isset($sp['area'])) echo "value='".$sp['area']."'"; ?> required />
       </p>
       
-        <p><label for="district">District</label><br>
+        <p><label for="district"><?php echo DISTRICT ; ?></label><br>
         <select name="district" id="district" required>
-          <option>Colombo</option>
-          <option>Kandy</option>
-          <option>Kurunegala</option>
-          <option>Ampara</option>
-          <option>Anuradhapura</option>
-          <option>Badulla</option>
-          <option>Batticaloa</option>
-          <option>Galle</option>
-          <option>Gampaha</option>
-          <option>Hambantota</option>
-          <option>Jaffna</option>
-          <option>Kalutara</option>
-          <option>Kegalle</option>
-          <option>Kilinochchi</option>
-          <option>Mannar</option>
-          <option>Matale</option>
-          <option>Matara</option>
-          <option>Moneragala</option>
-          <option>Mullaitivu</option>
-          <option>Nuwara Eliya</option>
-          <option>Polonnaruwa</option>
-          <option>Puttalam</option>
-          <option>Ratnapura</option>
-          <option>Trincomalee</option>
-          <option>Vavuniya</option>         
+          <option><?php echo COLOMBO ; ?></option>
+            <option><?php echo KANDY; ?></option>
+            <option><?php echo KURUNEGALA ; ?></option>
+            <option><?php echo AMPARA ; ?></option>
+            <option><?php echo ANURA ; ?></option>
+            <option><?php echo BADULLA ; ?></option>
+            <option><?php echo BATTICALOA ; ?></option>
+            <option><?php echo GALLE ; ?></option>
+            <option><?php echo GAMPAHA ; ?></option>
+            <option><?php echo HAMBANTOTA ; ?></option>
+            <option><?php echo JAFFNA ; ?></option>
+            <option><?php echo KALUTARA ; ?></option>
+            <option><?php echo KEGALLE ; ?></option>
+            <option><?php echo KILINOCHCHI ; ?></option>
+            <option><?php echo MANNAR ; ?></option>
+            <option><?php echo MATALE ; ?></option>
+            <option><?php echo MATARA ; ?></option>
+            <option><?php echo MONERAGALA ; ?></option>
+            <option><?php echo MULLITIVU ; ?></option>
+            <option><?php echo NUWARAELIYA ; ?></option>
+            <option><?php echo POLONNARUWA ; ?></option>
+            <option><?php echo PUTTALAMA ; ?></option>
+            <option><?php echo RATNAPURA ; ?></option>
+            <option><?php echo TRINCOMALEE ; ?></option>
+            <option><?php echo VAVUNIYA ; ?></option>
         </select>
       </p> 
       
@@ -158,7 +158,7 @@
       </p>      
       -->
       <p>
-        <input type="submit" name="saveOverview" id="saveOverview" value="Save" />
+        <input type="submit" name="saveOverview" id="saveOverview" value="<?php echo SAVE ; ?>" />
       </p>      
     </form>
   </div>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	<title>baas.lk</title>
 <style>
 #mainm{
 	position: absolute;
@@ -94,7 +96,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
-<body bgcolor="#f2f2f2">
+
+<body >
 <div id ="jobLogo"> 
 <center>
     <h2> Recently Posted Jobs </h2>

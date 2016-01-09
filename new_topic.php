@@ -1,5 +1,5 @@
 <head>
-
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <?php include 'header.php';
 	include 'sessioncheck.php' ;
@@ -71,7 +71,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p class="backto">  	<a href="forum.php">&lt;&lt;BACK TO FORUM</a></p>
+<p class="backto">  	<a href="forum.php">&lt;&lt;<?php echo BACKTOFORUM ; ?></a></p>
 <p>&nbsp;</p>
 <div class="createtabel">
 <table width="822" align="center" cellpadding="0" cellspacing="1" >
@@ -79,17 +79,17 @@
     <form id="form1" name="form1" method="post" action="add_new_topic.php">
       <td><table width="100%" border="0" cellpadding="3" cellspacing="1" >
         <tr>
-          <td colspan="3" ><strong>Create New Topic</strong></td>
+          <td colspan="3" ><strong><?php echo ADDNEWTOPIC ; ?></strong></td>
         </tr>
         <tr> <td></td> </tr><tr> <td></td> </tr>
         <tr>
-          <td width="14%"><strong>Topic</strong></td>
+          <td width="14%"><strong><?php echo TOPIC ; ?></strong></td>
           <td width="2%">:</td>
           <td width="84%"><input name="topic" type="text" id="topic" size="50%" / required></td>
         </tr>
         <tr> <td></td></tr> <tr> <td></td></tr>
         <tr>
-          <td valign="top"><strong>Detail</strong></td>
+          <td valign="top"><strong><?php echo DETAIL ; ?></strong></td>
           <td valign="top">:</td>
           <td><textarea name="detail" cols="75%" rows="10" id="detail" required></textarea></td>
         </tr>
@@ -97,7 +97,7 @@
         <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
-          <td><input type="submit" name="Submit" value="Submit" id="submit"/></td>
+          <td><input type="submit" name="Submit" value="<?php echo POST ; ?>" id="submit"/></td>
         </tr>
       </table></td>
     </form>

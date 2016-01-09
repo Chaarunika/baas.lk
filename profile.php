@@ -1,8 +1,9 @@
-<!DOCTYPE html >
+f<!DOCTYPE html >
 <html>
 
 <head>
 	<title>baas.lk</title>
+	<meta charset="UTF-8">
 
 	<!-- Bootstrap  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
@@ -65,6 +66,7 @@
 	$sp = mysqli_fetch_assoc($result2);
 	
 
+	
 	?>
 
 
@@ -123,9 +125,9 @@ echo "
 	<?php if(!isset($_GET['user']))	{	?>
 		<div id="subMenu">
 			<ul class="nav nav-tabs">
-			  	<li role="presentation" class="active"><a href="profile.php">Overview</a></li>
-			 	<li role="presentation"><a href="spProfEdit.php">Edit Profile</a></li>
-			 	<li role="presentation"><a href="list_pm.php">Messages</a></li>
+			  	<li role="presentation" class="active"><a href="profile.php"> <?php echo OVERVIEW ; ?> </a></li>
+			 	<li role="presentation"><a href="spProfEdit.php"> <?php echo EDITPROFILE ; ?> </a></li>
+			 	<li role="presentation"><a href="list_pm.php"> <?php echo MESSAGES ; ?></a> </li>
 			</ul>
 		</div>
 	<?php } ?>
@@ -145,9 +147,9 @@ echo "
         	}?>        	
       	</p>    
 
-        <p>member since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
-        <p>Catagory : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
-        <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
+        <p><?php echo MEMBERSINCE ; ?> : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
+        <p><?php echo CATEGORY ; ?> : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
+        <p><?php echo AREA ; ?> : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
 
         <div class="rw-ui-container"></div> 
         </div>
@@ -161,7 +163,7 @@ echo "
     
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
-        <p style="font-size:20px">Contact Details</p>
+        <p style="font-size:20px"><?php echo CONTACTDETAILS ; ?></p>
         <?php
         if(isset($_GET['user']))
 		{
@@ -169,11 +171,11 @@ echo "
 		}
 		?>
 		 
-        <p>Contact No : <?php if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
-        <p>Email : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
-        <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>  
-        <p>Optional Contact No : <?php if(isset($sp['opContactNo'])) { echo $sp['opContactNo'];} ?></p>    
-        <p>Optional Email : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>  
+        <p><?php echo CONTACTNUMBER ; ?> : <?php if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
+        <p><?php echo EMAIL  ; ?>: <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
+        <p><?php echo ADDRESS ; ?> : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>  
+        <p><?php echo OPTIONALCONTACTNO ; ?> : <?php if(isset($sp['opContactNo'])) { echo $sp['opContactNo'];} ?></p>    
+        <p><?php echo OPTIONALEMAIL ; ?> : <?php if(isset($sp['opEmail'])) {  echo $sp['opEmail'];} ?></p>  
 		
         </div>           
     </div>
@@ -193,11 +195,11 @@ echo "
     
     
     <div id="apDivShortDesc"> 
-    <p style="font-size:20px">About Us</p>  
+    <p style="font-size:20px"><?php echo ABOUTUS ; ?></p>  
     <p style="line-height: 130%;"><?php if(isset($sp['descr'])) { echo $sp['descr']; }?></div>
     
     <div id="apDivWorkHistory"> 
-    <p style="font-size:20px">Work History</p>  
+    <p style="font-size:20px"><?php echo WORKHISTORY ; ?></p>  
     <p style="line-height: 130%;"> <?php if(isset($sp['workInfo'])) { echo $sp['workInfo'];} ?></div>
     
 

@@ -17,7 +17,34 @@ if(isset($_POST['jobDesc'])){
     
     if (mysqli_query($dbConnection,$sql) ) {
     echo "New record created successfully";
+
+        //SMS send function
+
+         
+             
+
+        $sql2 = "SELECT DISTINCT contactNo FROM serviceprovider WHERE category='$jobType' AND area='$jobArea' ";
+        $result2 = mysqli_query($dbConnection,$sql2);
+
+        while($row = mysqli_fetch_assoc($result2)) {
+
+            $ch = curl_init(); 
+            curl_setopt($ch, CURLOPT_URL, "http://baas.lk/serverip.php"); 
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+            $output = curl_exec($ch);      
+            curl_close($ch);
+
+            //echo $row['contactNo']."";
+
+            $ch = curl_init();   
+            $gatewayURL =    "http://".$output.":9090/sendsms?phone=".$row['contactNo']."&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."%0a"."&password=123456";
+            echo $gatewayURL;
+            curl_setopt($ch, CURLOPT_URL, $gatewayURL); 
+            $output = curl_exec($ch);          
+            curl_close($ch);               
+        }
      } 
+
      else {
     echo "Error: " . $sql . "<br>" . mysqli_error($dbConnection);
      }
@@ -29,24 +56,23 @@ if(isset($_POST['jobDesc'])){
     <div id="mainform">
         
         <form name="formJob" method='post' class="formJobb" action='index.php'>
-            <h2> Post Your Job </h2>
-            <label> Select Job Type </label>
+            <h2> <?php echo POSTYOURJOB; ?> </h2>
+            <label> <?php echo SELECTJOBTYPE; ?> </label>
             <select  name="jobType"  class='jobSelect'>
-            <option> Architect</option>
-            <option>  Draftsman</option>
-            <option> Landscape Designer </option>
-            <option> Interior Designer</option>
-            <option> Carpenter</option>
-            <option> Mason</option>
-            <option>Painter </option>
-            <option> Plumber</option>
-            <option>Tiler </option>
-            <option> Contractor</option>
-            <option>Astrology </option>
-            <option> Fengshui</option>
-            <option>Numerology Service </option>
-            <option> Vaasthu</option>
-            <option>Brick Supplier </option>
+            <option><?php echo ARCHI_DESIGN ?></option>
+            <option><?php echo BUILDER ?></option>
+            <option><?php echo CONSULTANCYSERVICE ?> </option>
+            <option><?php echo CONTRACTOR ?></option>
+            <option><?php echo ELECTRICIAN ?></option>
+            <option><?php echo MASON ?></option>
+            <option><?php echo MATERIAL ?> </option>
+            <option><?php echo REALESTATECOMPANY ?></option>
+            <option><?php echo TECHNICIAN ?> </option>
+            <option><?php echo CARPENTER ?></option>
+            <option><?php echo  HANDYMAN ?> </option>
+            <option><?php echo PAINTER ?></option>
+            <option><?php echo  PLUMBER ?></option>
+            <!--
             <option> Cement</option>
             <option> Hardware</option>
             <option> Sand Supplier</option>
@@ -55,49 +81,52 @@ if(isset($_POST['jobDesc'])){
             <option> A/C Technician</option>
             <option> Electrician</option>
             <option>HandyMan </option>
-            <option> Carpenter </option>
+            <option> Carpenter </option> -->
              </select>
              
             <br><br>
-            <label> Select Area </label>
+            <label><?php echo SELECTAREA ?></label>
             <select name = "jobArea" class='jobSelect'> 
-            <option>Colombo</option>
-            <option>Kandy</option>
-            <option>Kurunegala</option>
-            <option>Ampara</option>
-            <option>Anuradhapura</option>
-            <option>Badulla</option>
-            <option>Batticaloa</option>
-            <option>Galle</option>
-            <option>Gampaha</option>
-            <option>Hambantota</option>
-            <option>Jaffna</option>
-            <option>Kalutara</option>
-            <option>Kegalle</option>
-            <option>Kilinochchi</option>
-            <option>Mannar</option>
-            <option>Matale</option>
-            <option>Matara</option>
-            <option>Moneragala</option>
-            <option>Mullaitivu</option>
-            <option>Nuwara Eliya</option>
-            <option>Polonnaruwa</option>
-            <option>Puttalam</option>
-            <option>Ratnapura</option>
-            <option>Trincomalee</option>
-            <option>Vavuniya</option> </select>
+            <option><?php echo COLOMBO ; ?></option>
+            <option><?php echo KANDY; ?></option>
+            <option><?php echo KURUNEGALA ; ?></option>
+            <option><?php echo AMPARA ; ?></option>
+            <option><?php echo ANURA ; ?></option>
+            <option><?php echo BADULLA ; ?></option>
+            <option><?php echo BATTICALOA ; ?></option>
+            <option><?php echo GALLE ; ?></option>
+            <option><?php echo GAMPAHA ; ?></option>
+            <option><?php echo HAMBANTOTA ; ?></option>
+            <option><?php echo JAFFNA ; ?></option>
+            <option><?php echo KALUTARA ; ?></option>
+            <option><?php echo KEGALLE ; ?></option>
+            <option><?php echo KILINOCHCHI ; ?></option>
+            <option><?php echo MANNAR ; ?></option>
+            <option><?php echo MATALE ; ?></option>
+            <option><?php echo MATARA ; ?></option>
+            <option><?php echo MONERAGALA ; ?></option>
+            <option><?php echo MULLITIVU ; ?></option>
+            <option><?php echo NUWARAELIYA ; ?></option>
+            <option><?php echo POLONNARUWA ; ?></option>
+            <option><?php echo PUTTALAMA ; ?></option>
+            <option><?php echo RATNAPURA ; ?></option>
+            <option><?php echo TRINCOMALEE ; ?></option>
+            <option><?php echo VAVUNIYA ; ?></option>
+
+
+            </select> 
             <br><br>
 
-            <label> Job Description </label>            
-            <textarea class='jobText' placeholder="Short Job Description" name ="jobDesc" required></textarea>
+            <label> <?php echo JOBDESCRIPTION; ?> </label>            
+            <textarea class='jobText' placeholder="<?php echo ENTERSHORTDESCRIPTION ; ?>" name ="jobDesc" maxlength="150" required></textarea>
             <br><br>
-            <label> Address </label>
-            <textarea class='jobText' name = "jobAddress" placeholder="Address" required></textarea>
+            <label> <?php echo JOBADDRESS ; ?></label>
+            <textarea class='jobText' name = "jobAddress" placeholder="<?php echo ENTERADDRESS ; ?>" required></textarea>
             <br><br>
-            <label> Contact Number </label>
-            <input name="jobTel" id="jobTel" class='jobInput' placeholder="Your Telephone Number" type="text" onblur="return ValidateMobNumber('jobTel')" required>
+            <label> <?php echo CONTACTNUMBER ; ?> </label>
+            <input name="jobTel" id="jobTel" class='jobInput' placeholder="<?php echo ENTERYOURTELEPHONENUMBER ; ?>" type="text" onblur="return ValidateMobNumber('jobTel')" required>
 
-            <input type="submit" class ='jobButton' name="submitJob"  value="PostJob">
+            <input type="submit" class ='jobButton' name="submitJob"  value= "<?php echo POSTJOB; ?>" >
         </form>
     </div>
 

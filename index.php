@@ -21,6 +21,11 @@
 <link href="css/header.css" rel="stylesheet">
 <link href="css/searchBar.css" rel="stylesheet"> 
 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<script src="javascript/owl.carousel.js"></script>
+
 
 <style type="text/css">
 
@@ -36,6 +41,7 @@
 #back{
 	position: absolute;
 	margin-top: 100px;
+	left: 0px;
 	
 }
 </style>
@@ -50,15 +56,19 @@
 	<div id="coverPics"></div>
 	</div>
 
-	<?php include 'includes/searchBar.php' ;?>
-
-
 	<?php 
-	//if(isset($_SESSION['Catagory'])){
-		//if($_SESSION['Catagory'] == 'customer'){
+	include_once('includes/searchBar.php') ;
+	include_once('_database/database.php'); 
+	include_once('functions/functions.php');
+	?>
+
+	<?php include_once('includes/jobBar.php'); ?>
+	<?php 
+	if(isset($_SESSION['Catagory'])){
+		if($_SESSION['Catagory'] == 'customer'){
 			include 'postjob.php' ;
-		//}
-	//}
+		}
+	}
 	?>
 	<?php //include 'functions/functions.php'; ?>
 	<?php //$message = display_error("SDDS"); ?>

@@ -1,13 +1,30 @@
 #login-form-box {
 	position:absolute;
 	width:374px;
-	height:377px;
+	height:410px;
 	z-index:2;
 	left: 260px;
 	top: 180px;
-	background-color: rgba(214,214,194,0.9);
+	background-color: rgba(201, 216, 197, 0.7);
 	border: 2px solid #f0f0f0;
 	border-radius: 10px;
+}
+
+#back{
+	position: absolute;
+	margin-top: 100px;
+	left: 0px;
+	
+}
+
+
+#coverPics{
+	position: absolute;
+	width: 800px;
+	height: 500px;	
+	background-image: url('images/cover1.jpg');
+	z-index: 0;
+
 }
 
 #login-form {
@@ -91,6 +108,16 @@
 	left: 101px;
 	top: 314px;
 }
+
+#google{
+	position:absolute;
+	width:201px;
+	height:53px;
+	z-index:2;
+	left: 101px;
+	top: 354px;
+}
+
 #signup {
 	position:absolute;
 	width:195px;

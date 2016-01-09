@@ -258,7 +258,7 @@ class Login
         session_destroy();
 
         $this->loginstatus = false;
-		header('location:../BAAS_LK/login.php');
+		header('location:login.php');
     }
 	
 	private function sessionsAndData($result_row)

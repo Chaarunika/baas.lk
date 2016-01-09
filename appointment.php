@@ -34,7 +34,23 @@
 	left: 50px;
 	top: 8px;
 	width: 323px;
-	z-index: 2;
+	z-index: 2;}
+
+
+	#sms{
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	width: 323px;
+	z-index: 1;}
+
+	#sendsms{
+	position: absolute;
+	left: 120px;
+	top: 230px;
+	width: 323px;
+	z-index: 1;}
+
 
 </style> 
 
@@ -82,10 +98,25 @@
 			
 	
 			
-			$sql="INSERT INTO `baaslk`.`calendar` (`title`, `detail`, `jobDate`, `dateAdded`, `location`, `jobtime`, `contactno`, `customer_id`, `sp_id`, `accepted`) VALUES
+			$sql="INSERT INTO `calendar` (`title`, `detail`, `jobDate`, `dateAdded`, `location`, `jobtime`, `contactno`, `customer_id`, `sp_id`, `accepted`) VALUES
 			('".$title."', '".$detail."', '".$date."', now(), '".$location."', '".$jobtime."', '".$contactNo."','".$customer."' ,'".$spid."' , 0)";
 			
 			mysqli_query($database,$sql);
+
+                        echo "<div id=\"appointmentForm\">
+		       <div id=\"appointmentFormbody\">
+                       <p style=\"font-size:20px\">Your appointment is added!!!
+                       <div id=\"sms\">
+                       <img src=\"images/sms.jpg\" height=\"200\" width=\"200\"></div>
+                       <div id=\"sendsms\">
+                       <a href=\"http://baaslk.byethost6.com\"><img src=\"images/send.png\" height=\"40\" width=\"80\"></a>
+                       </div>
+                        
+
+                       
+
+		       </div></div>";
+  
 	
 		
 		}
@@ -110,7 +141,7 @@
 
 
 		<?php
-		if (isset($_GET['date']))
+		if (!isset($_GET['add']))
 		{
 		
 		echo "<div id=\"appointmentForm\">
@@ -139,3 +170,4 @@ $("#spanhovering").hover(function(event) {
 
 </body>
 </html>
+	

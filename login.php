@@ -35,14 +35,7 @@
 	position:relative;
 	}
 	
-#coverPics{
-	width: 100%;
-	top:0px;
-	background-image: url('images/cover.jpg');
-	height: 768px;
-	
 
-}
 	
 	
 </style>
@@ -70,11 +63,6 @@ function myFunction() {
 
 
 
-
-<div id="coverPics"></div>
-
-
-
 <div id="apDiv1">
 <?php $login = new Login(); 	?>
 </div>
@@ -84,6 +72,9 @@ function myFunction() {
 </script>
 
 
+<div id="back">
+	<div id="coverPics"></div>
+</div>
 
 
 
@@ -98,7 +89,7 @@ function myFunction() {
 if ($login->checkloginstatus() == true) {
    	
 
-		header("Location:http://localhost/BAAS_LK/index.php");
+		header("Location:index.php");
 	}
 	
 	else 
@@ -118,8 +109,14 @@ if ($login->checkloginstatus() == true) {
   <a href = "fbLogin/fbSignupStatus_login.php">
   <div id="facebook"><img src="images/facebook-login.png" alt="" width="150" height="33" /></div>
   </a>
+
+  <a href = "google/login.php">
+  <div id="google"><img src="images/googleSignup.png" alt="" width="150" height="33" /></div>
+  </a>
+
 </div>	
  
+
 
 
 

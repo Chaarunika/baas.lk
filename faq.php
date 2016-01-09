@@ -21,7 +21,7 @@ h3{
  .FAQ { 
  		cursor:hand; cursor:pointer;
         border:1px solid darkorange;
-        border-radius: 10px;
+        border-radius: 3px;
         width:600px; 
         background-color: #f0f0f0;
        // padding :5px;  	
@@ -49,29 +49,58 @@ h3{
 	position: absolute;
 	left: 800px;
 	top: 170px;
-	width: 414px;
-	height: 363px;
+	width: 390px;
+	height: 350px;
 	z-index: 1;
 	background-color: #f0f0f0;
-	border-radius: 20px;
+	border-radius: 5px;
 	border:1px solid rgba(51,51,51,0.5);
 }
 #apDivQuestionTitle {
 	position: absolute;
 	left: 16px;
 	top: 18px;
-	width: 374px;
-	height: 155px;
+	width: 350px;
 	z-index: 2;
 }
 
 #apDivQustionForum {
 	position: absolute;
 	left: 19px;
-	top: 184px;
-	width: 366px;
+	top: 155px;
+	width: 340px;
 	height: 147px;
 	z-index: 2;
+}
+.post{
+width:100%;
+height:40px;
+margin-top:15px;
+margin-bottom:15px;
+background-color:rgba(240,240,240,0.8);
+border:1px solid rgba(0,0,0,0.2);
+border-radius:3px;
+font-family:'Fauna One',serif;
+font-weight:500;
+font-size:14px;
+border-style: solid;
+border-width: 1px;
+}
+.post:hover{
+	background-color:#a6a6a6;
+}
+.faqText{
+width:100%;
+height:60px;
+margin-top:10px;
+border:none;
+border-radius:3px;
+padding:5px;
+resize:none;
+border-style: solid;
+border-width: 1px;
+border-color: rgba(240,240,1,1);
+
 }
 </style>
 
@@ -93,79 +122,67 @@ h3{
 
 <div  id="apDivTitle">
 
-<h1> Frequently Asked Questions</h1>
+<h1> <?php echo FREQUETLYASKEDQUESTIONS ; ?></h1>
 
 <div class="FAQ" onclick="toggle('faq1')">	
 
-	<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;">  1. What is Baas.lk ???</h3>
+	<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;">  1.<?php echo  FAQQ1 ; ?> ???</h3>
 
  	<div id="faq1" class="FAA" >
  	<hr/>
 	 <p>
-	 We are an online constructional suuport service provider who are capable of providing all the support services for constructions. 
-	 We support all the phases of constructions from purchasing a land up to completing the construction.
-	 You can use our valuable services by just sign in up to our system.
-	 No matter if you are a customer or a service provider feel free to use our excellent services.</p>
+	 <?php echo FAQA1 ; ?></p>
  	</div>
 </div>
 
 <DIV class="FAQ" onclick="toggle('faq2')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 2. Why it's important to me ???</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 2. <?php echo FAQQ2 ; ?>???</h3>
  <div id="faq2" class="FAA">
  	<hr/>
  
- <p>In your busy life you may not comfortable of wasting yout time in finding constructional service providers. 
- Rather than searching for people here and there you and just find hundreds of service providers where you can compare
-them with each other. 
-<br><br> Or if you are interested to gather some knowledge about constructions just use our services to gain your knowledge.</p> 
+ <p> <?php echo FAQA2A ; ?> 
+<br><br> <?php echo FAQA2B ; ?>.</p> 
  </div>
 </DIV>
 
 <DIV class="FAQ" onclick="toggle('faq3')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 3. How can I find service providers ???</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 3. <?php echo FAQQ3 ; ?> ???</h3>
  <div id="faq3" class="FAA">
  	<hr/>
- <p>Just click on the service you want and meet hundreds of service providers waiting for you. 
- Choose service providers based on their performance or  choose the ones who are closer to you.</p>
+ <p><?php echo FAQA3 ; ?>.</p>
  
  </div>
 </DIV>
 
 <DIV class="FAQ" onclick="toggle('faq4')">
 
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 4. How can I trust those service providers?</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 4. <?php echo FAQQ4 ; ?> ???</h3>
 
  <div id="faq4" class="FAA">
  	<hr/> 
- <p>Yes, There are lot of raising concerns about the trustworthyness about the service providers. 
- So we provide a feedback platform and a rating platform where the customers can rate their service providers 
- after they receive their service. 
- This should provide a clear platform for the potential customers when choosing service providers.</p>
+ <p><?php echo FAQA4 ; ?>.</p>
  
  
  </div>
 </DIV>
 
 <DIV class="FAQ" onclick="toggle('faq5')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 5. How can I choose the right service provider ???</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 5. <?php echo FAQQ5 ; ?> ???</h3>
 
  <div id="faq5" class="FAA"><hr/>
  
- <p>You can use our rating systems and feedback systems in deciding the correct service providers. 
-And service providers are maintaining their own profiles reflecting their own capabilities. Rather than selecting a service provider based on
-others recommendations you can make better decisions about different service providers through us. </p>
+ <p><?php echo FAQA5; ?>. </p>
  
  </div>
 </DIV>
 
 
 <DIV class="FAQ" onclick="toggle('faq6')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 6. What if those service providers fail me ???</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 6.<?php echo FAQQ6 ; ?> ???</h3>
 
  <div id="faq6" class="FAA"><hr/>
  
- <p>Yes it is true that we hold no responsibility about service providers own work. But we assure you that you can make
- better decisions based on our rating systems and feedback systems. There will be no room for the game players in our web portal.</p>
+ <p> <?php echo FAQA6 ; ?>.</p>
  
  
  </div>
@@ -173,48 +190,42 @@ others recommendations you can make better decisions about different service pro
 
 
 <DIV class="FAQ" onclick="toggle('faq7')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 7. What if I'm a Service Provider ???</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 7. <?php echo FAQQ7 ; ?> ???</h3>
 
  <div id="faq7" class="FAA"><hr/>
  
- <p>Service providers may use our bunch of services to promote themselves and attract more and more customers for you. 
- If you are capable of providing an excellent service; Here is the platform for you to enter a huge new market.</p>
+ <p><?php echo FAQA7 ; ?>.</p>
  
  </div>
 </DIV>
 
 
 <DIV class="FAQ" onclick="toggle('faq8')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 8. How can do my payments through this site ?</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 8. <?php echo FAQQ8 ; ?> ???</h3>
  <div id="faq8" class="FAA"><hr/>
  
- <p>Sorry. As a web portal we do not provide any srvice related to money transactions between servie providers and customers. 
- We just provide services to bridg the communication gap between the service providers and the customers.
- You are kindly requested to be responsible for your own money transactions.</p>
+ <p><?php echo FAQA8 ; ?>.</p>
  
  </div>
 </DIV>
 
 
 <DIV class="FAQ" onclick="toggle('faq9')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 9. Can I acquire any knowledge related to constructions from you </h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 9.<?php echo FAQQ9 ; ?> ???</h3>
 
  <div id="faq9" class="FAA"><hr/>
  
- <p>There are seperate user forums as well as a complete wiki about constructions providing up to date valuable information. Feel free to use our knowledge
- sources to enhance your knowledge. And it is important to note that the Wiki is open for unregistered users as well. And if you are an expert in
- constructional expert you can contribute your knowledge to enhance the quality of Wiki and forums.  </p>
+ <p>  <?php echo FAQA9 ; ?>.</p>
  </div>
 </DIV>
 
 
 <DIV class="FAQ" onclick="toggle('faq10')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 10. In what parts of constructions you provide support ???</h3>
+<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 10. <?php echo FAQQ10 ; ?> ???</h3>
 
  <div id="faq10" class="FAA"><hr/>
  
- <p>We provide support services for almost every phase of domestic constructions. And it is clear that most of these support services can be used for other
- constructional purposes as well. In simple we are a one stop on line solution for the constructional industry in Sri Lanka.</p>
+ <p><?php echo FAQA10 ; ?>.</p>
  
  </div>
  
@@ -226,19 +237,19 @@ others recommendations you can make better decisions about different service pro
 <div id="apDivQuestionBox">
 
 <div id="apDivQuestionTitle">
-  <p style="font-size:18px"><strong>No solution to your problem here?</strong>?</p>
-  <p >Ask the admin...... </p>
-  <p >(Your Questions posted here will be directed to website administrators)</p>
+  <p style="font-size:18px"><strong><?php echo NOSOLUTIONTOYOURPROBLEMHERE ; ?>?</strong>?</p>
+  <p > <?php echo ASKTHEADMIN ; ?>...... </p>
+  <p >(<?php echo YOURQUESTIONPOSTED ; ?>)</p>
 </div>
 
 <div id="apDivQustionForum">
   <form id="form1" name="form1" method="post" action="">
     <p>
       <label for="question"></label>
-      <textarea name="question" id="question" cols="45" rows="5"></textarea>
+      <textarea name="question" id="question" class="faqText" placeholder="<?php echo ENTERYOURQUESTION ; ?>..." cols="45" rows="5" required></textarea>
     </p>
     <p>
-      <input type="submit" name="qBtn" id="qBtn" value="Submit" />
+      <input type="button" class="post" name="qBtn" id="qBtn" value="<?php echo POST ; ?>" />
     </p>
   </form>
 </div>

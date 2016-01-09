@@ -63,6 +63,46 @@
     	return $out;
 	}
 
+	function get_recent_job_details(){
+		global $dbConnection;
+		
+		$query = "SELECT * FROM postjob2 ORDER BY job_id DESC LIMIT 10" ;
+		$result = mysqli_query($dbConnection,$query);
+		
+		if(!$result){
+			die("Database query failed.");
+		}
+		return $result;
+	}
+
+function time_elapsed_string($datetime, $full = false) {
+    $now = new DateTime;
+    $ago = new DateTime($datetime, new DateTimeZone('Asia/Colombo'));
+    $diff = $now->diff($ago);
+
+    $diff->w = floor($diff->d / 7);
+    $diff->d -= $diff->w * 7;
+
+    $string = array(
+        'y' => 'year',
+        'm' => 'month',
+        'w' => 'week',
+        'd' => 'day',
+        'h' => 'hour',
+        'i' => 'minute',
+        's' => 'second',
+    );
+    foreach ($string as $k => &$v) {
+        if ($diff->$k) {
+            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+        } else {
+            unset($string[$k]);
+        }
+    }
+
+    if (!$full) $string = array_slice($string, 0, 1);
+    return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
 	
 
 ?>

@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
 <link href="css/header.css" rel="stylesheet">
+
 <?php include 'header.php'; ?> 
+
 <style type="text/css">
 .createtabel {
 	position: absolute;
@@ -55,7 +61,22 @@
 	border-width: 3px;
 	border-style:outset;
 }
+.postButton{
+width:50%;
+height:40px;
+margin-top:15px;
+margin-bottom:15px;
+background-color:rgba(240,240,240,0.8);
+border:1px solid rgba(0,0,0,0.2);
+border-radius:3px;
+font-family:'Fauna One',serif;
+font-weight:500;
+font-size:14px;
+border-style: solid;
+border-width: 1px;
+}
 </style>
+
 </head>
 
 <body>
@@ -111,7 +132,7 @@ while($rows=mysqli_fetch_array($result2)){
 echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
 <td width="95%"><table width="100%" border="0" align="right" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
 <tr>
-<td bgcolor="#ccc"><strong>RE :</strong></td>
+<td bgcolor="#ccc"><strong><?php echo RE ; ?> :</strong></td>
 </tr>
 <tr>
 <td bgcolor="#ccc" align="left"><?php echo "by ".$rows['user']."  -    ".$rows['a_datetime']; ?></td>
@@ -157,14 +178,14 @@ mysqli_close($database);
 <td>
 <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
-<td valign="top"><strong>Answer</strong></td>
+<td valign="top"><strong><?php echo ANSWER ; ?></strong></td>
 <td valign="top">:</td>
-<td><textarea name="a_answer" cols="60" rows="7" id="a_answer"  required></textarea></td>
+<td><textarea name="a_answer" cols="60" rows="7" id="a_answer" placeholder="<?php echo ENTERYOURANSWER ; ?>..."  required></textarea></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td><input name="id" type="hidden" value="<?php echo $id; ?>"></td>
-<td><input type="submit" name="Submit" value="Submit" id="answer"> </td>
+<td><input type="submit" class="postButton" name="Submit" value="<?php echo POST ; ?>"  id="answer"> </td>
 </tr>
 </table>
 </td>
@@ -173,6 +194,6 @@ mysqli_close($database);
 </table>
 </div>
 <p>&nbsp;</p>
-<p class="backto">  	<a href="forum.php">&lt;&lt;BACK TO FORUM</a></p>
+<p class="backto">  	<a href="forum.php">&lt;&lt;<?php echo BACKTOFORUM ; ?></a></p>
 
 </body>
