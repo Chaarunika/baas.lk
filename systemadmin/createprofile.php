@@ -1,3 +1,7 @@
+<?php include 'header.php'; ?> 
+<?php include "../_database/database.php"; ?>
+<?php include "common.php" ;?>
+
 <head>
 
 <script type="text/javascript">
@@ -48,12 +52,13 @@ function ValidateMobNumber(txtMobId) {
 
 #basic {
 	position:absolute;
-	left:59px;
-	top:29px;
-	width:498px;
+	left:270px;
+	top:60px;
+	width:400px;
 	height:446px;
 	z-index:3;
 	background-color: rgba(255,255,255,1);
+	padding-left:50px;
 }
 
 #apDiv5 {
@@ -66,24 +71,36 @@ function ValidateMobNumber(txtMobId) {
 	background-color: rgba(255,255,255,1);
 	border-radius:20px;
 }
+
+#show1{
+	position:absolute;
+	padding-left:20px;
+	left:212px;
+	top:79px;
+	width:85%;
+	height:600;
+	z-index:2;
+	background-color: rgba(192,192,192,1);	
+}
+
+
 </style>
 </head>
-<div id="apDiv11">
+<div id="show1">
 <h3>
- Create New Account
+ <h3>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h3>
 </h3>
- <div id="apDiv5">
+
 <div id="basic">
-  <p>BASIC INFORMATION   </p>
-    <form id="form1" name="form1" method="post" action="createprofile.php">
+  <h3>BASIC INFORMATION</h3>
+    <form id="form1" name="form1" method="post" action="extra.php">
    
     <table>
     <tr>
   	<td>
        <label for="username">User Name</label>
-       </td>
        <td>
-       <input type="text"  name="username" id="username" autocomplete="off" required/>
+       <input type="text"  name="username" id="username" autocomplete="off" />
      </td>
      </tr>
      
@@ -94,7 +111,7 @@ function ValidateMobNumber(txtMobId) {
        <label for="Password">New Password</label>
        </td>
        <td>
-       <input type="password"  name="newPassword" id="newPassword" autocomplete="off" required/>
+       <input type="password"  name="newPassword" id="newPassword" autocomplete="off" />
      	</td>
         </tr> 
         <tr><td></td></tr>
@@ -104,7 +121,7 @@ function ValidateMobNumber(txtMobId) {
        <label for="confirmPassword">Confirm Password</label>
 	</td>
     <td>
-       <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" required/>
+       <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" />
      </td>
      </tr>
       <tr><td></td></tr> <tr><td></td></tr> <tr><td></td></tr><tr><td></td></tr>
@@ -112,7 +129,7 @@ function ValidateMobNumber(txtMobId) {
       <label for="spCategory">SP Category</label>
       </td>
       <td>
-        <select name="spCategory" id="spCategory" required>
+        <select name="spCategory" id="spCategory" >
          <option> Architect</option>
         <option>  Draftsman</option>
         <option> Landscape Designer </option>
@@ -145,7 +162,7 @@ function ValidateMobNumber(txtMobId) {
         <label for="district">District</label>
         </td>
         <td>
-        <select name="district" id="district" required>
+        <select name="district" id="district">
            <option>Colombo</option>
         <option>Kandy</option>
         <option>Kurunegala</option>
@@ -184,7 +201,7 @@ function ValidateMobNumber(txtMobId) {
        <label for="primaryMobileNo">Mobile No</label>
      </td>
      <td>
-       <input type="text" name="primaryMobile" id="primaryMobile"  required/>
+       <input type="text" name="primaryMobile" id="primaryMobile"  />
     </td>
     </tr>
      <tr><td></td></tr>
@@ -201,46 +218,11 @@ function ValidateMobNumber(txtMobId) {
  
       <p>Address</p>
       <p>
-        <textarea name="secondLine" id="secondLine" rows=4 cols="50%" required /></textarea>
+        <textarea name="secondLine" id="secondLine" rows=4 cols="50%"  /></textarea>
       </p>
-      <table><tr><td width="350px"></td><td>
-      <input type="submit" name="next" id="saveContact" value="NEXT>>" /> </td></tr></table>
+      <table><tr><td width="270px"></td><td>
+      <input name="next" type="submit" class="next" id="saveContact" value="NEXT>>" /> </td></tr></table>
     </form>
-
-</div>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-if ( isset( $_POST['next'] ))
-{
-?>
-<style>
-#basic
-{
-	display:none;
-}
-</style>
-<div id="other">
-<p>EXTRA INFORMATION   </p>
-<form id="form2" name="form2" method="post" action="createprofile.php">
- <p>Brief Description</p>
-      <p>
-        <textarea name="secondLine" id="secondLine" rows=6 cols="50%" /></textarea>
-      </p>
-      
-   <p>Work History</p>
-      <p>
-        <textarea name="secondLine" id="secondLine" rows=6 cols="50%" /></textarea>
-      </p>
-      <table><tr><td width="350px"></td><td>
-      <input type="submit" name="finish" id="saveContact" value="FINISH" /> </td></tr></table>
-
- </form>
-</div>
-<?php
-	
-}}
-?>
 
 </div>
 </div>
