@@ -50,11 +50,11 @@ include('config.php');
 			<ul class="nav nav-tabs">
 				<?php
 				if( $_SESSION['Catagory']== "sp"){
-					echo "<li role=\"presentation\"><a href=\"profile.php\">Overview</a></li>";
-					echo "<li role=\"presentation\"><a href=\"spProfEdit.php\">Edit Profile</a></li>";
+					echo "<li role=\"presentation\"><a href=\"profile.php\">".OVERVIEW ."</a></li>";
+					echo "<li role=\"presentation\"><a href=\"spProfEdit.php\">".EDITPROFILE."</a></li>";
 				}
 				else{
-					echo "<li role=\"presentation\"><a href=\"profileCustomer.php\">". OVERVIEW ."</a></li>";
+					echo "<li role=\"presentation\"><a href=\"profileCustomer.php\">".OVERVIEW."</a></li>";
 				}
 			  	
 			 	
