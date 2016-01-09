@@ -1,7 +1,7 @@
 
 <?php
 
-$languageTranslated = "tamil"
+$languageTranslated = "tamil";
 
 //login
 define("DATABASE_ERROR","தரவுத்தள இணைப்பு பிழை");
@@ -80,6 +80,9 @@ define("RATNAPURA", "இரத்தினபுரி");
 define("TRINCOMALEE", "திருகோணமலை");
 define("VAVUNIYA", "வவுனியா");
 
+//job bar
+define("JOBLOCATION", "Location");
+define("JOBCONTACT","Contact");
 
 //Post a job
 define("POSTYOURJOB", "உங்கள் வேலை பதிவு");
