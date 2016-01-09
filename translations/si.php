@@ -120,12 +120,13 @@ define("POST", "පලකරන්න");
 define("ENTERYOURQUESTION", "ඔබේ ප්‍රශ්නය ඇතුලත් කරන්න");
 
 //forum
-define("ADDNEWTOPIC", "අලුත් මාතෘකාව එක් කරන්න");
+define("ADDNEWTOPIC", "අලුත් මාතෘකාවක් එක් කරන්න");
 define("DISCUSSION", "සාකච්ඡා");
 define("STARTEDBY", "ආරම්භය");
 define("VIEWS", "බැලුම් වාර");
 define("REPLIES", "පිළිතුරු");
 define("DATEANDTIME", "දිනය සහ වෙලාව");
+define("NOTFOUND","සෙවීම් නැත.");
 
 //view topic
 define("ANSWER", "පිළිතුර");
@@ -209,10 +210,32 @@ define("NOOFREPLIES", "පිළිතුරු සංඛ්යාව");
 define("PARTICIPANT", "සහභාගිවන්නා");
 define("DATEOFCREATION", "තැනූ දිනය");
 define("YOUHAVENOREADMESSAGE", "කියවීමට පණිවිඩ නැත");
-define("READMESSAGES", "කියා වූ පණිවිඩ");
+define("READMESSAGES", "කිය වූ පණිවිඩ");
 
 //profileCustomer
 define("YOURRECENTAPPOINTMENTS", "ඔබේ දැන්වීම් පත්වීම්");
+
+
+//new_pm
+define("NEWMESSAGE", "අලුත් කෙටි පණිවිඩයක්");
+define("RECIPIENT", "ලබන්නා");
+define("USERNAME", "පරිශීලක නාමය");
+define("MESSAGE", "පණිවිඩය");
+define("SEND", "යවන්න");
+define("GOTOMYPERSONALMESSAGES", "මගේ පුද්ගලික පණිවිඩ වලට යන්න");
+define("YOUHAVENOAPPOINMENTSTOSHOW","දැනට ඔබ සදහා පත්වීම් නොමැත.");
+define("THEMESSAGESENDSUCCESSFULLY", "ඔබේ පණිවිඩය සාර්ථකව යොමු කරන ලදී.");
+
+//findjob
+define("RECENTLYPOSTEDJOBS", "මෑතකදී පලකරන රැකියා");
+define("CUSTOMERNAME", "සේවා ලාභියාගේ නම");
+define("TP", "දු.ක");
+define("POSTEDDATE", "පලකරන ලද දිනය");
+define("POSTEDTIME", "පලකරන ලද වෙලාව");
+define("FINDJOBS", "රැකියා සොයන්න");
+define("SEARCHBYAREA", "ප්‍රදේශය මගින් සොයන්න");
+define("SEARCH", "සොයන්න");
+define("NOJOBSSEARCHAREA", "ඔබ සෙවූ ප්‍රදේශයේ රැකියා නොමැත.");
 
 
 

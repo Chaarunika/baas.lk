@@ -99,7 +99,7 @@
 		$noOfappointments=mysqli_num_rows($result);
 		if($noOfappointments==0)
 		{
-		echo "<br>You have no appointments to show<br>";
+		echo "<br>".YOUHAVENOAPPOINMENTSTOSHOW."<br>";
 		}
 		
 		else

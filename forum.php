@@ -180,7 +180,7 @@ if($found == 0)
 <table width="1077" bgcolor:"#fff">
 <tr>
 <td width="100%" align="center" bgcolor:"#fff"><p>&nbsp;</p>
-  <p><strong>Not Founded</strong></p></td>
+  <p><strong><?php echo NOTFOUND ; ?></strong></p></td>
 </tr>
 </table>
 </div>

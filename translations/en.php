@@ -1,5 +1,5 @@
 <?php
-echo "translation_english";
+
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
@@ -142,6 +142,7 @@ define("STARTEDBY", "Started By");
 define("VIEWS", "Views");
 define("REPLIES", "Replies");
 define("DATEANDTIME", "Date & Time");
+define("NOTFOUND","Not Found.");
 
 //view topic
 define("ANSWER", "Answer");
@@ -229,9 +230,27 @@ define("READMESSAGES", "Read Messages");
 
 //profileCustomer
 define("YOURRECENTAPPOINTMENTS", "Your Recent Appointments");
+define("YOUHAVENOAPPOINMENTSTOSHOW","You Have No Appointments To Show.");
 
+//new_pm
+define("NEWMESSAGE", "New Message");
+define("RECIPIENT", "Recipient");
+define("USERNAME", "User Name");
+define("MESSAGE", "Message");
+define("SEND", "SEND");
+define("GOTOMYPERSONALMESSAGES", "Go To My Personal Messages");
+define("THEMESSAGESENDSUCCESSFULLY", "The message was sent successfully.");
 
-
+//findjob
+define("RECENTLYPOSTEDJOBS", "Recently Posted Jobs");
+define("CUSTOMERNAME", "Customer Name");
+define("TP", "TP");
+define("POSTEDDATE", "Posted Date");
+define("POSTEDTIME", "Posted Time");
+define("FINDJOBS", "Find Jobs");
+define("SEARCHBYAREA", "Search By Area");
+define("SEARCH", "SEARCH");
+define("NOJOBSSEARCHAREA", "Sorry, No Jobs Searched Area.");
 
 
 
