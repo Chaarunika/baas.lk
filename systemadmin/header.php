@@ -78,9 +78,9 @@ window.onload = Fun;
 <div id="logout">
 <a href="logout.php"><img src="images/logout.png"></a> 
 </div>
-<div id="Home">
+<!--<div id="Home">
 <a href="home.php"><img src="images/home.png" width="70" height="70" ></a> 
-</div>
+</div> -->
 <div id="main-header">	
 "The best way to find a builder"	
 </div>

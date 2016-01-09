@@ -163,10 +163,12 @@ function confirmvalid()
 	left:270px;
 	top:60px;
 	width:400px;
-	height:490px;
+	height:510px;
 	z-index:3;
 	background-color: rgba(255,255,255,1);
 	padding-left:50px;
+	border-style: solid;
+    border-color: #0000ff;
 }
 
 #apDiv5 {
@@ -198,7 +200,7 @@ function confirmvalid()
 
 <div id="show1">
 <h3>
- <h3>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h3>
+ <h2>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h2>
 </h3>
 
 <div id="basic">
@@ -212,11 +214,9 @@ function confirmvalid()
        <td>
        <input type="text"  name="username" id="username" autocomplete="off" onBlur="return usernamevalidate('username')" required/>
      </td>
-     </tr>
+     </tr><tr><td></td></tr>
      
-      <tr><td></td></tr>
-     
-     <tr>
+      <tr>
      <td>
        <label for="Password">New Password</label>
        </td>
@@ -337,7 +337,7 @@ function confirmvalid()
  
       <p>Address</p>
       <p>
-        <textarea name="secondLine" id="secondLine" rows=4 cols="50%"  required/></textarea>
+        <textarea name="secondLine" id="secondLine" rows=4 cols="40"  required/></textarea>
       </p>
       <table><tr><td width="270px"></td><td>
       <input name="next" type="submit" class="next" id="saveContact" value="NEXT>>" /> </td></tr></table>

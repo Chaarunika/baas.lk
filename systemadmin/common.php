@@ -18,7 +18,7 @@ h3{
 	position: absolute;
 	left: 1px;
 	top: 79px;
-	width: 185px;
+	width: 15%;
 	height: 262px;
 	z-index: 111;
 }

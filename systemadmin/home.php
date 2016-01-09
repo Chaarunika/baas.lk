@@ -14,12 +14,12 @@
 }
 </style>
 <div id=show1>
- <h3>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h3>
+ <h2>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h2>
 
 <style type="text/css">
 #apDiv19 {
 	position:absolute;
-	left:300px;
+	left:200px;
 	top:70px;
 	width:896px;
 	height:115px;
@@ -203,7 +203,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -278,7 +278,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -352,7 +352,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -424,7 +424,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -507,7 +507,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -584,7 +584,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -662,7 +662,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -740,7 +740,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -814,7 +814,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:60px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
