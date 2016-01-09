@@ -1,5 +1,6 @@
 <?php
 
+$languageTranslated = "english"
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
@@ -24,6 +25,7 @@ define("JOBS", "JOBS");
 
 
 //searchbar
+define("NORESULTS", "NO RESULTS TO BE DISPLAYED");
 
 //catagory
 
@@ -158,6 +160,7 @@ define("DETAIL", "DETAIL");
 define("OVERVIEW", "Over View");
 define("EDITPROFILE", "Edit Profile");
 define("MESSAGES", "Messages");
+define("MESSAGETAB", "Messages");
 define("MEMBERSINCE", "Member Since");
 define("CATEGORY", "Category");
 define("AREA", "Area");

@@ -66,7 +66,7 @@ function ValidateMobNumber(txtMobId) {
     <ul class="nav nav-tabs">
       <li role="presentation" ><a href="profile.php"><?php echo OVERVIEW ; ?></a></li>
       <li role="presentation" class="active"><a href="spProfEdit.php"><?php echo EDITPROFILE ; ?></a></li>
-      <li role="presentation"><a href="list_pm.php"><?echo MESSAGES ; ?></a></li>
+      <li role="presentation"><a href="list_pm.php"><?php echo MESSAGETAB; ?></a></li>
     </ul>
   </div>
 

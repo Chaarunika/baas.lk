@@ -1,6 +1,8 @@
 
 <?php
 
+$languageTranslated = "tamil"
+
 //login
 define("DATABASE_ERROR","தரவுத்தள இணைப்பு பிழை");
 define("LOGIN_FAILED", "புகுபதிகை தவறியது");
@@ -26,6 +28,8 @@ define("JOBS", "வேலைகள்");
 
 
 //searchbar
+
+define("NORESULTS", "NO RESULTS TO BE DISPLAYED");
 
 //catagory
 

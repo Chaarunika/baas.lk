@@ -1,5 +1,5 @@
 <?php
-echo "translation_sinhala";
+$languageTranslated = "sinhala";
 
 define("DATABASE_ERROR","දත්ත පද්ධතියේ දෝෂයකි.");
 define("LOGIN_FAILED", "ඇතුල්වීම වලංගු නැත.");
@@ -21,7 +21,7 @@ define("JOBS", "රැකියා");
 
 
 //searchbar
-
+define("NORESULTS", "ප්‍රතිපල නොමැත");
 
 define("ALL", "සියලුම");
 define("SUBMIT_SEARCH", "සොයන්න");
