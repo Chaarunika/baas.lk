@@ -1,8 +1,6 @@
 <?php include 'header.php'; ?> 
 <?php include "../_database/database.php"; ?>
-<?php include "common.php" ;?>
-
-<head>
+<?php include "common.php" ;?><head>
 
 <script type="text/javascript">
 function ValidateMobNumber(txtMobId) {
@@ -55,7 +53,7 @@ function ValidateMobNumber(txtMobId) {
 	left:270px;
 	top:60px;
 	width:400px;
-	height:446px;
+	height:490px;
 	z-index:3;
 	background-color: rgba(255,255,255,1);
 	padding-left:50px;
@@ -86,6 +84,8 @@ function ValidateMobNumber(txtMobId) {
 
 </style>
 </head>
+
+
 <div id="show1">
 <h3>
  <h3>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h3>
@@ -100,7 +100,7 @@ function ValidateMobNumber(txtMobId) {
   	<td>
        <label for="username">User Name</label>
        <td>
-       <input type="text"  name="username" id="username" autocomplete="off" />
+       <input type="text"  name="username" id="username" autocomplete="off" required/>
      </td>
      </tr>
      
@@ -111,7 +111,7 @@ function ValidateMobNumber(txtMobId) {
        <label for="Password">New Password</label>
        </td>
        <td>
-       <input type="password"  name="newPassword" id="newPassword" autocomplete="off" />
+       <input type="password"  name="newPassword" id="newPassword" autocomplete="off" required/>
      	</td>
         </tr> 
         <tr><td></td></tr>
@@ -121,7 +121,16 @@ function ValidateMobNumber(txtMobId) {
        <label for="confirmPassword">Confirm Password</label>
 	</td>
     <td>
-       <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" />
+       <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="off" required/>
+     </td>
+     </tr>
+     <tr><td></td></tr>
+        <tr>
+        <td>
+       <label for="email">Email</label>
+	</td>
+    <td>
+       <input type="text" name="email" id="email" autocomplete="off" required />
      </td>
      </tr>
       <tr><td></td></tr> <tr><td></td></tr> <tr><td></td></tr><tr><td></td></tr>
@@ -129,7 +138,7 @@ function ValidateMobNumber(txtMobId) {
       <label for="spCategory">SP Category</label>
       </td>
       <td>
-        <select name="spCategory" id="spCategory" >
+        <select name="spCategory" id="spCategory" required>
          <option> Architect</option>
         <option>  Draftsman</option>
         <option> Landscape Designer </option>
@@ -162,7 +171,7 @@ function ValidateMobNumber(txtMobId) {
         <label for="district">District</label>
         </td>
         <td>
-        <select name="district" id="district">
+        <select name="district" id="district" required>
            <option>Colombo</option>
         <option>Kandy</option>
         <option>Kurunegala</option>
@@ -201,7 +210,7 @@ function ValidateMobNumber(txtMobId) {
        <label for="primaryMobileNo">Mobile No</label>
      </td>
      <td>
-       <input type="text" name="primaryMobile" id="primaryMobile"  />
+       <input type="text" name="primaryMobile" id="primaryMobile" required/>
     </td>
     </tr>
      <tr><td></td></tr>
@@ -211,14 +220,14 @@ function ValidateMobNumber(txtMobId) {
        <label for="optionalMobile">Second Mobile No</label>
        </td>
        <td>
-       <input type="text" name="optionalMobile" id="optionalMobile"  />
+       <input type="text" name="optionalMobile" id="optionalMobile" />
     </td>
     </tr>
 </table>
  
       <p>Address</p>
       <p>
-        <textarea name="secondLine" id="secondLine" rows=4 cols="50%"  /></textarea>
+        <textarea name="secondLine" id="secondLine" rows=4 cols="50%"  required/></textarea>
       </p>
       <table><tr><td width="270px"></td><td>
       <input name="next" type="submit" class="next" id="saveContact" value="NEXT>>" /> </td></tr></table>
