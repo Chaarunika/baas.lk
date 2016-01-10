@@ -12,7 +12,6 @@
 	height:60px;
 	z-index:16;
 	background-color: #CCCCCC;
-	border-radius: 20px;
 	left: 509px;
 }
 #apDiv2 {
@@ -23,7 +22,7 @@
 	height:51px;
 	z-index:17;
 	background-color: #CCCCCC;
-	border-radius:20px;
+	
 }
 .searchtext {
 	position: absolute;
@@ -45,9 +44,27 @@
 	left: 350px;
 	top: 7px;
 	width: 118px;
-	background-color: #FC0;
+	background: #787878;
+    background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
 	height: 27px;
+	color:#FFF;
+	font-weight: bold;
+	font-size: 12px;
 	
+}
+.searchbtton:hover{
+ background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+  cursor:hand;
 }
 
 .notfound {
@@ -135,7 +152,7 @@ while($rows = mysqli_fetch_assoc($result)) {
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
 <tr>
-<td align="center" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><img src="/BAAS_LK/<?php 
+<td align="center" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><img src="../<?php 
 echo $rows['userphoto'];
 ?>" alt="" border=3 height=30 width=30></img></td>
 <td align="left" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><?php echo $rows['user'];?></td>
@@ -235,7 +252,7 @@ while($rows = mysqli_fetch_array($result)){
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
 <tr>
-<td align="center" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><img src="/BAAS_LK/<?php 
+<td align="center" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><img src="../<?php 
 echo $rows['userphoto'];
 ?>" alt="" border=3 height=30 width=30></img></td>
 <td align="left" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><?php echo $rows['user'];?></td>

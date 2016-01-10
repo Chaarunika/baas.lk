@@ -163,10 +163,12 @@ function confirmvalid()
 	left:270px;
 	top:60px;
 	width:400px;
-	height:490px;
+	height:510px;
 	z-index:3;
 	background-color: rgba(255,255,255,1);
 	padding-left:50px;
+	border-style: solid;
+    border-color: #0000ff;
 }
 
 #apDiv5 {
@@ -190,6 +192,60 @@ function confirmvalid()
 	z-index:2;
 	background-color: rgba(192,192,192,1);	
 }
+#btn {
+	top:0px;
+	left:0px;
+  background: #787878;
+  background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width:140px;
+}
+
+#btn:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
+#btn1 {
+  top:0px;
+  left:140px;
+  background: #787878;
+  background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width:140px;
+}
+
+#btn1:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
 
 
 </style>
@@ -197,9 +253,7 @@ function confirmvalid()
 
 
 <div id="show1">
-<h3>
- <h3>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h3>
-</h3>
+<table><tr><td><a href="home.php"><div id='btn'>Remove User</div></a></td><td><a href="createprofile.php"><div id='btn1'>Create User</div></a></td></tr></table>
 
 <div id="basic">
   <h3>BASIC INFORMATION</h3>
@@ -212,11 +266,9 @@ function confirmvalid()
        <td>
        <input type="text"  name="username" id="username" autocomplete="off" onBlur="return usernamevalidate('username')" required/>
      </td>
-     </tr>
+     </tr><tr><td></td></tr>
      
-      <tr><td></td></tr>
-     
-     <tr>
+      <tr>
      <td>
        <label for="Password">New Password</label>
        </td>
@@ -337,7 +389,7 @@ function confirmvalid()
  
       <p>Address</p>
       <p>
-        <textarea name="secondLine" id="secondLine" rows=4 cols="50%"  required/></textarea>
+        <textarea name="secondLine" id="secondLine" rows=4 cols="40"  required/></textarea>
       </p>
       <table><tr><td width="270px"></td><td>
       <input name="next" type="submit" class="next" id="saveContact" value="NEXT>>" /> </td></tr></table>

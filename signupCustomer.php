@@ -2,7 +2,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Untitled Document</title>
+	<title>baas.lk</title>
 
 	<style></style>
 	<link href="css/header.css" rel="stylesheet" />
@@ -18,7 +18,7 @@
 	require_once('_database/database.php');
     require_once('libraries/password_compatibility_library.php');
 	require_once('config/configCustomer.php');	
-	require_once('translations/en.php');
+	
 	require_once('libraries/PHPMailer.php');
 	require_once('classes/RegistrationCustomer.php');
 
@@ -28,13 +28,13 @@
 
 	<div id ="apDivBox">
 
-		<div id="apDivTitle">Create	your baas.lk Account</div>
+		<div id="apDivTitle"><?php echo CREATEYOURBAASACCOUNT ; ?></div>
 
 		<?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
 
 		<div id="apDivFbLogin">
-  			<p style="font-size:20px">Fed up with filling forms...???</p>
-  			<p style="font-size:20px">Try easy signup solutions..</p>
+  			<p style="font-size:20px"><?php echo FEDUPWITHFILLINGFORMS ; ?>...???</p>
+  			<p style="font-size:20px"><?php echo TRYEASYSIGNUPSOLUTION ; ?>..</p>
 
   			<a href = "fbLogin/fbSignupStatus.php?catagory=customer">
   			<p><img src="images/fb-logo-signup.png" width="250" height="53" /></p>
@@ -52,20 +52,19 @@
   			<form method="post" action="" name="registerform">
     		
     		<label for="user_name">
-   			<p>Choose your username</p></label>
+   			<p><?php echo CHOOSEYOURUSERNAME ; ?></p></label>
     		<input name="user_name" type="text" required class="textField" id="user_name" pattern="[a-zA-Z0-9]{2,64}" />
 
     		<label for="user_email">
-    		<p>Email Address (verification Required)</p></label>
+    		<p><?php echo EMAILADDRESS ; ?></p></label>
     		<input name="user_email" type="email" required class="textField" id="user_email" />    
 
-		    <label for="user_password_new"><p>Create a password (minimun 6 characters)</p></label>
-		    <input name="user_password_new" type="password" required class="textField" id="user_password_new" pattern=".{6,}" autocomplete="off" />
+		    <label for="user_password_new"><p> <?php echo CREATEAPASSWORD ; ?> <id="user_password_new" pattern=".{6,}" autocomplete="off" />
 
-		    <label for="user_password_repeat"><p>Confirm your password</p></label>
+		    <label for="user_password_repeat"><p><?php echo CONFIRMYOURPASSWORD ; ?></p></label>
 		    <input name="user_password_repeat" type="password" required class="textField" id="user_password_repeat" pattern=".{6,}" autocomplete="off" />
 
-    		<input name="register" type="submit" class="signupBtn" value="signup"/>
+    		<input name="register" type="submit" class="signupBtn" value="<?php echo SIGNUP ; ?>"/>
 			</form>
 
 		<?php } ?>
