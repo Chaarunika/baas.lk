@@ -62,7 +62,7 @@ window.onload = Fun;
 
 <html>
 
-<div id="apDivHeaderContainer">
+<div id="btnheader">
 
 <div id="apDivLogo">
 
@@ -70,19 +70,20 @@ window.onload = Fun;
 
 </div>
 
-<div id="apDivUBar1"></div>
-<div id="apDivUBar2"></div>
+<div id="btnheader1"></div>
+<div id="btnheader2"></div>
 
 <div id="apDivBaasLk">baas.lk</div>
 
+<a href="logout.php">
 <div id="logout">
-<a href="logout.php"><img src="images/logout.png"></a> 
-</div>
-<div id="Home">
+Log Out</div></a> 
+
+<!--<div id="Home">
 <a href="home.php"><img src="images/home.png" width="70" height="70" ></a> 
-</div>
-<div id="main-header">	
-"The best way to find a builder"	
+</div> -->
+<div id="main-header1">	
+System Admin Panel	
 </div>
 
 

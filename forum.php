@@ -10,31 +10,37 @@
 <style type="text/css">
 #apDiv1 {
 	position:absolute;
-	top:122px;
+	top:90px;
+	left:5px;
 	width:516px;
-	height:93px;
+	height:60px;
 	z-index:16;
-	background-color: rgba(192,192,192,0.2);
-	border-radius: 20px;
-	left: 3px;
+	 background: #a7b1b5;
+  background-image: -webkit-linear-gradient(top, #a7b1b5, #90a3ad);
+  background-image: -moz-linear-gradient(top, #a7b1b5, #90a3ad);
+  background-image: -ms-linear-gradient(top, #a7b1b5, #90a3ad);
+  background-image: -o-linear-gradient(top, #a7b1b5, #90a3ad);
+  background-image: linear-gradient(to bottom, #a7b1b5, #90a3ad);
+	border-radius: 5px;
 }
 .notfound {
 	background-color: #fff;
 	position: absolute;
 	left: 3px;
-	top: 71px;
-	width: 1216px;
-	height: 60px;
-	z-index: 100;
+	top:1px;
+	width: 900px;
+	height: 120px;
+	z-index: 2;
 }
 #apDiv2 {
 	position:absolute;
-	left:15px;
+	right:5px;
 	top:16px;
 	width:480px;
 	height:62px;
 	z-index:17;
 	border-radius:20px;
+	
 }
 .searchtext {
 	position: absolute;
@@ -44,34 +50,149 @@
 	left: 8px;
 	font-size:15px;
 	font-family:"Arial Black", Gadget, sans-serif;
-	top: 15px;
+	top: 1px;
 	width: 319px;
-	height: 33px;
+	height: 20px;
 }
 .searchtext:focus{
 	color:#000;
 }
-.searchbtton {
+#searchbtton {
 	position: absolute;
 	left: 354px;
-	top: 16px;
+	top: 1px;
 	width: 118px;
-	background-color: #FC0;
+	background: #787878;
+    background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
 	height: 33px;
-	border-radius:20px;
 	border-style:outset;
 	border-width:3px;
 	cursor:hand;
 	font-weight: bold;
+	color:#fff;
+	 
+}
+#searchbtton:hover{
+	
+ background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+ 
 }
 #newdiscuss
-{
-	border-width:4px;
-	
-	border-color:#999;
-	cursor:hand;
+ {
+  background: #74787a;
+  background-image: -webkit-linear-gradient(top, #74787a, #2a3033);
+  background-image: -moz-linear-gradient(top, #74787a, #2a3033);
+  background-image: -ms-linear-gradient(top, #74787a, #2a3033);
+  background-image: -o-linear-gradient(top, #74787a, #2a3033);
+  background-image: linear-gradient(to bottom, #74787a, #2a3033);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
 }
 
+#newdiscuss:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #212629);
+  background-image: -moz-linear-gradient(top, #000000, #212629);
+  background-image: -ms-linear-gradient(top, #000000, #212629);
+  background-image: -o-linear-gradient(top, #000000, #212629);
+  background-image: linear-gradient(to bottom, #000000, #212629);
+  text-decoration: none;
+}
+
+#apDivQuestionBox {
+	position: absolute;
+	left: 950px;
+	top: 200px;
+	width: 390px;
+	height: 350px;
+	z-index: 1;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	border:1px solid rgba(51,51,51,0.5);
+}
+#apDivQuestionTitle {
+	position: absolute;
+	left: 16px;
+	top: 18px;
+	width: 350px;
+	z-index: 2;
+}
+
+#apDivQustionForum {
+	position: absolute;
+	left: 19px;
+	top: 60px;
+	width: 100%;
+	height: 147px;
+	z-index: 2;
+}
+.post{
+width:100%;
+height:40px;
+margin-top:15px;
+margin-bottom:15px;
+background-color:rgba(240,240,240,0.8);
+border:1px solid rgba(0,0,0,0.2);
+border-radius:3px;
+font-family:'Fauna One',serif;
+font-weight:500;
+font-size:14px;
+border-style: solid;
+border-width: 1px;
+}
+.post:hover{
+	background-color:#a6a6a6;
+}
+.faqText{
+width:100%;
+height:60px;
+margin-top:10px;
+border:none;
+border-radius:3px;
+padding:5px;
+resize:none;
+border-style: solid;
+border-width: 1px;
+border-color: rgba(240,240,1,1);
+
+}
+.faqText1{
+width:100%;
+height:60px;
+margin-top:10px;
+border:none;
+border-radius:3px;
+padding:5px;
+resize:none;
+border-style: solid;
+border-width: 1px;
+border-color: rgba(240,240,1,1);
+
+}
+.createtabel2 {
+	position: absolute;
+	left: 200px;
+	top: 350px;
+	width: 900px;
+	height: 140px;
+	z-index: 15;
+}
 
 </style>
 
@@ -80,6 +201,21 @@
 
 <body >
 <?php include 'header.php'; ?> 
+<div id="apDiv1">
+<div id="apDiv2">
+  <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    <p>
+      <label for="textfield"></label>
+      <input name="textfield" type="text" class="searchtext" id="textfield" required>
+      <input name="button" type="submit" class="searchbtton" id="searchbtton" value=" <?php echo SUBMIT_SEARCH ; ?> ">
+  </p>
+    
+  </form>
+</div>
+</div>
+
+
+
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -96,32 +232,18 @@ $result = mysqli_query($database,$sql);
 $word =stripslashes($_POST['textfield']);
 $word = str_replace(' ','',$word);
 ?>
-<div id="apDiv1">
-<div id="apDiv2">
-  <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    <p>
-      <label for="textfield"></label>
-      <input name="textfield" type="text" class="searchtext" id="textfield" required>
-      <input name="button" type="submit" class="searchbtton" id="button" value=" <?php echo SUBMIT_SEARCH ; ?> ">
-  </p>
-    <p>&nbsp;</p>
-  </form>
-</div>
-</div>
-<div class="createtabel">
+<h2> Searching Result </h2>
+<div class="createtabel2">
 <table border="0" bordercolor="#666666">
 <tr>
 <td>
-<table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
-<tr >
-<td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="<?php echo ADDNEWTOPIC ; ?>"></form></td>
-</tr>
+<table width="900" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr>
-<td width="30%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
-<td width="30%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
+<td width="45%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
+<td width="20%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
 </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -177,9 +299,9 @@ if($found == 0)
 ?>
 
 <div class="notfound">
-<table width="1077" bgcolor:"#fff">
+<table width="900" bgcolor:"#fff">
 <tr>
-<td width="100%" align="center" bgcolor:"#fff"><p>&nbsp;</p>
+<td width="100%" align="center" bgcolor:"#fff">
   <p><strong><?php echo NOTFOUND ; ?></strong></p></td>
 </tr>
 </table>
@@ -192,6 +314,8 @@ mysqli_close($database);
 }
 }
 else{
+	
+
 	include "_database/database.php";
  
 $tbl_name="fquestions";
@@ -206,16 +330,13 @@ $bgcolor="";
 <table border="0" bordercolor="#666666">
 <tr>
 <td>
-<table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
-<tr >
-<td colspan="7" align="center"><form method="post" action="new_topic.php"><input id="newdiscuss" type="submit" value="<?php echo ADDNEWTOPIC ; ?>"></form></td>
-</tr>
+<table width="900" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr>
-<td width="30%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
-<td width="30%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
+<td width="45%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
+<td width="20%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
 </tr>
  
 <?php
@@ -258,21 +379,35 @@ mysqli_close($database);
 </tr>
 </table>
 </div>
-<div id="apDiv1">
-<div id="apDiv2">
-  <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    <p>
-      <label for="textfield"></label>
-      <input name="textfield" type="text" class="searchtext" id="textfield" required>
-      <input name="button" type="submit" class="searchbtton" id="button" value=" <?php echo SUBMIT_SEARCH ; ?> ">
-  </p>
-    <p>&nbsp;</p>
+<div id="apDivQuestionBox">
+
+<div id="apDivQuestionTitle">
+  <p style="font-size:18px"><strong>ADD NEW TOPIC</strong></p>
+</div>
+
+<div id="apDivQustionForum">
+  <form id="form1" name="form1" method="post" action="add_new_topic.php">
+      <table><tr><td>
+      Topic</td></tr>
+      <tr><td>
+      <textarea name="topic" id="question" class="faqText" placeholder="topic" cols="40" rows="2" required></textarea>
+      </td></tr><tr><td>
+      Details
+      </td></tr><tr><td>
+      <textarea name="detail" id="question1" class="faqText1" placeholder="details" cols="45" rows="5" required></textarea>
+   	</td></tr><tr><td>
+   
+      <input type="submit" class="post" name="qBtn" id="qBtn" value="<?php echo POST ; ?>" />
+   </td></tr><table>
   </form>
 </div>
+
 </div>
 <?php
 }
 ?>
+
+
 
 </body>
 </html>

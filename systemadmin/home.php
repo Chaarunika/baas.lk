@@ -2,6 +2,60 @@
 <?php include "common.php" ;?>
   <?php include '../_database/database.php'; ?>
 <style>
+#btn {
+	top:0px;
+	left:0px;
+  background: #787878;
+  background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width:140px;
+}
+
+#btn:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
+#btn1 {
+  top:0px;
+  left:140px;
+  background: #787878;
+  background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width:140px;
+}
+
+#btn1:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+}
 #show1{
 	position:absolute;
 	padding-left:20px;
@@ -12,14 +66,16 @@
 	z-index:2;
 	background-color: rgba(192,192,192,1);	
 }
+
 </style>
 <div id=show1>
- <h3>  <a href="home.php">Remove User</a> || <a href="createprofile.php">Create User</a></h3>
+
+<table><tr><td><a href="home.php"><div id='btn'>Remove User</div></a></td><td><a href="createprofile.php"><div id='btn1'>Create User</div></a></td></tr></table>
 
 <style type="text/css">
 #apDiv19 {
 	position:absolute;
-	left:300px;
+	left:200px;
 	top:70px;
 	width:896px;
 	height:115px;
@@ -55,9 +111,26 @@
 	top: 17px;
 	width: 94px;
 	height: 24px;
-	background-color: #FF9900;
+	 background: #787878;
+    background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
 	font-weight: bold;
+	color:#FFF;
 	font-size: 12px;
+	text-decoration: none;
+}
+.searchbutton:hover{
+ background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+  cursor:hand;
 }
 #apDiv1 #apDiv2 #form1 p {
 	font-size: 14px;
@@ -203,7 +276,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -278,7 +351,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -341,7 +414,7 @@ mysqli_close($database);
 	
 	{
  		
-    $found =-1;
+$found =-1;
 $sql = "SELECT * FROM users CROSS JOIN serviceprovider WHERE users.user_id=serviceprovider.user_id and serviceprovider.category='$category' ";
 $result = mysqli_query($database, $sql);
 if (mysqli_num_rows($result) > 0) {
@@ -352,7 +425,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -424,7 +497,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -507,7 +580,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -584,7 +657,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -662,7 +735,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -740,7 +813,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:30px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -814,7 +887,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $found; ?>
 {
 	position:absolute;
-	left:60px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;

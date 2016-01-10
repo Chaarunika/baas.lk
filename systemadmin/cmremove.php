@@ -6,22 +6,21 @@
 <style type="text/css">
 #capDiv1 {
 	position:absolute;
-	left:3px;
-	top:150px;
-	width:100%;
-	height:81px;
-	z-index:1;
+	top:20px;
+	width:500px;
+	height:60px;
+	z-index:16;
+	background-color: #CCCCCC;
+	left: 509px;
 }
 #capDiv2 {
 	position:absolute;
-	left:508px;
-	top:-108px;
-	width:470px;
-	height:48px;
-	z-index:2;
-	background-color:#CCC;
-	font-weight: bold;
-	border-radius: 20px;
+	left:0px;
+	top:7px;
+	width:500px;
+	height:51px;
+	z-index:17;
+	background-color: #CCCCCC;
 }
 #cpublish {
 	position:absolute;
@@ -37,12 +36,12 @@
 	border-width:3px;
 	border-style: inset;
 	background-color:#fff;
-	left: 25px;
-	font-size:16px;
+	left: 13px;
+	font-size:14px;
 	font-family:"Arial Black", Gadget, sans-serif;
-	top: 4px;
+	top: 6px;
 	width: 319px;
-	height: 24px;
+	height: 28px;
 }
 .csearchtext:focus{
 	color:#000;
@@ -50,16 +49,31 @@
 .csearchbutton {
 	position: absolute;
 	left: 350px;
-	top: 5px;
-	width: 103px;
-	height: 23px;
-	background-color: #FF9900;
+	top: 7px;
+	width: 118px;
+	 background: #787878;
+    background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+	height: 27px;
+	color:#FFF;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 12px;
 	
 }
-</style>
-<body>
+.csearchbutton:hover{
+ background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+  cursor:hand;
+}
+</style><body>
 <div id="capDiv1">
 <div id="capDiv2">
   <form id="form1" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?> ">
@@ -107,7 +121,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $cfound; ?>
 {
 	position:absolute;
-	left:60px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -125,7 +139,7 @@ if (mysqli_num_rows($result) > 0) {
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="25%" bgcolor="#F8F7F1"><img src="\BAAS_LK\<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
+<td width="25%" bgcolor="#F8F7F1"><img src="..\<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
@@ -174,7 +188,7 @@ if (mysqli_num_rows($result) > 0) {
 #ap<?php echo $cfound; ?>
 {
 	position:absolute;
-	left:60px;
+	left:180px;
 	top:<?php echo 200*$found?>px;
 	width:750px;
 	height:180px;
@@ -192,7 +206,7 @@ if (mysqli_num_rows($result) > 0) {
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="25%" bgcolor="#F8F7F1"><img src="\BAAS_LK\<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
+<td width="25%" bgcolor="#F8F7F1"><img src="..\<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
@@ -231,6 +245,7 @@ mysqli_close($database);
 </div>
 </body>
 </div>
+
 <style>
 #show1{
 	position:absolute;

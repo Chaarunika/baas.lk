@@ -1,9 +1,8 @@
 <?php
+include 'sessioncheck.php' ;
 include "_database/database.php";
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
 
+if($_SESSION["username"]){
 $user= $_SESSION['username'];
 $userphoto=$_SESSION['user_avatar'];
 $usercatagory=$_SESSION['Catagory'];
@@ -26,4 +25,5 @@ else {
 echo "ERROR";
 }
 mysqli_close($database);
+}
 ?>

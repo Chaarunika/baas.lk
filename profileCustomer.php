@@ -18,6 +18,156 @@
 	<link href="css/profileCustomer.css" rel="stylesheet" />
 </head>
 
+<style>
+p{	
+	color: rgba(51,51,51,1);
+	font-size:18px;
+	}
+
+h3{
+	line-height: 40%;	
+
+}
+ .FAQ { 
+ 		cursor:hand; cursor:pointer;
+        border:1px solid darkorange;
+        border-radius: 3px;
+        width:600px; 
+        background-color: #f0f0f0;
+       // padding :5px;  	
+        
+        
+    }
+
+ .FAA { 
+ 	display:none;	
+ 	 }
+
+
+#apDivTitle{
+	position: absolute;
+	left: 131px;
+	top: 90px;
+	width: 70%;
+	height: 105px;
+	z-index: 111;
+}
+
+
+
+#apDivQuestionBox {
+	position: absolute;
+	left: 100px;
+	top: 30px;
+	width: 390px;
+	height: 400px;
+	z-index: 1;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	border:1px solid rgba(51,51,51,0.5);
+}
+#apDivQuestionTitle {
+	position: absolute;
+	left: 16px;
+	top: 18px;
+	width: 350px;
+	z-index: 2;
+}
+
+#apDivQustionForum {
+	position: absolute;
+	left: 19px;
+	top: 50px;
+	width: 340px;
+	height: 160px;
+	z-index: 2;
+}
+.post{
+width:100%;
+height:40px;
+margin-top:15px;
+margin-bottom:15px;
+background-color:rgba(240,240,240,0.8);
+border:1px solid rgba(0,0,0,0.2);
+border-radius:3px;
+font-family:'Fauna One',serif;
+font-weight:500;
+font-size:14px;
+border-style: solid;
+border-width: 1px;
+}
+.post:hover{
+	background-color:#a6a6a6;
+}
+.faqText{
+width:100%;
+height:100px;
+margin-top:10px;
+border:none;
+border-radius:3px;
+padding:5px;
+resize:none;
+border-style: solid;
+border-width: 1px;
+border-color: rgba(240,240,1,1);
+
+}
+.faqInput{
+width:50%;
+height:30px;
+margin-top:10px;
+border:none;
+border-radius:3px;
+padding:5px;
+resize:none;
+border-style: solid;
+border-width: 1px;
+border-color: rgba(240,240,1,1);
+
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+</style>
 
 <body>
 
@@ -30,18 +180,20 @@
 	<?php 	
 	if(isset($_SESSION['userID'])){
 	$userID = $_SESSION['userID'];
+	$result2 = get_customer_details($userID);
+	$sp = mysqli_fetch_assoc($result2);
 	}	
 
 	if(isset($_GET['user']))
 	{
-		$userID = $_GET['user'];	
+		$userID = $_GET['user'];
+		$result = get_user_details($userID);
+	    $user = mysqli_fetch_assoc($result);	
 	}
 
-	$result = get_user_details($userID);
-	$user = mysqli_fetch_assoc($result);	
+		
 
-	$result2 = get_customer_details($userID);
-	$sp = mysqli_fetch_assoc($result2);
+	
 	
 	?>
 
@@ -90,75 +242,221 @@
     <div id="appointmentBox">
 	
 		 <div id="appointmentBody">
-		<p align='center' style='font-size:30px'><?php echo YOURRECENTAPPOINTMENTS ; ?></p><br><br>
-
+		
 		<?php
-		$customer=$_SESSION['userID'];
-		$sql="select * from calendar where customer_id='".$customer."'";
-		$result = mysqli_query($database,$sql) or die(mysqli_error($database));
-		$noOfappointments=mysqli_num_rows($result);
-		if($noOfappointments==0)
-		{
-		echo "<br>".YOUHAVENOAPPOINMENTSTOSHOW."<br>";
-		}
-		
-		else
-		{
-		
-		echo "
-		<table class='table table-bordered'>
-			<thead>       
-				<tr>
-				<td align='center' width='100px'>Date</td>
-				<td align='center' width='200px'>Job</td>
-				<td align='center' width='200px'>Service Provider</td>
-				<td align='center' width='400px'>Status</td>
-				</tr>
-			 </thead>";
-		
-		while($appointment = mysqli_fetch_assoc($result))
-		{
-			$timest=strtotime($appointment['jobDate']);
-		echo "<tbody>
-			<tr>
-			<td align='center' width='100px'>".date('j/m/Y',$timest)."</td>
-			<td align='center' width='200px'>".$appointment['title']."</td>
 
-			<td align='center' width='200px'>";			
-			$sqlname="select user_firstname,user_id from users where user_id='".$appointment['sp_id']."'";
-			$resultname = mysqli_query($database,$sqlname) or die(mysqli_error($database));
-			$fname = mysqli_fetch_assoc($resultname);	
-			echo "<a href='
-			profile.php?user=".$fname['user_id']."'";	
-			echo">";
-			echo $fname['user_firstname'];
-			echo "</a>";
-			echo "</td >";
+		 if(isset($_POST['description']))
+		    {
+		    	$job_id=$_SESSION['job_id'];
+		    	$sp_id=$_SESSION['sid'];
 
-			echo "<td align='center' width='400px'>";
+		    	$sql="insert into complain(job_id,sp_id,description) values('".$job_id."','".$sp_id."','".$_POST['description']."')";
+			    mysqli_query($database,$sql) or die(mysqli_error($database));
+
+			    $sql="UPDATE calendar SET reported='1' WHERE calendar_id=$job_id";	
+			     mysqli_query($database,$sql) or die(mysqli_error($database));		
+
+		    	
+
+		 }
+
+        if(!isset($_GET['complain']))
+        {
+        		echo "<p align='center' style='font-size:30px'>YOURRECENTAPPOINTMENTS</p><br><br>";
+
+
+				$customer=$_SESSION['userID'];
+				$sql="select * from calendar where customer_id='".$customer."'";
+				$result = mysqli_query($database,$sql) or die(mysqli_error($database));
+				$noOfappointments=mysqli_num_rows($result);
+				if($noOfappointments==0)
+				{
+				echo "<br>".YOUHAVENOAPPOINMENTSTOSHOW."<br>";
+				}
+				
+				else
+				{
+				
+				echo "
+				<table class='table table-bordered'>
+					<thead>       
+						<tr>
+						<td align='center' width='100px'>Date</td>
+						<td align='center' width='200px'>Job</td>
+						<td align='center' width='200px'>Service Provider</td>
+						<td align='center' width='400px'>Status</td>
+						<td align='center' width='400px'>Complain</td>
+						<td align='center' width='400px'>Feedback</td>
+						</tr>
+					 </thead>";
+				
+				while($appointment = mysqli_fetch_assoc($result))
+				{
+					$timest=strtotime($appointment['jobDate']);
+				echo "<tbody>
+					<tr>
+					<td align='center' width='100px'>".date('j/m/Y',$timest)."</td>
+					<td align='center' width='200px'>".$appointment['title']."</td>
+
+					<td align='center' width='200px'>";			
+					$sqlname="select user_firstname,user_id from users where user_id='".$appointment['sp_id']."'";
+					$resultname = mysqli_query($database,$sqlname) or die(mysqli_error($database));
+					$fname = mysqli_fetch_assoc($resultname);	
+					echo "<a href='
+					profile.php?user=".$fname['user_id']."'";	
+					echo">";
+					echo $fname['user_firstname'];
+					echo "</a>";
+					echo "</td >";
+
+					echo "<td align='center' width='400px'>";
+					
+					if($appointment['accepted']==0){
+						echo "Pending";				
+					}
+					else if($appointment['accepted']==1){
+						echo "Service provider agreed";					
+					}
+					else if($appointment['accepted']==2){
+						echo "Canceled by Service provider";					
+					}
+				
+					echo "</td>";
+
+
+					echo "<td align='center' width='200px'>";	
+
+					if($appointment['accepted']==1&&$appointment['reported']==0){
+			    
+				    echo "<a href=profileCustomer.php?complain=".$appointment['calendar_id']."&sid=".$fname['user_id'].">";
+				    echo "<div id='report' class='btn'>
+				    Report
+				    </div>";
+
+				   
+				    echo "</a>";				
+					}	
+
+
+					else if($appointment['accepted']==1&&$appointment['reported']==1)
+					{
+						echo "Reported";
+
+
+					}
+
+					else
+					{
+						
+				   		 echo "Pending";
+				    	
+
+
+					}	
+				   
+				    echo "</td >";
+
+
+				    echo "<td align='center' width='400px'>";
+					
+					if($appointment['accepted']==0){
+						echo "Pending";				
+					}
+					else if($appointment['feedback']==0){
+						echo "Display feedback";					
+					}
+					else if($appointment['feedback']==1){
+						echo "Feedback lefted";					
+					}
+				
+					echo "</td>";
+				
+
+					echo "</tr></tbody>";
+				
+				
+				}
+					
+				
+				echo "</table>";
+				
+				
+				}
+		
+		    }
+
+	
+
+		    else
+		    {
+
+
+
+
+				echo "<div id='apDivQuestionBox'>
+
+
+
+				<div id='apDivQuestionTitle'>
+				  <p style='font-size:18px'><strong> Have a complain ?</strong>?</p>
+				  <p > Report to admin ...... </p>
+
+				</div>
+
+				<div id='apDivQustionForum'>
+				  <form id='form1' name='form1' method='post' action='profileCustomer.php'>
+				    <p>
+				      <br><br>
+				      <label>Service provider: ".$_GET['sid']." </label>
+
+
+				      
+				    </p>
+
+				    <p>";
+
+				     
+
+				    $_SESSION['job_id']=$_GET['complain'];
+				    $_SESSION['sid']=$_GET['sid'];
+
+				      echo "<br><br>
+
+				      <label>Job Title: ";
+
+				      $sql="select * from calendar where calendar_id='".$_GET['complain']."'";
+				      $result = mysqli_query($database,$sql) or die(mysqli_error($database));
+				      $job=mysqli_fetch_assoc($result);
+					
+
+				      echo $job['title'];
+
+				      echo "</label>
+				   
+				    </p>
+
+				    <p>
+				      <label for='description'></label>
+				      <textarea name='description' id='question' class='faqText' placeholder='Description' cols='45' rows='10' required></textarea>
+				    </p>
+				    <p>
+				      <input type='submit' class='post' name='qBtn' id='qBtn' value='POST'/>
+				    </p>
+				  </form>
+				</div>
+
 			
-			if($appointment['accepted']==0){
-				echo "Pending";				
-			}
-			else if($appointment['accepted']==1){
-				echo "Service provider agreed";					
-			}
-			else if($appointment['accepted']==2){
-				echo "Canceled by Service provider";					
-			}
-		
-			echo "</td></tr></tbody>";
-		
-		
-		}
-			
-		
-		echo "</table>";
-		
-		
-		}
-		
-		
+
+				</div>";
+
+
+
+
+
+		    }
+
+
+		   
 		
 		?>
 	
