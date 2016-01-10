@@ -326,6 +326,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	//width: 1200px;	
 	padding: 20px;
 	background-color: #f0f0f0;
+	border: 1px solid rgba(51,51,51,0.1);
 
 }
 
@@ -333,10 +334,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	position: absolute;
 	top: 0px;
 	left:1000px;
-	width: 300px;
+	width: 330px;
 	height: 1000px;	
 	padding: 20px;
 	background-color: #f0f0f0;
+	border: 1px solid rgba(51,51,51,0.1);
 
 }
 
@@ -387,7 +389,7 @@ if($k !=0)
 
 		if($word== ""){
 		
-		echo "<div id='apDivResultPic'> <img src='".$row['user_avatar']."' width='40' height='40' alt='facePic' style='border-radius:15px;left:3px;top:3px;position:absolute'></div>";
+		echo "<div id='apDivResultPic'> <img src='".$row['user_avatar']."' width='40' height='40' alt='facePic' style='border:1px solid rgba(51,51,51,0.1);left:3px;top:3px;position:absolute'></div>";
 		echo "<div id=\"apDivResultName{$i}\"><a style='color:rgba(51,51,51,1)' href= \"profile.php?user=". $row['user_id']. "\">".$row["user_firstname"]." ".$row['user_lastname']."</a> || ".$row["area"] . " || ". $row["category"] ;
 
 	
@@ -416,13 +418,14 @@ if($k !=0)
 			
 			echo "<div id='apDivResultPic'> <img src='".$row['user_avatar']."' width='40' height='40' alt='facePic' style='border:1px solid rgba(51,51,51,0.1);left:3px;top:3px;position:absolute'></div>";
 			echo "<div id=\"apDivResultName{$i}\"><a style='color:rgba(51,51,51,1)' href= \"profile.php?user=". $row['user_id']. "\">".$row["user_firstname"]." ".$row['user_lastname']."</a> || ".$row["area"] . " || ". $row["category"] ;
+
+		
 			echo "</div>";
 			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
-			
-			include('includes/ratingForSearch.php');
 
+			include('includes/ratingForSearch.php');
 			if(isset($_SESSION['Catagory'])){
-			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")			
+			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
 			echo "<hr> <a href= \"profile.php?user=". $row["user_id"]. " \">Click to View Profile</a></div>";
 			}
 

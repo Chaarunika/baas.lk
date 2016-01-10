@@ -163,7 +163,6 @@ define("DETAIL", "DETAIL");
 define("OVERVIEW", "Over View");
 define("EDITPROFILE", "Edit Profile");
 define("MESSAGES", "Messages");
-define("MESSAGETAB", "Messages");
 define("MEMBERSINCE", "Member Since");
 define("CATEGORY", "Category");
 define("AREA", "Area");
