@@ -1,114 +1,90 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
- <HEAD>
-  <TITLE>An AJAX Username Verification Tool</TITLE>
-  <META NAME="Keywords" CONTENT="form, username, checker">
-  <META NAME="Description" CONTENT="An AJAX Username Verification Script">
+<!DOCTYPE html>
+<html>
 
-<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+<head>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+<title>baas.lk</title>
+<meta charset="UTF-8">
 
-<SCRIPT type="text/javascript">
-<!--
-/*
-Credits: Bit Repository
-Source: http://www.bitrepository.com/web-programming/ajax/username-checker.html 
-*/
 
-pic1 = new Image(16, 16); 
-pic1.src = "loader.gif";
+<!--  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script> -->
 
-$(document).ready(function(){
+<!--  postjob  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href="css/postjob.css" rel="stylesheet">
+<script src = "javascript/postjob.js"> </script>
+<script src = "javascript/telerror.js"> </script> 
 
-$("#username").change(function() { 
+<link href="css/header.css" rel="stylesheet">
+<link href="css/searchBar.css" rel="stylesheet"> 
 
-var usr = $("#username").val();
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<script src="javascript/owl.carousel.js"></script>
 
-if(usr.length >= 4)
-{
-$("#status").html('<img src="loader.gif" align="absmiddle">&nbsp;Checking availability...');
 
-    $.ajax({  
-    type: "POST",  
-    url: "check.php",  
-    data: "username="+ usr,  
-    success: function(msg){  
-   
-   $("#status").ajaxComplete(function(event, request, settings){ 
+<style type="text/css">
 
-	if(msg == 'OK')
-	{ 
-        $("#username").removeClass('object_error'); // if necessary
-		$("#username").addClass("object_ok");
-		$(this).html('&nbsp;<img src="tick.gif" align="absmiddle">');
-	}  
-	else  
-	{  
-		$("#username").removeClass('object_ok'); // if necessary
-		$("#username").addClass("object_error");
-		$(this).html(msg);
-	}  
-   
-   });
-
- } 
-   
-  }); 
+#coverPics{
+  position: absolute;
+  width: 800px;
+  height: 500px;  
+  background-image: url('images/cover1.jpg');
+  z-index: 0;
 
 }
-else
-	{
-	$("#status").html('<font color="red">The username should have at least <strong>4</strong> characters.</font>');
-	$("#username").removeClass('object_ok'); // if necessary
-	$("#username").addClass("object_error");
-	}
 
-});
+#back{
+  position: absolute;
+  margin-top: 100px;
+  left: 0px;
+  
+}
+</style>
 
-});
+</head>
 
-//-->
-</SCRIPT>
+<body>
+    
+  <?php include 'header.php' ?>
 
-</HEAD>
+  <div id="back">
+  <div id="coverPics"></div>
+  </div>
 
- <BODY>
- <center>
+  <?php 
+  include_once('includes/searchBar.php') ;
+  include_once('_database/database.php'); 
+  include_once('functions/functions.php');
+  ?>
 
-<div align="center">
+  <?php include_once('includes/jobBar.php'); ?>
+  <?php 
+  if(isset($_SESSION['Catagory'])){
+    if($_SESSION['Catagory'] == 'customer'){
+      include 'postjob2.php' ;
+    }
+  }
+  ?>
+  <?php //include 'functions/functions.php'; ?>
+  <?php //$message = display_error("SDDS"); ?>
+  <?php  //print_r($_SESSION) ; ?>
 
-<h2 align="center">AJAX Username Verification</h2>
+  
 
-<center>NOTE: Please type an username and continue filling the other fields. You'll see the validator in action.<br /><br />
+</body>
 
-Already existing members in this demo: <STRONG>john, michael, terry, steve, donald</STRONG></center><br /><br />
+</html>
 
-<form>
-  <table width="700" border="0">  
-    <tr>
-      <td width="200"><div align="right">Username:&nbsp;</div></td>
-      <td width="100"><input id="username" size="20" type="text" name="user_name"></td>
-      <td width="400" align="left"><div id="status"></div></td>
-    </tr> 
 
-	<tr>
-      <td width="200"><div align="right">Password:&nbsp;</div></td>
-      <td width="100"><input size="20" type="text" name="password"></td>
-      <td width="400" align="left"><div id="status"></div></td>
-    </tr> 
 
-	<tr>
-      <td width="200"><div align="right">Confirm Password:&nbsp;</div></td>
-      <td width="100"><input size="20" type="text" name="confirm_password"></td>
-      <td width="400" align="left"><div id="status"></div></td>
-    </tr> 
-  </table>
-</form>
 
-</div>
- </center>
- 
- </BODY>
 
-</HTML>
+
+
+
