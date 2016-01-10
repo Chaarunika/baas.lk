@@ -5,17 +5,30 @@
     <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
+
+<script language="javascript" type="text/javascript" src="javascript/datetimepicker.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/addauctionitem.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <style type="text/css">
 
 #apDivBidContainer {
-	position: absolute;
-	left: 5%;
-	top: 200px;
-	width: 90%;
-	height: 600px;
+	position: relative;	
+	width: 1200px;
 	z-index: 1;
 	//background-color:#f0f0f0;
 		
+}
+
+#BidContainerAndAuctionAdd{
+    position: absolute;
+    left: 5%;
+    top: 200px;
+    width: 1200px;
+    z-index: 1;
+    //background-color:#f0f0f0;
 }
 
 #apDivContainer2 {
@@ -113,6 +126,16 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<script>
+$(document).ready(function(){
+    $("#addauctionMainContainer").hide();
+    $("#dropBidButton").click(function(){
+        $("#addauctionMainContainer").slideToggle();
+    });
+});
+
+</script>
+
 </head>
 
 <body>
@@ -184,9 +207,15 @@
                 </button>
             </span>
         </div>
-    </div>     
+        <a href="#" id="dropBidButton" type="submit" class="btn btn-block btn-default">Add Auction <span class="glyphicon glyphicon-chevron-down"></span></a>
+    </div>  
+     
 </div>
 </form>
+
+<div id="BidContainerAndAuctionAdd">
+
+    <?php include_once('addauctionitem.php')?>
 
 <div id="apDivBidContainer">
 <?php
@@ -314,6 +343,6 @@ $result = mysqli_query($dbConnection,$sql);
 ?>
 
 </div>
-
+</div>
 </body>
 </html>
