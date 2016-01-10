@@ -113,12 +113,12 @@ function english_to_sinhala($engStr){
 	elseif($engStr=="Painter"){
 		return "පින්තාරු ශිල්පී";
 	}
-	else($engStr=="Plumber"){
+	elseif($engStr=="Plumber"){
 		return "ජල නළ වෑද්දුම් ශිල්පී";
 	}
 }
 
-function english_to_tamil($tamStr){	
+function english_to_tamil($engStr){	
 	if($engStr=="Colombo"){
 		return "கொழும்பு";
 	}
@@ -232,10 +232,11 @@ function english_to_tamil($tamStr){
 	elseif($engStr=="Painter"){
 		return "பெயிண்டர்";
 	}
-	else($engStr=="Plumber"){
+	elseif($engStr=="Plumber"){
 		return "பிளம்பர்";
 	}
 }
+
 function sinhala_to_tamil($sinStr){	
 	if($sinStr=="කොළඹ දිස්ත්‍රික්කය"){
 		return "கொழும்பு";
@@ -348,7 +349,7 @@ function sinhala_to_tamil($sinStr){
 	elseif($sinStr=="පින්තාරු ශිල්පී"){
 		return "பெயிண்டர்";
 	}
-	else($sinStr=="ජල නළ වෑද්දුම් ශිල්පී"){
+	elseif($sinStr=="ජල නළ වෑද්දුම් ශිල්පී"){
 		return "பிளம்பர்";
 	}
 }
@@ -470,10 +471,15 @@ function sinhala_to_english($sinStr){
 	}
 
 }
-/*
-elseif($sinStr==""){
-		return "";
-	}
-*/
+
+
+function tamil_to_english($sinStr){	
+	return "false";
+}
+
+function tamil_to_sinhala($sinStr){	
+	return "false";
+}
+
 ?>
 

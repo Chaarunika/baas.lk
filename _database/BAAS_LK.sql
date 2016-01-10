@@ -213,9 +213,8 @@ CREATE TABLE IF NOT EXISTS `serviceprovider` (
   `address` text COLLATE utf8_unicode_ci,
   `website` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `languages` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `gallery1` text COLLATE utf8_unicode_ci,
-  `gallery2` text COLLATE utf8_unicode_ci,
-  `gallery3` text COLLATE utf8_unicode_ci,
+  `rating` int(11) DEFAULT NULL,
+  `ratingCount` int(11) DEFAULT NULL,  
   PRIMARY KEY (`sp_id`),
   KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data' AUTO_INCREMENT=21 ;
@@ -224,21 +223,21 @@ CREATE TABLE IF NOT EXISTS `serviceprovider` (
 -- Dumping data for table `serviceprovider`
 --
 
-INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `category`, `area`, `descr`, `workInfo`, `dob`, `gender`, `address`, `website`, `languages`, `gallery1`, `gallery2`, `gallery3`) VALUES
-(1, 1, 775669875, NULL, NULL, 'Carpenter', 'Colombo', 'I am a Carpenter with 37 years experience in the construction industry. I can be flexible from project management to taking on carpentry work only. I offer a personal service with free estimates and references.', 'I have worked mostly privately for the last 20 years. Iam experinced in designing pantries, wooden stair cases ,chairs,wood designs etc. ', '1973-06-05', 'Male', ' No 6/21,kaluthra', NULL, NULL, NULL, NULL, NULL),
-(2, 2, 712365489, NULL, NULL, 'Mason', 'Kalutara', 'Im the mason in kaluthara district', 'I worked Nawaloka construction', '1984-10-10', 'Male', 'Kaluthara south,kaluthara', NULL, NULL, NULL, NULL, NULL),
-(3, 3, 789654123, NULL, NULL, 'HandyMan', 'Colombo', 'Im the handy man in colombo district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'Kirulapane,Colombo', NULL, NULL, NULL, NULL, NULL),
-(4, 4, 714563697, NULL, NULL, 'HandyMan', 'Gampaha', 'Im the handy man in gampaha district', 'I worked gampaha south construction', '1956-05-23', 'Male', 'No:78,Gampaha', NULL, NULL, NULL, NULL, NULL),
-(5, 5, 714569872, NULL, NULL, 'HandyMan', 'Matara', 'I m the handy man in matara district', 'I worked Nawaloka construction', '1981-01-10', 'Male', 'No45,weligama', NULL, NULL, NULL, NULL, NULL),
-(8, 8, 785236984, NULL, NULL, 'Plumber', 'NuwaraEliya', 'Im the plumber in nuwaraeliya district', 'I worked ABC project', '1979-08-29', 'Male', 'NO56,Nuwaraeliya', NULL, NULL, NULL, NULL, NULL),
-(9, 9, 125487963, NULL, NULL, 'Plumber', 'Galle', 'Im the plumber in galle district', 'I worked Midigama construction', '1978-02-10', 'Male', 'Karapitiya,galle', NULL, NULL, NULL, NULL, NULL),
-(10, 10, 715463256, NULL, NULL, 'Real Estate Company', 'Colombo', 'Land Seller & dealer in colombo district', 'I worked PQR construction', '1975-08-30', 'Male', 'Lucky Lanka Sons,No.456/7,Viraketiya,Hambanthota', 'www.luckylanka.org', NULL, NULL, NULL, NULL),
-(12, 12, 789655566, NULL, NULL, 'Real Estate Company', 'Kandy', 'Im the Real Estate in kandy district', '', '1973-09-27', 'Male', 'No.45,Sri Deerananda Mawatha, kandy', 'www.wijayalankalands.lk', NULL, NULL, NULL, NULL),
-(13, 13, 715899633, NULL, NULL, 'Carpenter', 'Kalutara', 'Im the carpenter in kaluthara district', 'I worked Naguma construction', '1972-08-14', 'Male', 'No78,kaluthra', NULL, NULL, NULL, NULL, NULL),
-(14, 14, 785622456, NULL, NULL, 'Painter', 'Galle', 'Im the painter in galle district', 'I worked ABC project', '1971-01-10', 'Male', 'No20,galle', NULL, NULL, NULL, NULL, NULL),
-(15, 15, 774552236, NULL, NULL, 'Painter', 'Anuradhapura', 'Im the painter in Anuradhapura district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'No2,anuradhapura', NULL, NULL, NULL, NULL, NULL),
-(16, 16, 789662232, NULL, NULL, 'Painter', 'Badulla', 'Im the painter in Badulla', 'I worked cms project', '1946-03-10', 'Male', 'No 23,Badulla', NULL, NULL, NULL, NULL, NULL),
-(20, 24, 0, NULL, NULL, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `opEmail`, `category`, `area`, `descr`, `workInfo`, `dob`, `gender`, `address`, `website`, `languages`,`rating`,`ratingCount`) VALUES
+(1, 1, 775669875, NULL, NULL, 'Carpenter', 'Colombo', 'I am a Carpenter with 37 years experience in the construction industry. I can be flexible from project management to taking on carpentry work only. I offer a personal service with free estimates and references.', 'I have worked mostly privately for the last 20 years. Iam experinced in designing pantries, wooden stair cases ,chairs,wood designs etc. ', '1973-06-05', 'Male', ' No 6/21,kaluthra', NULL, NULL, NULL, NULL),
+(2, 2, 712365489, NULL, NULL, 'Mason', 'Kalutara', 'Im the mason in kaluthara district', 'I worked Nawaloka construction', '1984-10-10', 'Male', 'Kaluthara south,kaluthara', NULL, NULL, NULL, NULL),
+(3, 3, 789654123, NULL, NULL, 'HandyMan', 'Colombo', 'Im the handy man in colombo district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'Kirulapane,Colombo', NULL, NULL, NULL, NULL),
+(4, 4, 714563697, NULL, NULL, 'HandyMan', 'Gampaha', 'Im the handy man in gampaha district', 'I worked gampaha south construction', '1956-05-23', 'Male', 'No:78,Gampaha', NULL, NULL, NULL, NULL),
+(5, 5, 714569872, NULL, NULL, 'HandyMan', 'Matara', 'I m the handy man in matara district', 'I worked Nawaloka construction', '1981-01-10', 'Male', 'No45,weligama', NULL, NULL, NULL, NULL),
+(8, 8, 785236984, NULL, NULL, 'Plumber', 'NuwaraEliya', 'Im the plumber in nuwaraeliya district', 'I worked ABC project', '1979-08-29', 'Male', 'NO56,Nuwaraeliya', NULL, NULL, NULL, NULL),
+(9, 9, 125487963, NULL, NULL, 'Plumber', 'Galle', 'Im the plumber in galle district', 'I worked Midigama construction', '1978-02-10', 'Male', 'Karapitiya,galle', NULL, NULL, NULL, NULL),
+(10, 10, 715463256, NULL, NULL, 'Real Estate Company', 'Colombo', 'Land Seller & dealer in colombo district', 'I worked PQR construction', '1975-08-30', 'Male', 'Lucky Lanka Sons,No.456/7,Viraketiya,Hambanthota', 'www.luckylanka.org', NULL, NULL, NULL),
+(12, 12, 789655566, NULL, NULL, 'Real Estate Company', 'Kandy', 'Im the Real Estate in kandy district', '', '1973-09-27', 'Male', 'No.45,Sri Deerananda Mawatha, kandy', 'www.wijayalankalands.lk', NULL, NULL, NULL),
+(13, 13, 715899633, NULL, NULL, 'Carpenter', 'Kalutara', 'Im the carpenter in kaluthara district', 'I worked Naguma construction', '1972-08-14', 'Male', 'No78,kaluthra', NULL, NULL, NULL, NULL),
+(14, 14, 785622456, NULL, NULL, 'Painter', 'Galle', 'Im the painter in galle district', 'I worked ABC project', '1971-01-10', 'Male', 'No20,galle', NULL, NULL, NULL, NULL),
+(15, 15, 774552236, NULL, NULL, 'Painter', 'Anuradhapura', 'Im the painter in Anuradhapura district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'No2,anuradhapura', NULL, NULL, NULL, NULL),
+(16, 16, 789662232, NULL, NULL, 'Painter', 'Badulla', 'Im the painter in Badulla', 'I worked cms project', '1946-03-10', 'Male', 'No 23,Badulla', NULL, NULL, NULL, NULL),
+
 
 -- --------------------------------------------------------
 

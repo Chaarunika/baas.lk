@@ -1,74 +1,81 @@
+
 #apDivContainer{
 	position: absolute;
 	left: 50px;
 	top: 135px;
-	width: 1041px;
-	height: 850px;
-	z-index: 1;
+	padding: 20px;
+	//width: 1041px;
+	//height: 850px;
 	background-color: #f0f0f0;	
-		
+	border: 1px solid rgba(51,51,51,0.2);
+	z-index: 1;		
+}
+
+#apDivContainerCol2{
+	position: absolute;
+	left: 600px;
+	top: 135px;
+	padding: 20px;
+	//width: 1041px;
+	//height: 850px;	
+	background-color: #f0f0f0;
+	border: 1px solid rgba(51,51,51,0.2);	
+	z-index: 1;		
+}
+
+#apDivContainerCol3{
+	position: absolute;
+	left: 1019px;
+	top: 135px;
+	padding: 20px;
+	width: 241px;
+	height: 850px;	
+	background-color: #f0f0f0;
+	border: 1px solid rgba(51,51,51,0.2);	
+	z-index: 1;		
+}
+
+#subMenu{
+	position: absolute;
+	top: 90px;
+	width: 90%;
+	left :50px;
+}
+
+.bubble 
+{
+position: relative;
+width: 120px;
+height: 30px;
+background: rgba(51,51,51,0.4);
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
+text-align: center;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 9px 10px;
+border-color: rgba(51,51,51,0.4) transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -10px;
+left: 59px;
 }
 
 #apDivMainInfo{
-	position: absolute;
-	left: 30px;
-	top: 20px;
-	width: 501px;
-	min-height: 173px;
-	z-index: 2;
+	position: relative;
+	width: 500px;
 	background-color: rgba(255,255,255,0.5);
-	border-radius: 20px;
-	padding: 10px;
-}
-
-#apDivShortDesc{
-	position: absolute;
-	left: 31px;
-	top: 450px;
-	width: 501px;
-	height: 180px;
-	z-index: 2;
-	background-color: rgba(255,255,255,0.5);
-	border-radius: 20px;
-	padding: 30px;
-	padding-top: 10px;
-}
-
-#apDivWorkHistory{
-	position: absolute;
-	left: 31px;
-	top: 650px;
-	width: 501px;
-	height: 173px;
-	z-index: 2;
-	background-color: rgba(255,255,255,0.5);
-	border-radius: 20px;	
-	padding :30px;
-	padding-top: 10px;
-}
-
-#apDivContactBox{
-	position: absolute;
-	left: 31px;
-	top: 215px;
-	width: 501px;
-	height: 210px;
-	z-index: 2;
-	background-color: rgba(255,255,255,0.5);
-	border-radius: 20px;
-	padding :30px;
-	padding-top: 10px;
-}
-
-#calendarBox{
-	position: absolute;
-	left: 639px;
-	top: 16px;
-	width: 330px;
-	height: 247px;
-	z-index: 2;
-	background-color: rgba(255,255,255,0.5);
-	border-radius: 20px;
+	//border-radius: 20px;
+	border: 1px solid rgba(51,51,51,0.2);
+	padding: 20px;
+	margin-bottom: 20px;
 }
 
 .img-circle2 {
@@ -78,47 +85,78 @@
 	background-repeat: no-repeat;
 	background-position: center center;// Center image in the circle
     background-size: cover; // Make sure it covers the circle, as there is no bg repeat; 	
-	border: medium solid rgba(51,51,51,1);
+	border: 1px solid rgba(51,51,51,1);
 }
 
 #apDivProfPic2 {
 	position: absolute;
-	left: 18px;
-	top: 29px;
+	left: 0px;
+	top: 0px;
+	padding: 10px;
 	width: 110px;
 	height: 110px;
 	z-index: 1;
 }
 
-p{
-	line-height: 120%;
-}
-
 #apDivTitle {
-	position: absolute;
-	left: 142px;
-	top: 8px;
-	width: 323px;
-	height: 149px;
+	position: relative;
+	//padding: 10px;
+	left: 110px;
+	width: 370px;
 	z-index: 2;
 }
-/*
-#apDivContactInfo {
-	position: absolute;
-	left: 30px;
-	top: 14px;
-	width: 275px;
-	height: 209px;
-	z-index: 2;
-}
-*/
 
+#apDivShortDesc{
+	position: relative;	
+	width: 500px;
+	background-color: rgba(255,255,255,0.5);
+	//border-radius: 20px;
+	border: 1px solid rgba(51,51,51,0.2);
+	padding :30px;	
+	margin-bottom: 20px;
+}
+
+#apDivWorkHistory{
+	position: relative;	
+	width: 370px;
+	background-color: rgba(255,255,255,0.5);
+	//border-radius: 20px;
+	border: 1px solid rgba(51,51,51,0.2);
+	padding :30px;	
+	margin-bottom: 20px;
+}
+
+#apDivContactBox{
+	position: relative;	
+	width: 501px;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.5);
+	//border-radius: 20px;
+	border: 1px solid rgba(51,51,51,0.2);
+	padding :20px;
+	margin-bottom: 20px;
+}
+
+#calendarBox{
+	position: relative;
+	width: 370px;
+	background-color: rgba(255,255,255,0.5);
+	//border-radius: 20px;
+	border: 1px solid rgba(51,51,51,0.2);
+	padding-left: 30px;
+	margin-bottom: 20px;
+	height: 250px;	
+}
 
 #galleryBox{
-	position: absolute;
-	left: 639px;
-	top: 300px;
-	width: 340px;
-	height: 343px;
-	z-index: 2;
+	position: relative;
+	width: 370px;
+	background-color: rgba(255,255,255,0.5);
+	//border-radius: 20px;
+	border: 1px solid rgba(51,51,51,0.4);
+	padding: 30px;
+	margin-bottom: 20px;
+	height: 300px;
 }
+
+

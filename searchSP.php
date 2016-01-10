@@ -43,7 +43,7 @@ include_once('functions/translationFunctions.php')
 			
 			$area = $_GET["location"];
 			$cat = $_GET["category"];
-
+				/*
 			$areaEnglish= $area;
 			$areaSinhala= $area;
 			$areaTamil = $area;	
@@ -52,7 +52,7 @@ include_once('functions/translationFunctions.php')
 			$catSinhala= $cat;
 			$catTamil= $cat;
 
-				/*
+				*/
 			if($languageTranslated=="english"){
 				$areaEnglish= $area;
 				$areaSinhala= english_to_sinhala($area);
@@ -83,7 +83,7 @@ include_once('functions/translationFunctions.php')
 				$catTamil= $cat;
 
 			}			
-			*/
+			
 	}
 ?>
 
@@ -161,11 +161,32 @@ $result = mysqli_query($dbConnection,$query);
 <meta charset="utf-8">
 <title>baas.lk</title>
 
-<link href="css/header.css" rel="stylesheet">
-<link href="css/searchBar.css" rel="stylesheet">
 
 
+	<!-- Bootstrap  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+	
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- rating  -->
+	<link rel="stylesheet" href="star-rating.css" media="all" type="text/css"/>  
+    <script src="star-rating.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="css/header.css" rel="stylesheet">
+	<link href="css/searchBar.css" rel="stylesheet">
 <style type="text/css">
+
+
+#apDivResultBox0 {
+	//position: relative;
+	//top: 100px;
+}
 
 <?php
 $distance = 300;
@@ -175,21 +196,15 @@ for($i=0; $i<$k;$i++){
 echo "
 #apDivResultBox{$i} {
 	position: relative;
-	left: 50px;
-	top: ". $distance. "px;
+	//left: 50px;
+	//top: ". $distance. "px;
 	width: 955px;
-	height: 140px;
+	//height: 140px;
 	z-index: 1;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-	border-top-color: rgba(102,102,102,1);
-	border-right-color: rgba(102,102,102,1);
-	border-bottom-color: rgba(102,102,102,1);
-	border-left-color: rgba(102,102,102,1);
-	border-radius: 20px;
-	background-color: rgba(240, 240, 240,0.9) ;
+	border: 1px solid rgba(51,51,51,0.4);
+	//border-radius: 20px;
+	background-color: #f8f8f8 ;
+	margin-bottom: 10px;
 }
 #apDivResultPic{$i}  {
 	position: absolute;
@@ -201,34 +216,30 @@ echo "
 	border: 3px solid rgba(153,153,153,1);
 }
 #apDivResultName{$i}  {
-	position: absolute;
-	left: 49px;
+	position: relative;
+	left: 55px;
 	top: 0px;
 	width: 900px;
 	height: 38px;
-	z-index: 2;
+	z-index: 4;
 	font-family: \"Arial Black\", Gadget, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: rgba(51,51,51,1);
-	border-bottom-style: dotted;
-	border-top-color: rgba(153,153,153,1);
-	border-right-color: rgba(153,153,153,1);
-	border-bottom-color: rgba(153,153,153,1);
-	border-left-color: rgba(153,153,153,1);
+	
 }
 #apDivResultDesc{$i}  {
-	position: absolute;
+	position: relative;
 	left: 0px;
-	top: 45px;
+	//top: 45px;
 	width: 939px;
-	height: 127px;
+	//height: 127px;
 	z-index: 2;
 	padding: 10px;
 }
 
 ";
-$distance = $distance + 10;
+//$distance = $distance + 10;
 }
 
 
@@ -308,27 +319,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	
 }
 
+#searchResultContainer{
+	position: absolute;
+	top: 300px;
+	left:20px;
+	//width: 1200px;	
+	padding: 20px;
+	background-color: #f0f0f0;
+
+}
+
+#searchResultContainerCol2{
+	position: absolute;
+	top: 0px;
+	left:1000px;
+	width: 300px;
+	height: 1000px;	
+	padding: 20px;
+	background-color: #f0f0f0;
+
+}
+
 </style>
 </head>
 
 <body>
-
+<!--
 	<div id='back'>
 	<div id='coverPics'></div>
 	</div>
 
-	
+<div id='addBox' >Advertisements<hr>
+<img src="images/ad.jpg" alt="add" style="width:250px;height:500px;">
+</div>
+-->
 <?php include ("header.php")  ?>
 <?php include ("includes/searchBar.php")  ?>
 
 
 
-<div id='addBox' >Advertisements<hr>
-<img src="images/ad.jpg" alt="add" style="width:250px;height:500px;">
-</div>
 
 
-
+<?php echo "<div id='searchResultContainer'>"; ?>
 
 <?php 
 
@@ -346,17 +378,23 @@ if($k !=0)
 {
 	while($row=mysqli_fetch_assoc($result) )
 	{
-	
+		echo "<div id=\"apDivResultBox{$i}\">";
+
     	$string = $row["user_name"].$row["user_firstname"].$row["user_lastname"].$row["area"].$row["category"].$row['address'].$row['descr'];
 		$string = str_replace(' ','',$string); 
 		//$string = "ds";
 	  
 
 		if($word== ""){
-		echo "<div id=\"apDivResultBox{$i}\">";
-		echo "<div id=\"apDivResultPic\"> <img src=\"".$row['user_avatar']."\" width=\"40\" height=\"40\" alt=\"facePic\"></div>";
-		echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
+		
+		echo "<div id='apDivResultPic'> <img src='".$row['user_avatar']."' width='40' height='40' alt='facePic' style='border-radius:15px;left:3px;top:3px;position:absolute'></div>";
+		echo "<div id=\"apDivResultName{$i}\"><a style='color:rgba(51,51,51,1)' href= \"profile.php?user=". $row['user_id']. "\">".$row["user_firstname"]." ".$row['user_lastname']."</a> || ".$row["area"] . " || ". $row["category"] ;
+
+	
+		echo "</div>";
 		echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
+
+		include('includes/ratingForSearch.php');
 		if(isset($_SESSION['Catagory'])){
 			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
 			echo "<hr> <a href= \"profile.php?user=". $row["user_id"]. " \">Click to View Profile</a></div>";
@@ -375,13 +413,17 @@ if($k !=0)
 	  		if(strpos(strtolower($string),strtolower($word))>-1 ){   
 	   		
 	   		++$found;
-			echo "<div id=\"apDivResultBox{$i}\">";
-			echo "<div id=\"apDivResultPic\"> <img src=\"".$row['user_avatar']."\" width=\"40\" height=\"40\" alt=\"facePic\"></div>";
-			echo "<div id=\"apDivResultName{$i}\">".$row["user_firstname"]." ".$row['user_lastname']." || ".$row["area"] . " || ". $row["category"] . "</div>";
+			
+			echo "<div id='apDivResultPic'> <img src='".$row['user_avatar']."' width='40' height='40' alt='facePic' style='border:1px solid rgba(51,51,51,0.1);left:3px;top:3px;position:absolute'></div>";
+			echo "<div id=\"apDivResultName{$i}\"><a style='color:rgba(51,51,51,1)' href= \"profile.php?user=". $row['user_id']. "\">".$row["user_firstname"]." ".$row['user_lastname']."</a> || ".$row["area"] . " || ". $row["category"] ;
+			echo "</div>";
 			echo "<div id=\"apDivResultDesc{$i}\">".$row["descr"]  ;
+			
+			include('includes/ratingForSearch.php');
+
 			if(isset($_SESSION['Catagory'])){
-				if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")
-				echo "<a href= \"profile.php?user=". $row["user_id"]. " \">Click to View</a></div>";
+			if($_SESSION['Catagory']== "sp" or $_SESSION['Catagory']== "customer")			
+			echo "<hr> <a href= \"profile.php?user=". $row["user_id"]. " \">Click to View Profile</a></div>";
 			}
 
 			else{
@@ -404,6 +446,62 @@ if($i == 0)
 ?>
 
 	
+<?php echo "</div'>"; ?>
+   
+
+<div id='searchResultContainerCol2'><div>
+<script>
+    jQuery(document).ready(function () {
+        $("#input-21f").rating({
+            starCaptions: function(val) {
+                if (val < 3) {
+                    return val;
+                } else {
+                    return 'high';
+                }
+            },
+            starCaptionClasses: function(val) {
+                if (val < 3) {
+                    return 'label label-danger';
+                } else {
+                    return 'label label-success';
+                }
+            },
+            hoverOnClear: false
+        });
+        
+        $('#rating-input').rating({
+              min: 0,
+              max: 5,
+              step: 1,
+              size: 'lg',
+              showClear: false
+           });
+           
+        $('#btn-rating-input').on('click', function() {
+            $('#rating-input').rating('refresh', {
+                showClear:true, 
+                disabled:true
+            });
+        });
+        
+        
+        $('.btn-danger').on('click', function() {
+            $("#kartik").rating('destroy');
+        });
+        
+        $('.btn-success').on('click', function() {
+            $("#kartik").rating('create');
+        });
+        
+        $('#rating-input').on('rating.change', function() {
+            alert($('#rating-input').val());
+        });
+        
+        
+        $('.rb-rating').rating({'showCaption':true, 'stars':'3', 'min':'0', 'max':'3', 'step':'1', 'size':'xs', 'starCaptions': {0:'status:nix', 1:'status:wackelt', 2:'status:geht', 3:'status:laeuft'}});
+    });
+</script>
 
 
 

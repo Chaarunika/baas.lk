@@ -1,28 +1,16 @@
-<script>
-function myFunction() {
-    document.getElementById("ratingForm").submit();
-}
-</script>
 
-
-
-<form name="ratingForm" id="ratingForm" method="post" action="smscheck.php">
-    <input id="input-2c" name="rating" class="rating" min="0" max="5" step="0.5" data-size="sm"
-           data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" onclick="myFunction()" onchange="document.getElementById('ratingForm').submit();" >
+<form name="ratingForm" id="ratingForm" method="post" action="profile.php">
+    <input id="input-2c" name="rating" class="rating" min="0" max="5" step="0.1" data-size="xs" 
+    value= <?php if(isset($sp['rating'])){echo $sp['rating'];} else{echo 0;} ?>
+     data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa"  onchange="document.getElementById('ratingForm').submit();" readonly >
         
  </form>
    
-
-   <script>
-function myFunction() {
-    document.getElementById("ratingForm").submit();
-}
-</script>
-
    
    <?php 
         if(isset($_POST['rating'])){
-                echo $_POST['rating'];
+              include_once("functions/ratingFunctions.php");
+              update_rating($sp['user_id'],$_POST['rating']);
         }
    ?>
 
