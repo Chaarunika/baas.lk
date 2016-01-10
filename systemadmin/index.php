@@ -156,7 +156,7 @@ window.onload = Fun;
 	cursor:hand;
 }
 #coverPics{
-	width: 100%
+	width: 110%
 	top:0px;
 	background-image: url('images/cover.jpg');
 	height: 100%
@@ -166,16 +166,17 @@ window.onload = Fun;
 }
 </style>
 </head>
-<body>
-<div id="apDivHeaderContainer">
+<body background="images/cover.jpg">
+<div id="btnheader">
 <div id="apDivLogo">
 <a href="index.php"><img src="images/logo.png" width="80" height="68" alt="Bass Logo"> </a>
 </div>
-<div id="apDivUBar1"></div>
-<div id="apDivUBar2"></div>
+<div id="btnheader1"></div>
+<div id="btnheader2"></div>
 <div id="apDivBaasLk">baas.lk</div>
-<div id="main-header">	
-"The best way to find a builder"	
+<div id="main-header1">	
+System Admin Panel	
+</div>
 </div>
 </div>
 
@@ -211,8 +212,6 @@ window.onload = Fun;
 </div>
 </div>
 
-<div id="coverPics">
-</div>
 
 </body></html>
 

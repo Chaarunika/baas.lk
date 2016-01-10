@@ -16,27 +16,56 @@ h3{
 
 #apDivTitle{
 	position: absolute;
-	left: 1px;
+	left: 0px;
 	top: 79px;
 	width: 15%;
 	height: 262px;
 	z-index: 111;
+}
+.btncommon{
+  background: #787878;
+  background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width:85%;
+}
+
+.btncommon:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
 }
 
 </style>
 <body >
 <!-- -->
 <div  id="apDivTitle">
-<div class="FAQ" onClick="toggle('show1')">
-<h3 align="left"><a href="home.php"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">  Service Provider</a></h3>
-</div>
-<DIV class="FAQ" onClick="toggle('show2')">
-<h3 align="left"><a href="cmremove.php"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Customer</a></h3>
-</DIV>
-<DIV class="FAQ" onClick="toggle('show3')">
-<h3 align="left"><a href="forumremove.php"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Forum</a></h3>
-</DIV>
-<DIV class="FAQ" onClick="toggle('show4')">
-<h3 align="left"><a href="jobremove.php"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Jobs</a></h3>
- </DIV>
+<a href="home.php">
+<div class="btncommon" onClick="toggle('show1')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">  Service Provider</h3>
+</div></a>
+<a href="cmremove.php">
+<DIV class="btncommon" onClick="toggle('show2')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Customer</h3>
+</DIV></a>
+<a href="forumremove.php">
+<DIV class="btncommon" onClick="toggle('show3')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Forum</h3>
+</DIV></a>
+<a href="jobremove.php">
+<DIV class="btncommon" onClick="toggle('show4')">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Jobs</h3>
+ </DIV></a>
 </div>

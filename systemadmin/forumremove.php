@@ -44,11 +44,27 @@
 	left: 350px;
 	top: 7px;
 	width: 118px;
-	background-color: #FF9900;
+	background: #787878;
+    background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
+  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
+  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
+  background-image: -o-linear-gradient(top, #787878, #4e5a61);
+  background-image: linear-gradient(to bottom, #787878, #4e5a61);
 	height: 27px;
+	color:#FFF;
 	font-weight: bold;
 	font-size: 12px;
 	
+}
+.searchbtton:hover{
+ background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  text-decoration: none;
+  cursor:hand;
 }
 
 .notfound {

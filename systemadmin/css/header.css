@@ -30,6 +30,52 @@
 	background: linear-gradient(to bottom,  #fadc7a 0%,#fcbf02 74%,#fcbf02 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fadc7a', endColorstr='#fcbf02',GradientType=0 ); /* IE6-9 */
 }
+#btnheader {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 79px;
+  z-index: 0;
+  background: #7a7a7a;
+  background-image: -webkit-linear-gradient(top, #7a7a7a, #000000);
+  background-image: -moz-linear-gradient(top, #7a7a7a, #000000);
+  background-image: -ms-linear-gradient(top, #7a7a7a, #000000);
+  background-image: -o-linear-gradient(top, #7a7a7a, #000000);
+  background-image: linear-gradient(to bottom, #7a7a7a, #000000);
+}
+#btnheader1{
+  position: absolute;
+	left: 0px;
+	top: 73px;
+	width: 100%;
+	height: 3px;
+	z-index: 1;
+  background: #050005;
+  background-image: -webkit-linear-gradient(top, #050005, #000000);
+  background-image: -moz-linear-gradient(top, #050005, #000000);
+  background-image: -ms-linear-gradient(top, #050005, #000000);
+  background-image: -o-linear-gradient(top, #050005, #000000);
+  background-image: linear-gradient(to bottom, #050005, #000000);
+	
+	}
+#btnheader2{
+	position: absolute;
+	left: 0px;
+	top: 76px;
+	width: 100%;
+	height: 3px;
+	z-index: 2;
+  background: #050005;
+  background-image: -webkit-linear-gradient(top, #050005, #000000);
+  background-image: -moz-linear-gradient(top, #050005, #000000);
+  background-image: -ms-linear-gradient(top, #050005, #000000);
+  background-image: -o-linear-gradient(top, #050005, #000000);
+  background-image: linear-gradient(to bottom, #050005, #000000);
+	
+	}
+
+
 #apDivLogo {
 	position: absolute;
 	left: 10px;
@@ -87,7 +133,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', end
 	top: 0px;
 	font-family: "Bauhaus93";
 	font-size: 45px;
-	color: #5c5c5c;
+	color: #fff;
 	height: 59px;
 	width: 141px;
 }
@@ -104,13 +150,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', end
 
 #logout
 {
-
+font-family: "Bauhaus93";
 position: absolute;
-right:50px;
+box-sizing: border-box;
+right:1px;
 top: 10px;
-width: 65px;
+width: 165px;
 height: 20px;
 z-index: 5;
+font-size: 24px;
+color: #fff;
 
 }
 
@@ -158,6 +207,19 @@ z-index: 5;
 	top: 5px;
 	font-size: 35px;
 	color: #7c7c7c;
+	right: 15%;
+}
+#main-header1
+{
+	font-family: MC;
+	z-index: 1;
+	width: 512px;
+	height: 41px;
+	position: absolute;
+	left: auto;
+	top: 5px;
+	font-size: 35px;
+	color: #fff;
 	right: 15%;
 }
 
