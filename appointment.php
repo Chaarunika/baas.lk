@@ -50,25 +50,11 @@
 	top: 230px;
 	width: 323px;
 	z-index: 1;}
-
-
 </style> 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-	
-	
 
     
     
@@ -103,26 +89,77 @@
 			
 			mysqli_query($database,$sql);
 
-                        echo "<div id=\"appointmentForm\">
-		       <div id=\"appointmentFormbody\">
-                       <p style=\"font-size:20px\">Your appointment is added!!!
-                       <div id=\"sms\">
-                       <img src=\"images/sms.jpg\" height=\"200\" width=\"200\"></div>
-                       <div id=\"sendsms\">
-                       <a href=\"http://baaslk.byethost6.com\"><img src=\"images/send.png\" height=\"40\" width=\"80\"></a>
-                       </div>
+					
+
+                        $sql2 = "SELECT contactNo FROM serviceprovider WHERE sp_id=$spid";
+                        $result2=mysqli_query($database,$sql2);
+                        $row = mysqli_fetch_assoc($result2);
+                        
+                        $phone=$row['contactNo'];
+
+                        $sql3="SELECT calendar_id FROM calendar ORDER BY calendar_id DESC";
+                        $result3=mysqli_query($database,$sql3);
+                        $row1 = mysqli_fetch_assoc($result3);
+                        $job=$row1['calendar_id'];
                         
 
-                       
+                          
 
-		       </div></div>";
-  
+
+                         $ch = curl_init(); 
+
+
+                 
+                      
+                        $detail=urlencode($detail);
+
+ 
+                        
+                         
+                         
+ 
+                         $url="http://www.textit.biz/sendmsg/index.php?id=94776014365&password=6065&text=baas.lk%0a".$detail."%0aCall++:+".$contactNo."%0a%0aTo+accept+this+Job+Reply:+JOB+".$job."&to=".$phone;
+                      
+                    
+                
+                         
+                         curl_setopt($ch, CURLOPT_URL, $url); 
+
+                         //return the transfer as a string 
+                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+                         // $output contains the output string 
+                         $output = curl_exec($ch); 
+                         //echo   $output;
+
+
+
+                         // close curl resource to free up system resources 
+                         curl_close($ch);   
+                         
+
+                         header("Location:appointment.php?user=$spid&send=true");
+                        
+                         
 	
 		
 		}
 	
 	}
-	
+
+	if(isset($_GET['send']))
+	{
+        if($_GET['send']==true)
+        {
+              echo "<div id=\"appointmentForm\">
+		    <div id=\"appointmentFormbody\">
+                    <p style=\"font-size:20px\">SMS was sent...!!!
+                    <div id=\"sms\">
+                    <img src=\"images/sms.jpg\" height=\"200\" width=\"200\"></div>
+                    <div id=\"sendsms\"></div></div></div>";
+                    
+        }
+	}	
 ?>
 
 
@@ -141,7 +178,7 @@
 
 
 		<?php
-		if (!isset($_GET['add']))
+		if (!isset($_GET['add']) and !isset($_GET['send']))
 		{
 		
 		echo "<div id=\"appointmentForm\">
@@ -170,4 +207,4 @@ $("#spanhovering").hover(function(event) {
 
 </body>
 </html>
-	
+					
