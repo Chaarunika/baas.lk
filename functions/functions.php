@@ -12,6 +12,19 @@
 		return $result;
 	}
 
+
+	function get_calendar_details($ID){
+		global $dbConnection;
+		
+		$query = "SELECT * FROM calendar WHERE calendar_id = $ID" ;
+		$result = mysqli_query($dbConnection,$query);
+		
+		if(!$result){
+			die("Database query failed.");
+		}
+		return $result;
+	}
+
 	function get_serviceprovider_details($userID){
 		global $dbConnection;
 
