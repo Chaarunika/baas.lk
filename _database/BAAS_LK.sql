@@ -396,13 +396,13 @@ INSERT INTO `tblbidhistory` (`bidhistoryid`, `accountid`, `biditemid`, `bidprice
 
 CREATE TABLE IF NOT EXISTS `tblbiditems` (
   `biditemid` int(11) NOT NULL AUTO_INCREMENT,
-  `accountno` varchar(50) NOT NULL,
-  `biditem` varchar(50) NOT NULL,
-  `biddesc` varchar(500) NOT NULL,
-  `town` varchar(100) NOT NULL,
-  `image_path` varchar(200) NOT NULL,
-  `minimumbid` bigint(20) NOT NULL,
-  `closingtime` text NOT NULL,
+  `accountno` varchar(50) NULL,
+  `biditem` varchar(50) NULL,
+  `biddesc` varchar(500) NULL,
+  `town` varchar(100) NULL,
+  `image_path` varchar(200) NULL,
+  `minimumbid` bigint(20) NULL,
+  `closingtime` text NULL,
   PRIMARY KEY (`biditemid`),
   KEY `user_id` (`accountno`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=141 ;

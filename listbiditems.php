@@ -1,17 +1,17 @@
 
 <html>
 <head>
-    <title> List of bid items</title>
+    <title>baas.lk</title>
     <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <style type="text/css">
 
-#apDivContainer {
+#apDivBidContainer {
 	position: absolute;
-	left: 5px;
+	left: 5%;
 	top: 200px;
-	width: 100%
+	width: 90%;
 	height: 600px;
 	z-index: 1;
 	//background-color:#f0f0f0;
@@ -39,16 +39,15 @@
 
 #bidtbl td, #bidtbl th {
     font-size: 1em;
-	text-align: center;
-    border: 1px solid #999999;
-    padding: 3px 7px 2px 7px;
+	text-align: left;   
 	word-wrap: break-word;
 	//background-color: #F8F8F8;
+    border-top: 1px solid #999999
 }
 
 #bidtbl th {
     font-size: 1.1em;
-    text-align: center;
+    text-align: left;
     padding-top: 5px;
     padding-bottom: 4px;
     //background-color: #F8F8F8;
@@ -65,7 +64,55 @@
 	background-color: #f0f0f0;
 }
 
+/* Button */
+
+#custom-search-input{
+    position: absolute;
+    top: 100px;
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+
 </style>
+
+<!-- Bootstrap  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 </head>
 
 <body>
@@ -75,10 +122,9 @@
     require_once("_database/database.php");
     $_SESSION['accountid'] = $_SESSION['userID'];
     ?>
-<div id="apDivContainer2">
-
-	<?php
-	/*
+<!--
+<div id="apDivContainer2">	
+	
 	<center><h2> FIND BIDD </h2></center>
   
     <form action="" method="POST" >
@@ -120,72 +166,64 @@
     
     <input type= "submit" name="submit" value="FIND">
     </center>
-	
-	*/
-	
-	?> 
-	
-	<?php /*	<center><h2> FIND BIDD </h2></center>
-  
-    <form action="" method="POST" >
-    <center>
-    
-    Bid ID <input name= "search" class="area" type="number"> 
-	
- 
-   
-   
-	
-    
-    <input type= "submit" name="submit" value="FIND">
-    </center>
-	</form>
-	*/
-	
-	?>
-	
-	
-
- 
-
+</form>
 	
 </div>
 
-<div id="apDivContainer">
+-->
 
 
+<form>
+<div name="ccontainer" style="position:absolute;left:5%;width:500px">                 
+    <div id="custom-search-input">
+        <div class="input-group ">
+            <input type="text" class="form-control input-lg"  placeholder="Search Auction" />
+            <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>     
+</div>
+</form>
+
+<div id="apDivBidContainer">
 <?php
 
 
-
+//$sql="SELECT * FROM tblbiditems,tblbidhistory INNER JOIN ON tblbiditems.biditemid = tblbidhistory.biditemid  " ;
+if(!isset($_GET['orderState'])){
+    $sql="SELECT * FROM tblbiditems " ;
+}
+else{
+    $sql="SELECT * FROM tblbiditems ORDER BY ".$_GET['orderState']." ";
+}
 
 	
-$sql="SELECT baaslk.tblbiditems.biditemid, baaslk.tblbiditems.biditem,  baaslk.tblbiditems.accountno, baaslk.tblbiditems.biddesc, baaslk.tblbiditems.town, baaslk.tblbiditems.closingtime FROM baaslk.tblbiditems  " ;
-	
-$result = mysqli_query($database,$sql);
+$result = mysqli_query($dbConnection,$sql);
     
-	if (false === $result) {
+	if (!$result) {
     echo mysqli_error();
 	}	
-	
-	echo "<ul>";
-	
-	$out = "<table class='table table-striped' id='bidtbl'  width=100%  border='0' ><colgroup><col span='1' style='width: 5%;'/><col span='1' style='width: 15%;'/><col span='1' style='width: 20%;'/><col span='1' style='width: 10%;'/><col span='1' style='width: 15%;'/><col span='1' style='width: 10%;'/><col span='1' style='width: 10%;'/></colgroup><tr><th>ID</th><th>Land Name</th><th  word-wrap: break-word;>Land descriptiom</th><th>Area</th><th>Remaining time</th>";
-$out .= "<th>Highest Bid</th><th>Place a bid</th></tr>";
-
-
-
-$row=mysqli_fetch_array($result);
-
- 
-	
-	
 		
 	
-	
-    
-    
-    //echo "<ul>";  
+	$out = "<table class='table table-striped' id='bidtbl'  width=100%  border='0' style='position:relative;border: 1px solid #999999' >
+                <colgroup>
+                <col span='1' style='width: 5%;'/>
+                <col span='1' style='width: 15%;'/><col span='1' style='width: 20%;'/>
+                <col span='1' style='width: 10%;'/><col span='1' style='width: 15%;'/>
+                <col span='1' style='width: 10%;'/><col span='1' style='width: 10%;'/>
+                </colgroup>
+                <tr>
+                    <th><a href=\"listbiditems.php?orderState=biditemid\">ID</a></th>
+                    <th>Land Name</th>
+                    <th  word-wrap: break-word;>Land descriptiom</th>
+                    <th><a href=\"listbiditems.php?orderState=town\">Area</a></th>
+                    <th><a href=\"listbiditems.php?orderState=closingtime\">Remaining time</a></th>
+                    <th>Highest Bid</th>
+                    <th>Place a bid</th>
+                </tr>";
 
       while($row=mysqli_fetch_array($result)){
 
@@ -200,37 +238,82 @@ $row=mysqli_fetch_array($result);
         $item=$row['biditem'];
         $ownerid=$row['accountno'];
 
-        $query_1 = "SELECT max(bidprice) FROM baaslk.tblbidhistory WHERE biditemid = ";
-        $query_1 .= "(SELECT biditemid FROM baaslk.tblbiditems WHERE biditem = '{$row['biditem']}') GROUP BY biditemid;";
-        $result_1 = mysqli_query($database,$query_1);
+        $query_1 = "SELECT max(bidprice) FROM tblbidhistory WHERE biditemid =  '$itemid' ";       
+        $result_1 = mysqli_query($dbConnection,$query_1);
            
-            if (false === $result) {
+            if (!$result_1) {
             echo mysqli_error();
           }
 		  
               
         $row_1=mysqli_fetch_array($result_1); 
            
-		 if($remaining>0){ 
-        $out .= "<tr style='height:75px'>";
-        $out .= "<td >" . $row['biditemid'] . "</td>";
-        $out .= "<td  >" . $row['biditem'] . "</td>";
-        $out .= "<td >" . $row['biddesc'] . "</td>";
-        $out .= "<td >" .$row['town'] . "</td>";
-        $out .= "<td>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." </td>";
-        $out .= "<td>" ."Rs. ". $row_1['max(bidprice)'] .  "</td>";
-        $out .= "<td>"."<a href=acceptbid.php?itemid=$itemid> View & bid</a>"."</td>";  
-        $out .= "</tr>";
-		}
+		if($remaining>0){ 
+            $out .= "<tr style='height:75px'>";
+
+                $out .= "<td>" . $row['biditemid'] . "</td>";
+                $out .= "<td>" ;
+                    
+                    if(isset($row['image_path'])){
+                        $bidImageUrl = 'uploaded_img/'.$row['image_path']; 
+
+                        if($bidImageUrl == "uploaded_img/"){
+                            $out .= "
+                            <div name='bidPic'>
+                            <img src='uploaded_img/default.jpg' height='50' width='50' >
+                            </div>
+                            ";
+                        }      
+                        else{
+                            $out .= "
+                            <div name='bidPic'>
+                            <img src='".$bidImageUrl."' height='50' width='50'>
+                            </div>
+                            "; 
+                        }     
+                        
+                    }
+                    else{
+                        $out .= "
+                        
+                        ";
+                    }         
+                
+                $out .= " ".$row['biditem'] . "</td>";
+
+                $out .= "<td >";
+                    if(strlen($row['biddesc'] )>75){                       
+                        $out .= substr($row['biddesc'],0,75);
+                        $out .= "<a href='acceptbid.php?itemid=$itemid'>..read more</a>";
+                    }
+                    else{
+                        
+                        $out .= $row['biddesc'];
+
+                    }
+              
+                 $out .= "</td>";
+                $out .= "<td >".$row['town']."</td>";
+
+                $out .= "<td>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." </td>";
+                    if(isset($row_1['max(bidprice)'])){
+                        $out .= "<td>Rs.". $row_1['max(bidprice)'] . ".00</td>";     
+                    }
+                    else{
+                        $out .= "<td>No bids</td>";
+                    }
+                    
+                $out .= "<td>"."<a href='acceptbid.php?itemid=$itemid'> View & bid</a>"."</td>";  
+            $out .= "</tr>";
+    	}
+
         }
 
         $out .= "</table>";
         echo $out;
 ?>
 
-
-
-
 </div>
+
 </body>
 </html>
