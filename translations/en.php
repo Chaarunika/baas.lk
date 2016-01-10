@@ -1,6 +1,6 @@
 <?php
 
-$languageTranslated = "english"
+$languageTranslated = "english";
 //login
 define("DATABASE_ERROR","Database connection error");
 define("LOGIN_FAILED", "Login failed");
@@ -76,6 +76,9 @@ define("RATNAPURA", "Ratnapura");
 define("TRINCOMALEE", "Trincomalee");
 define("VAVUNIYA", "Vavuniya");
 
+//job bar
+define("JOBLOCATION", "Location");
+define("JOBCONTACT","Contact");
 
 //post a job
 define("POSTYOURJOB", "Post Your Job");
@@ -177,6 +180,7 @@ define("EDITBASICINFORMATION", "Edit Basic Information");
 define("EDITYOURCONTACTDETAILS", "Edit Your Contact Details");
 define("EDITYOURWORKINFORMATION", "Edit Your Work Information");
 define("PASSWORDCHANGE", "Password Change");
+define("MESSAGETAB", "Messages");
 
 //apDivOptionBox0
 define("FIRSTNAME", "First Name");
@@ -243,6 +247,13 @@ define("MESSAGE", "Message");
 define("SEND", "SEND");
 define("GOTOMYPERSONALMESSAGES", "Go To My Personal Messages");
 define("THEMESSAGESENDSUCCESSFULLY", "The message was sent successfully.");
+
+//read_pm
+define("USER", "User");
+define("REPLY", "Reply");
+define("GOTOTHEDISCUSSION", "Go to the discussion");
+define("SENT", "Sent");
+
 
 //findjob
 define("RECENTLYPOSTEDJOBS", "Recently Posted Jobs");

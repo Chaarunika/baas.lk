@@ -6,7 +6,7 @@ include('config.php');
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="css/chat.css" rel="stylesheet" title="Style" />
-        <title>Messages</title>
+        <title>Message</title>
 		<link href="css/header.css" rel="stylesheet">
     </head>
     <body>
@@ -63,8 +63,8 @@ if(isset($_SESSION['username']))
 					if(mysql_query('insert into pm (id, id2, title, user1, user2, message, timestamp, user1read, user2read)values("'.$id.'", "'.(intval(mysql_num_rows($req2))+1).'", "", "'.$_SESSION['userID'].'", "", "'.$message.'", "'.time().'", "", "")') and mysql_query('update pm set user'.$user_partic.'read="yes" where id="'.$id.'" and id2="1"'))
 					{
 				?>
-				<div class="message">Your message was successfully sent.<br /><br/><br/>
-				<a href="read_pm.php?id=<?php echo $id; ?>">Go to the discussion</a></div>
+				<div class="message"><?php echo THEMESSAGESENDSUCCESSFULLY ; ?>.<br /><br/><br/>
+				<a href="read_pm.php?id=<?php echo $id; ?>"><?php echo GOTOTHEDISCUSSION ; ?></a></div>
 				<?php
 					}
 					else
@@ -84,8 +84,8 @@ if(isset($_SESSION['username']))
 			<h1><?php echo $dn1['title']; ?></h1><br/><br/>
 			<table class="messages_table">
 				<tr>
-					<th class="author">User</th>
-					<th>Message</th>
+					<th class="author"><?php echo USER ; ?></th>
+					<th><?php echo MESSAGE ; ?></th>
 				</tr>
 			<?php
 			while($dn2 = mysql_fetch_array($req2))
@@ -98,7 +98,7 @@ if(isset($_SESSION['username']))
 				echo '<img src="'.htmlentities($dn2['user_avatar']).'" alt="" style="max-width:50px;max-height:50px;" />';
 			}
 			?><br /><?php echo $dn2['user_name']; ?></td>
-					<td class="left"><div class="date">Sent: <?php echo date('m/d/Y H:i:s' ,$dn2['timestamp']); ?></div>
+					<td class="left"><div class="date"><?php echo SENT ; ?>: <?php echo date('m/d/Y H:i:s' ,$dn2['timestamp']); ?></div>
 					<?php echo $dn2['message']; ?></td>
 				</tr>
 			<?php
@@ -106,12 +106,12 @@ if(isset($_SESSION['username']))
 			//We display the reply form
 			?>
 			</table><br /><br/>
-			<h2 align="center">Reply</h2><br/><br/>
+			<h2 align="center"><?php echo REPLY ; ?></h2><br/><br/>
 			<div class="center">
 				<form action="read_pm.php?id=<?php echo $id; ?>" method="post">
-					<label for="message" class="center">Message</label><br />
+					<label for="message" class="center"><?php echo MESSAGE ; ?></label><br />
 					<textarea cols="40" rows="5" name="message" id="message"></textarea><br/><br/>
-					<input type="submit" value="Send" />
+					<input type="submit" value="<?php echo SEND ; ?>" />
 				</form>
 			</div>
 			</div>
@@ -138,6 +138,6 @@ else
 	echo '<div class="error">You must be logged to access this page.</div>';
 }
 ?>
-		<div class="foot"><a href="list_pm.php">Go to my personal messages</a></div>
+		<div class="foot"><a href="list_pm.php"><?php echo GOTOMYPERSONALMESSAGES ; ?></a></div>
 	</body>
 </html>

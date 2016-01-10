@@ -1,7 +1,7 @@
 
 <?php
 
-$languageTranslated = "tamil"
+$languageTranslated = "tamil";
 
 //login
 define("DATABASE_ERROR","தரவுத்தள இணைப்பு பிழை");
@@ -80,6 +80,9 @@ define("RATNAPURA", "இரத்தினபுரி");
 define("TRINCOMALEE", "திருகோணமலை");
 define("VAVUNIYA", "வவுனியா");
 
+//job bar
+define("JOBLOCATION", "Location");
+define("JOBCONTACT","Contact");
 
 //Post a job
 define("POSTYOURJOB", "உங்கள் வேலை பதிவு");
@@ -170,6 +173,7 @@ define("EDITBASICINFORMATION", "மஸம மவக மநஸலஸ");
 define("EDITYOURCONTACTDETAILS", "ஸககோ மஸெஸ");
 define("EDITYOURWORKINFORMATION", "ஸக்க ஸெஸக");
 define("PASSWORDCHANGE", "நகரக மஸோ");
+define("MESSAGETAB", "செய்திகள்");
 
 //apDivOptionBox0
 define("FIRSTNAME", "நமவவந ");
@@ -236,6 +240,13 @@ define("MESSAGE", "செய்தி");
 define("SEND", "அனுப்பவும்");
 define("GOTOMYPERSONALMESSAGES", "என்னுடைய தனிப்பட்ட செய்திகளுக்கு செல்க");
 define("THEMESSAGESENDSUCCESSFULLY", "சேதி வெற்றிகரமாக அனுப்பப்பட்டது.");
+
+//read_pm
+define("USER", "பயனர்");
+define("REPLY", "பதில்");
+define("GOTOTHEDISCUSSION", "விவாதம் சென்று");
+define("SENT", "நேரம் அனுப்பிய");
+
 
 //findjob
 define("RECENTLYPOSTEDJOBS", "சமீபத்தில் இட்ட வேலைகள்");
