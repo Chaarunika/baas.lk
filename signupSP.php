@@ -9,6 +9,9 @@
 	<link href="css/signup.css" rel="stylesheet" />
 </head>
 
+
+
+
 <body>
 
 	<?php include("header.php"); ?>
@@ -52,16 +55,19 @@
 
 		<div id="apDivFormBox"> 
 
+	
+
   			<form method="post" action="" name="registerform">
     		
     		<label for="user_name">
    			<p><?php echo CHOOSEYOURUSERNAME ; ?></p></label>
-    		<input name="user_name" type="text" required class="textField" id="user_name" pattern="[a-zA-Z0-9]{2,64}" />
-
+    		<input name="user_name" type="text" required class="textField" id="username" pattern="[a-zA-Z0-9]{2,64}" />
+    		<div id="error"><div id="status"></div></div>
     		<label for="user_email">
     		<p><?php echo EMAILADDRESS ; ?> </p></label>
-    		<input name="user_email" type="email" required class="textField" id="user_email" />    
-
+    		<input name="user_email" type="email" required class="textField" id="inputID" />
+    		<div id="error_email"><div id="invalidEmailError" style="display:none">Please enter a valid email address</div>    
+            </div id="error_email">
 		    <label for="user_password_new"><p><?php echo CREATEAPASSWORD ; ?></p></label>
 		    <input name="user_password_new" type="password" required class="textField" id="user_password_new" pattern=".{6,}" autocomplete="off" />
 
@@ -107,5 +113,105 @@
 	
 	
 </body>
+<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<SCRIPT type="text/javascript">
+<!--
+/*
+Credits: Bit Repository
+Source: http://www.bitrepository.com/web-programming/ajax/username-checker.html 
+*/
+
+pic1 = new Image(16, 16); 
+pic1.src = "loader.gif";
+
+$(document).ready(function(){
+
+$("#username").change(function() { 
+
+var usr = $("#username").val();
+
+if(usr.length >= 4)
+{
+$("#status").html('<img src="loader.gif" align="absmiddle">&nbsp;Checking availability...');
+
+    $.ajax({  
+    type: "POST",  
+    url: "check.php",  
+    data: "username="+ usr,  
+    success: function(msg){  
+   
+   $("#status").ajaxComplete(function(event, request, settings){ 
+
+	if(msg == 'OK')
+	{ 
+        $("#username").removeClass('object_error'); // if necessary
+		$("#username").addClass("object_ok");
+		$(this).html('&nbsp;<img src="tick.gif" align="absmiddle">');
+	}  
+	else  
+	{  
+		$("#username").removeClass('object_ok'); // if necessary
+		$("#username").addClass("object_error");
+		$(this).html(msg);
+	}  
+   
+   });
+
+ } 
+   
+  }); 
+
+}
+else
+	{
+	$("#status").html('<font color="red">The username should have at least <strong>4</strong> characters.</font>');
+	$("#username").removeClass('object_ok'); // if necessary
+	$("#username").addClass("object_error");
+	}
+
+});
+
+});
+ 
+
+$('#inputID').bind('blur focus', function(event){
+    if(event.type === 'blur'){
+        //cache jquery objects
+        var $invalidEmailError = $('#invalidEmailError'),
+            $submitButton = $('#submitButton'),
+            $this = $(this);
+
+        var v = $this.val();
+        
+        //trim spaces
+        v =  v.replace(/^\s+|\s+$/g, "");
+
+        //check email against regex
+        if(v.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i)){
+            $invalidEmailError.hide();
+            $submitButton.removeAttr('disabled').removeClass('disabled');
+            $this.addClass('email-good').removeClass('email-bad');
+        }
+        else{
+            $invalidEmailError.show();
+            $submitButton.attr('disabled','disabled').addClass('disabled');
+            $this.addClass('email-bad').removeClass('email-good');
+        }
+        //replace email with trimmed version
+        $this.val(v);
+    }
+    //remove status styles while editing
+    if(event.type === 'focus'){
+        $(this).removeClass('email-bad email-good');
+    }
+});
+
+
+
+
+</SCRIPT>
 
 </html>

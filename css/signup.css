@@ -1,3 +1,42 @@
+.object_ok
+{
+border: 1px solid green; 
+color: #333333; 
+}
+
+.object_error
+{
+border: 1px solid #AC3962; 
+color: #333333; 
+}
+
+#error
+{
+	position: absolute;
+	z-index: 2;
+	top : 48px;
+	left: 275px;
+	width:200px;
+	height: 50px;
+	
+
+}
+
+#error_email
+{
+
+	position: absolute;
+	z-index: 2;
+	top : 128px;
+	left: 275px;
+	width:200px;
+	height: 50px;
+	color:red;
+
+
+}
+
+
 #apDivBox{
 	position: absolute;
 	width: 1000px;

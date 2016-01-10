@@ -12,7 +12,7 @@
 	left: 127px;
 	top: 175px;
 	width: 724px;
-	height: 450px;
+	height: 300px;
 }
 #apDiv11 {
 	position:absolute;
@@ -49,36 +49,42 @@
 	height: 175px;
 }
 #answer{
-	border-style: outset;
-	border-width: 3px;
-	border-color: #FC0;
+	
+	
 	background-color:#FC0;
-	cursor:hand;
+
 	font-weight: bold;
 }
-#a_answer
-{
-	border-width: 3px;
-	border-style:outset;
-}
+
 .postButton{
+	cursor:hand;
 width:50%;
 height:40px;
-margin-top:15px;
-margin-bottom:15px;
-background-color:rgba(240,240,240,0.8);
-border:1px solid rgba(0,0,0,0.2);
-border-radius:3px;
+background: #74787a;
+  background-image: -webkit-linear-gradient(top, #74787a, #2a3033);
+  background-image: -moz-linear-gradient(top, #74787a, #2a3033);
+  background-image: -ms-linear-gradient(top, #74787a, #2a3033);
+  background-image: -o-linear-gradient(top, #74787a, #2a3033);
+  background-image: linear-gradient(to bottom, #74787a, #2a3033);
 font-family:'Fauna One',serif;
 font-weight:500;
 font-size:14px;
-border-style: solid;
-border-width: 1px;
+color:#fff;
 }
+.postButton:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #212629);
+  background-image: -moz-linear-gradient(top, #000000, #212629);
+  background-image: -ms-linear-gradient(top, #000000, #212629);
+  background-image: -o-linear-gradient(top, #000000, #212629);
+  background-image: linear-gradient(to bottom, #000000, #212629);
+  text-decoration: none;
+}
+
 </style>
 
 </head>
-
+<p class="backto"> <a href="forum.php">&lt;&lt;<?php echo BACKTOFORUM ; ?></a></p>
 <body>
 
 <?php
@@ -95,7 +101,7 @@ $rows=mysqli_fetch_array($result);
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="createtabel">
-<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCC" class="viewtopic3">
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCC" class="viewtopic3">
  <tr>
 <td align="center" width="5%"><img src="<?php 
 echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
@@ -107,7 +113,7 @@ echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
 <td bgcolor="#ccc" align="left"><?php echo "by ".$rows['user']."  -    ".$rows['datetime']; ?></td>
 </tr>  
 <tr>
-<td bgcolor="#F8F7F1" height="75%"> <p><?php echo $rows['detail']; ?></p>
+<td bgcolor="#F8F7F1" height="60%"> <p><?php echo $rows['detail']; ?></p>
   <p>&nbsp;</p></td>
 </tr>
 
@@ -123,7 +129,7 @@ $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
 $result2=mysqli_query($database,$sql2);
 while($rows=mysqli_fetch_array($result2)){
 ?>
-<table align="center" width="1000">
+<table align="center" width="900">
 <tr>
 <td>
 <table width="95%" border="0"  align="right" cellpadding="0" cellspacing="1" bgcolor="#CCC" class="viewtopic3">
@@ -193,7 +199,6 @@ mysqli_close($database);
 </tr>
 </table>
 </div>
-<p>&nbsp;</p>
-<p class="backto">  	<a href="forum.php">&lt;&lt;<?php echo BACKTOFORUM ; ?></a></p>
+
 
 </body>

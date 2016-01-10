@@ -246,7 +246,8 @@ define("POSTEDTIME", "පලකරන ලද වෙලාව");
 define("FINDJOBS", "රැකියා සොයන්න");
 define("SEARCHBYAREA", "ප්‍රදේශය මගින් සොයන්න");
 define("SEARCH", "සොයන්න");
-define("NOJOBSSEARCHAREA", "ඔබ සෙවූ ප්‍රදේශයේ රැකියා නොමැත.");
+define("SEARCHBYCATAGORY", "සේවාදායක වර්ගය අනුව සොයන්න");
+define("NOJOBSSEARCHAREA", "ඔබ සෙවූ රැකියා නොමැත.");
 
 //addauctionitem
 define("REALESTATEAUCTION", "දේපළ වෙළදාම");

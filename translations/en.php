@@ -260,10 +260,11 @@ define("CUSTOMERNAME", "Customer Name");
 define("TP", "TP");
 define("POSTEDDATE", "Posted Date");
 define("POSTEDTIME", "Posted Time");
-define("FINDJOBS", "Find Jobs");
+define("FINDJOBS", "FIND JOBS");
 define("SEARCHBYAREA", "Search By Area");
 define("SEARCH", "SEARCH");
-define("NOJOBSSEARCHAREA", "Sorry, No Jobs Searched Area.");
+define("SEARCHBYCATAGORY", "Search By Category");
+define("NOJOBSSEARCHAREA", "Sorry, No Jobs Found.");
 
 //addauctionitem
 define("REALESTATEAUCTION", "Real State Auction");
