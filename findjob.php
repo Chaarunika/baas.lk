@@ -38,7 +38,7 @@
 
 	}
 #b3{
-	margin-top: 305px;
+	margin-top: 310px;
 
 	width:1020px;
 	background: #f8f8f8;
@@ -73,6 +73,7 @@
 	border-radius:3px;
 	border-width:1px;
 	border-style:solid;
+	font-family:'Fauna One',serif;
 	
 }
 .area{
@@ -123,7 +124,7 @@ border-width: 1px;
 			$row = mysqli_fetch_assoc($result2);
 	
 			if($result2 -> num_rows >0){
-			echo "--------------------------------------------------------.<br>";
+			echo "------------------------------.<br>";
 			while($row = $result2 -> fetch_assoc()){
 				echo $row['job_description'];
 				echo "<br>";
@@ -147,7 +148,7 @@ border-width: 1px;
 				echo $t[4];
 				echo $t[5];
 				echo "<br><br>";
-				echo "-----------------------------------------------------";
+				echo "---------------------------";
 				echo "<br><br>";
 			}
 		}
