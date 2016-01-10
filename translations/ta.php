@@ -257,6 +257,7 @@ define("POSTEDTIME", "நேரம் வெளியிடப்பட்ட");
 define("FINDJOBS", "வேலை தேடல்");
 define("SEARCHBYAREA", "பிராந்தியம் மூலம் தேடல்");
 define("SEARCH", "தேடல்");
+define("SEARCHBYCATAGORY", "நீங்கள் வேலை பார்த");
 define("NOJOBSSEARCHAREA", "நீங்கள் வேலை பார்த்து.");
 
 //addauctionitem
