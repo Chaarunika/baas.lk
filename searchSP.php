@@ -180,7 +180,17 @@ $result = mysqli_query($dbConnection,$query);
 
     <link href="css/header.css" rel="stylesheet">
 	<link href="css/searchBar.css" rel="stylesheet">
-<style type="text/css">
+
+	<!-- Animated advertisement -->
+	<link rel="shortcut icon" href="../favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+
+	
 
 
 #apDivResultBox0 {
@@ -332,10 +342,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 #searchResultContainerCol2{
 	position: absolute;
-	top: 0px;
+	//top: 10px;
 	left:1000px;
-	width: 330px;
-	height: 1000px;	
+	width: 320px;
+	height: 100%;	
 	padding: 20px;
 	background-color: #f0f0f0;
 	border: 1px solid rgba(51,51,51,0.1);
@@ -452,7 +462,11 @@ if($i == 0)
 <?php echo "</div'>"; ?>
    
 
-<div id='searchResultContainerCol2'><div>
+
+
+
+
+
 <script>
     jQuery(document).ready(function () {
         $("#input-21f").rating({
@@ -507,6 +521,27 @@ if($i == 0)
 </script>
 
 
+
+<div id='searchResultContainerCol2' style="position:absolute;top:0px">Advertisemets</hr>
+	<section class="wrapper" style="position:relative;top:0px;left:0px">
+		<div id="ad-2">
+			<h2>Lost<br />at<br />sea?</h2>
+			<ul id="boat">
+				<li>
+					<div id="question-mark"></div>
+				</li>
+			</ul>
+			<ul id="water">
+				<li id="water-back"></li>
+				<li id="water-front"></li>
+			</ul>
+			<div id="content">
+				<h3 style="font-size:20px ;color:rgba(51,51,51,1)">Relax.<br />We've got your rudder.</h3>
+				<a href="#"><img src="images/logo.png" style="width:100px;height:100px" ><span style="font-size:14px;color:rgba(51,51,51,1)">baas.lk</span></a>
+			</div>
+		</div>
+    </section> 
+<div>
 
 </body>
 
