@@ -124,7 +124,7 @@ input[type=checkbox] {
 #apDivFbLogin{
 	position: absolute;
 	width: 361px;
-	height: 250px;
+	height: 200px;
 	z-index: 2;
 	right: 10%;
 	top: 110px;
