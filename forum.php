@@ -4,7 +4,6 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="css/header.css">
-<link rel="stylesheet" type="text/css" href="css/forum.css" >
 <meta charset="UTF-8">
 <title>baas.lk</title>
 <style type="text/css">
@@ -15,14 +14,23 @@
 	width:516px;
 	height:60px;
 	z-index:16;
-	 background: #a7b1b5;
-  background-image: -webkit-linear-gradient(top, #a7b1b5, #90a3ad);
-  background-image: -moz-linear-gradient(top, #a7b1b5, #90a3ad);
-  background-image: -ms-linear-gradient(top, #a7b1b5, #90a3ad);
-  background-image: -o-linear-gradient(top, #a7b1b5, #90a3ad);
-  background-image: linear-gradient(to bottom, #a7b1b5, #90a3ad);
+	background: #bdbdbd;
+  background-image: -webkit-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: -moz-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: -ms-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: -o-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: linear-gradient(to bottom, #bdbdbd, #bdbdbd);
 	border-radius: 5px;
 }
+.createtabel {
+	position: absolute;
+	left: 10px;
+	top: 200px;
+	width: 70%;
+	height: 140px;
+	z-index: 15;
+}
+
 .notfound {
 	background-color: #fff;
 	position: absolute;
@@ -62,12 +70,12 @@
 	left: 354px;
 	top: 1px;
 	width: 118px;
-	background: #787878;
-    background-image: -webkit-linear-gradient(top, #787878, #4e5a61);
-  background-image: -moz-linear-gradient(top, #787878, #4e5a61);
-  background-image: -ms-linear-gradient(top, #787878, #4e5a61);
-  background-image: -o-linear-gradient(top, #787878, #4e5a61);
-  background-image: linear-gradient(to bottom, #787878, #4e5a61);
+	  background: #dae2f0;
+  background-image: -webkit-linear-gradient(top, #dae2f0, #999999);
+  background-image: -moz-linear-gradient(top, #dae2f0, #999999);
+  background-image: -ms-linear-gradient(top, #dae2f0, #999999);
+  background-image: -o-linear-gradient(top, #dae2f0, #999999);
+  background-image: linear-gradient(to bottom, #dae2f0, #999999);
 	height: 33px;
 	border-style:outset;
 	border-width:3px;
@@ -117,9 +125,9 @@
 
 #apDivQuestionBox {
 	position: absolute;
-	left: 950px;
+	left: 70%;
 	top: 200px;
-	width: 390px;
+	width: 29%;
 	height: 350px;
 	z-index: 1;
 	background-color: #f0f0f0;
@@ -188,7 +196,7 @@ border-color: rgba(240,240,1,1);
 .createtabel2 {
 	position: absolute;
 	left: 200px;
-	top: 350px;
+	top: 250px;
 	width: 900px;
 	height: 140px;
 	z-index: 15;
@@ -232,6 +240,7 @@ $result = mysqli_query($database,$sql);
 $word =stripslashes($_POST['textfield']);
 $word = str_replace(' ','',$word);
 ?>
+<p>&nbsp;</p>
 <h2> Searching Result </h2>
 <div class="createtabel2">
 <table border="0" bordercolor="#666666">
@@ -382,17 +391,17 @@ mysqli_close($database);
 <div id="apDivQuestionBox">
 
 <div id="apDivQuestionTitle">
-  <p style="font-size:18px"><strong>ADD NEW TOPIC</strong></p>
+  <p style="font-size:18px"><strong><?php echo ADDNEWTOPIC ; ?></strong></p>
 </div>
 
 <div id="apDivQustionForum">
   <form id="form1" name="form1" method="post" action="add_new_topic.php">
       <table><tr><td>
-      Topic</td></tr>
+      <?php echo TOPIC ; ?></td></tr>
       <tr><td>
       <textarea name="topic" id="question" class="faqText" placeholder="topic" cols="40" rows="2" required></textarea>
       </td></tr><tr><td>
-      Details
+      <?php echo DETAIL ; ?>
       </td></tr><tr><td>
       <textarea name="detail" id="question1" class="faqText1" placeholder="details" cols="45" rows="5" required></textarea>
    	</td></tr><tr><td>
