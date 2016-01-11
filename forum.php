@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>baas.lk</title>
 <style type="text/css">
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 #apDiv1 {
 	position:absolute;
 	top:90px;
@@ -21,6 +22,11 @@
   background-image: -o-linear-gradient(top, #bdbdbd, #bdbdbd);
   background-image: linear-gradient(to bottom, #bdbdbd, #bdbdbd);
 	border-radius: 5px;
+}
+
+table{
+	font-size:10px;
+	font-family:'Fauna One',serif
 }
 .createtabel {
 	position: absolute;
@@ -57,7 +63,7 @@
 	background-color:#fff;
 	left: 8px;
 	font-size:15px;
-	font-family:"Arial Black", Gadget, sans-serif;
+	font-family: 'Fauna One',serif;
 	top: 1px;
 	width: 319px;
 	height: 20px;
@@ -106,7 +112,7 @@
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Arial;
+  font-family: 'Fauna One',serif;
   color: #ffffff;
   font-size: 14px;
   padding: 10px 20px 10px 20px;
@@ -158,7 +164,7 @@ margin-bottom:15px;
 background-color:rgba(240,240,240,0.8);
 border:1px solid rgba(0,0,0,0.2);
 border-radius:3px;
-font-family:'Fauna One',serif;
+font-family: 'Fauna One',serif;
 font-weight:500;
 font-size:14px;
 border-style: solid;
@@ -248,11 +254,11 @@ $word = str_replace(' ','',$word);
 <td>
 <table width="900" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr>
-<td width="45%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
-<td width="20%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
+<td width="45%" align="center" bgcolor="#999"><?php echo DISCUSSION ; ?></td>
+<td width="20%" align="center" bgcolor="#999"><?php echo STARTEDBY ; ?></td>
+<td width="10%" align="center" bgcolor="#999"><?php echo VIEWS ; ?></td>
+<td width="10%" align="center" bgcolor="#999"><?php echo REPLIES ; ?></td>
+<td width="15%" align="center" bgcolor="#999"><?php echo DATEANDTIME ; ?></td>
 </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -273,7 +279,7 @@ while($rows = mysqli_fetch_assoc($result)) {
 	}
 ?>
 <tr>
-<td bgcolor="<?php echo $bgcolor?>" align="left" ><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><strong><?php echo $rows['topic']; ?></strong></a><BR></td>
+<td bgcolor="<?php echo $bgcolor?>" align="left" ><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
 <tr>
@@ -311,7 +317,7 @@ if($found == 0)
 <table width="900" bgcolor:"#fff">
 <tr>
 <td width="100%" align="center" bgcolor:"#fff">
-  <p><strong><?php echo NOTFOUND ; ?></strong></p></td>
+  <p><?php echo NOTFOUND ; ?></p></td>
 </tr>
 </table>
 </div>
@@ -341,11 +347,11 @@ $bgcolor="";
 <td>
 <table width="900" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr>
-<td width="45%" align="center" bgcolor="#999"><strong><?php echo DISCUSSION ; ?></strong></td>
-<td width="20%" align="center" bgcolor="#999"><strong><?php echo STARTEDBY ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo VIEWS ; ?></strong></td>
-<td width="10%" align="center" bgcolor="#999"><strong><?php echo REPLIES ; ?></strong></td>
-<td width="15%" align="center" bgcolor="#999"><strong><?php echo DATEANDTIME ; ?></strong></td>
+<td width="45%" align="center" bgcolor="#999"><?php echo DISCUSSION ; ?></td>
+<td width="20%" align="center" bgcolor="#999"><?php echo STARTEDBY ; ?></td>
+<td width="10%" align="center" bgcolor="#999"><?php echo VIEWS ; ?></td>
+<td width="10%" align="center" bgcolor="#999"><?php echo REPLIES ; ?></td>
+<td width="15%" align="center" bgcolor="#999"><?php echo DATEANDTIME ; ?></td>
 </tr>
  
 <?php
@@ -362,7 +368,7 @@ while($rows = mysqli_fetch_array($result)){
 		$bgcolor="#EEE";}
 ?>
 <tr>
-<td bgcolor="<?php echo $bgcolor?>" align="left" ><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><strong><?php echo $rows['topic']; ?></strong></a><BR></td>
+<td bgcolor="<?php echo $bgcolor?>" align="left" ><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
 <tr>
@@ -391,7 +397,7 @@ mysqli_close($database);
 <div id="apDivQuestionBox">
 
 <div id="apDivQuestionTitle">
-  <p style="font-size:18px"><strong><?php echo ADDNEWTOPIC ; ?></strong></p>
+  <p style="font-size:18px"><?php echo ADDNEWTOPIC ; ?></p>
 </div>
 
 <div id="apDivQustionForum">

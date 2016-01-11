@@ -8,15 +8,18 @@
 <link href="css/header.css" rel="stylesheet">
 
 <style>
-
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 p{	
 	color: rgba(51,51,51,1);
-	font-size:18px;
+	font-size:14px;
+	font-family:'Fauna One',serif;
+	padding-left: 5px;
 	}
-
-h3{
-	line-height: 40%;	
-
+h1{	
+	font-family:'Fauna One',serif
+}
+h3{	
+	font-family:'Fauna One',serif;
 }
  .FAQ { 
  		cursor:hand; cursor:pointer;
@@ -24,16 +27,15 @@ h3{
         border-radius: 3px;
         width:600px; 
         background-color: #f0f0f0;
-       // padding :5px;  	
-        
-        
+        font-size: 13px;
+       // padding :5px;  	       
     }
 
  .FAA { 
- 	display:none;	
+ 	display:none;
+ 	font-size: 10px;
+
  	 }
-
-
 #apDivTitle{
 	position: absolute;
 	left: 131px;
@@ -41,10 +43,8 @@ h3{
 	width: 70%;
 	height: 105px;
 	z-index: 111;
+	font-size: 10px;
 }
-
-
-
 #apDivQuestionBox {
 	position: absolute;
 	left: 800px;
@@ -100,7 +100,11 @@ resize:none;
 border-style: solid;
 border-width: 1px;
 border-color: rgba(240,240,1,1);
+font-size: 14px;
+}
 
+label{
+	font-size: 14px;
 }
 </style>
 

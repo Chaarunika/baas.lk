@@ -189,7 +189,7 @@ $result = mysqli_query($dbConnection,$query);
     <link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
 
 	<style type="text/css">
-
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 	
 
 
