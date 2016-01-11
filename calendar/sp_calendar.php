@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<link href="calendar.css" rel="stylesheet" type="text/css" />
+	<link href="calendar/calendar.css" rel="stylesheet" type="text/css" />
 	<script>
 		function goLastMonth(month,year)
 		{
