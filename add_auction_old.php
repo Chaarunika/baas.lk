@@ -1,8 +1,28 @@
+<html>
+<head>
 
+<title>baas.lk</title>
+<meta charset="UTF-8">
+
+<script language="javascript" type="text/javascript" src="javascript/datetimepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/header.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/addauctionitem.css">
+
+
+<style type="text/css">
+
+</style>
+
+
+</head>
+
+<body>
+<?php include ('header.php') ; ?>
 
 <div id='addauctionMainContainer'>
 
-<form action="listbiditems.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<form action="addauctionitem.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
 
     <div id='apDivBidAddCol2'>
           <label><?php echo ADDPICTURE ; ?></label><br>
@@ -29,7 +49,7 @@
     <label><?php echo MINIMUMBIDPRICE ; ?></label><br>
     <div class="input-group">
       <span class="input-group-addon" ><?php echo RS ; ?>.</span>
-        <input type="number" placeholder="minimum Bid" name="minimumbid" required min=0 class="form-control" style="border: 1px solid rgba(240,240,1,1)"  aria-label="Amount (to the nearest dollar)">
+        <input type="number" name="minimumbid" required min=0 class="form-control" style="border: 1px solid rgba(240,240,1,1)"  aria-label="Amount (to the nearest dollar)">
       <span class="input-group-addon">.00</span>
     </div>
 
@@ -38,11 +58,11 @@
   </div>
 
     <div id="apDivBidAddCol1" ><b>
-    <!-- <p style="text-align:center ;font-size:18px"><?php echo REALESTATEAUCTION ; ?> </p></b> -->
+    <p style="text-align:center ;font-size:18px"><?php echo REALESTATEAUCTION ; ?> </p></b>
   
 
     <label><?php echo LANDNAME ; ?> </label><br>
-    <input type="text" name="item" placeholder="name" id="item" class="addAucSelectInput" required><br><br>
+    <input type="text" name="item" id="item" class="addAucSelectInput" required><br><br>
 
     <label><?php echo TOWN ; ?></label><br>
     <select name=town class="addAucSelect" >
@@ -74,7 +94,7 @@
     </select><br><br>
 
     <label><?php echo DESCRIPTION ; ?></label><br>
-    <textarea name="description" id="description" placeholder="description" class="addAucSelectText" cols="45" rows="5" style="font-family:Arial, sans-serif;" required></textarea><br><br>
+    <textarea name="description" id="description" class="addAucSelectText" cols="45" rows="5" style="font-family:Arial, sans-serif;" required></textarea><br><br>
    
 
 
@@ -110,10 +130,13 @@
           }
       else
         {
-        //include ('includes/addLandDisplay.php');
+        include ('includes/addLandDisplay.php');
         }
 
       $mess= "Auction item $item sucessfully created";
     }
   ?>
 
+
+</body>
+</html>

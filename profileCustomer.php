@@ -262,7 +262,7 @@ border-color: rgba(240,240,1,1);
 
         if(!isset($_GET['complain']))
         {
-        		echo "<p align='center' style='font-size:30px'>YOURRECENTAPPOINTMENTS</p><br><br>";
+        		echo "<p align='center' style='font-size:30px'>".YOURRECENTAPPOINTMENTS."</p><br><br>";
 
 
 				$customer=$_SESSION['userID'];
