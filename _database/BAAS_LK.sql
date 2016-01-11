@@ -236,7 +236,7 @@ INSERT INTO `serviceprovider` (`sp_id`, `user_id`, `contactNo`, `opContactNo`, `
 (13, 13, 715899633, NULL, NULL, 'Carpenter', 'Kalutara', 'Im the carpenter in kaluthara district', 'I worked Naguma construction', '1972-08-14', 'Male', 'No78,kaluthra', NULL, NULL, NULL, NULL),
 (14, 14, 785622456, NULL, NULL, 'Painter', 'Galle', 'Im the painter in galle district', 'I worked ABC project', '1971-01-10', 'Male', 'No20,galle', NULL, NULL, NULL, NULL),
 (15, 15, 774552236, NULL, NULL, 'Painter', 'Anuradhapura', 'Im the painter in Anuradhapura district', 'I worked Nawaloka construction', '1976-10-10', 'Male', 'No2,anuradhapura', NULL, NULL, NULL, NULL),
-(16, 16, 789662232, NULL, NULL, 'Painter', 'Badulla', 'Im the painter in Badulla', 'I worked cms project', '1946-03-10', 'Male', 'No 23,Badulla', NULL, NULL, NULL, NULL),
+(16, 16, 789662232, NULL, NULL, 'Painter', 'Badulla', 'Im the painter in Badulla', 'I worked cms project', '1946-03-10', 'Male', 'No 23,Badulla', NULL, NULL, NULL, NULL);
 
 
 -- --------------------------------------------------------
@@ -473,3 +473,52 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_password_hash`, `user_email`,
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+CREATE TABLE IF NOT EXISTS `complain` (
+  `complain_id` int(11) NOT NULL AUTO_INCREMENT,
+  `job_id` int(11) NOT NULL,
+  `sp_id` int(11) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  PRIMARY KEY (`complain_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `complain`
+--
+
+INSERT INTO `complain` (`complain_id`, `job_id`, `sp_id`, `description`) VALUES
+(1, 20, 10, '0'),
+(2, 20, 10, 'ui9u0ui09ui-p'),
+(3, 20, 10, 'sdcxcxzc'),
+(4, 12, 1, 'fdghbfghbfgbnfgbn'),
+(5, 12, 1, 'dfcbgfcdvbcvbvcbvvvbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'),
+(6, 12, 1, 'kljlkjlijj'),
+(7, 12, 1, 'lkjniljojoi'),
+(8, 12, 1, 'mkljkhljnlk jopjoijioj oi pojop;'),
+(9, 9, 1, 'dfhgffhbfg dfgh dfgh'),
+(10, 6, 1, 'dtfhggfh th fgh fg'),
+(11, 31, 1, 'khjhuihik');
+
+
+CREATE TABLE IF NOT EXISTS `calendar` (
+  `calendar_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(60) DEFAULT NULL,
+  `detail` varchar(250) DEFAULT NULL,
+  `jobDate` varchar(15) NOT NULL,
+  `dateAdded` date NOT NULL,
+  `location` varchar(60) DEFAULT NULL,
+  `jobtime` varchar(10) DEFAULT NULL,
+  `contactno` varchar(10) DEFAULT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `sp_id` int(11) DEFAULT NULL,
+  `accepted` int(1) NOT NULL,
+  `reported` int(1) NOT NULL,
+  `feedback` int(11) NOT NULL,
+  PRIMARY KEY (`calendar_id`),
+  KEY `customer_id` (`customer_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+
