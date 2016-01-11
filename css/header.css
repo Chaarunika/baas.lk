@@ -130,6 +130,15 @@
 	z-index: 2;	
 }
 
+#english{
+	position: absolute;
+	left: 1010px;
+	top: 30px;
+	width: 40px;
+	height: 19px;
+	z-index: 3;	
+}
+
 #sinhala{
 	position: absolute;
 	left: 900px;
