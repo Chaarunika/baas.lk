@@ -141,7 +141,7 @@ else{
 		<ul>
 	  		<li><a href="index.php"><?php echo HOME; ?></a></li>
 	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo WIKI; ?></a></li>
-	  		<li><a href="addauctionitem.php"><?php echo FAQ; ?></a></li>	 
+	  		<li><a href="faq.php"><?php echo FAQ; ?></a></li>	 
 			<li><a href="forum.php"><?php echo FORUM; ?></a></li>
 	  		
 
