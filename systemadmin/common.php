@@ -53,19 +53,27 @@ h3{
 <!-- -->
 <div  id="apDivTitle">
 <a href="home.php">
-<div class="btncommon" onClick="toggle('show1')">
+<div class="btncommon">
 <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">  Service Provider</h3>
 </div></a>
 <a href="cmremove.php">
-<DIV class="btncommon" onClick="toggle('show2')">
+<DIV class="btncommon">
 <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Customer</h3>
 </DIV></a>
 <a href="forumremove.php">
-<DIV class="btncommon" onClick="toggle('show3')">
+<DIV class="btncommon">
 <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;"> Forum</h3>
 </DIV></a>
 <a href="jobremove.php">
-<DIV class="btncommon" onClick="toggle('show4')">
+<DIV class="btncommon">
 <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Jobs</h3>
  </DIV></a>
+<a href="complain.php">
+<DIV class="btncommon">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Complain</h3>
+ </DIV></a>
+<!--<a href="bid.php">
+<DIV class="btncommon">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Bid</h3>
+ </DIV></a> -->
 </div>

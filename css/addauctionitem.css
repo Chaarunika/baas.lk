@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+label{
+	font-family:'Fauna One',serif;
+    font-size: 14px;
+}
+input{
+	font-family:'Fauna One',serif;
+    font-size: 10px;
+}
+=======
+>>>>>>> b6496fc902cfea89a2360275bea3af0544ed25a0
 #addauctionMainContainer{
   position: relative;
   left:0px;
@@ -6,9 +18,11 @@
   background-color: #f0f0f0;
   border: 1px solid rgba(51,51,51,0.2);
   margin-bottom: 20px;
+  font-family:'Fauna One',serif;
 }
 
 #apDivBidAddCol1{
+	font-family:'Fauna One',serif;
   position:relative;
   width:500px;
   //height:700px;
@@ -25,6 +39,7 @@
 }
 
 #apDivBidAddCol2 {
+	font-family:'Fauna One',serif;
   position:absolute;
   width:500px; 
   top: 0px;
@@ -40,6 +55,7 @@
 }
 
 .addAucSelectInput{
+	font-family:'Fauna One',serif;
 width:100%;
 height:30px;
 margin-top:10px;
@@ -51,6 +67,7 @@ border-width: 1px;
 border-color: rgba(240,240,1,1);
 }
 .addAucSelectText{
+	font-family:'Fauna One',serif;
 width:100%;
 height:60px;
 margin-top:10px;
@@ -66,6 +83,7 @@ border-color: rgba(240,240,1,1);
 
 
 .addAucSelectButton{
+	font-family:'Fauna One',serif;
 width:50%;
 height:40px;
 margin-top:15px;
@@ -80,9 +98,11 @@ border-style: solid;
 border-width: 1px;
 }
 .addAucSelectButton:hover{
+	font-family:'Fauna One',serif;
   background-color:#a6a6a6;
 }
 .addAucSelect{
+	font-family:'Fauna One',serif;
 width:100%;
 height:30px;
 margin-top:5px;
@@ -92,14 +112,18 @@ padding:5px;
 border-style: solid;
 border-width: 1px;
 border-color: rgba(240,240,1,1);
+font-size:14px;
+font-family:'Fauna One',serif
 }
 
 .fileUpload {
+	font-family:'Fauna One',serif;
     position: relative;
     overflow: hidden;
     margin: 10px;
 }
 .fileUpload input.upload {
+	font-family:'Fauna One',serif;
     position: absolute;
     top: 0;
     right: 0;
@@ -112,8 +136,10 @@ border-color: rgba(240,240,1,1);
 }
 
 #addLandDisplayTable{
+	font-family:'Fauna One',serif;
   position: absolute;
   left: 750px;
   top:200px;
+  
 }
 

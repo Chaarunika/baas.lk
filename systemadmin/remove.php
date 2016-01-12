@@ -44,6 +44,14 @@ else if($detailarray[0]=='job')
 	
 	header("location:jobremove.php");
 }
+else if($detailarray[0]=='complain')
+{
+	$sql1="DELETE FROM complain WHERE complain_id=$detailarray[1]";
+	$result1 = mysqli_query($database, $sql1);
+	
+	
+	header("location:complain.php");
+}
 
 
 mysqli_close($database);

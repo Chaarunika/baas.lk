@@ -1,5 +1,6 @@
 /*****************************************************/
 /****General****/
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 *
 {
 	margin:0px;
@@ -10,7 +11,7 @@ body
 	background:none;
 	padding-left:10%;
 	padding-right:10%;
-	font-family:Arial, Geneva, sans-serif;
+	font-family:'Fauna One',serif;
 }
 a
 {
@@ -116,6 +117,7 @@ td, th
 	margin:auto;
 	padding:20px;
 	margin-top:20px;
+	font-family:'Fauna One',serif;
 }
 /*****************************************************/
 /****Content****/

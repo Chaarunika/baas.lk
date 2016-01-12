@@ -291,11 +291,6 @@ define("SIGNUP", "SIGNUP");
 
 
 
-
-//define("", "");
-
-
-/*
 define("PASSWORD_WRONG", "Password is wrong");
 define("ACCOUNT_NOT_ACTIVATED", "Your account is not activated yet. Please click on the confirm link in the mail.");
 
@@ -371,5 +366,5 @@ define("WORDING_SUBMIT_NEW_PASSWORD", "Submit new password");
 define("WORDING_USERNAME", "Username");
 define("WORDING_YOU_ARE_LOGGED_IN_AS", "You are logged in as ");
 
-*/
+
 ?>

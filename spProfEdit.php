@@ -18,7 +18,10 @@
 
 
 <style type="text/css">
-
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+#form1,#form2,#form3,#form4{
+  font-family:'Fauna One',serif;
+}
 	#subMenu{
   position: absolute;
   top: 90px;

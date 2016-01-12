@@ -1,3 +1,4 @@
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 .createtabel {
 	position: absolute;
 	left: 10px;
@@ -47,9 +48,11 @@
 }
 createtopic {
 	font-size: 24px;
+	font-family: 'Fauna One',serif;
 }
 createtopic {
 	font-size: 36px;
+	font-family: 'Fauna One',serif;
 }
 createtopic {
 	color: #000;
@@ -57,6 +60,7 @@ createtopic {
 .createtopic {
 	font-size: 24px;
 	color: #000;
+	font-family: 'Fauna One',serif;
 }
 .whole {
 	position: absolute;
@@ -64,4 +68,5 @@ createtopic {
 	top: 206px;
 	width: 1390px;
 	height: 513px;
+	font-family: 'Fauna One',serif;
 }

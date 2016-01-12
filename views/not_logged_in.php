@@ -10,5 +10,5 @@
 </form>
 <br>
 <a href="selectUser.php"><?php echo REGISTER; ?></a>
-<a href="password_reset.php"><?php echo FORGOT_MY_PASSWORD; ?></a>
+
 

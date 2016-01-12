@@ -31,6 +31,12 @@
 	<script type="text/javascript" src="Gallery/_scripts/pop-up-gallery3.js"></script>
 	<link href="css/header.css" rel="stylesheet" />
 	<link href="css/profile.css" rel="stylesheet" />
+	<style>
+		@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+		p{
+		font-family:'Fauna One',serif;
+		}
+	</style>
 </head>
 
 <body>

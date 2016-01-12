@@ -1,4 +1,4 @@
-
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 #apDivProfBox {
 	position: absolute;
 	left: 50px;
@@ -19,6 +19,7 @@
 	border-bottom-color: rgba(212,212,212,1);
 	border-left-color: rgba(212,212,212,1);
 	visibility: visible;
+	font-family:'Fauna One',serif;
 	
 }
 
@@ -38,6 +39,7 @@
 	border-bottom-width: thin;
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
+	font-family:'Fauna One',serif;
 }
 #apDivIcon {
 	position: absolute;
@@ -46,6 +48,7 @@
 	width: 44px;
 	height: 43px;
 	z-index: 3;
+	font-family:'Fauna One',serif;
 }
 #apDivAbout {
 	position: absolute;
@@ -54,7 +57,7 @@
 	width: 130px;
 	height: 38px;
 	z-index: 1;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family:'Fauna One',serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: rgba(0,0,0,1);
@@ -67,6 +70,7 @@
 	z-index: 4;
 	bottom: 0px;
 	border-right: thin solid rgba(212,212,212,1);
+	font-family:'Fauna One',serif;
 }
 #apDivTopic0,#apDivTopic1,#apDivTopic2,#apDivTopic3 {
 	position: absolute;
@@ -76,6 +80,7 @@
 	height: 65px;
 	z-index: 5;
 	border-bottom: thin solid rgba(212,212,212,1);
+	font-family:'Fauna One',serif;
 }
 
 #apDivTopic0{
@@ -94,6 +99,7 @@
 	width: 3%;
 	height: 98%;
 	z-index: 2;
+	font-family:'Fauna One',serif;
 }
 #apDivTag0 ,#apDivTag1,#apDivTag2 ,#apDivTag3{
 	position: relative;
@@ -104,8 +110,7 @@
 	height: 100%;
 	bottom :0px;
 	z-index: 2;
-	
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:'Fauna One',serif;
 	font-size: 15px;
 	font-weight: bold;
 	color :grey;
@@ -128,6 +133,7 @@
 	z-index: 3;
 	visibility : visible;
 	box-sizing: border-box;
+	font-family:'Fauna One',serif;
 }
 /*
 #apDivOptionBox0{
@@ -163,6 +169,7 @@
 	border-bottom-width: thin;
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
+	font-family:'Fauna One',serif;
 }
 #apDivBirthDate {
 	position: relative;
@@ -174,6 +181,7 @@
 	border-bottom-width: thin;
 	border-bottom-style: solid;
 	border-bottom-color: rgba(204,204,204,1);
+	font-family:'Fauna One',serif;
 }
 #apDivGender {
 	position: relative;
@@ -198,6 +206,7 @@
 	left: 0px;
 	right: 0px;
 	bottom: auto;
+	font-family:'Fauna One',serif;
 }
 #apDiv1 {
 	position: absolute;
@@ -208,11 +217,13 @@
 	z-index: 2;
 	box-sizing: border-box;
 	border: 80px solid rgba(0,0,0,1);
+	font-family:'Fauna One',serif;
 }
 
 label {
 	position: relative;
 	vertical-align: middle;
+	font-family:'Fauna One',serif;
 	}
 input[type=text],
 input[type=password],
@@ -222,8 +233,10 @@ input[type=email]  {
 	margin-bottom: 15px;
 	vertical-align: middle;
 	width: 250px;
+	font-family:'Fauna One',serif;
 	}
 input[type=checkbox] {
 	margin-bottom: 15px;
+	font-family:'Fauna One',serif;
 	
 	}
