@@ -1,3 +1,7 @@
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+p{
+font-family:'Fauna One',serif;
+}
 .object_ok
 {
 border: 1px solid green; 
@@ -70,16 +74,16 @@ color: #333333;
 	width: 594px;
 	height: 34px;
 	z-index: 10;
-	font-family: BRITANIC;
+	font-family:'Fauna One',serif;
 	font-size: 15px;
 	color: red;
 }
-
+/*
 @font-face {
     font-family: BRITANIC;
     src: url(../fonts/verdana.woff);
 }
-
+*/
 #apDivTitle{
 	position: absolute;
 	width: 800px;
@@ -87,14 +91,14 @@ color: #333333;
 	z-index: 3;
 	left: 30px;
 	top: 25px;
-	font-family: BRITANIC;
+	font-family:'Fauna One',serif;
 	font-size: 30px;
 	color: #213266;
 	font-weight: bold;
 }
 
 p{
-	font-family:BRITANIC;
+	font-family:'Fauna One',serif;
 	font-size: 15px;
 	color: #213266;
 	font-weight:bold;
@@ -102,7 +106,7 @@ p{
 }
 
 body{
-	font-family: Arial, sans-serif;
+	font-family:'Fauna One',serif;
 	font-size: 12px;
 	margin: 10px;
 }
@@ -124,7 +128,7 @@ input[type=checkbox] {
 #apDivFbLogin{
 	position: absolute;
 	width: 361px;
-	height: 250px;
+	height: 200px;
 	z-index: 2;
 	right: 10%;
 	top: 110px;
@@ -150,4 +154,5 @@ input[type=checkbox] {
 	height: 35px;
 	font-size: 16px;
 	font-weight: bold;
+	font-family:'Fauna One',serif;
 }

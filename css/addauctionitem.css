@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 label{
 	font-family:'Fauna One',serif;
@@ -7,6 +8,8 @@ input{
 	font-family:'Fauna One',serif;
     font-size: 10px;
 }
+=======
+>>>>>>> b6496fc902cfea89a2360275bea3af0544ed25a0
 #addauctionMainContainer{
   position: relative;
   left:0px;
@@ -121,8 +124,6 @@ font-family:'Fauna One',serif
     opacity: 0;
     filter: alpha(opacity=0);
 }
-
-
 
 #addLandDisplayTable{
   position: absolute;

@@ -25,7 +25,7 @@
 }
 
 table{
-	font-size:10px;
+	font-size:14px;
 	font-family:'Fauna One',serif
 }
 .createtabel {
@@ -76,20 +76,23 @@ table{
 	left: 354px;
 	top: 1px;
 	width: 118px;
-	  background: #dae2f0;
+	font-family:'Fauna One',serif;
+/*	background: #dae2f0;
   background-image: -webkit-linear-gradient(top, #dae2f0, #999999);
   background-image: -moz-linear-gradient(top, #dae2f0, #999999);
   background-image: -ms-linear-gradient(top, #dae2f0, #999999);
   background-image: -o-linear-gradient(top, #dae2f0, #999999);
   background-image: linear-gradient(to bottom, #dae2f0, #999999);
+
 	height: 33px;
 	border-style:outset;
 	border-width:3px;
 	cursor:hand;
 	font-weight: bold;
 	color:#fff;
-	 
+*/	 
 }
+/*
 #searchbtton:hover{
 	
  background: #000000;
@@ -101,6 +104,7 @@ table{
   text-decoration: none;
  
 }
+*/
 #newdiscuss
  {
   background: #74787a;

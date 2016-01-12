@@ -13,7 +13,7 @@ if (mysqli_num_rows($result) > 0) {
       
       $post = "<div class='item'>";
       $post .= "<b><span style='padding:5px;text-align:center;position:absolute;background-color:#c9d8c5; width:90%'>".$row['job_type']." Wanted..!!</span><br></b><br>";
-      $post .= JOBLOCATION." : ".$row['area']." | ".JOBCONTACT." :0{$row['tel_num']}";
+      $post .= JOBLOCATION." : ".$row['area']." <br> ".JOBCONTACT." :0{$row['tel_num']}";
       //$post .= "Location : {$row['address']} <br>";     
       $post .= "<br><p> {$row['job_description']} </p>";          
       $post .= time_elapsed_string($row['time']) ."<br>";

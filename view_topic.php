@@ -7,6 +7,7 @@
 <?php include 'header.php'; ?> 
 
 <style type="text/css">
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 .createtabel {
 	position: absolute;
 	left: 127px;
@@ -79,6 +80,9 @@ color:#fff;
   background-image: -o-linear-gradient(top, #000000, #212629);
   background-image: linear-gradient(to bottom, #000000, #212629);
   text-decoration: none;
+}
+table{
+	font-family:'Fauna One',serif;
 }
 
 </style>

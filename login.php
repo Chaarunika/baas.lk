@@ -19,6 +19,11 @@
 <link href="login.css" rel="stylesheet">
 <link href="css/header.css" rel="stylesheet">
 <style type="text/css">
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+label{
+	font-family:'Fauna One',serif;
+	font-size: 14px;
+}
 #apDiv1 {
 	position:absolute;
 	width:200px;
@@ -34,8 +39,12 @@
 #apDivRand {
 	position:relative;
 	}
-	
-
+input{
+	font-family:'Fauna One',serif;
+}	
+a{
+	font-family:'Fauna One',serif;
+}
 	
 	
 </style>
@@ -102,10 +111,6 @@ if ($login->checkloginstatus() == true) {
 	?>
 	
  </div>
-  
-  
- 
-  
   <a href = "fbLogin/fbSignupStatus_login.php">
   <div id="facebook"><img src="images/facebook-login.png" alt="" width="150" height="33" /></div>
   </a>
@@ -115,10 +120,5 @@ if ($login->checkloginstatus() == true) {
   </a>
 
 </div>	
- 
-
-
-
-
 </html>
 

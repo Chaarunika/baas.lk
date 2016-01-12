@@ -177,7 +177,7 @@
 </div>
 
 
-		<?php
+		<?php 
 		if (!isset($_GET['add']) and !isset($_GET['send']))
 		{
 		
@@ -189,7 +189,7 @@
 			include('calendar/createappointment.php');
 		 }
 		 
-		 echo "</div>";
+		 echo "</div>"; 
 		 ?>
 		
 </div>
