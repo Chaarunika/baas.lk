@@ -6,6 +6,7 @@
 <head>
 
 <title>baas.lk</title>
+<meta charset="UTF-8">
 
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">

@@ -72,4 +72,8 @@ h3{
 <DIV class="btncommon">
 <h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Complain</h3>
  </DIV></a>
+<!--<a href="bid.php">
+<DIV class="btncommon">
+<h3 align="left"><img src="images/j.png" alt="expand" style="width:30px;height:30px;">Bid</h3>
+ </DIV></a> -->
 </div>

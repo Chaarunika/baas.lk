@@ -139,7 +139,7 @@ if (mysqli_num_rows($result) > 0) {
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="25%" bgcolor="#F8F7F1"><img src="..\<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
+<td width="25%" bgcolor="#F8F7F1"><img src="../<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
@@ -200,13 +200,12 @@ if (mysqli_num_rows($result) > 0) {
 	font-weight: bold;
 
 </style>
-
 <div id="ap<?php echo $cfound; ?>">
 <table width="95%" height="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#F8F7F1" >
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="25%" bgcolor="#F8F7F1"><img src="..\<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
+<td width="25%" bgcolor="#F8F7F1"><img src="../<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
