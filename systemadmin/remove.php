@@ -52,6 +52,18 @@ else if($detailarray[0]=='complain')
 	
 	header("location:complain.php");
 }
+else if($detailarray[0]=='bid')
+{
+	$sql1="DELETE FROM tblbidhistory WHERE biditemid =$detailarray[1]";
+	$result1 = mysqli_query($database, $sql1);
+	
+	$sql2="DELETE FROM tblbiditems WHERE biditemid=$detailarray[1]";
+	$result2 = mysqli_query($database, $sql2);
+	
+	header("location:bid.php");
+}
+
+
 
 
 mysqli_close($database);

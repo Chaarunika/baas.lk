@@ -295,7 +295,17 @@ if (mysqli_num_rows($result) > 0) {
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr>
 <td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="10%" bgcolor="#F8F7F1" align="left"><img src="../<?php echo $row['user_avatar'];?>" alt="" border=3 height=30 width=30></img></td>
+<td width="10%" bgcolor="#F8F7F1" align="left"><img src="
+<?php 
+if($row['login_type']=='fb')
+{
+	echo $row['user_avatar'];
+}
+else
+{
+	echo "../".$row['user_avatar'];
+}
+?>" alt="" border=3 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "../systemadmin/profile.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr></table></td>
 </tr>
@@ -370,12 +380,30 @@ if (mysqli_num_rows($result) > 0) {
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr>
 <td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="10%" bgcolor="#F8F7F1" align="left"><img src="../<?php echo $row['user_avatar'];?>" alt="" border=3 height=30 width=30></img></td>
+<td width="10%" bgcolor="#F8F7F1" align="left"><img src="<?php
+if($row['login_type']=='fb')
+{
+	echo $row['user_avatar'];
+}
+else
+{
+	echo "../".$row['user_avatar'];
+}
+?>" alt="" border=3 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "../systemadmin/profile.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr></table></td>
 </tr>
 <tr>
-<td width="100%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']." || ".$row['category']; ?></strong></td>
+<td width="100%" bgcolor="#F8F7F1"><strong><?php 
+if($row['login_type']=='fb')
+{
+	echo $row['user_firstname']." || ".$row['area']." || ".$row['category']; 
+}
+else
+{
+	echo $row['user_name']." || ".$row['area']." || ".$row['category']; 
+}
+?></strong></td>
 </tr>
 <tr>
 <td width="100%" bgcolor="#F8F7F1"><?php echo $row['descr']; ?></td>
@@ -449,7 +477,17 @@ if (mysqli_num_rows($result) > 0) {
 </tr></table></td>
 </tr>
 <tr>
-<td width="100%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']." || ".$row['category']; ?></strong></td>
+<td width="100%" bgcolor="#F8F7F1"><strong><?php 
+if($row['login_type']=='fb')
+{
+	echo $row['user_firstname']." || ".$row['area']." || ".$row['category']; 
+}
+else
+{
+	echo $row['user_name']." || ".$row['area']." || ".$row['category']; 
+}
+
+?></strong></td>
 </tr>
 <tr>
 <td width="100%" bgcolor="#F8F7F1"><?php echo $row['descr']; ?></td>
