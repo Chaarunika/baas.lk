@@ -14,7 +14,8 @@
 
 <style type="text/css">
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
-label,th,textarea,#button{
+
+label,th,textarea{
     font-family:'Fauna One',serif;
 }
 

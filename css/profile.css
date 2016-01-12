@@ -11,7 +11,8 @@ font-family:'Fauna One',serif;
 	//height: 850px;
 	background-color: #f0f0f0;	
 	border: 1px solid rgba(51,51,51,0.2);
-	z-index: 1;		
+	z-index: 1;	
+	font-family:'Fauna One',serif;	
 }
 
 #apDivContainerCol2{
@@ -23,7 +24,8 @@ font-family:'Fauna One',serif;
 	//height: 850px;	
 	background-color: #f0f0f0;
 	border: 1px solid rgba(51,51,51,0.2);	
-	z-index: 1;		
+	z-index: 1;	
+	font-family:'Fauna One',serif;	
 }
 
 #apDivContainerCol3{
@@ -35,7 +37,8 @@ font-family:'Fauna One',serif;
 	height: 850px;	
 	background-color: #f0f0f0;
 	border: 1px solid rgba(51,51,51,0.2);	
-	z-index: 1;		
+	z-index: 1;
+	font-family:'Fauna One',serif;		
 }
 
 #subMenu{
@@ -43,6 +46,7 @@ font-family:'Fauna One',serif;
 	top: 90px;
 	width: 90%;
 	left :50px;
+	font-family:'Fauna One',serif;
 }
 
 .bubble 
@@ -55,6 +59,7 @@ background: rgba(51,51,51,0.4);
 -moz-border-radius: 1px;
 border-radius: 1px;
 text-align: center;
+font-family:'Fauna One',serif;
 }
 
 .bubble:after 
@@ -69,6 +74,7 @@ width: 0;
 z-index: 1;
 top: -10px;
 left: 59px;
+font-family:'Fauna One',serif;
 }
 
 #apDivMainInfo{
@@ -79,6 +85,7 @@ left: 59px;
 	border: 1px solid rgba(51,51,51,0.2);
 	padding: 20px;
 	margin-bottom: 20px;
+	font-family:'Fauna One',serif;
 }
 
 .img-circle2 {
@@ -99,6 +106,7 @@ left: 59px;
 	width: 110px;
 	height: 110px;
 	z-index: 1;
+	font-family:'Fauna One',serif;
 }
 
 #apDivTitle {
@@ -107,6 +115,7 @@ left: 59px;
 	left: 110px;
 	width: 370px;
 	z-index: 2;
+	font-family:'Fauna One',serif;
 }
 
 #apDivShortDesc{
@@ -117,6 +126,7 @@ left: 59px;
 	border: 1px solid rgba(51,51,51,0.2);
 	padding :30px;	
 	margin-bottom: 20px;
+	font-family:'Fauna One',serif;
 }
 
 #apDivWorkHistory{
@@ -127,6 +137,7 @@ left: 59px;
 	border: 1px solid rgba(51,51,51,0.2);
 	padding :30px;	
 	margin-bottom: 20px;
+	font-family:'Fauna One',serif;
 }
 
 #apDivContactBox{
@@ -138,6 +149,7 @@ left: 59px;
 	border: 1px solid rgba(51,51,51,0.2);
 	padding :20px;
 	margin-bottom: 20px;
+	font-family:'Fauna One',serif;
 }
 
 #calendarBox{
