@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?> 
 <!DOCTYPE html>
 <html>
 
@@ -218,7 +217,7 @@ border-color: rgba(240,240,1,1);
 </head>
 
 <body >
-
+<?php include 'header.php'; ?> 
 <div id="apDiv1">
 <div id="apDiv2">
   <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
