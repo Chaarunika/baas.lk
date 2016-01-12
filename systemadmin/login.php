@@ -1,12 +1,11 @@
 <?php
+ob_start();
 include '../_database/database.php';
 $username = $_POST['textfield'];
 $password = $_POST['textfield2'];
 
 $username = stripslashes($username);
 $password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
 $password = md5($password);
 
 
