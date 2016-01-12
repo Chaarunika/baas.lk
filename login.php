@@ -24,6 +24,7 @@ label{
 	font-family:'Fauna One',serif;
 	font-size: 14px;
 }
+
 #apDiv1 {
 	position:absolute;
 	width:200px;
@@ -82,6 +83,12 @@ function myFunction() {
 
 
 <div id="back">
+<div id="nextjob">
+Your next job is just 
+around the corner...
+ 
+</div>
+
 	<div id="coverPics"></div>
 </div>
 
@@ -89,8 +96,7 @@ function myFunction() {
 
 <div id="login-form-box">
 
-	
-  
+	 
   <div id="login-form">
   
 <?php
