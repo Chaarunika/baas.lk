@@ -1,4 +1,13 @@
+
 <!DOCTYPE html>
+
+<?php 
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
 <html>
 
 <head>
@@ -45,6 +54,25 @@
 	left: 0px;
 	
 }
+
+<?php
+if(!isset($_SESSION['userID'])){
+echo "
+.owl-carousel {  
+  width: 98%;
+}
+";
+}
+
+else{
+echo "
+.owl-carousel {  
+  width: 75%;
+}
+";
+}
+
+?>
 </style>
 
 </head>
@@ -64,19 +92,16 @@
 	?>
 
 	<?php include_once('includes/jobBar.php'); ?>
-	<?php 
-	include 'postjob.php' ;
+	<?php 		
 	if(isset($_SESSION['Catagory'])){
 		if($_SESSION['Catagory'] == 'customer'){
-			//include 'postjob.php' ;
+			include_once 'postjob.php' ;
 		}
 	}
 	?>
 	<?php //include 'functions/functions.php'; ?>
 	<?php //$message = display_error("SDDS"); ?>
 	<?php  //print_r($_SESSION) ; ?>
-
-	
 
 </body>
 

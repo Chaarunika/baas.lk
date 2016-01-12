@@ -2,6 +2,38 @@
  *  Owl Carousel - Animate Plugin
  */
 
+#owl-demo .item{
+  //background: #3fbf79;
+  background-color: #f8f8f8;
+  color: rgba(51,51,51,1);
+  padding: 5px 0px;
+  margin: 10px;
+  //color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+
+  //position: relative;
+  //min-height: 220px;
+  //text-align: center;
+  //padding: 10px;
+  //border: 1px solid rgba(240,240,1,1);
+}
+.customNavigation{
+  text-align: center;
+}
+//use styles below to disable ugly selection
+.customNavigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*
  .item{
   position: relative;
   //min-height: 220px;
@@ -11,12 +43,12 @@
   border: 1px solid rgba(240,240,1,1);
 
 
-}
+}  */
 
 .owl-carousel {
   top: 450px;
   display: none;
-  width: 75%;
+  width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: absolute;
