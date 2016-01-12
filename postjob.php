@@ -19,10 +19,6 @@ if(isset($_POST['jobDesc'])){
     echo "New record created successfully";
 
         //SMS send function
-
-         
-             
-
         $sql2 = "SELECT DISTINCT contactNo FROM serviceprovider WHERE category='$jobType' AND area='$jobArea' ";
         $result2 = mysqli_query($dbConnection,$sql2);
 
