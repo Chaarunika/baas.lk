@@ -14,7 +14,7 @@
 
 <style type="text/css">
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
-label,th{
+label,th,textarea,#button{
     font-family:'Fauna One',serif;
 }
 
@@ -50,7 +50,7 @@ label,th{
 
 
 #bidtbl {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family:'Fauna One',serif;
     border-collapse: collapse;
 	 table-layout: fixed;
 	 width: 100%;
