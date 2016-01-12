@@ -34,6 +34,8 @@
   font-size: 10px;
   text-decoration: none;
   height:20px;
+  width:40px;
+  border-radius: 5px;
 }
 
 .btn:hover {
@@ -45,9 +47,64 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+
+
+
 </style>
 
 <div id='show1'>
+
+
+<?php
+
+
+if(isset($_GET['user']))
+{
+	if($_GET['user']=="win")
+	{
+		    
+	        $id=$_GET['id'];
+	
+            $ch = curl_init();   
+            //$gatewayURL =    "http://".$output.":9090/sendsms?phone=".$row['contactNo']."&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."%0a"."&password=123456";
+            $textitURL = "http://www.textit.biz/sendmsg/index.php?id=94776014365&password=6065&text=You+won+the+bid.&to=$id";
+      
+            curl_setopt($ch, CURLOPT_URL, $textitURL); 
+            $output = curl_exec($ch);          
+            curl_close($ch); 
+	  
+			
+   
+	
+	
+	}
+	else if($_GET['user']=="bid")
+	{
+		$id=$_GET['id'];
+		
+            $ch = curl_init();   
+            //$gatewayURL =    "http://".$output.":9090/sendsms?phone=".$row['contactNo']."&text=baas.lk%0a".urlencode($jobDesc)."%0aAddress+:+".urlencode($jobAddress).",+".urldecode($jobArea).".%0a%0acall++".urlencode($jobTel)."%0a"."&password=123456";
+            $textitURL = "http://www.textit.biz/sendmsg/index.php?id=94776014365&password=6065&text=Bid+is+over.&to=$id";
+      
+            curl_setopt($ch, CURLOPT_URL, $textitURL); 
+            $output = curl_exec($ch);          
+            curl_close($ch);   
+		
+		
+		
+	}
+}
+
+
+
+
+?>
+
+
+
+
+
 <?php
 
 $sql2 = "SELECT * FROM users CROSS JOIN serviceprovider WHERE users.user_id=serviceprovider.user_id";
@@ -150,24 +207,26 @@ if($rows['accountno']=="")
 { echo "";}else{
 echo $conarray[$rows['accountno']];}
  ?>
- <form method="post" action="bidmsg.php">
- <input type="submit" class ='btn' name="msg"  value= "Report" > 
- </form>
+<a href="bid.php?user=bid&id=<?php 
+if($rows['accountno']=="")
+{ echo "";}else{
+echo $conarray[$rows['accountno']];}
+ ?>"><div class='btn'>Report</div></a>
+
  </td>
 
 <td align="center" bgcolor="<?php echo $bgcolor	?>"><?php if($row5['accountid']=="")
 { echo "";}else{
 echo $conarray[$row5['accountid']];} ?>
-<form method="post" action="bidmsg.php">
- <input type="submit" class ='btn' name="msg"  value= "Report" > 
-</form>
+<a href="bid.php?user=win&id=<?php if($row5['accountid']=="")
+{ echo "";}else{
+echo $conarray[$row5['accountid']];} ?>"><div class='btn'>Report</div></a>
 </td>
 </tr>
 	
  <?php       		   
  }
 		    
-
 }
 
 ?>
