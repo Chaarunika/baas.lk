@@ -139,13 +139,33 @@ if (mysqli_num_rows($result) > 0) {
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="25%" bgcolor="#F8F7F1"><img src="../<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
+<td width="25%" bgcolor="#F8F7F1"><img src="<?php 
+if($row['login_type']=='fb')
+{
+	echo $row['user_avatar'];
+}
+else
+{
+	echo "../".$row['user_avatar'];
+}
+
+
+?>" alt="" border=2 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
 </td>
 <tr>
-<td width="75%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']; ?></strong></td>
+<td width="75%" bgcolor="#F8F7F1"><strong><?php 
+if($row['login_type']=='fb')
+{
+	echo $row['user_firstname']." || ".$row['area']; 
+}
+else
+{
+	echo $row['user_name']." || ".$row['area']; 
+}
+?></strong></td>
 </tr>
 <tr>
 <td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "customer".",".$row["customer_id"].",".$row["user_id"];?>" onClick="msg()"><img src="images/remove.jpg" alt="" border=2 height=30 width=30></img></a></td>
@@ -205,13 +225,33 @@ if (mysqli_num_rows($result) > 0) {
 <tr>
 <td><table width="100%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#F8F7F1">
 <tr><td width="100%" bgcolor="#F8F7F1"><table><tr>
-<td width="25%" bgcolor="#F8F7F1"><img src="../<?php echo $row['user_avatar'];?>" alt="" border=2 height=30 width=30></img></td>
+<td width="25%" bgcolor="#F8F7F1"><img src="<?php
+if($row['login_type']=='fb')
+{
+	echo $row['user_avatar'];
+}
+else
+{
+	echo "../".$row['user_avatar'];
+}
+?>" alt="" border=2 height=30 width=30></img></td>
 <td width="75%"bgcolor="#F8F7F1" align="right"><a href= "profileCustomer.php?user=<?php echo $row["user_id"];?>" target="_blank" >View Profile</a></td>
 </tr>
 </table>
 </td>
 <tr>
-<td width="75%" bgcolor="#F8F7F1"><strong><?php echo $row['user_name']." || ".$row['area']; ?></strong></td>
+<td width="75%" bgcolor="#F8F7F1"><strong><?php
+if($row['login_type']=='fb')
+{
+	echo $row['user_firstname']." || ".$row['area']; 
+}
+else
+{
+	echo $row['user_name']." || ".$row['area']; 
+}
+
+
+?></strong></td>
 </tr>
 <tr>
 <td width="75%" bgcolor="#F8F7F1" align="right"><a href= "remove.php?detail=<?php  echo "customer".",".$row["customer_id"].",".$row["user_id"];?>" onClick="msg()"><img src="images/remove.jpg" alt="" border=2 height=30 width=30></img></a></td>
