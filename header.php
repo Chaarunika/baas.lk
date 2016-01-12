@@ -87,29 +87,10 @@ else{
 	<div id="apDivUBar1"></div>
 	<div id="apDivUBar2"></div>
 	<div id="apDivBaasLk">baas.lk</div>
-	<?php
 
 
-	if(isset($_SESSION['language'])){
-		if($_SESSION['language']=='sinhala')
-		{
-		echo "<div id='sinhala'><a href='english.php'><img src='images/english.png' height='22' width='40'></a></div>";
-		}
-
-
-		else
-		{
-		echo "<div id='sinhala'><a href='sinhala.php'><img src='images/sinhala.png'></a></div>";
-		}
-	
-	}
-
-	else
-	{
-		echo "<div id='sinhala'><a href='sinhala.php'><img src='images/sinhala.png'></a></div>";
-	}
-
-	?>
+	<div id='english'><a href='english.php'><img src='images/english.png' height='20' width='40'></a></div>
+	<div id='sinhala'><a href='sinhala.php'><img src='images/sinhala.png'></a></div>
 	<div id="tamil"><a href="tamil.php"><img src="images/tamil.png"></a></div>
 
 	<?php
