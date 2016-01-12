@@ -30,11 +30,11 @@ label{
 	width:200px;
 	height:30px;
 	z-index:6;
-	left: 400px;
+	left: 120px;
 	top: 230px;
 	font-size:15px;
-	color:red;
-	   font-weight: bold;
+	color:blue;
+	font-weight: bold;
 }
 
 #apDivRand {

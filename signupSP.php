@@ -88,7 +88,7 @@
 	if (isset($registration)) {
    		if ($registration->errors) {
         	foreach ($registration->errors as $error) {
-           		echo "<div id=\"apDivMessage\">".$error."</div>";
+           		echo "<div id=\"apDivError\">".$error."</div>";
         		}
     		}
     	if ($registration->messages) {

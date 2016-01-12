@@ -61,7 +61,7 @@ color: #333333;
 	box-sizing: border-box;
 	position: absolute;
 	z-index: 2;
-	top : 80px;
+	top : 120px;
 	left: 20px;
 	width: 400px;
 	height: 639px;
@@ -69,14 +69,26 @@ color: #333333;
 
 #apDivMessage {
 	position: absolute;
-	left: 380px;
+	left: 100px;
+	top: 180px;
+	width: 594px;
+	height: 34px;
+	z-index: 10;
+	font-family:'Fauna One',serif;
+	font-size: 15px;
+	color: blue;
+}
+
+#apDivError {
+	position: absolute;
+	left: 100px;
 	top: 193px;
 	width: 594px;
 	height: 34px;
 	z-index: 10;
 	font-family:'Fauna One',serif;
 	font-size: 15px;
-	color: red;
+	color: blue;
 }
 /*
 @font-face {
@@ -128,7 +140,7 @@ input[type=checkbox] {
 #apDivFbLogin{
 	position: absolute;
 	width: 361px;
-	height: 200px;
+	height: 300px;
 	z-index: 2;
 	right: 10%;
 	top: 110px;
