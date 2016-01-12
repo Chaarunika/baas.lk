@@ -269,7 +269,7 @@ define("NOJOBSSEARCHAREA", "Sorry, No Jobs Found.");
 
 //addauctionitem
 define("REALESTATEAUCTION", "Real State Auction");
-define("LANDNAME", "Land Name");
+define("LANDNAME", "Auction Name");
 define("TOWN", "Town");
 define("DESCRIPTION", "Description");
 define("ADDPICTURE", "Add Picture");

@@ -118,6 +118,7 @@ border-width: 1px;
 <body >
 
 	<div id ="jobLogo"> 
+		<!-- Recently Posted Jobs -->
 		<center><h2><?php echo RECENTLYPOSTEDJOBS ; ?> </h2><center>
     	<?php
 			$conn = new MySQLi("localhost","root","","baaslk");
@@ -157,7 +158,7 @@ border-width: 1px;
 		?>
 		</center>
 	</div>
-
+	<!-- Search Jobs Based on Area -->
 	<div id = "mainm">
 		<div id="main">
 			<div id = "b1">
@@ -195,7 +196,7 @@ border-width: 1px;
     			</select>
     			<input type= "submit" name="findA" value="<?php echo SEARCH ; ?>" class = "find"></center>
     		</div>
-
+    		<!-- Search Jobs Based on Category -->
         	<div id="b4">
     			<form action="" method="POST">
     			<center><br><label2><?php echo SEARCHBYCATAGORY ; ?> </label2>
