@@ -1,8 +1,11 @@
 <?php
 
-function update_rating($userID,$newRating){
+function update_rating($userID,$newRating,$calendarID){
 	//include_once('_database/database.php');
 	global $dbConnection;	
+
+	$query3 = "UPDATE calendar SET feedback=$newRating WHERE calendar_id = $calendarID " ;
+	$result3 = mysqli_query($dbConnection,$query3);
 
 	$query = "SELECT * FROM serviceprovider WHERE user_id = $userID " ;
 	$result = mysqli_query($dbConnection,$query);
@@ -21,18 +24,19 @@ function update_rating($userID,$newRating){
 	else{
 		$updatedRating= $newRating;
 		$newRatingCount = 1 ;
-		echo "dsss as a";
-
 	}	
 	
-	echo $newRatingCount;
-	echo $updatedRating;
+	//echo $newRatingCount;
+	//echo $updatedRating;
+	
+
+
 	$query2 = "UPDATE serviceprovider SET rating=$updatedRating , ratingCount=$newRatingCount WHERE user_id = $userID" ;
 
 	$result2 = mysqli_query($dbConnection,$query2);
 
 	if($result2){
-			die("Updation Sucessful.");
+			//header('Location: profileCustomer.php');  
 	}
 	
 

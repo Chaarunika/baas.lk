@@ -1,3 +1,4 @@
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 .Dropdn {
 	background-color: rgba(51,51,51,1);
 	position: absolute;
@@ -5,9 +6,9 @@
 	top: 104px;
 	width: 220px;
 	height: 24px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family:'Fauna One',serif;
 	color: rgba(255,255,255,1);
-	font-weight: bold;
+	//font-weight: bold;
 }
 
 #apDivSearchBar {
@@ -19,6 +20,7 @@
 	z-index: 8;
 	background-color: rgba(240, 240, 240,0.4) ;
 	border-radius: 20px;
+	font-family:'Fauna One',serif;
 
 }  
 /*
@@ -32,9 +34,9 @@
 } */ 
 
 .SearchBar {
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family:'Fauna One',serif;
 	font-size: 16px;
-	font-weight: normal;
+	//font-weight: normal;
 	color: rgba(255,255,255,1);
 	background-color: rgba(51,51,51,1);
 	position: absolute;
@@ -51,14 +53,15 @@
 	top: 81px;
 	width: 230px;
 	height: 96px;
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-weight: bold;
+	font-family:'Fauna One',serif;
+	//font-weight: bold;
 }
 
 input.MyButton {
+	font-family:'Fauna One',serif;
 	width: 94px;
 	padding: 5px;
-	font-weight: bold;
+	//font-weight: bold;
 	font-size: 80%;
 	background: #302D2D;
 	color: #FFFFFF;
@@ -78,7 +81,7 @@ input.MyButton {
 	height: 24px;
 	left: 407px;
 	top: 104px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
+	font-family:'Fauna One',serif;
+	//font-weight: bold;
 	color: rgba(255,255,255,1);
 }

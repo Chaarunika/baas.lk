@@ -9,7 +9,9 @@
 
 	
 }
-
+center{
+	font-family:'Fauna One',serif;	
+}
 #main{
 	position: absolute;
 	top :80px;

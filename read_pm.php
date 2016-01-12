@@ -8,6 +8,14 @@ include('config.php');
         <link href="css/chat.css" rel="stylesheet" title="Style" />
         <title>Message</title>
 		<link href="css/header.css" rel="stylesheet">
+		<style>
+		h1,td,h2,label,input,th{
+			font-family:'Fauna One',serif;
+		}
+		.date{
+			font-family:'Fauna One',serif;
+		}
+		</style>
     </head>
     <body>
 	<?php include 'header.php'?>

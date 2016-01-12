@@ -1,16 +1,17 @@
 
-<form name="ratingForm" id="ratingForm" method="post" action="profile.php">
+<form name="ratingForm" id="ratingForm" method="get" action="profileCustomer.php">
+    <!-- <input name="calendar_entry" type="hidden" value = <?php $appointment['calendar_id'] ?> > -->
     <input id="input-2c" name="rating" class="rating" min="0" max="5" step="0.1" data-size="xs" 
-    value= <?php if(isset($sp['rating'])){echo $sp['rating'];} else{echo 0;} ?>
-     data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa"  onchange="document.getElementById('ratingForm').submit();" readonly >
+    value= <?php if(isset($appointment['feedback'])){echo $appointment['feedback']; } else{echo 0;} ?>
+     data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa"  onchange="document.getElementById('ratingForm').submit();"  >
         
  </form>
    
    
    <?php 
-        if(isset($_POST['rating'])){
+        if(isset($_GET['rating'])){
               include_once("functions/ratingFunctions.php");
-              update_rating($sp['user_id'],$_POST['rating']);
+              update_rating($sp['user_id'],$_GET['rating'],$appointment['calendar_id']);
         }
    ?>
 

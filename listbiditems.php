@@ -13,12 +13,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <style type="text/css">
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+label,th,textarea,#button{
+    font-family:'Fauna One',serif;
+}
 
 #apDivBidContainer {
 	position: relative;	
 	width: 1200px;
 	z-index: 1;
 	//background-color:#f0f0f0;
+    font-family:'Fauna One',serif;
 		
 }
 
@@ -28,6 +33,7 @@
     top: 200px;
     width: 1200px;
     z-index: 1;
+    font-family:'Fauna One',serif;
     //background-color:#f0f0f0;
 }
 
@@ -37,16 +43,18 @@
 	top: 90px;
 	width: 100%;
 	z-index: 22;
+    font-family:'Fauna One',serif;
 	//background-color:#f0f0f0;;
 		
 }
 
 
 #bidtbl {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family:'Fauna One',serif;
     border-collapse: collapse;
 	 table-layout: fixed;
 	 width: 100%;
+     font-family:'Fauna One',serif;
     
 }
 
@@ -55,7 +63,8 @@
 	text-align: left;   
 	word-wrap: break-word;
 	//background-color: #F8F8F8;
-    border-top: 1px solid #999999
+    border-top: 1px solid #999999;
+    font-family:'Fauna One',serif;
 }
 
 #bidtbl th {
@@ -65,11 +74,13 @@
     padding-bottom: 4px;
     //background-color: #F8F8F8;
     color: #000000;
+    font-family:'Fauna One',serif;
 }
 
 #bidtbl tr.alt td {
     color: #000000;
     //background-color: #;
+    font-family:'Fauna One',serif;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
@@ -86,11 +97,13 @@
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
+    font-family:'Fauna One',serif;
 }
 
 #custom-search-input input{
     border: 0;
     box-shadow: none;
+    font-family:'Fauna One',serif;
 }
 
 #custom-search-input button{
@@ -101,16 +114,19 @@
     color: #666666;
     padding: 0 8px 0 10px;
     border-left: solid 1px #ccc;
+    font-family:'Fauna One',serif;
 }
 
 #custom-search-input button:hover{
     border: 0;
     box-shadow: none;
     border-left: solid 1px #ccc;
+    font-family:'Fauna One',serif;
 }
 
 #custom-search-input .glyphicon-search{
     font-size: 23px;
+    font-family:'Fauna One',serif;
 }
 
 

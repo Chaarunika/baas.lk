@@ -65,9 +65,10 @@
 
 	<?php include_once('includes/jobBar.php'); ?>
 	<?php 
+	include 'postjob.php' ;
 	if(isset($_SESSION['Catagory'])){
 		if($_SESSION['Catagory'] == 'customer'){
-			include 'postjob.php' ;
+			//include 'postjob.php' ;
 		}
 	}
 	?>
