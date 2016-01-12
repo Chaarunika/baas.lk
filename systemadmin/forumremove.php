@@ -121,12 +121,12 @@ $word = str_replace(' ','',$word);
 <td>
 <table width="1100" height="107" align="center" cellpadding="3" cellspacing="0" border="0" >
 <tr >
-<td width="10%"  align="center" bgcolor="#999"><strong>Remove</strong></td>
-<td width="25%"  align="center" bgcolor="#999"><strong>Discussion</strong></td>
-<td width="25%"  align="center" bgcolor="#999"><strong>Started by</strong></td>
-<td width="15%"  align="center" bgcolor="#999"><strong>Views</strong></td>
-<td width="15%"  align="center" bgcolor="#999"><strong>Replies</strong></td>
-<td width="10%"  align="center" bgcolor="#999"><strong>Date/Time</strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong>Remove</strong></td>
+<td width="35%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong>Started by</strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong>Views</strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong>Replies</strong></td>
+<td width="10%" align="center" bgcolor="#999"><strong>Date/Time</strong></td>
 </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -152,9 +152,6 @@ while($rows = mysqli_fetch_assoc($result)) {
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
 <tr>
-<td align="center" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><img src="../<?php 
-echo $rows['userphoto'];
-?>" alt="" border=3 height=30 width=30></img></td>
 <td align="left" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><?php echo $rows['user'];?></td>
 </tr>
 </table>
@@ -226,8 +223,8 @@ $bgcolor="";
 <table width="1100" height="107" align="center" cellpadding="3"  cellspacing="0"  >
 <tr>
 <td width="10%" align="center" bgcolor="#999"><strong>Remove</strong></td>
-<td width="25%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
-<td width="25%" align="center" bgcolor="#999"><strong>Started by</strong></td>
+<td width="35%" align="center" bgcolor="#999"><strong>Discussion</strong></td>
+<td width="15%" align="center" bgcolor="#999"><strong>Started by</strong></td>
 <td width="15%" align="center" bgcolor="#999"><strong>Views</strong></td>
 <td width="15%" align="center" bgcolor="#999"><strong>Replies</strong></td>
 <td width="10%" align="center" bgcolor="#999"><strong>Date/Time</strong></td>
@@ -252,9 +249,6 @@ while($rows = mysqli_fetch_array($result)){
 <td bgcolor="<?php echo $bgcolor?>">
 <table align="center" border="0" width="100%" height="100%" bgcolor="<?php echo $bgcolor?>">
 <tr>
-<td align="center" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><img src="../<?php 
-echo $rows['userphoto'];
-?>" alt="" border=3 height=30 width=30></img></td>
 <td align="left" bgcolor="<?php echo $bgcolor	?>" width ="50%" height="100%"><?php echo $rows['user'];?></td>
 </tr>
 </table>

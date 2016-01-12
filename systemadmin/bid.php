@@ -243,13 +243,13 @@ if($found == 0)
 ?>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<!--<div class="notfound">
+<div class="notfound">
 <table width="1000" bgcolor:"#fff">
 <tr>
 <td width="100%" align="center" bgcolor:"#cccccc"><strong>Not Founded</strong></td>
 </tr>
 </table>
-</div>-->
+</div>
 <?php
 }
 mysqli_close($database);
