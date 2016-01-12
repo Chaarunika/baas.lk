@@ -4,7 +4,7 @@ session_start();
 
 $_SESSION['language']='sinhala';
 
-if($_SERVER['HTTP_REFERER']!='http://localhost/BAAS_LK/searchSP.php')
+if($_SERVER['HTTP_REFERER']!='http://localhost/baas.lk/searchSP.php')
 {
 	header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
