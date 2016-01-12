@@ -203,7 +203,6 @@ border-color: rgba(240,240,1,1);
 <div id="subMenu">
 	<ul class="nav nav-tabs">
 	  	<li role="presentation" class="active"><a href="../profileCustomer.php">OVERVIEW</a></li>	 	
-	 	<li role="presentation"><a href="../list_pm.php">MESSAGES</a></li>
 	</ul>
 </div>
 
@@ -219,8 +218,8 @@ border-color: rgba(240,240,1,1);
         	}?>
       	</p>    
       	<br>
-        <p>MEMBER SINCE : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
-        <p>AREA : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
+        <p>Member Since : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p>    
+        <p>Area : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  
         </div>
       
      	<!--
@@ -232,10 +231,10 @@ border-color: rgba(240,240,1,1);
     
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
-        <p style="font-size:20px">CONTACT DETAILS</p>    
-        <p>CONTACTNUMBER : <?php // if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
-        <p>EMAIL : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
-        <p>ADDRESS : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>          
+        <p style="font-size:20px">Contact Details</p>    
+        <p>Contact Number : <?php // if(isset($sp['contactNo'])) { echo $sp['contactNo'];} ?></p>    
+        <p>Email : <?php if(isset($user['user_email'])) {  echo $user['user_email'];} ?></p>
+        <p>Address : <?php if(isset($sp['address'])) { echo $sp['address'];} ?></p>          
             
         </div>           
     </div>
