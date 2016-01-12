@@ -130,9 +130,18 @@
 	z-index: 2;	
 }
 
+#english{
+	position: absolute;
+	left: 1000px;
+	top: 30px;
+	width: 40px;
+	height: 19px;
+	z-index: 3;	
+}
+
 #sinhala{
 	position: absolute;
-	left: 900px;
+	left: 890px;
 	top: 30px;
 	width: 40px;
 	height: 19px;
@@ -141,7 +150,7 @@
 
 #tamil{
 	position: absolute;
-	left: 950px;
+	left: 940px;
 	top: 30px;
 	width: 47px;
 	height: 20px;

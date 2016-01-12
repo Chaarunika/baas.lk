@@ -47,7 +47,7 @@ h3{
 #apDivTitle{
 	position: absolute;
 	left: 131px;
-	top: 90px;
+	top: 15px;
 	width: 70%;
 	height: 105px;
 	z-index: 111;
@@ -180,20 +180,13 @@ border-color: rgba(240,240,1,1);
 	<?php 	
 	if(isset($_SESSION['userID'])){
 	$userID = $_SESSION['userID'];
-	$result2 = get_customer_details($userID);
-	$sp = mysqli_fetch_assoc($result2);
+		$result = get_user_details($userID);
+	$user = mysqli_fetch_assoc($result);
+
 	}	
 
-	if(isset($_GET['user']))
-	{
-		$userID = $_GET['user'];
-		$result = get_user_details($userID);
-	    $user = mysqli_fetch_assoc($result);	
-	}
 
-		
 
-	
 	
 	?>
 
@@ -238,6 +231,8 @@ border-color: rgba(240,240,1,1);
             
         </div>           
     </div>
+    
+
     
     <div id="appointmentBox">
 	
