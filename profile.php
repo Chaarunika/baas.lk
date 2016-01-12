@@ -89,7 +89,7 @@
 		        <p style="margin-top:0px" ><?php echo MEMBERSINCE ; ?> : <?php if(isset($user['user_registration_datetime'])) { echo $user['user_registration_datetime'] ;} ?></p> 
 		        <p><?php echo CATEGORY ; ?> : <?php if(isset($sp['category'])) { echo $sp['category'] ;} ?></p>
 		        <p><?php echo AREA ; ?> : <?php if(isset($sp['area'])) { echo $sp['area'] ;} ?></p>  		      
-			    <p><?php include('includes/rating.php') ?></p> 	        			      
+			    <p><?php include('includes/ratingForSearch.php') ?></p> 	        			      
 			    <p class="bubble"><span style='padding:5px' class="glyphicon glyphicon-user"><?php echo " ".$sp['ratingCount']." Votes"; ?></span></p>
 	    	</div> 
 	      	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>  > </div>    	

@@ -5,9 +5,12 @@
         if(isset($row['rating'] )){
           echo $row['rating'];
         } 
-        else{
-          echo 0;
+        elseif(isset($appointment['feedback'])){       
+          echo $appointment['feedback'];
         } 
+        else{
+        	echo 0;
+        }
       echo " data-symbol='&#xf005;' data-glyphicon='false' data-rating-class='rating-fa' readonly> ";
    
 ?>
