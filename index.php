@@ -22,6 +22,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script> -->
 
+
 <!--  postjob  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link href="css/postjob.css" rel="stylesheet">
@@ -36,14 +37,18 @@ if (session_status() == PHP_SESSION_NONE) {
 <link rel="stylesheet" href="css/owl.carousel.css">
 <script src="javascript/owl.carousel.js"></script>
 
+<!-- Button -->
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/core.css">
 
 <style type="text/css">
 
 #coverPics{
 	position: absolute;
-	width: 800px;
-	height: 500px;	
-	background-image: url('images/cover1.jpg');
+	width: 1000px;
+	height: 200px;	
+	top:200px;
+	background-image: url('images/aa.jpg');
 	z-index: 0;
 
 }
@@ -73,6 +78,43 @@ echo "
 }
 
 ?>
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+  	//margin: 0px 10px 10px 0px;
+  	//float: left;
+  	width: 60px;
+  	height:12px;  	
+	//border-radius: 10px;
+	//font-family: 'Pacifico';
+	font-size: 12px;
+	color: rgba(51,51,51,0.5);
+	text-decoration: none;	
+}
+
+.blue
+{
+	background-color: #c9d8c5;
+	border-bottom: 2px solid rgba(51,51,51,0.5);
+	text-shadow: 0px -1px #2980B9;
+}
+
+.action-button:active
+{
+	transform: translate(0px,2px);
+  -webkit-transform: translate(0px,2px);
+	border-bottom: 1px solid;
+}
+
+
 </style>
 
 </head>

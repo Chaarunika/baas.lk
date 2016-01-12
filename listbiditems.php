@@ -330,7 +330,7 @@ $result = mysqli_query($dbConnection,$sql);
                 $out .= "<td >";
                     if(strlen($row['biddesc'] )>75){                       
                         $out .= substr($row['biddesc'],0,75);
-                        $out .= "<a href='acceptbid.php?itemid=$itemid'>..read more</a>";
+                        $out .= "<a href=\"acceptbid.php?itemid=$itemid\">..read more</a>";
                     }
                     else{
                         
