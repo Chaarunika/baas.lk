@@ -14,7 +14,7 @@ define("THEBESTWAY", "බාස් කෙනෙක් හොයන හොදම 
 define("HOME", "මුල් පිටුව");
 define("WIKI", "තොරතුරු කේන්ද්‍රය");
 define("FAQ", "නිති අසන පැණ");
-define("FORUM", "පෝරමය");
+define("FORUM", "සංවාද");
 define("MYPROFILE", "මගේ විස්තර");
 define("AUCTION", "වෙන්දේසිය");
 define("JOBS", "රැකියා");

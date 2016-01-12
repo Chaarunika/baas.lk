@@ -88,6 +88,18 @@
 		return $result;
 	}
 
+	function get_recent_auction_details(){
+		global $dbConnection;
+		
+		$query = "SELECT * FROM tblbiditems ORDER BY biditemid DESC LIMIT 10" ;
+		$result = mysqli_query($dbConnection,$query);
+		
+		if(!$result){
+			die("Database query failed.");
+		}
+		return $result;
+	}
+
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;
     $ago = new DateTime($datetime, new DateTimeZone('Asia/Colombo'));

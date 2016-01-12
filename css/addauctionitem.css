@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+
 label{
 	font-family:'Fauna One',serif;
     font-size: 14px;
@@ -8,8 +8,7 @@ input{
 	font-family:'Fauna One',serif;
     font-size: 10px;
 }
-=======
->>>>>>> b6496fc902cfea89a2360275bea3af0544ed25a0
+
 #addauctionMainContainer{
   position: relative;
   left:0px;
@@ -18,7 +17,8 @@ input{
   background-color: #f0f0f0;
   border: 1px solid rgba(51,51,51,0.2);
   margin-bottom: 20px;
-  font-family:'Fauna One',serif;
+  //font-family:'Fauna One',serif;
+  z-index:1;
 }
 
 #apDivBidAddCol1{

@@ -14,7 +14,8 @@
 
 <style type="text/css">
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
-label,th,textarea,#button{
+
+label,th,textarea{
     font-family:'Fauna One',serif;
 }
 
@@ -223,7 +224,13 @@ $(document).ready(function(){
                 </button>
             </span>
         </div>
-        <a href="#" id="dropBidButton" type="submit" class="btn btn-block btn-default">Add Auction <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <?php
+            if($_SESSION['Catagory'] == "sp"){
+                echo "
+                <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add Auction <span class='glyphicon glyphicon-chevron-down'></span></a>
+                ";
+            }
+        ?>
     </div>  
      
 </div>
@@ -329,7 +336,7 @@ $result = mysqli_query($dbConnection,$sql);
                 $out .= "<td >";
                     if(strlen($row['biddesc'] )>75){                       
                         $out .= substr($row['biddesc'],0,75);
-                        $out .= "<a href='acceptbid.php?itemid=$itemid'>..read more</a>";
+                        $out .= "<a href=\"acceptbid.php?itemid=$itemid\">..read more</a>";
                     }
                     else{
                         

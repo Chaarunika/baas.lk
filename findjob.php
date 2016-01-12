@@ -9,7 +9,7 @@
 
 	
 }
-center{
+center,.area{
 	font-family:'Fauna One',serif;	
 }
 #main{
