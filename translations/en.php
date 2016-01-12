@@ -10,6 +10,7 @@ define("REMEMBER_ME", "Keep me logged in");
 define("LOGIN", "Login");
 define("REGISTER", "Register");
 define("FORGOT_MY_PASSWORD", "I forgot my password");
+define("YOURNEXT","Your next job is just around the corner...");
 
 //header
 

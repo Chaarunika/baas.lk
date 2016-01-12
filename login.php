@@ -84,8 +84,7 @@ function myFunction() {
 
 <div id="back">
 <div id="nextjob">
-Your next job is just 
-around the corner...
+<?php echo YOURNEXT?>
  
 </div>
 

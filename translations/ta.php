@@ -12,6 +12,7 @@ define("REMEMBER_ME", "என்னை வைத்திரு");
 define("LOGIN", "உள் நுழை");
 define("REGISTER", "பதிவு");
 define("FORGOT_MY_PASSWORD", "எனது கடவுச்சொல்லை மறந்துவிட்டேன்");
+define("YOURNEXT","Your next job is just around the corner... ...");
 
 //header
 
