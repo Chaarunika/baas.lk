@@ -9,6 +9,16 @@ include('config.php');
         <link href="css/chat.css" rel="stylesheet" title="Style" />
         <title><?php echo NEWMESSAGE ; ?></title>
 		<link href="css/header.css" rel="stylesheet">
+		<style>
+			h1,label{
+				font-family:'Fauna One',serif;
+			}
+			input{
+				font-family:'Fauna One',serif;
+				width: 175px;
+				
+			}
+		</style>
     </head>
     <body>
 	<?php include 'header.php'?>

@@ -19,7 +19,10 @@ include('config.php');
 
 
 		<style type="text/css">
-
+		@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+		h1,h3,th,td{
+			font-family:'Fauna One',serif;
+		}
 			#subMenu{
 		  position: absolute;
 		  top: 90px;
