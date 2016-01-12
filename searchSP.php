@@ -192,7 +192,9 @@ $result = mysqli_query($dbConnection,$query);
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 	
 
-
+input{
+	font-family:'Fauna One',serif;
+}
 #apDivResultBox0 {
 	//position: relative;
 	//top: 100px;
@@ -232,7 +234,7 @@ echo "
 	width: 900px;
 	height: 38px;
 	z-index: 4;
-	font-family: \"Arial Black\", Gadget, sans-serif;
+	font-family:'Fauna One',serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: rgba(51,51,51,1);

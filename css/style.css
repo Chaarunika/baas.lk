@@ -1,5 +1,5 @@
 /* Begin Ad 1 */
-
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 #ad-1 {
 	width: 720px;
 	height: 300px;
@@ -21,7 +21,7 @@
 	overflow: visible;
 }
 	#ad-1 #content h2 {
-		font-family: 'Alfa Slab One', cursive;
+		font-family:'Fauna One',serif;
 		color: #137dd5;
 		font-size: 50px;
 		line-height: 50px;
@@ -33,7 +33,7 @@
 		animation: h2-animation 7s 1 ease-in-out;
 	}
 	#ad-1 #content h3 {
-		font-family: 'Boogaloo', cursive;
+		font-family:'Fauna One',serif;
 		color: #202224;
 		font-size: 31px;
 		line-height: 31px;
@@ -59,7 +59,7 @@
 		float: left;
 		padding: 0 20px;
 		font-size: 16px;
-		font-family: 'Lucida Grande', sans-serif;
+		font-family:'Fauna One',serif;
 		color: #fff;
 		text-shadow: 1px 1px 0px #a2917d;
 		border-top-left-radius: 5px;
@@ -87,7 +87,7 @@
 		float: left;
 		padding: 0 20px;
 		font-size: 20px;
-		font-family: 'Boogaloo', cursive;
+		font-family:'Fauna One',serif;
 		color: #137dd5;
 		text-shadow: 1px 1px 0px #fff;
 		border-top-right-radius: 5px;
@@ -529,7 +529,7 @@
 	text-align: center;
 }
 #ad-2 h2 {
-	font-family: 'Alfa Slab One', cursive;
+	font-family:'Fauna One',serif;
 	color: #137dd5;
 	font-size: 50px;
 	line-height: 50px;
@@ -630,7 +630,7 @@
 		display: inline-block;
 		height: 20px;
 		padding: 15px;
-		font-family: 'Boogaloo', cursive;
+		font-family:'Fauna One',serif;
 		font-size: 20px;
 		line-height: 20px;
 		color: #137dd5;

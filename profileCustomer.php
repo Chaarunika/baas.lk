@@ -20,6 +20,7 @@
 
 <style>
 p{	
+	font-family:'Fauna One',serif;
 	color: rgba(51,51,51,1);
 	font-size:18px;
 	}
