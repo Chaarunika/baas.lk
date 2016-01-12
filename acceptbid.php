@@ -188,14 +188,7 @@ $row4=mysqli_fetch_array($result4);
 
 ?>
   
-<div id="fullscreen">
-	<div id="fullscreen-inner">
-		<div id="fullscreen-inner-left" class="fullscreen-inner-button"><span class="icon-caret-left"></span></div>
-		<div id="fullscreen-inner-right" class="fullscreen-inner-button"><span class="icon-caret-right"></span></div>
-		<div id="fullscreen-inner-close" class="fullscreen-inner-button"><span class="icon-close"></span></div>
-		<div id="fullscreen-image"></div>
-	</div>
-</div>
+
 
 <div id="apDivContainer">
 

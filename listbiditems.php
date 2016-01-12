@@ -224,7 +224,13 @@ $(document).ready(function(){
                 </button>
             </span>
         </div>
-        <a href="#" id="dropBidButton" type="submit" class="btn btn-block btn-default">Add Auction <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <?php
+            if($_SESSION['Catagory'] == "sp"){
+                echo "
+                <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add Auction <span class='glyphicon glyphicon-chevron-down'></span></a>
+                ";
+            }
+        ?>
     </div>  
      
 </div>

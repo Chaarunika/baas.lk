@@ -135,11 +135,16 @@
           },
           1000: {
             <?php
-            if(!isset($_SESSION['userID'])){
-              echo "items: 5";
+            if(isset($_SESSION['userID'])){
+              if($_SESSION['Catagory'] == "customer"){
+                echo "items: 3";
+              }
+              else{
+                echo "items: 5";
+              }
             }
             else{
-              echo "items: 3";
+              echo "items: 5";
             }
             
             ?>

@@ -45,10 +45,11 @@ if (session_status() == PHP_SESSION_NONE) {
 
 #coverPics{
 	position: absolute;
+	left:50px;
 	width: 1000px;
 	height: 200px;	
 	top:200px;
-	background-image: url('images/aa.jpg');
+	//background-image: url('images/aa.jpg');
 	z-index: 0;
 
 }
@@ -61,18 +62,28 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 <?php
-if(!isset($_SESSION['userID'])){
-echo "
-.owl-carousel {  
-  width: 98%;
-}
-";
+if(isset($_SESSION['userID'])){
+	if($_SESSION['Catagory'] == "customer"){
+		echo "
+		.owl-carousel {  
+		  width: 75%;
+		}
+		";
+	}
+	else{
+		echo "
+		.owl-carousel {  
+		  width: 98%;
+		}
+		";	
+	}
+
 }
 
 else{
 echo "
 .owl-carousel {  
-  width: 75%;
+  width: 98%;
 }
 ";
 }
