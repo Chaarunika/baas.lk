@@ -23,6 +23,7 @@
     <!-- calendar  -->
     <link href="calendar/calendar.css" rel="stylesheet" type="text/css" />
 
+    <!-- Galley links  -->
 	<link href="Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="Gallery/_css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="Gallery/_css/main.css" rel="stylesheet" type="text/css"/>
@@ -47,7 +48,7 @@
 	include_once('functions/functions.php');
 	?>
 
-	<?php 	
+	<?php 	// userid for search result and actual profile
 	if(isset($_SESSION['userID']))	{
 		$userID = $_SESSION['userID'];	
 	}

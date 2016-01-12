@@ -45,11 +45,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 #coverPics{
 	position: absolute;
-	left:50px;
-	width: 1000px;
-	height: 200px;	
-	top:200px;
-	//background-image: url('images/aa.jpg');
+	top: 0px;
+	width: 800px;
+	height: 300px;	
+	background-image: url('images/cover2.jpg');
 	z-index: 0;
 
 }
