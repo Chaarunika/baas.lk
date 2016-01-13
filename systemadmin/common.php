@@ -1,3 +1,5 @@
+
+<!--common slide in systemadmin panel -->
 <style type="text/css">
 p{	
 	color: rgba(51,51,51,1);

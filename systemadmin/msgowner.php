@@ -1,5 +1,5 @@
 <?php 
-
+// send message to bid owner
 $id=$_GET['id'];
 
 

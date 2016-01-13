@@ -5,6 +5,7 @@
 	height:100px;
 	z-index: 2;
 	background-color: rgba(200,200,200,0.8);
+	border: 1px solid rgba(51,51,51,0.2);
 	}
 
 #manageAppointmentsInside{
@@ -17,6 +18,7 @@
 	z-index: 2;
 	background-color: rgba(255,255,255,0.6);
 	    box-shadow: 2px 5px 5px #7c7c7c;
+	    border: 1px solid rgba(51,51,51,0.2);
 	}	
 	
 	
@@ -29,6 +31,7 @@
 	z-index: 2;
 	border-radius: 20px;
 	background-color: rgba(255,255,255,0.5);
+	border: 1px solid rgba(51,51,51,0.2);
 }
 
 #apDivContainer{
@@ -36,9 +39,10 @@
 	left: 50px;
 	top: 100px;
 	width: 1041px;
-	height: 2322px;
+	height: 500px;
 	z-index: 1;
-	background-color: #f0f0f0;		
+	background-color: #f0f0f0;	
+	border: 1px solid rgba(51,51,51,0.2);	
 }
 
 

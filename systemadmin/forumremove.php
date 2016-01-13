@@ -92,6 +92,7 @@ alert("cancel");
 
 <body>
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
 {
@@ -129,6 +130,7 @@ $word = str_replace(' ','',$word);
 <td width="10%" align="center" bgcolor="#999"><strong>Date/Time</strong></td>
 </tr>
 <?php
+//forum topic searching function
 if (mysqli_num_rows($result) > 0) {
 while($rows = mysqli_fetch_assoc($result)) {
        $string = $rows["topic"];
@@ -207,6 +209,7 @@ mysqli_close($database);
 }
 }
 else{
+	//print forum table
 $tbl_name="fquestions"; // Table name 
  
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";

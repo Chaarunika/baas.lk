@@ -1,5 +1,6 @@
-<?php
 
+<?php
+//Translate to sinhala
 session_start();
 
 $_SESSION['language']='sinhala';

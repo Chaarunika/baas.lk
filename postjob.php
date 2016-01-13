@@ -50,7 +50,7 @@ if(isset($_POST['jobDesc'])){
 
 <br><br>
     <div id="mainform">
-        
+        <!-- Post Your Job Form     -->
         <form name="formJob" method='post' class="formJobb" action='index.php'>
             <h2> <?php echo POSTYOURJOB; ?> </h2>
             <label> <?php echo SELECTJOBTYPE; ?> </label>

@@ -1,4 +1,6 @@
 <?php 
+
+// send full details of create new account to database
 include "../config/config.php";
 include "../libraries/password_compatibility_library.php";
 include "../_database/database.php"; 

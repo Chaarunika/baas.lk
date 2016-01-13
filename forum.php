@@ -235,6 +235,8 @@ border-color: rgba(240,240,1,1);
 
 
 <?php
+// forum search function
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ( isset( $_POST['button'] ))
 {
@@ -333,6 +335,7 @@ mysqli_close($database);
 }
 else{
 	
+	// defualt forum
 
 	include "_database/database.php";
  

@@ -1,4 +1,5 @@
 <?php 
+// header of systemadmin login pages
 	include 'sessioncheck.php';
 ?>
 <html>

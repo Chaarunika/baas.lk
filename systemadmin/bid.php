@@ -59,6 +59,7 @@
 <?php
 
 
+//  send message for bid owner and highest bidder
 if(isset($_GET['user']))
 {
 	if($_GET['user']=="win")
@@ -106,6 +107,7 @@ if(isset($_GET['user']))
 
 
 <?php
+//get contact number to array
 
 $sql2 = "SELECT * FROM users CROSS JOIN serviceprovider WHERE users.user_id=serviceprovider.user_id";
   	$result2 = $database->query($sql2);
@@ -121,6 +123,8 @@ $result3 = $database->query($sql3);
     	$conarray[$row3['user_id']] = $row3['contactNo'];
 		
   	}
+	
+// get name of the users
 $sql8 = "SELECT * FROM users CROSS JOIN serviceprovider WHERE users.user_id=serviceprovider.user_id";
   	$result8 = $database->query($sql8);
 	while($row8 = $result8->fetch_assoc()){
@@ -143,6 +147,8 @@ $result9 = $database->query($sql9);
 $colorchange=0;
 $bgcolor="";
 $found =0;
+
+// print table
 ?>
 
 <div class="createtabel">

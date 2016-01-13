@@ -1,5 +1,5 @@
 <?php
-
+//Translate to English
 session_start();
 
 $_SESSION['language']='english';

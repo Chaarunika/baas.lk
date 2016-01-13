@@ -1,5 +1,5 @@
 <?php
-
+// Sinhala Define for Constant
 $languageTranslated = "english";
 //login
 define("DATABASE_ERROR","Database connection error");
@@ -10,6 +10,7 @@ define("REMEMBER_ME", "Keep me logged in");
 define("LOGIN", "Login");
 define("REGISTER", "Register");
 define("FORGOT_MY_PASSWORD", "I forgot my password");
+define("YOURNEXT","Your next job is just around the corner...");
 
 //header
 
