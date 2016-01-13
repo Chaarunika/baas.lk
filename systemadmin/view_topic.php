@@ -78,7 +78,7 @@ echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
 <BR>
  
 <?php
- // metana database ake tiyena answer eliyata gannawa.
+ // view discussion
 $tbl_name2="fanswer"; // Switch to table "forum_answer"
 $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
 $result2=mysqli_query($database,$sql2);

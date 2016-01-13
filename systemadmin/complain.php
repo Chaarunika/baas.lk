@@ -24,6 +24,7 @@
 
 <div id='show1'>
 <?php
+//getting customer and user name
 
 $sql1 = "SELECT * FROM users CROSS JOIN serviceprovider WHERE users.user_id=serviceprovider.user_id";
 
@@ -49,6 +50,8 @@ $found =0;
 $sql = "SELECT * FROM complain CROSS JOIN calendar WHERE complain.job_id=calendar.calendar_id";
 $result = $database->query($sql);
 
+
+//print complain table
 ?>
 
 <div class="createtabel">
