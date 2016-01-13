@@ -62,6 +62,36 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <?php
 if(isset($_SESSION['userID'])){
+	if($_SESSION['Catagory'] == "sp"){
+		echo "
+		#coverPics2{
+		position: absolute;
+		top: 100px;
+		left:800px;
+		right:2%;
+		height: 300px;	
+		background-image: url('images/line-up.svg');
+		z-index: 5; ";
+
+	}
+}
+
+else{
+echo "
+		#coverPics2{
+		position: absolute;
+		top: 100px;
+		left:800px;
+		right:2%;
+		height: 300px;	
+		background-image: url('images/line-up.svg');
+		z-index: 5; ";
+}
+?>
+
+
+<?php
+if(isset($_SESSION['userID'])){
 	if($_SESSION['Catagory'] == "customer"){
 		echo "
 		.owl-carousel {  
@@ -136,6 +166,10 @@ echo "
 	<div id="back">
 	<div id="coverPics"></div>
 	</div>
+
+
+	<div id="coverPics2"></div>
+
 
 	<?php 
 	include_once('includes/searchBar.php') ;
