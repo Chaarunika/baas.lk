@@ -2,6 +2,7 @@
 	<head>
 	<link href="calendar/calendar.css" rel="stylesheet" type="text/css" />
 	<script>
+		//go to last month reduce a one from current
 		function goLastMonth(user,month,year)
 		{
 		
@@ -17,7 +18,7 @@
 			
 
 			
-			
+		//add one to current month	
 		function goNextMonth(user,month,year)
 		{
 			if(month==12)
@@ -37,7 +38,7 @@
 	 
 	 	
 		<?php
-		
+		    //is this a customer? then only they can put appointments
 			if(isset($_SESSION['Catagory']))
 			{
 							if($_SESSION['Catagory']=='customer')
@@ -54,17 +55,20 @@
 					
 			}
 					
-		
+			//if a get is passed then take month from that
 			if(isset($_GET['month']))
 			{
 				$month=$_GET['month'];
 				
 				
 			}
+			//else current date as month
 			else
 			{
 				$month=date("n");
 			}
+
+			//take year from get
 			if(isset($_GET['year']))
 			{
 				$year=$_GET['year'];
@@ -74,7 +78,7 @@
 				$year=date("Y");
 			}
 			
-				
+			//get the word for month	
 			switch($month)
 			{
 				case '1':
@@ -193,6 +197,8 @@
 			<?php
 			
 				echo "<tr  height='20px'>";
+
+				//diplay calendar div objects
 				
 				for($i=1;$i<$NumberofDays+1;$i++,$counter++){
 				
@@ -234,6 +240,7 @@
 							}
 						
 						}
+						//check end of the week
 						
 						if($counter%7==0 && $i!=1 )
 						{
@@ -266,7 +273,7 @@
 						
 					
 						
-				
+						//get details from database
 					
 						$sqlcount="select * from calendar where jobDate='".$comparewith."' and sp_id='".$user."'";
 						$resultsp = mysqli_query($database,$sqlcount) or die(mysqli_error($database));
@@ -421,6 +428,8 @@
 								
 				
 							$dayOnWeek=date("w",$eachday);
+
+							//is this a day on week
 								
 							if($dayOnWeek==0 ||$dayOnWeek==6)
 							{
@@ -662,6 +671,8 @@
 		$result = mysqli_query($database,$sql) or die(mysqli_error($database));
 		while($job = mysqli_fetch_assoc($result))
 		{
+
+		//echo hover tag
 		
 		$jobdate=$job['jobDate'];
 		$timestamp= strtotime($jobdate);
