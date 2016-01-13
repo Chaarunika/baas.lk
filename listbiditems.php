@@ -269,8 +269,8 @@ $result = mysqli_query($dbConnection,$sql);
                 </colgroup>
                 <tr>
                     <th><a href=\"listbiditems.php?orderState=biditemid\">ID</a></th>
-                    <th>Land Name</th>
-                    <th  word-wrap: break-word;>Land descriptiom</th>
+                    <th>Name</th>
+                    <th  word-wrap: break-word;>description</th>
                     <th><a href=\"listbiditems.php?orderState=town\">Area</a></th>
                     <th><a href=\"listbiditems.php?orderState=closingtime\">Remaining time</a></th>
                     <th>Highest Bid</th>

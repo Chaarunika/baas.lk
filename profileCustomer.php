@@ -124,15 +124,15 @@
 				
 				else{				
 					echo "
-					<table class='table table-bordered'>
+					<table class='table  table-striped'>
 						<thead>       
 							<tr>
-							<td align='center' width='100px'>Date</td>
-							<td align='center' width='200px'>Job</td>
-							<td align='center' width='200px'>Service Provider</td>
-							<td align='center' width='400px'>Status</td>
-							<td align='center' width='400px'>Complain</td>
-							<td align='center' width='400px'>Feedback</td>
+							<td align='center' width='100px'><FONT color=blue size=5>Date</FONT></td>
+							<td align='center' width='200px'><FONT color=blue size=5>Job</FONT></td>
+							<td align='center' width='200px'><FONT color=blue size=5>User</FONT></td>
+							<td align='center' width='400px'><FONT color=blue size=5>Status</FONT></td>
+							<td align='center' width='400px'><FONT color=blue size=5>Complain</FONT></td>
+							<td align='center' width='400px'><FONT color=blue size=5>Feedback</FONT></td>
 							</tr>
 						 </thead>";
 				
@@ -161,10 +161,10 @@
 							echo "Pending";				
 						}
 						else if($appointment['accepted']==1){
-							echo "Service provider agreed";					
+							echo "Accepted";					
 						}
 						else if($appointment['accepted']==2){
-							echo "Canceled by Service provider";					
+							echo "Canceled";					
 						}
 				
 						echo "</td>";

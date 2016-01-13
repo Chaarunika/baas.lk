@@ -2,7 +2,7 @@
 <?php include "../_database/database.php"; ?>
 <?php include "common.php" ;?>
 
-
+<!-- create new account form2-->
 
 <?php
  $username = $_POST['username'];

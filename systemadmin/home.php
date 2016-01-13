@@ -1,6 +1,7 @@
 <?php include "header.php" ;?>
 <?php include "common.php" ;?>
   <?php include '../_database/database.php'; ?>
+  <!-- home and also serviceprovider profile view-->
 <style>
 #btn {
 	top:0px;

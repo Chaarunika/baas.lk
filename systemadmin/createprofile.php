@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?> 
 <?php include "../_database/database.php"; ?>
 <?php include "common.php" ;?><head>
-
+<!-- create new account form1 -->
 
 <script type="text/javascript">
 function ValidateMobNumber(txtMobId) {

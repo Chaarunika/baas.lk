@@ -24,16 +24,17 @@ label{
 	font-family:'Fauna One',serif;
 	font-size: 14px;
 }
+
 #apDiv1 {
 	position:absolute;
 	width:200px;
 	height:30px;
 	z-index:6;
-	left: 400px;
+	left: 120px;
 	top: 230px;
 	font-size:15px;
-	color:red;
-	   font-weight: bold;
+	color:blue;
+	font-weight: bold;
 }
 
 #apDivRand {
@@ -82,6 +83,11 @@ function myFunction() {
 
 
 <div id="back">
+<div id="nextjob">
+<?php echo YOURNEXT?>
+ 
+</div>
+
 	<div id="coverPics"></div>
 </div>
 
@@ -89,8 +95,7 @@ function myFunction() {
 
 <div id="login-form-box">
 
-	
-  
+	 
   <div id="login-form">
   
 <?php

@@ -10,6 +10,7 @@ define("REMEMBER_ME", "Keep me logged in");
 define("LOGIN", "Login");
 define("REGISTER", "Register");
 define("FORGOT_MY_PASSWORD", "I forgot my password");
+define("YOURNEXT","Your next job is just around the corner...");
 
 //header
 
@@ -268,7 +269,7 @@ define("NOJOBSSEARCHAREA", "Sorry, No Jobs Found.");
 
 //addauctionitem
 define("REALESTATEAUCTION", "Real State Auction");
-define("LANDNAME", "Land Name");
+define("LANDNAME", "Auction Name");
 define("TOWN", "Town");
 define("DESCRIPTION", "Description");
 define("ADDPICTURE", "Add Picture");
