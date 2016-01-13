@@ -57,11 +57,6 @@ $rows=mysqli_fetch_array($result);
 <p>&nbsp;</p>
 <div class="createtabel">
 <table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCC" class="viewtopic3">
- <tr>
-<td align="center" width="5%"><img src="/BAAS_LK/<?php 
-echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
-<td width="95%"><table width="100%" border="0" align="right" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
-<tr>
 <td bgcolor="#ccc"><strong><?php echo $rows['topic']; ?></strong></td>
 </tr>
 <tr>
@@ -88,11 +83,6 @@ while($rows=mysqli_fetch_array($result2)){
 <tr>
 <td>
 <table width="95%" border="0"  align="right" cellpadding="0" cellspacing="1" bgcolor="#CCC" class="viewtopic3">
- <tr>
-<td align="center" width="5%"><img src="/BAAS_LK/<?php 
-echo $rows['userphoto'];?>" alt="" border=3 height=30 width=30></img></td>
-<td width="95%"><table width="100%" border="0" align="right" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
-<tr>
 <td bgcolor="#ccc"><strong>RE :</strong></td>
 </tr>
 <tr>
