@@ -1,5 +1,5 @@
 <?php
-
+//Tamil define for constant
 session_start();
 
 $_SESSION['language']='tamil';

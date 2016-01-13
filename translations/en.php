@@ -1,5 +1,5 @@
 <?php
-
+// Sinhala Define for Constant
 $languageTranslated = "english";
 //login
 define("DATABASE_ERROR","Database connection error");
