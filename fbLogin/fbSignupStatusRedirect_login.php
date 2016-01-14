@@ -4,16 +4,16 @@ session_start();
 include ('_database/database.php');
 
 
-define("DB_HOST", "localhost");
-define("DB_NAME", "baaslk");
-define("DB_USER", "root");
-define("DB_PASS", "");
+define("DB_HOST", "mysql.hostinger.co.uk");
+define("DB_NAME", "u160949775_baas");
+define("DB_USER", "u160949775_baas");
+define("DB_PASS", "baaslaepa");
 
 require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => '1680299895566142',
-  'app_secret' => '5d88d2a30ab36423a1a9aa3e8acc0865',
+  'app_id' => '520230444818215',
+  'app_secret' => 'a468986e874bfc3b2a68fb4dfc5faa7c',
   'default_graph_version' => 'v2.2',
   ]);
 
@@ -61,14 +61,18 @@ if (isset($accessToken)) {
 	$loginType="fb";	
 	$userActive=1;
 
-	$_SESSION['loginType'] = $loginType ;
+     
 
-	$sql = "SELECT * FROM users where user_name=$id";
+	$_SESSION['loginType'] = $loginType ;
+        
+      
+
+	$sql = "SELECT * FROM users where user_email='$email'";
     $result = mysqli_query($database,$sql) or die(mysqli_error($database)); 
     $rws = mysqli_fetch_array($result);
 
     $count = 0;  // variable to chech wther user already exists
-	if($id==$rws['user_name'])
+	if($email==$rws['user_email'])
 	{
 	$_SESSION['Catagory']	= $rws['user_catagory'] ;  //user catagory for session for previously signed fb users$_SESSION['catagory']	= $rws['user_catagory'] ;
 	$_SESSION['userID']	= $rws['user_id'] ;
@@ -77,8 +81,13 @@ if (isset($accessToken)) {
 
 	}
 	else{
+                   
+                   echo $id;
 
-		header('location: selectUserFB.php');
-	}
+		   echo "user doesn't exist";
+		//header('location: selectUserFB.php');
+         }
+	
 }
 	?>
+	
