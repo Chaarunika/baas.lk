@@ -109,8 +109,8 @@
 
 			 	}
 
-			 	if(!isset($_GET['complain']))
-        {
+			 	if(!isset($_GET['complain'])&&!isset($_GET['rate']))
+       			{
         		echo "<p align='center' style='font-size:30px'>".YOURRECENTAPPOINTMENTS."</p><br><br>";
 
 				$customer=$_SESSION['userID'];
@@ -192,18 +192,27 @@
 						}	
 				   
 					    echo "</td >";
+
+
 					    echo "<td align='center' width='400px'>";
+
 						
 						if($appointment['accepted']==0){
 							echo "Pending";				
 						}
 						else if($appointment['feedback']==0){
-							$result4 = get_serviceprovider_details($appointment['sp_id']);
-							$sp = mysqli_fetch_assoc($result4);	
-							echo include('includes/rating.php');					
+							echo "<a href=profileCustomer.php?rate=".$appointment['calendar_id']."&sid=".$fname['user_id'].">";
+							echo "<div id='report' class='btn'>
+					   	    Rate
+					    	</div>";
+
+					   
+					    echo "</a>";				
 						}
 						else if($appointment['feedback'] != 0){
-							echo include('includes/ratingForSearch.php');						
+
+							echo "Submitted";	
+							//echo include('includes/ratingForSearch.php');						
 						}
 				
 						echo "</td>";
@@ -214,7 +223,7 @@
 				}		
 		    }	
 
-		    else{
+		    else if(isset($_GET['complain'])){
 				echo "<div id='apDivQuestionBox'>
 				<div id='apDivQuestionTitle'>
 				  <p style='font-size:18px'><strong> Have a complain ?</strong>?</p>
@@ -246,6 +255,52 @@
 					    <p>
 					      <label for='description'></label>
 					      <textarea name='description' id='question' class='faqText' placeholder='Description' cols='45' rows='10' required></textarea>
+					    </p>
+					    <p>
+					      <input type='submit' class='post' name='qBtn' id='qBtn' value='POST'/>
+					    </p>
+					  </form>
+					</div>
+					</div>";
+		    }
+
+
+		    else if(isset($_GET['rate'])){
+
+				echo "<div id='apDivQuestionBox'>
+				<div id='apDivQuestionTitle'>
+				  <p style='font-size:18px'><strong> Have a complain ?</strong>?</p>
+				  <p > Report to admin ...... </p>
+
+				</div>
+
+				<div id='apDivQustionForum'>
+				  <form id='form1' name='form1' method='post' action='profileCustomer.php'>
+				    <p>
+				      <br><br>
+				      <label>Service provider: ".$_GET['sid']." </label>				      
+				    </p>
+				    <p>";				     
+
+				    $_SESSION['job_id']=$_GET['rate'];
+				    $_SESSION['sid']=$_GET['sid'];
+
+				      echo "<br><br>
+				      <label>Job Title: ";
+
+				      $sql="select * from calendar where calendar_id='".$_GET['rate']."'";
+				      $result = mysqli_query($database,$sql) or die(mysqli_error($database));
+				      $job=mysqli_fetch_assoc($result);
+					
+				      echo $job['title'];
+
+				      include('includes/ratingForSearch.php');
+				      
+				      echo "</label>				   
+					    </p>
+					    <p>
+					      <label for='description'></label>
+					      <textarea name='comment' id='question' class='faqText' placeholder='comment' cols='45' rows='5' required></textarea>
 					    </p>
 					    <p>
 					      <input type='submit' class='post' name='qBtn' id='qBtn' value='POST'/>

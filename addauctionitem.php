@@ -20,17 +20,20 @@
     </script>
     <br>   
 
-    <label><?php echo BIDCLOSINGTIME ; ?></label><br>
-    <input placeholder="<?php echo SELECTDATEFROMTHECALENDAR ; ?>" name="closingtime" id="demo3" class="addAucSelectInput" style="width:50%"  readonly  required>
-    <a href="javascript:NewCal('demo3','mmmddyyyy',true,12)">
-        <img src="pics/cal.png" width="50" height="50" border="0" alt="Pick a date" style="margin-left:10px">
-    </a><br><br>
-
     <label><?php echo MINIMUMBIDPRICE ; ?></label><br>
     <div class="input-group">
       <span class="input-group-addon" ><?php echo RS ; ?>.</span>
-        <input type="number" placeholder="minimum Bid" name="minimumbid" required min=0 class="form-control" style="border: 1px solid rgba(240,240,1,1)"  aria-label="Amount (to the nearest dollar)">
+        <input type="number" placeholder="" name="minimumbid" required min=0 class="form-control" style="border: 1px solid rgba(240,240,1,1)"  aria-label="Amount (to the nearest dollar)">
       <span class="input-group-addon">.00</span>
+
+    </div>
+
+     <label><?php echo "Contact No." ; ?></label><br>
+    <div class="input-group">
+  
+        <input placeholder="" name="minimumbid"  class="form-control" style="border: 1px solid rgba(240,240,1,1)"  aria-label="Amount (to the nearest dollar)">
+
+
     </div>
 
     <input type="submit" name="button" id="button" class="addAucSelectButton" value="<?php echo SAVE ; ?>" style="font-family:Arial, sans-serif;"/>  

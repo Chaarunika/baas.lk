@@ -14,7 +14,7 @@
 	left: 220px;
 	top: 110px;
 	width: 1041px;
-	height: 1000px;
+	height: 600px;
 	z-index: 1;
 	background-color: #f0f0f0;
 		
@@ -226,41 +226,7 @@ $row4=mysqli_fetch_array($result4);
 		</table>
 		</div>
 	  
-	  <div id="listofbids">
-
-	  
-	    <?php
-			$out1="<table width='500' class='tg' style='border-width:10px'>"; 
-			$out1 .="<tr>";
-			$out1 .="<th class='tg-031e' colspan='3'>Latest Bids</th>";
-			$out1 .="</tr>";
-			$out1 .="<tr>";
-			$out1 .="<td class='tg-b7b8'>Bid id</td>";
-			$out1 .="<td class='tg-b7b8'>Bid value</td>";
-			$out1 .="<td class='tg-b7b8'>Time of bid</td>";
-			$out1 .="</tr>";
 	
-			echo ($out1) ;
-	
-			while($row3=mysqli_fetch_array($result3)){
-		
-	
-  
-
-			$out="<tr>";
-			$out .= "<td class='tg-b7b8'>".$row3['bidhistoryid']. "</td>";
-			$out .="<td class='tg-b7b8'>".$row3['bidprice']."</td>";
-			$out .= "<td class='tg-b7b8'>".$row3['dtesubmitted']."</td>";
-			$out .="</tr>";
- 
-  
-  
-  
-			echo ($out);
-  
-  }
-   echo ('</table>');
-    
  ?>
 
 	  
@@ -282,144 +248,11 @@ $minutes_remaining = floor((($remaining % 86400) % 3600)/60);
 $seconds_remaining = floor(((($remaining % 86400) % 3600)%60));
 
 ?>
-	  
-	  <div id="time" class="tg"  onload="countdown()">
-	  
-	  <script type="text/javascript">
 
 
- var hour = '<?php echo $hours_remaining; ?>';
- var min = '<?php echo $minutes_remaining; ?>'; 
- var sec = '<?php echo $seconds_remaining; ?>'; 
 
-function countdown() {
- if(sec <= 0 && min > 0) {
-  sec = 59;
-  min -= 1;
- }
- else if(min <= 0 && sec <= 0) {
-  min = 0;
-  sec = 0;
- }
- else {
-  sec -= 1;
- }
- 
- if(min <= 0 && hour > 0) {
-  min = 59;
-  hour -= 1;
- }
- 
-  if(hour <= 0 ) {
-  hour = 23;
-  
- }
- 
- 
- 
- var pat = /^[0-9]{1}$/;
- sec = (pat.test(sec) == true) ? '0'+sec : sec;
- min = (pat.test(min) == true) ? '0'+min : min;
- hour = (pat.test(hour) == true) ? '0'+hour : hour;
- 
- 
- 
- document.getElementById('time').innerHTML =" <?php echo $days_remaining; ?> Days "+hour+" Hours "+min+" minutes "+sec+" seconds ";
- setTimeout("countdown()",1000);
- }
- countdown();
-</script>
-	  
-	  </div>
-	  
-	    <div id="addbid" >
-	  <?php
-	  
-	 /* echo $row3['bidprice'] ;
-	  echo "<br>";
-	  echo $row['closingtime'] ;
-	  
-	  
 
-	  
-	  <form  method="post" action="acceptbidprocess.php">
-
-<p >Bid Price:
-	<input  type="number" name="bidprice" id="bidprice"/><br/>
-	<input   type= "hidden" name="itemid" id="itemid" value="<?php echo"$itemid";?>"/>
 	
-	<br/><input type="submit" name="button" id="button" value="Add to Bid"/>
-	</p>
-
-
-</form>*/
-
-?>
-
-
-
-	<table width="400" class="tg" style="border-width:10px">
-  
-  <tr>
-    <td class="tg-b7b8">Current Highest Bid</td>
-    <td class="tg-b7b8"><?php  echo $row5['max(bidprice)']; ?></td>
-   
-  </tr>
-  
- <form  method="post" action="acceptbidprocess.php">
-  <tr>
-    <td class="tg-yw4l">Bid price</td>
-    <td class="tg-yw4l">Rs. <input  type="number" name="bidprice" id="bidprice" required min= <?php echo ($row['minimumbid'])  ?> /><br/>
-	<input   type= "hidden" name="itemid" id="itemid" value="<?php echo"$itemid";?>"/> </td>
-   
-  </tr>
-  
-  <tr>
-    <td class="tg-b7b8"><input type="submit" name="button" id="button" value="Add to Bid"/></td>
-    <td class="tg-b7b8"><input type="reset" name="button2" id="button2" value="Cancel"/></td>
-   
-    </tr>
-	<?php
-	if(isset($_POST['bidprice'])){
-	
-	$bidprice=$_POST['bidprice'];
-
-$sql= "insert into tblbidhistory(accountid,biditemid,bidprice,dtesubmitted) values($accountid, $itemid,$bidprice, NOW())";
-$result=mysqli_query($database,$sql) or die ("Error in adding bid for item: ".mysqli_error());
-
-header('location:listbiditems.php');
-
-}
-else{}
-	?>
- 
-  </table>
-
-
-
- 
-</div>
-	  
-	  
-	  
-     <div id="apDivProfPicBid"><img class="img-circleBid"  src= <?php echo $row2['user_avatar'] ?> > </div>  
-    </div>
-    
-  
-    
-    
-    <
-    
-   
-	
-    
-	
-			
-
-    
-</div>
-
-
 
 </body>
 </html>

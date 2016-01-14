@@ -21,7 +21,7 @@ define("WIKI", "Wiki");
 define("FAQ", "FAQ");
 define("FORUM", "FORUM");
 define("MYPROFILE", "MY PROFILE");
-define("AUCTION", "AUCTION");
+define("AUCTION", "Classifieds");
 define("JOBS", "JOBS");
 
 
@@ -269,13 +269,13 @@ define("NOJOBSSEARCHAREA", "Sorry, No Jobs Found.");
 
 //addauctionitem
 define("REALESTATEAUCTION", "Real State Auction");
-define("LANDNAME", "Auction Name");
+define("LANDNAME", "Name");
 define("TOWN", "Town");
 define("DESCRIPTION", "Description");
 define("ADDPICTURE", "Add Picture");
 define("UPLOAD", "Upload");
-define("BIDCLOSINGTIME", "Bid Closing Time");
-define("MINIMUMBIDPRICE", "Minimum Bid Price");
+define("BIDCLOSINGTIME", "Contact No");
+define("MINIMUMBIDPRICE", "Price");
 define("CHOOSEFILE", "Choose Photo");
 define("SELECTDATEFROMTHECALENDAR", "Select Date From Calendar");
 define("RS", "Rs");
