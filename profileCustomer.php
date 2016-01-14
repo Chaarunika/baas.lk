@@ -269,8 +269,8 @@
 
 				echo "<div id='apDivQuestionBox'>
 				<div id='apDivQuestionTitle'>
-				  <p style='font-size:18px'><strong> Have a complain ?</strong>?</p>
-				  <p > Report to admin ...... </p>
+				  <p style='font-size:18px'><strong> Leave a feedback</strong></p>
+				  <p > How was this service provider ...... </p>
 
 				</div>
 
@@ -285,17 +285,17 @@
 				    $_SESSION['job_id']=$_GET['rate'];
 				    $_SESSION['sid']=$_GET['sid'];
 
-				      echo "<br><br>
+				      echo "<br>
 				      <label>Job Title: ";
 
 				      $sql="select * from calendar where calendar_id='".$_GET['rate']."'";
 				      $result = mysqli_query($database,$sql) or die(mysqli_error($database));
 				      $job=mysqli_fetch_assoc($result);
 					
-				      echo $job['title'];
+				      echo $job['title']."<br><br>";
 
 				      include('includes/rating.php');
-				      
+
 				      echo "</label>				   
 					    </p>
 					    <p>
