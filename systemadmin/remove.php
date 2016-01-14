@@ -1,4 +1,5 @@
 <?php
+// remove every data using this file
 $detail = $_GET["detail"];
 $detailarray = explode(",", $detail);
 include '../_database/database.php';

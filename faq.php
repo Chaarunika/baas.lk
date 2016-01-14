@@ -261,7 +261,7 @@
       <textarea name="question" id="question" class="faqText" placeholder="<?php echo ENTERYOURQUESTION ; ?>..." cols="45" rows="5" required></textarea>
     </p>
     <p>
-      <input type="button" class="post" name="qBtn" id="qBtn" value="<?php echo POST ; ?>" />
+      <input type="submit" class="post" name="qBtn" id="qBtn" value="<?php echo POST ; ?>" />
     </p>
   </form>
 </div>

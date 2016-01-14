@@ -1,13 +1,12 @@
 
 <!DOCTYPE html>
+	<?php 
+	// SESSION CHECK AND START SESSION
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 
-<?php 
-
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-?>
+	?>
 <html>
 
 <head>
@@ -23,7 +22,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <script src="js/bootstrap.min.js"></script> -->
 
 
-<!--  postjob  -->
+<!--  postjob Links -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link href="css/postjob.css" rel="stylesheet">
 <script src = "javascript/postjob.js"> </script>
@@ -37,7 +36,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <link rel="stylesheet" href="css/owl.carousel.css">
 <script src="javascript/owl.carousel.js"></script>
 
-<!-- Button -->
+<!-- Button Links-->
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/core.css">
 
@@ -61,31 +60,68 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 <?php
-if(isset($_SESSION['userID'])){
-	if($_SESSION['Catagory'] == "customer"){
-		echo "
-		.owl-carousel {  
-		  width: 75%;
+
+	// Show background pic only if sp is logged in
+	if(isset($_SESSION['userID'])){
+		if($_SESSION['Catagory'] == "sp"){
+			echo "
+			#coverPics2{
+			position: absolute;
+			top: 100px;
+			left:800px;
+			right:2%;
+			height: 300px;	
+			background-image: url('images/line-up.svg');
+			z-index: 10; }
+			";
+
 		}
-		";
 	}
+
 	else{
-		echo "
-		.owl-carousel {  
-		  width: 98%;
+	echo "
+			#coverPics2{
+			position: absolute;
+			top: 100px;
+			left:800px;
+			right:2%;
+			height: 300px;	
+			background-image: url('images/line-up.svg');
+			z-index: 10;
+			}
+			 ";
+	}
+?>
+
+
+<?php
+
+	// checking current session catagory
+	if(isset($_SESSION['userID'])){
+		if($_SESSION['Catagory'] == "customer"){
+			echo "
+			.owl-carousel {  
+			  width: 75%;
+			}
+			";
 		}
-		";	
+		else{
+			echo "
+			.owl-carousel {  
+			  width: 98%;
+			}
+			";	
+		}
+
 	}
 
-}
-
-else{
-echo "
-.owl-carousel {  
-  width: 98%;
-}
-";
-}
+	else{
+	echo "
+	.owl-carousel {  
+	  width: 98%;
+	}
+	";
+	}
 
 ?>
 
@@ -137,14 +173,19 @@ echo "
 	<div id="coverPics"></div>
 	</div>
 
+
+	<div id="coverPics2"></div>
+
+
 	<?php 
-	include_once('includes/searchBar.php') ;
-	include_once('_database/database.php'); 
-	include_once('functions/functions.php');
+	include_once('includes/searchBar.php') ;  // search Bar included
+	include_once('_database/database.php');   // database connectivity
+	include_once('functions/functions.php');  // all the functions are here
 	?>
 
 	<?php include_once('includes/jobBar.php'); ?>
 	<?php 		
+	//checking current catagory
 	if(isset($_SESSION['Catagory'])){
 		if($_SESSION['Catagory'] == 'customer'){
 			include_once 'postjob.php' ;

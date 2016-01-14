@@ -219,7 +219,7 @@ border-width: 1px;
     		</div>
     	</div>
 
-
+			<!-- Display posted Jobs(PHP code) -->
 			<div id = "b3"> <center>
 				<?php
     			$conn = new MySQLi("localhost","root","","baaslk");

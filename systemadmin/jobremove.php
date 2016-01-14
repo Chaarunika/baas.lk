@@ -1,7 +1,7 @@
 <?php include "header.php"; ?>
 <?php include "common.php" ;?>
 <?php include "../_database/database.php"; ?>
-
+<!-- view job function -->
 <div id='show1'>
 <style type="text/css">
 #apDiv1 {

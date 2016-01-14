@@ -5,7 +5,7 @@
 	<title>baas.lk</title>
 	<meta charset="UTF-8">
 
-	<!-- Bootstrap  -->
+	<!-- Bootstrap Links  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
@@ -15,12 +15,12 @@
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-	<!-- rating  -->
+	<!-- rating Links -->
 	<link rel="stylesheet" href="star-rating.css" media="all" type="text/css"/>  
     <script src="star-rating.js" type="text/javascript"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!-- calendar  -->
+    <!-- calendar Links -->
     <link href="calendar/calendar.css" rel="stylesheet" type="text/css" />
 
     <!-- Galley links  -->
@@ -44,8 +44,8 @@
 
 	<?php 
 	include_once('header.php'); 	
-	include_once('_database/database.php'); 
-	include_once('functions/functions.php');
+	include_once('_database/database.php');  //database connectivity
+	include_once('functions/functions.php');  //adding functions needed
 	?>
 
 	<?php 	// userid for search result and actual profile
@@ -64,7 +64,7 @@
 	?>
 
 
-
+	<!-- gallery full view div -->
 	<div id="fullscreen">
 		<div id="fullscreen-inner">
 			<div id="fullscreen-inner-left" class="fullscreen-inner-button"><span class="icon-caret-left"></span></div>
@@ -74,6 +74,7 @@
 		</div>
 	</div>
 
+	<!-- checking get request bar propertise-->
 	<?php if(!isset($_GET['user']))	{	?>
 		<div id="subMenu">
 			<ul class="nav nav-tabs">
@@ -138,7 +139,7 @@
 			?>	
 		</div>
 	  	
-
+		<!-- Work gallery photos div -->
 		<div id="galleryBox">
 		<?php 
 			$result = get_user_details($userID); //need this otherwise not working

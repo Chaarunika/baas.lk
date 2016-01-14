@@ -1,4 +1,5 @@
 <?php
+//Sinhala Define for constatnt
 $languageTranslated = "sinhala";
 
 define("DATABASE_ERROR","දත්ත පද්ධතියේ දෝෂයකි.");

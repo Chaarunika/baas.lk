@@ -1,4 +1,6 @@
 <?php
+
+//systemadmin login function
 ob_start();
 include '../_database/database.php';
 $username = $_POST['textfield'];

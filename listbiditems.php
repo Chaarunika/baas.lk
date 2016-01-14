@@ -220,7 +220,7 @@ $(document).ready(function(){
             <input type="text" class="form-control input-lg"  placeholder="Search Auction" />
             <span class="input-group-btn">
                 <button class="btn btn-info btn-lg" type="submit">
-                    <i class="glyphicon glyphicon-search"></i>
+                    <span class="glyphicon glyphicon-search"></span>
                 </button>
             </span>
         </div>

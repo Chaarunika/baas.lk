@@ -335,7 +335,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 	position: absolute;
 	top: 300px;
 	left:20px;
-	//width: 1200px;	
+	//width: 1200px;
+	min-height: 700px;	
+	min-width: 950px;
 	padding: 20px;
 	background-color: #f0f0f0;
 	border: 1px solid rgba(51,51,51,0.1);
@@ -354,15 +356,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 }
 
+#coverPics2{
+		position: absolute;
+		top: 100px;
+		left:800px;
+		right:1%;
+		height: 300px;	
+		background-image: url('images/line-up.svg');
+		z-index: 0; 
+	}
 </style>
 </head>
 
 <body>
-<!--
-	<div id='back'>
-	<div id='coverPics'></div>
-	</div>
 
+
+	<div id='coverPics2'></div>
+
+<!--
 <div id='addBox' >Advertisements<hr>
 <img src="images/ad.jpg" alt="add" style="width:250px;height:500px;">
 </div>
@@ -455,7 +466,7 @@ if($k !=0)
 
 
 if($i == 0)
-{	echo "<div id=\"apDivResultNull\"> <p>".NORESULTS."</p></div>";
+{	echo "<div id=\"apDivResultNull\"> <p style='position:absolute;top:0px;font-size:20px'>".NORESULTS."</p></div>";
 	
 	}
 ?>

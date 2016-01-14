@@ -1,6 +1,6 @@
 
 <?php
-
+//Tamil Definition
 $languageTranslated = "tamil";
 
 //login

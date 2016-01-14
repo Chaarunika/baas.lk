@@ -100,6 +100,7 @@ alert("cancel");
 }  
 </script>
 <?php
+//searching customer
 if ( isset($_POST['cbutton']))
 {
 $cfound =0;
@@ -196,6 +197,8 @@ if($cfound == 0)
 mysqli_close($database);
 }
 else{
+	
+	// default customer search
 $cfound =0;
 $sql = "SELECT * FROM users CROSS JOIN customer WHERE users.user_id=customer.user_id";
 $result = mysqli_query($database, $sql);

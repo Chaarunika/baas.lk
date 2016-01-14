@@ -92,6 +92,7 @@ table{
 <body>
 
 <?php
+// view topic
 include "_database/database.php";
  
 // get value of id that sent from address bar 

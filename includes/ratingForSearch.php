@@ -7,10 +7,10 @@
         } 
         elseif(isset($appointment['feedback'])){       
           echo $appointment['feedback'];
-        } 
-        
-        elseif(isset($row4['rating'])){       
-          echo $row4['rating'];
+        }        
+
+        elseif(isset($sp['rating'])){       
+          echo $sp['rating'];
         }
         else{
         	echo 0;

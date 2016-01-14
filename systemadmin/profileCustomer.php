@@ -1,6 +1,6 @@
 <!DOCTYPE html >
 <html>
-
+<!-- systemadmin look profile of customer -->
 <head>
 	<meta charset="UTF-8">
 	<title>baas.lk</title>
@@ -167,9 +167,18 @@ border-color: rgba(240,240,1,1);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+#close
+{
+	width: 1000px;
+	top: 300px;
+	height:900px;
+	background-color:#FFF
+}
 </style>
 
 <body>
+	<div id='close'>
+    </div>
 
 	<?php 
 	include_once('header.php'); 
@@ -228,6 +237,9 @@ border-color: rgba(240,240,1,1);
      	<div id="apDivProfPic2"><img class="img-circle2"  src=  <?php if(isset($user['user_avatar'])) { echo $user['user_avatar'] ;} ?>   > </div>  
     	
      </div>
+ <?php
+ /* 
+ 
     
     <div id="apDivContactBox">
     	<div id="apDivContactInfo">
@@ -265,7 +277,7 @@ border-color: rgba(240,240,1,1);
         		echo "<p align='center' style='font-size:30px'>"."YOUR RECENT APPOINTMENTS"."</p><br><br>";
 
 
-				$customer=$_SESSION['userID'];
+				//$customer=$_SESSION['userID'];
 				$sql="select * from calendar where customer_id='".$customer."'";
 				$result = mysqli_query($database,$sql) or die(mysqli_error($database));
 				$noOfappointments=mysqli_num_rows($result);
