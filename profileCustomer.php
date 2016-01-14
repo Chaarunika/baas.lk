@@ -294,7 +294,7 @@
 					
 				      echo $job['title'];
 
-				      include('includes/ratingForSearch.php');
+				      include('includes/rating.php');
 				      
 				      echo "</label>				   
 					    </p>
