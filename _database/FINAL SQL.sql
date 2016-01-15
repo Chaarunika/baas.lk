@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `calendar` (
   `feedback` int(1) NOT NULL,
   PRIMARY KEY (`calendar_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `complain` (
   `sp_id` int(11) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`complain_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `fanswer` (
   `a_datetime` varchar(25) NOT NULL DEFAULT '',
   `user_catagory` varchar(65) NOT NULL,
   KEY `a_id` (`a_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `fanswer`
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `fquestions` (
   `reply` int(4) NOT NULL DEFAULT '0',
   `user_catagory` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+)ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `fquestions`
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `pm` (
   `timestamp` int(10) NOT NULL,
   `user1read` varchar(3) NOT NULL,
   `user2read` varchar(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `pm`
@@ -168,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `postjob2` (
   `tel_num` int(100) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`job_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `postjob2`
@@ -242,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `systemadmin` (
   `adminusername` varchar(20) NOT NULL,
   `password` varchar(150) NOT NULL,
   PRIMARY KEY (`sa_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -257,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `tblbidhistory` (
   `bidprice` bigint(20) NOT NULL,
   `dtesubmitted` datetime NOT NULL,
   PRIMARY KEY (`bidhistoryid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -276,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `tblbiditems` (
   `closingtime` text NOT NULL,
   PRIMARY KEY (`biditemid`),
   KEY `user_id` (`accountno`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tblbiditems`
