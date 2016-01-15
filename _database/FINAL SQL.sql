@@ -1,32 +1,9 @@
--- phpMyAdmin SQL Dump
--- version 4.0.4
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Jan 13, 2016 at 05:32 AM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
---
--- Database: `baaslk`
---
-CREATE DATABASE IF NOT EXISTS `baaslk` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `baaslk`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `calendar`
---
 
 CREATE TABLE IF NOT EXISTS `calendar` (
   `calendar_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -359,6 +336,3 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_password_hash`, `user_email`,
 (14, 'customer', '$2y$10$ySzIdli40/zH0F79v/jHAOwq8nZdqNNO3Emq4n9N/cf9IADxzUaeO', 'customer85@gmail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2015-10-16 18:35:57', '::1', 'Customer', 'Customer', 'avatar/default.jpg', 'customer', NULL),
 (16, '10205379873408648', '', 'malith009@ymail.com', 1, NULL, NULL, NULL, NULL, 0, NULL, '2016-01-13 09:23:49', '::1', 'Nirmal', 'Malith', 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c0.0.50.50/p50x50/971089_4976999835133_634578937_n.jpg?oh=170c662b28617550b614fe0fa80b06da&oe=5746625A&__gda__=1463389067_ea24a87586f95092dfdf2341d3517e5e', 'customer', 'fb');
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

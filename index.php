@@ -47,7 +47,7 @@
 	top: 0px;
 	width: 800px;
 	height: 300px;	
-	//background-image: url('images/cover2.jpg');
+	background-image: url('images/cover2.jpg');
 	z-index: 0;
 
 }
