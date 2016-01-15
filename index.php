@@ -132,7 +132,7 @@
 	right:2%;
 	height: 300px;	
 	//background-image: url('images/cover2.jpg');
-	z-index: 15;
+	z-index: 0;
 	}
 
 .animate
