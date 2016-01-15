@@ -47,7 +47,7 @@
 	top: 0px;
 	width: 800px;
 	height: 300px;	
-	//background-image: url('images/cover2.jpg');
+	background-image: url('images/cover2.jpg');
 	z-index: 0;
 
 }
@@ -125,6 +125,16 @@
 
 ?>
 
+#ads{
+	position: absolute;
+	top: 100px;
+	left:1000px;
+	right:2%;
+	height: 300px;	
+	//background-image: url('images/cover2.jpg');
+	z-index: 0;
+	}
+
 .animate
 {
 	transition: all 0.1s;
@@ -175,6 +185,8 @@
 
 
 	<div id="coverPics2"></div>
+
+	<div id="ads"> <?php include('includes/ads.php')?> </div>
 
 
 	<?php 
