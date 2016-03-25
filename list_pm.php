@@ -4,9 +4,8 @@ include('config.php');
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-    	<title>baas.lk</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>baas.lk</title>
+        <title>baas.lk | My Messages</title>
         <link href="css/chat.css" rel="stylesheet" title="Style" />
         <title> <?php echo PERSONALMESSAGES ; ?></title>
 		<link href="css/header.css" rel="stylesheet">
@@ -32,7 +31,11 @@ include('config.php');
 		</style>
     </head>
     <body>
-	<?php include 'header.php' ?>
+	<?php include_once ('header.php');
+	mysql_connect('localhost', 'root', '');
+	mysql_select_db('baaslk');
+	//require_once('_database/database.php');  //database connectivity	
+	?>
 
 	<?php
 	//We check if the user is logged

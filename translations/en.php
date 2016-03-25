@@ -21,7 +21,7 @@ define("WIKI", "Wiki");
 define("FAQ", "FAQ");
 define("FORUM", "FORUM");
 define("MYPROFILE", "MY PROFILE");
-define("AUCTION", "Classifieds");
+define("CLASSIFIEDS", "Classifieds");
 define("JOBS", "JOBS");
 
 

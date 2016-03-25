@@ -2,7 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>baas.lk</title>
+	<title>baas.lk | Jobs</title>
+	<meta name="description" content="Find jobs posted by customers building houses">
+	<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, jobs, wanted, masons, carpenters, painters, plumbers, Colombo" />
 <style>
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 #mainm{

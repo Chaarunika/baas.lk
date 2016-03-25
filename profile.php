@@ -2,7 +2,9 @@
 <html>
 
 <head>
-	<title>baas.lk</title>
+	<title>baas.lk | My profile</title>
+	<meta name="description" content="Profiles of construction service providers in Sri Lanka">
+	<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, jobs, masons, carpenters, painters, plumbers, architects" />
 	<meta charset="UTF-8">
 
 	<!-- Bootstrap Links  -->

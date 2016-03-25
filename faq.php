@@ -2,8 +2,10 @@
 <html>
 
 <head>
-	<title>baas.lk</title>
+	<title>baas.lk | FAQ</title>
 	<meta charset="UTF-8">
+	<meta name="description" content="Frequently asked questions of baas.lk."/>
+	<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, service providers, constructions, house" />
 <link href="css/header.css" rel="stylesheet">
 
 <style>

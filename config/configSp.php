@@ -4,9 +4,9 @@
 
 //confirmation mail
 define("EMAIL_USE_SMTP", true);
-define("EMAIL_SMTP_HOST", "ssl://smtp.gmail.com");
+define("EMAIL_SMTP_HOST", "ssl://mx1.hostinger.co.uk");
 define("EMAIL_SMTP_AUTH", true);
-define("EMAIL_SMTP_USERNAME", "baaslkinfo@gmail.com");
+define("EMAIL_SMTP_USERNAME", "admin@baas.lk");
 define("EMAIL_SMTP_PASSWORD", "baaslaepa");
 define("EMAIL_SMTP_PORT", 465);
 define("EMAIL_SMTP_ENCRYPTION", "ssl");

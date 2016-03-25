@@ -18,7 +18,7 @@ define("WIKI", "තොරතුරු කේන්ද්‍රය");
 define("FAQ", "නිති අසන පැණ");
 define("FORUM", "සංවාද");
 define("MYPROFILE", "මගේ විස්තර");
-define("AUCTION", "වෙන්දේසිය");
+define("CLASSIFIEDS", "ලුහුඩු දැන්වීම්");
 define("JOBS", "රැකියා");
 
 

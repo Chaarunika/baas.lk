@@ -1,3 +1,5 @@
+<?php include_once("analytics.php") ?>
+
 <?php 
 
 if (session_status() == PHP_SESSION_NONE) {
@@ -124,13 +126,12 @@ else{
 	  		<li><a href="http://baas.lk/wiki/index.php?title=Main_Page"><?php echo WIKI; ?></a></li>
 	  		<li><a href="faq.php"><?php echo FAQ; ?></a></li>	 
 			<li><a href="forum.php"><?php echo FORUM; ?></a></li>
-	  		
+	  		<li><a href='listbiditems.php'><?php echo CLASSIFIEDS; ?></a></li>
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
 		  			if( $_SESSION['Catagory']== "sp"){					
-					echo"<li><a href='profile.php'>".MYPROFILE."</a></li>";
-					echo"<li><a href='listbiditems.php'>".AUCTION."</a></li>";
+					echo"<li><a href='profile.php'>".MYPROFILE."</a></li>";					
 					echo"<li><a href='findjob.php'>".JOBS."</a></li>";
 
 
@@ -143,8 +144,7 @@ else{
 			   		}
 
 			   		if( $_SESSION['Catagory']== "customer"){
-			   		echo"<li><a href='profileCustomer.php'>".MYPROFILE."</a></li>";
-					echo"<li><a href='listbiditems.php'>".AUCTION."</a></li>";
+			   		echo"<li><a href='profileCustomer.php'>".MYPROFILE."</a></li>";					
 					echo"<li><a href='findjob.php'>".JOBS."</a></li>";
 					//echo"<li><a href=\"menu.php\">Bidd</a></li>";
 					//echo "<li><a href=\"postjob.php\">Post A Job</a></li>";

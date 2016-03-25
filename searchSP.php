@@ -159,8 +159,9 @@ $result = mysqli_query($dbConnection,$query);
 
 <head>
 <meta charset="utf-8">
-<title>baas.lk</title>
-
+<title>baas.lk | Search Results</title>
+<meta name="description" content="Find best service providers to build your house according to category and area." />
+<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, Local, Masons, Architects, Builders, Contractors, Electricians, Plumbers, Carpenters, Material Suppliers, Painters, Technicians, Handy men, Colombo" />
 
 
 	<!-- Bootstrap  -->

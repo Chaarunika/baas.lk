@@ -3,8 +3,10 @@
 
 <head>
 
-<title>baas.lk</title>
+<title>baas.lk - SL house construction portal</title>
 <meta charset="UTF-8">
+<meta name="description" content="The first complete Sri Lankan web portal from you can meet Masons, Carpenters, Plumbers, Contractors and all other service providers and also to get construction guidance to build your house." />
+<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, Local, Masons, Architects, Builders, Contractors, Electricians, Plumbers, Carpenters, Material Suppliers, Painters, Technicians, Handy men, build houses" />
 
 
 <!--  

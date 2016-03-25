@@ -4,7 +4,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <meta charset="UTF-8">
-<title>baas.lk</title>
+<title>baas.lk | Forum</title>
+<meta name="description" content="Discussion forum for baas.lk users"/>
+<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, forum, discussions, construction, house building" />
 <style type="text/css">
 @import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
 #apDiv1 {

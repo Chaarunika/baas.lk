@@ -2,7 +2,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>baas.lk</title>
+<title>baas.lk | Profile Edit</title>
 <?php require_once('libraries/password_compatibility_library.php') ; ?>
 <?php require_once('config/config.php'); ?>
 <link rel="stylesheet" type="text/css" href="css/spProfEdit.css">

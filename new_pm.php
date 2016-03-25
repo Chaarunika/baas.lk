@@ -21,7 +21,10 @@ include('config.php');
 		</style>
     </head>
     <body>
-	<?php include 'header.php'?>
+	<?php include ('header.php');
+	mysql_connect('localhost', 'root', '');
+	mysql_select_db('baaslk');
+	?>
     	<div class="header">
         	<br /><br /><br /><br />
 	    </div>

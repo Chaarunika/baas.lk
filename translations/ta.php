@@ -23,7 +23,7 @@ define("WIKI", "விக்கி");
 define("FAQ", "கேள்விகள்");
 define("FORUM", "கருத்துக்களம்");
 define("MYPROFILE", "சுயவிவர");
-define("AUCTION", "ஏலம்");
+define("CLASSIFIEDS", "Classifieds");
 define("JOBS", "வேலைகள்");
 
 

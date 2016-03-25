@@ -1,8 +1,10 @@
 
 <html>
 <head>
-    <title>baas.lk</title>
+    <title>baas.lk | Classifieds</title>
     <meta charset="UTF-8">
+	<meta name="description" content="Sri Lankan classified advertisements related to house constructions"/>
+	<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, classifieds, advertisements, construction, land, materials" />
 
 <link rel="stylesheet" type="text/css" href="css/header.css">
 
@@ -160,7 +162,11 @@ $(document).ready(function(){
     <?php 
     include_once('header.php'); 
     require_once("_database/database.php");
-    $_SESSION['accountid'] = $_SESSION['userID'];
+
+    if(isset($_SESSION['userID'])){
+        $_SESSION['accountid'] = $_SESSION['userID'];
+    }
+    
     ?>
 <!--
 <div id="apDivContainer2">	
@@ -225,7 +231,7 @@ $(document).ready(function(){
             </span>
         </div>
         <?php
-            if($_SESSION['Catagory'] == "sp"){
+            if(isset($_SESSION['Catagory']) && $_SESSION['Catagory'] == "sp"){
                 echo "
                 <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add <span class='glyphicon glyphicon-chevron-down'></span></a>
                 ";
@@ -263,10 +269,11 @@ $result = mysqli_query($dbConnection,$sql);
 	$out = "<table class='table table-striped' id='bidtbl'  width=100%  border='0' style='position:relative;border: 1px solid #999999' >
                 <colgroup>
                 <col span='1' style='width: 5%;'/>
-                <col span='1' style='width: 15%;'/><col span='1' style='width: 20%;'/>
-                <col span='1' style='width: 10%;'/><col span='1' style='width: 15%;'/>
-                <col span='1' style='width: 10%;'/><col span='1' style='width: 10%;'/>
-
+                <col span='1' style='width: 15%;'/>
+                <col span='1' style='width: 35%;'/>
+                <col span='1' style='width: 10%;'/>
+                <col span='1' style='width: 15%;'/>
+                <col span='1' style='width: 10%;'/>
 
                 </colgroup>
                 <tr>

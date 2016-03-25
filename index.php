@@ -3,7 +3,7 @@
 	<?php 
 	// SESSION CHECK AND START SESSION
 	if (session_status() == PHP_SESSION_NONE) {
-	    session_start();
+	    session_start();	    
 	}
 
 	?>
@@ -11,7 +11,9 @@
 
 <head>
 
-<title>baas.lk</title>
+<title>baas.lk - SL house construction portal</title>
+<meta name="description" content="The first complete Sri Lankan web portal from you can meet Masons, Carpenters, Plumbers, Contractors and all other service providers and also to get construction guidance to build your house." />
+<meta name="keywords" content="baas, Baas, Baaslk, Sri Lanka, Lanka, Local, Masons, Architects, Builders, Contractors, Electricians, Plumbers, Carpenters, Material Suppliers, Painters, Technicians, Handy men, build houses" />
 <meta charset="UTF-8">
 
 
@@ -58,6 +60,7 @@
 	left: 0px;
 	
 }
+
 
 <?php
 
@@ -131,8 +134,7 @@
 	left:1000px;
 	right:2%;
 	height: 300px;	
-	//background-image: url('images/cover2.jpg');
-	z-index: 0;
+	z-index: 10;
 	}
 
 .animate
@@ -173,7 +175,24 @@
 
 </style>
 
+
+
+
 </head>
+
+<div id="ads">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- baaslk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7797848166663166"
+     data-ad-slot="6689291169"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
 
 <body>
 		
@@ -184,9 +203,8 @@
 	</div>
 
 
-	<div id="coverPics2"></div>
 
-	<div id="ads"> <?php include('includes/ads.php')?> </div>
+
 
 
 	<?php 
