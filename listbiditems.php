@@ -217,17 +217,17 @@ $(document).ready(function(){
 <div name="ccontainer" style="position:absolute;left:5%;width:500px">                 
     <div id="custom-search-input">
         <div class="input-group ">
-            <input type="text" class="form-control input-lg"  placeholder="Search" />
+            <input type="text" class="form-control input-lg"  placeholder="Search Auction" />
             <span class="input-group-btn">
                 <button class="btn btn-info btn-lg" type="submit">
-                    <span class="glyphicon glyphicon-search"></span>
+                    <i class="glyphicon glyphicon-search"></i>
                 </button>
             </span>
         </div>
         <?php
             if($_SESSION['Catagory'] == "sp"){
                 echo "
-                <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add <span class='glyphicon glyphicon-chevron-down'></span></a>
+                <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add Auction <span class='glyphicon glyphicon-chevron-down'></span></a>
                 ";
             }
         ?>
@@ -266,16 +266,15 @@ $result = mysqli_query($dbConnection,$sql);
                 <col span='1' style='width: 15%;'/><col span='1' style='width: 20%;'/>
                 <col span='1' style='width: 10%;'/><col span='1' style='width: 15%;'/>
                 <col span='1' style='width: 10%;'/><col span='1' style='width: 10%;'/>
-
-
                 </colgroup>
                 <tr>
                     <th><a href=\"listbiditems.php?orderState=biditemid\">ID</a></th>
-                    <th>Name</th>
-                    <th  word-wrap: break-word;>description</th>
+                    <th>Land Name</th>
+                    <th  word-wrap: break-word;>Land descriptiom</th>
                     <th><a href=\"listbiditems.php?orderState=town\">Area</a></th>
-                    <th>Price</th>
-                    <th>More</th>
+                    <th><a href=\"listbiditems.php?orderState=closingtime\">Remaining time</a></th>
+                    <th>Highest Bid</th>
+                    <th>Place a bid</th>
                 </tr>";
 
       while($row=mysqli_fetch_array($result)){
@@ -348,14 +347,15 @@ $result = mysqli_query($dbConnection,$sql);
                  $out .= "</td>";
                 $out .= "<td >".$row['town']."</td>";
 
+                $out .= "<td>" ."$days_remaining"." Days" ." "."$hours_remaining"." Hrs"." "."$minutes_remaining"." Mins"." </td>";
                     if(isset($row_1['max(bidprice)'])){
                         $out .= "<td>Rs.". $row_1['max(bidprice)'] . ".00</td>";     
                     }
                     else{
-                        $out .= "<td>Negotiable</td>";
+                        $out .= "<td>No bids</td>";
                     }
                     
-                $out .= "<td>"."<a href='acceptbid.php?itemid=$itemid'> View</a>"."</td>";  
+                $out .= "<td>"."<a href='acceptbid.php?itemid=$itemid'> View & bid</a>"."</td>";  
             $out .= "</tr>";
     	}
 
