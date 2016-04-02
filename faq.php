@@ -215,7 +215,7 @@
 
 
 <DIV class="FAQ" onclick="toggle('faq9')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 9.<?php echo FAQQ9 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 9.<?php echo FAQQ9 ; ?> ???</h3>
 
  <div id="faq9" class="FAA"><hr/>
  
@@ -225,7 +225,7 @@
 
 
 <DIV class="FAQ" onclick="toggle('faq10')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 10. <?php echo FAQQ10 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 10. <?php echo FAQQ10 ; ?> ???</h3>
 
  <div id="faq10" class="FAA"><hr/>
  
@@ -235,7 +235,7 @@
  
 </DIV>
 <DIV class="FAQ" onclick="toggle('faq11')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 10. <?php echo FAQQ10 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 10. <?php echo FAQQ10 ; ?> ???</h3>
 
  <div id="faq11" class="FAA"><hr/>
  
