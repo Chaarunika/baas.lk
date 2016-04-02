@@ -179,10 +179,10 @@
 
 
 </head>
-
+<!--
 <div id="ads">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- baaslk -->
+
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-7797848166663166"
@@ -193,7 +193,7 @@
 </script>
 </div>
 
-
+-->
 <body>
 		
 	<?php include 'header.php' ?>
