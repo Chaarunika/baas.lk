@@ -130,7 +130,7 @@
 
 <div class="FAQ" onclick="toggle('faq1')">	
 
-	<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;">  1.<?php echo  FAQQ1 ; ?> ???</h3>
+	<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;">  1.<?php echo  FAQQ1 ; ?> ???</h3>
 
  	<div id="faq1" class="FAA" >
  	<hr/>
@@ -140,7 +140,7 @@
 </div>
 
 <DIV class="FAQ" onclick="toggle('faq2')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 2. <?php echo FAQQ2 ; ?>???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 2. <?php echo FAQQ2 ; ?>???</h3>
  <div id="faq2" class="FAA">
  	<hr/>
  
@@ -150,7 +150,7 @@
 </DIV>
 
 <DIV class="FAQ" onclick="toggle('faq3')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 3. <?php echo FAQQ3 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 3. <?php echo FAQQ3 ; ?> ???</h3>
  <div id="faq3" class="FAA">
  	<hr/>
  <p><?php echo FAQA3 ; ?>.</p>
@@ -160,7 +160,7 @@
 
 <DIV class="FAQ" onclick="toggle('faq4')">
 
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 4. <?php echo FAQQ4 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 4. <?php echo FAQQ4 ; ?> ???</h3>
 
  <div id="faq4" class="FAA">
  	<hr/> 
@@ -171,7 +171,7 @@
 </DIV>
 
 <DIV class="FAQ" onclick="toggle('faq5')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 5. <?php echo FAQQ5 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 5. <?php echo FAQQ5 ; ?> ???</h3>
 
  <div id="faq5" class="FAA"><hr/>
  
@@ -182,7 +182,7 @@
 
 
 <DIV class="FAQ" onclick="toggle('faq6')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 6.<?php echo FAQQ6 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 6.<?php echo FAQQ6 ; ?> ???</h3>
 
  <div id="faq6" class="FAA"><hr/>
  
@@ -194,7 +194,7 @@
 
 
 <DIV class="FAQ" onclick="toggle('faq7')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 7. <?php echo FAQQ7 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 7. <?php echo FAQQ7 ; ?> ???</h3>
 
  <div id="faq7" class="FAA"><hr/>
  
@@ -205,7 +205,7 @@
 
 
 <DIV class="FAQ" onclick="toggle('faq8')">
-<h3><img src="images/magnify.png" alt="expand" style="width:20px;height:20px;"> 8. <?php echo FAQQ8 ; ?> ???</h3>
+<h3><img src="images/Magnify.png" alt="expand" style="width:20px;height:20px;"> 8. <?php echo FAQQ8 ; ?> ???</h3>
  <div id="faq8" class="FAA"><hr/>
  
  <p><?php echo FAQA8 ; ?>.</p>
