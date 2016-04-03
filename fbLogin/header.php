@@ -10,21 +10,21 @@ if (session_status() == PHP_SESSION_NONE) {
 if(isset($_SESSION['language'])){
 
 	if($_SESSION['language'] == 'sinhala'){
-		include_once 'translations/si.php' ;
+		include_once '../translations/si.php' ;
 	}
 
 	else if($_SESSION['language'] == 'tamil'){
-		include_once 'translations/ta.php' ;
+		include_once '../translations/ta.php' ;
 	}
 
 	else if($_SESSION['language'] == 'english')
 	{
-		include_once 'translations/en.php' ;
+		include_once '../translations/en.php' ;
 	}
 }
 
 else{
-	include_once 'translations/en.php' ;
+	include_once '../translations/en.php' ;
 } 
 ?>
 
