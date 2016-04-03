@@ -55,9 +55,17 @@ if (isset($_GET['code'])) {
 		else
 		{
 						//new user
+	
+			session_start();
+			$_SESSION['username']=$id;
+			$_SESSION['email']=$email;
+			$_SESSION['firstname']=$firstname;
+			$_SESSION['lastname']=$lastname;
+			$_SESSION['url']=$url;
+			$_SESSION['loginType'] = $loginType ;
 
 
-			header('location: ../selectUser.php');
+			header('location: selectUser.php');
 			
 
 
