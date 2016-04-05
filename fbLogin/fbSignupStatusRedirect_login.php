@@ -160,11 +160,9 @@ else{
 			}
 			else{
 		                   
-		                   echo $id;
-
-				   echo "user doesn't exist";
-				//header('location: selectUserFB.php');
-		         }
+		                   
+					header('location: selectUserFB.php');
+		        }
 			
 		}
 

@@ -11,7 +11,6 @@ if($_SERVER['SERVER_ADDR']== "::1"){
 	$helper = $fb->getRedirectLoginHelper();
 	$permissions = ['email']; // optional
 	$loginUrl = $helper->getLoginUrl('http://localhost/BAAS_LK/fbLogin/fbSignupStatusRedirect_login.php', $permissions);
-	//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 	header('location:'.$loginUrl);
 }
 
@@ -23,7 +22,6 @@ else{
 	$helper = $fb->getRedirectLoginHelper();
 	$permissions = ['email']; // optional
 	$loginUrl = $helper->getLoginUrl('http://baas.lk/fbLogin/fbSignupStatusRedirect_login.php', $permissions);
-	//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 	header('location:'.$loginUrl);	
 }
 

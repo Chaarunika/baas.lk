@@ -130,25 +130,29 @@ else{
 
 	  		<?php
 		  		if(isset($_SESSION['username']) ){
-		  			if( $_SESSION['Catagory']== "sp"){					
-					echo"<li><a href='profile.php'>".MYPROFILE."</a></li>";					
-					echo"<li><a href='findjob.php'>".JOBS."</a></li>";
+		  			if(isset($_SESSION['Catagory']) ){
+
+		  				if( $_SESSION['Catagory']== "sp"){					
+						echo"<li><a href='profile.php'>".MYPROFILE."</a></li>";					
+						echo"<li><a href='findjob.php'>".JOBS."</a></li>";
 
 
-			   		//echo"<li><a href=\"profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
+			   			//echo"<li><a href=\"profile.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
 
-			   		$foldername = "Gallery/galleryUploads/".$_SESSION['username']; 
- 					if(!file_exists ( $foldername)){ 
- 						mkdir($foldername, 7777);
-						}
+			   			$foldername = "Gallery/galleryUploads/".$_SESSION['username']; 
+ 						if(!file_exists ( $foldername)){ 
+ 							mkdir($foldername, 7777);
+							}
+			   			}
 			   		}
-
-			   		if( $_SESSION['Catagory']== "customer"){
-			   		echo"<li><a href='profileCustomer.php'>".MYPROFILE."</a></li>";					
-					echo"<li><a href='findjob.php'>".JOBS."</a></li>";
-					//echo"<li><a href=\"menu.php\">Bidd</a></li>";
-					//echo "<li><a href=\"postjob.php\">Post A Job</a></li>";
-					//echo"<li><a href=\"profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
+			   		if(isset($_SESSION['Catagory']) ){
+			   			if( $_SESSION['Catagory']== "customer"){
+			   			echo"<li><a href='profileCustomer.php'>".MYPROFILE."</a></li>";					
+						echo"<li><a href='findjob.php'>".JOBS."</a></li>";
+						//echo"<li><a href=\"menu.php\">Bidd</a></li>";
+						//echo "<li><a href=\"postjob.php\">Post A Job</a></li>";
+						//echo"<li><a href=\"profileCustomer.php?user=". $_SESSION['userID'] . "\">Profile</a></li>";
+			   			}
 			   		}
 
 				}

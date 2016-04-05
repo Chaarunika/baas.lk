@@ -27,7 +27,7 @@ $apiConfig = array(
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
     'oauth2_client_id' => '724667106705-esl21mhn29jhktijlr8jna6r28a8nnud.apps.googleusercontent.com',
     'oauth2_client_secret' => 'uWXcv9_OuKEb2L48T_shoIry',
-    'oauth2_redirect_uri' => 'http://localhost/BAAS_LK/google/loginredirect.php',
+    'oauth2_redirect_uri' => 'http://baas.lk/google/loginredirect.php',
 
     // The developer key, you get this at https://code.google.com/apis/console
     'developer_key' => '',
