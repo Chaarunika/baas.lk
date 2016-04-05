@@ -160,57 +160,8 @@ $(document).ready(function(){
     <?php 
     include_once('header.php'); 
     require_once("_database/database.php");
-    $_SESSION['accountid'] = $_SESSION['userID'];
+    //$_SESSION['accountid'] = $_SESSION['userID'];
     ?>
-<!--
-<div id="apDivContainer2">	
-	
-	<center><h2> FIND BIDD </h2></center>
-  
-    <form action="" method="POST" >
-    <center>
-    
-    Search Area <select name= "search" class="area"> 
-	
-   <option></option>
-   <option>Colombo</option>
-    <option>Kandy</option>
-	<option>Galle</option>
-	<option>Ampara</option>
-    <option>Anuradhapura</option>
-    <option>Badulla</option>
-    <option>Batticaloa</option>
-	 <option>Gampaha</option>
-    <option>Hambantota</option>
-    <option>Jaffna</option>
-    <option>Kalutara</option>
-    <option>Kegalle</option>
-    <option>Kilinochchi</option>
-    <option>Kurunegala</option>
-    <option>Mannar</option>
-    <option>Matale</option>
-    <option>Matara</option>
-    <option>Moneragala</option>
-    <option>Mullaitivu</option>
-    <option>Nuwara Eliya</option>
-    <option>Polonnaruwa</option>
-    <option>Puttalam</option>
-    <option>Ratnapura</option>
-    <option>Trincomalee</option>
-    <option>Vavuniya</option>
-	 <option>Colombo</option>
-    </select>
-   
-   
-	
-    
-    <input type= "submit" name="submit" value="FIND">
-    </center>
-</form>
-	
-</div>
-
--->
 
 
 <form>
@@ -225,11 +176,11 @@ $(document).ready(function(){
             </span>
         </div>
         <?php
-            if($_SESSION['Catagory'] == "sp"){
+            //if($_SESSION['Catagory'] == "sp"){
                 echo "
-                <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add Auction <span class='glyphicon glyphicon-chevron-down'></span></a>
+                <a href='#'' id='dropBidButton' type='submit' class='btn btn-block btn-default'>Add Property/Land <span class='glyphicon glyphicon-chevron-down'></span></a>
                 ";
-            }
+           // }
         ?>
     </div>  
      
