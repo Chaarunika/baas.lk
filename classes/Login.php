@@ -258,7 +258,7 @@ class Login
         session_destroy();
 
         $this->loginstatus = false;
-		header('location:login.php');
+		header('location:index.php');
     }
 	
 	private function sessionsAndData($result_row)
